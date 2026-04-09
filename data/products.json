@@ -1,0 +1,1736 @@
+{
+  "categories": [
+    {
+      "id": "vape",
+      "name": "Vape",
+      "icon": "\ud83d\udca8",
+      "description": "Premium vape devices and disposables"
+    },
+    {
+      "id": "kratom",
+      "name": "Kratom",
+      "icon": "\ud83c\udf3f",
+      "description": "Premium kratom shots, powders and capsules"
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "icon": "\ud83d\udd25",
+      "description": "Delta-8, Delta-9 edibles and disposables"
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "icon": "\ud83c\udf44",
+      "description": "Functional mushroom gummies and more"
+    },
+    {
+      "id": "pseudo",
+      "name": "Pseudo",
+      "icon": "\u26a1",
+      "description": "Premium pseudo products"
+    },
+    {
+      "id": "bluelotus",
+      "name": "Blue Lotus",
+      "icon": "\ud83c\udf38",
+      "description": "Blue lotus carts, prerolls and disposables"
+    },
+    {
+      "id": "supplements",
+      "name": "Supplements",
+      "icon": "\ud83d\udc8a",
+      "description": "Wellness shots and supplement blends"
+    },
+    {
+      "id": "novelties",
+      "name": "Novelties",
+      "icon": "\ud83c\udf81",
+      "description": "Unique lifestyle accessories"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1-delta-8-9-gummies",
+      "name": "1 DELTA 8 9 GUMMIES",
+      "category": "delta"
+    },
+    {
+      "id": "better-now",
+      "name": "BETTER NOW",
+      "category": "supplements"
+    },
+    {
+      "id": "featured",
+      "name": "FEATURED",
+      "category": "bluelotus"
+    },
+    {
+      "id": "gushers",
+      "name": "GUSHERS",
+      "category": "pseudo"
+    },
+    {
+      "id": "kanna-kava",
+      "name": "KANNA KAVA",
+      "category": "supplements"
+    },
+    {
+      "id": "lucid-50mg",
+      "name": "LUCID 50MG",
+      "category": "pseudo"
+    },
+    {
+      "id": "rock-on",
+      "name": "ROCK ON",
+      "category": "delta"
+    },
+    {
+      "id": "shroom-bang",
+      "name": "SHROOM BANG",
+      "category": "mushroom"
+    },
+    {
+      "id": "shroom-puff",
+      "name": "SHROOM PUFF",
+      "category": "mushroom"
+    },
+    {
+      "id": "silly-dots",
+      "name": "SILLY DOTS",
+      "category": "mushroom"
+    },
+    {
+      "id": "strike-kava-shot",
+      "name": "STRIKE KAVA SHOT",
+      "category": "supplements"
+    },
+    {
+      "id": "ultra-ohmz",
+      "name": "ULTRA OHMZ",
+      "category": "pseudo"
+    },
+    {
+      "id": "vapes-new",
+      "name": "VAPES NEW",
+      "category": "vape"
+    },
+    {
+      "id": "zen-power-shot",
+      "name": "ZEN POWER SHOT",
+      "category": "supplements"
+    }
+  ],
+  "products": [
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-blue-razz-blast",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-BLUE-RAZZ-BLAST",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (BLUE RAZZ BLAST)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-blue-razz-blast.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-pineapple-paradise",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-PINEAPPLE-PARADISE",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PINEAPPLE PARADISE)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-pineapple-paradise.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-pink-champagne",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-PINK-CHAMPAGNE",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PINK CHAMPAGNE)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-pink-champagne.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-purple-dragon",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-PURPLE-DRAGON",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PURPLE DRAGON)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-purple-dragon.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-strawberry-splash",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-STRAWBERRY-SPLASH",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (STRAWBERRY SPLASH)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-strawberry-splash.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-blue-razz-blast",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH-BLUE-RAZZ-BLAST",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH (BLUE RAZZ BLAST)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-blue-razz-blast.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH-PURPLE-DRAGON",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH (PURPLE DRAGON)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-strawberry-splash",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH-STRAWBERRY-SPLASH",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH (STRAWBERRY SPLASH)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-strawberry-splash.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-blue-razz-blast",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-BLUE-RAZZ-BLAST",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (BLUE RAZZ BLAST)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-pineapple-paradise",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-PINEAPPLE-PARADISE",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (PINEAPPLE PARADISE)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pineapple-paradise.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-pink-champagne",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-PINK-CHAMPAGNE",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (PINK CHAMPAGNE)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-purple-dragon",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-PURPLE-DRAGON",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (PURPLE DRAGON)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-purple-dragon.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-strawberry-splash",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-STRAWBERRY-SPLASH",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (STRAWBERRY SPLASH)",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-strawberry-splash.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE",
+      "company": "featured",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-1-delta-8-9-gummies-12ct-delta-9-gummies",
+      "sku": "12CT-DELTA-9-GUMMIES",
+      "name": "12CT DELTA 9 GUMMIES",
+      "company": "1-delta-8-9-gummies",
+      "category": "delta",
+      "image": "assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "delta-1-delta-8-9-gummies-delta-8-gummies-1",
+      "sku": "DELTA-8-GUMMIES-1",
+      "name": "DELTA 8 GUMMIES 1",
+      "company": "1-delta-8-9-gummies",
+      "category": "delta",
+      "image": "assets/categories/delta/1-delta-8-9-gummies/delta-8-gummies-1.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "delta-1-delta-8-9-gummies-ml-product-photo-12ct-gummies",
+      "sku": "ML-PRODUCT-PHOTO-12CT-GUMMIES",
+      "name": "ML PRODUCT PHOTO 12CT GUMMIES",
+      "company": "1-delta-8-9-gummies",
+      "category": "delta",
+      "image": "assets/categories/delta/1-delta-8-9-gummies/ml-product-photo-12ct-gummies.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0077",
+      "sku": "IMG-20250411-WA0077",
+      "name": "IMG 20250411 WA0077",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0077.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0078",
+      "sku": "IMG-20250411-WA0078",
+      "name": "IMG 20250411 WA0078",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0078.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0079",
+      "sku": "IMG-20250411-WA0079",
+      "name": "IMG 20250411 WA0079",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0079.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0080",
+      "sku": "IMG-20250411-WA0080",
+      "name": "IMG 20250411 WA0080",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0080.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0081",
+      "sku": "IMG-20250411-WA0081",
+      "name": "IMG 20250411 WA0081",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0081.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0082",
+      "sku": "IMG-20250411-WA0082",
+      "name": "IMG 20250411 WA0082",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0082.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0083",
+      "sku": "IMG-20250411-WA0083",
+      "name": "IMG 20250411 WA0083",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0083.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0084",
+      "sku": "IMG-20250411-WA0084",
+      "name": "IMG 20250411 WA0084",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0084.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0085",
+      "sku": "IMG-20250411-WA0085",
+      "name": "IMG 20250411 WA0085",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0085.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0086",
+      "sku": "IMG-20250411-WA0086",
+      "name": "IMG 20250411 WA0086",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0086.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0087",
+      "sku": "IMG-20250411-WA0087",
+      "name": "IMG 20250411 WA0087",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0087.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0088",
+      "sku": "IMG-20250411-WA0088",
+      "name": "IMG 20250411 WA0088",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0088.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0089",
+      "sku": "IMG-20250411-WA0089",
+      "name": "IMG 20250411 WA0089",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0089.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0103",
+      "sku": "IMG-20250411-WA0103",
+      "name": "IMG 20250411 WA0103",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0103.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0105",
+      "sku": "IMG-20250411-WA0105",
+      "name": "IMG 20250411 WA0105",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0105.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0107",
+      "sku": "IMG-20250411-WA0107",
+      "name": "IMG 20250411 WA0107",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0107.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0108",
+      "sku": "IMG-20250411-WA0108",
+      "name": "IMG 20250411 WA0108",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0108.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250411-wa0113",
+      "sku": "IMG-20250411-WA0113",
+      "name": "IMG 20250411 WA0113",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250411-wa0113.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250522-wa0266",
+      "sku": "IMG-20250522-WA0266",
+      "name": "IMG 20250522 WA0266",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250522-wa0266.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250522-wa0267",
+      "sku": "IMG-20250522-WA0267",
+      "name": "IMG 20250522 WA0267",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250522-wa0267.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250522-wa0268",
+      "sku": "IMG-20250522-WA0268",
+      "name": "IMG 20250522 WA0268",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250522-wa0268.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250522-wa0269",
+      "sku": "IMG-20250522-WA0269",
+      "name": "IMG 20250522 WA0269",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250522-wa0269.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250522-wa0270",
+      "sku": "IMG-20250522-WA0270",
+      "name": "IMG 20250522 WA0270",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250522-wa0270.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250523-wa0044",
+      "sku": "IMG-20250523-WA0044",
+      "name": "IMG 20250523 WA0044",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250523-wa0044.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250523-wa0045",
+      "sku": "IMG-20250523-WA0045",
+      "name": "IMG 20250523 WA0045",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250523-wa0045.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250523-wa0046",
+      "sku": "IMG-20250523-WA0046",
+      "name": "IMG 20250523 WA0046",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250523-wa0046.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250523-wa0047",
+      "sku": "IMG-20250523-WA0047",
+      "name": "IMG 20250523 WA0047",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250523-wa0047.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250523-wa0048",
+      "sku": "IMG-20250523-WA0048",
+      "name": "IMG 20250523 WA0048",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250523-wa0048.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250523-wa0049",
+      "sku": "IMG-20250523-WA0049",
+      "name": "IMG 20250523 WA0049",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250523-wa0049.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250604-wa0176",
+      "sku": "IMG-20250604-WA0176",
+      "name": "IMG 20250604 WA0176",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250604-wa0176.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250604-wa0177",
+      "sku": "IMG-20250604-WA0177",
+      "name": "IMG 20250604 WA0177",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250604-wa0177.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250604-wa0178",
+      "sku": "IMG-20250604-WA0178",
+      "name": "IMG 20250604 WA0178",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250604-wa0178.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-img-20250604-wa0179",
+      "sku": "IMG-20250604-WA0179",
+      "name": "IMG 20250604 WA0179",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/img-20250604-wa0179.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-rock-on-blue",
+      "sku": "ROCK-ON-BLUE",
+      "name": "ROCK ON BLUE",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-blue.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-rock-on-green",
+      "sku": "ROCK-ON-GREEN",
+      "name": "ROCK ON GREEN",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-green.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-rock-on-pink",
+      "sku": "ROCK-ON-PINK",
+      "name": "ROCK ON PINK",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pink.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-rock-on-yellow",
+      "sku": "ROCK-ON-YELLOW",
+      "name": "ROCK ON YELLOW",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-yellow.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-whatsapp-image-2025-06-04-at-18-09-29-8f5e8ee6",
+      "sku": "WHATSAPP-IMAGE-2025-06-04-AT-18-09-29-8F5E8EE6",
+      "name": "WHATSAPP IMAGE 2025 06 04 AT 18 09 29 8F5E8EE6",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/whatsapp-image-2025-06-04-at-18-09-29-8f5e8ee6.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-whatsapp-image-2025-06-04-at-18-15-28-64b204f4",
+      "sku": "WHATSAPP-IMAGE-2025-06-04-AT-18-15-28-64B204F4",
+      "name": "WHATSAPP IMAGE 2025 06 04 AT 18 15 28 64B204F4",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/whatsapp-image-2025-06-04-at-18-15-28-64b204f4.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-100gm-p0wder",
+      "sku": "BLISS-XTRA-100GM-P0WDER",
+      "name": "BLISS XTRA 100GM P0WDER",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-100gm-p0wder.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-84ct-capsule",
+      "sku": "BLISS-XTRA-84CT-CAPSULE",
+      "name": "BLISS XTRA 84CT CAPSULE",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-84ct-capsule.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-black-shot",
+      "sku": "BLISS-XTRA-BLACK-SHOT",
+      "name": "BLISS XTRA BLACK SHOT",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-black-shot.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-gold-shot",
+      "sku": "BLISS-XTRA-GOLD-SHOT",
+      "name": "BLISS XTRA GOLD SHOT",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-gold-shot.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-feek-free",
+      "sku": "FEEK-FREE",
+      "name": "FEEK FREE",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/feek-free.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-feel-free-shot",
+      "sku": "FEEL-FREE-SHOT",
+      "name": "FEEL FREE SHOT",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/feel-free-shot.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-kanva-focus-flow-shot",
+      "sku": "KANVA-FOCUS-FLOW-SHOT",
+      "name": "KANVA FOCUS FLOW SHOT",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/kanva-focus-flow-shot.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-kshot-black",
+      "sku": "KSHOT-BLACK",
+      "name": "KSHOT BLACK",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/kshot-black.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-kshot-regular",
+      "sku": "KSHOT-REGULAR",
+      "name": "KSHOT REGULAR",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/kshot-regular.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-blue-shot",
+      "sku": "MIT-45-BLUE-SHOT",
+      "name": "MIT 45 BLUE SHOT",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-blue-shot.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-go-boldly",
+      "sku": "MIT-45-GO-BOLDLY",
+      "name": "MIT 45 GO BOLDLY",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-go-boldly.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-gold",
+      "sku": "MIT-45-GOLD",
+      "name": "MIT 45 GOLD",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-gold.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-purple-shot",
+      "sku": "MIT-45-PURPLE-SHOT",
+      "name": "MIT 45 PURPLE SHOT",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-purple-shot.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-shots",
+      "sku": "MIT-45-SHOTS",
+      "name": "MIT 45 SHOTS",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-shots.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mystic-lab-kratom-gummies",
+      "sku": "MYSTIC-LAB-KRATOM-GUMMIES",
+      "name": "MYSTIC LAB KRATOM GUMMIES",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mystic-lab-kratom-gummies.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms-black",
+      "sku": "OPMS-BLACK",
+      "name": "OPMS BLACK",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms-black.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms-gold",
+      "sku": "OPMS-GOLD",
+      "name": "OPMS GOLD",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms-gold.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms-red",
+      "sku": "OPMS-RED",
+      "name": "OPMS RED",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms-red.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms",
+      "sku": "OPMS",
+      "name": "OPMS",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-viva-xtreme",
+      "sku": "VIVA-XTREME",
+      "name": "VIVA XTREME",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/viva-xtreme.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-vivazen-2x",
+      "sku": "VIVAZEN-2X",
+      "name": "VIVAZEN 2X",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/vivazen-2x.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-vivazen-regular",
+      "sku": "VIVAZEN-REGULAR",
+      "name": "VIVAZEN REGULAR",
+      "company": "featured",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/vivazen-regular.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-bang-shroom-bang-2ct-pre-roll",
+      "sku": "SHROOM-BANG-2CT-PRE-ROLL",
+      "name": "SHROOM BANG 2CT PRE ROLL",
+      "company": "shroom-bang",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-bang/shroom-bang-2ct-pre-roll.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-bang-shroom-bang-4ct-tablet",
+      "sku": "SHROOM-BANG-4CT-TABLET",
+      "name": "SHROOM BANG 4CT TABLET",
+      "company": "shroom-bang",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-bang/shroom-bang-4ct-tablet.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-bang-shroom-bang-4grm-disposable",
+      "sku": "SHROOM-BANG-4GRM-DISPOSABLE",
+      "name": "SHROOM BANG 4GRM DISPOSABLE",
+      "company": "shroom-bang",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-bang/shroom-bang-4grm-disposable.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-3grm-disposable",
+      "sku": "SHROOM-3GRM-DISPOSABLE",
+      "name": "SHROOM 3GRM DISPOSABLE",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-3grm-disposable.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-1-grm-cartridge",
+      "sku": "SHROOM-PUFF-1-GRM-CARTRIDGE",
+      "name": "SHROOM PUFF 1 GRM CARTRIDGE",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-1-grm-cartridge.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-2ct-pre-roll",
+      "sku": "SHROOM-PUFF-2CT-PRE-ROLL",
+      "name": "SHROOM PUFF 2CT PRE ROLL",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-3grm-disposable",
+      "sku": "SHROOM-PUFF-3GRM-DISPOSABLE",
+      "name": "SHROOM PUFF 3GRM DISPOSABLE",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-3grm-disposable.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-blaster",
+      "sku": "SHROOM-PUFF-BLASTER",
+      "name": "SHROOM PUFF BLASTER",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-pre-roll-40ct-jar",
+      "sku": "SHROOM-PUFF-PRE-ROLL-40CT-JAR",
+      "name": "SHROOM PUFF PRE ROLL 40CT JAR",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-pre-roll-40ct-jar.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-pugg-gummies",
+      "sku": "SHROOM-PUGG-GUMMIES",
+      "name": "SHROOM PUGG GUMMIES",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-pugg-gummies.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-hero-dose-blue-razz",
+      "sku": "SILLY-DOTS-HERO-DOSE-BLUE-RAZZ",
+      "name": "SILLY DOTS HERO DOSE BLUE RAZZ",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-hero-dose-blue-razz.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-hero-dose-cherry-berry",
+      "sku": "SILLY-DOTS-HERO-DOSE-CHERRY-BERRY",
+      "name": "SILLY DOTS HERO DOSE CHERRY BERRY",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-hero-dose-cherry-berry.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-hero-dose-natural",
+      "sku": "SILLY-DOTS-HERO-DOSE-NATURAL",
+      "name": "SILLY DOTS HERO DOSE NATURAL",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-hero-dose-natural.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose-blue-razz",
+      "sku": "SILLY-DOTS-MEGA-DOSE-BLUE-RAZZ",
+      "name": "SILLY DOTS MEGA DOSE BLUE RAZZ",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose-blue-razz.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose-cherry-berry",
+      "sku": "SILLY-DOTS-MEGA-DOSE-CHERRY-BERRY",
+      "name": "SILLY DOTS MEGA DOSE CHERRY BERRY",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose-cherry-berry.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose-natural",
+      "sku": "SILLY-DOTS-MEGA-DOSE-NATURAL",
+      "name": "SILLY DOTS MEGA DOSE NATURAL",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose-natural.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose",
+      "sku": "SILLY-DOTS-MEGA-DOSE",
+      "name": "SILLY DOTS MEGA DOSE",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-super-dose",
+      "sku": "SILLY-DOTS-SUPER-DOSE",
+      "name": "SILLY DOTS SUPER DOSE",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-super-dose.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-10ct-jar-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-10CT-JAR-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 10CT JAR (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-10ct-jar-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-10CT-JAR-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 10CT JAR (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-strawberry-splash.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-10ct-jar-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-10CT-JAR-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 10CT JAR (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-watermelon-gushers.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-1ct-tablet-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-1CT-TABLET-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 1CT TABLET (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-1ct-tablet-blueberry-blast.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-1ct-tablet-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-1CT-TABLET-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 1CT TABLET (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-1ct-tablet-strawberry-splash.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-1ct-tablet-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-1CT-TABLET-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 1CT TABLET (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-1ct-tablet-watermelon-gushers.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-2ct-tablet-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-2CT-TABLET-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 2CT TABLET (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-2ct-tablet-blueberry-blast.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-2ct-tablet-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-2CT-TABLET-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 2CT TABLET (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-2ct-tablet-strawberry-splash.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-2ct-tablet-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-2CT-TABLET-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 2CT TABLET (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-2ct-tablet-watermelon-gushers.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-5ct-jar-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-5CT-JAR-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 5CT JAR (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-blueberry-blast.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-5ct-jar-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-5CT-JAR-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 5CT JAR (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-strawberry-splash.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-5ct-jar-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-5CT-JAR-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 5CT JAR (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-watermelon-gushers.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-lucid-50mg-photoroom-20260325-155055",
+      "sku": "PHOTOROOM-20260325-155055",
+      "name": "PHOTOROOM 20260325 155055",
+      "company": "lucid-50mg",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/lucid-50mg/photoroom-20260325-155055.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-BOX-MOCKUP-BLUERAZZ-011426",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES BOX MOCKUP BLUERAZZ 011426",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-strawberry-011426",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-BOX-MOCKUP-STRAWBERRY-011426",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES BOX MOCKUP STRAWBERRY 011426",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-strawberry-011426.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-watermelon-011426",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-BOX-MOCKUP-WATERMELON-011426",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES BOX MOCKUP WATERMELON 011426",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-watermelon-011426.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-blueberry-011226",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-MOCKUP-BLUEBERRY-011226",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES MOCKUP BLUEBERRY 011226",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-blueberry-011226.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-cherry-011226",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-MOCKUP-CHERRY-011226",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES MOCKUP CHERRY 011226",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-cherry-011226.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-strawberry-011226",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-MOCKUP-STRAWBERRY-011226",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES MOCKUP STRAWBERRY 011226",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-strawberry-011226.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-watermelon-011226",
+      "sku": "ULTRAOHMZPSEUDOMEGA-CAPSULES-MOCKUP-WATERMELON-011226",
+      "name": "ULTRAOHMZPSEUDOMEGA CAPSULES MOCKUP WATERMELON 011226",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-watermelon-011226.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-010526",
+      "sku": "ULTRAOHMZPSEUDOSUPREME-CAPSULES-MOCKUP-BOX-BLUERAZZ-010526",
+      "name": "ULTRAOHMZPSEUDOSUPREME CAPSULES MOCKUP BOX BLUERAZZ 010526",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-010526.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-110725",
+      "sku": "ULTRAOHMZPSEUDOSUPREME-CAPSULES-MOCKUP-BOX-BLUERAZZ-110725",
+      "name": "ULTRAOHMZPSEUDOSUPREME CAPSULES MOCKUP BOX BLUERAZZ 110725",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-110725.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-010526",
+      "sku": "ULTRAOHMZPSEUDOSUPREME-CAPSULES-MOCKUP-BOX-MIXEDBERRY-010526",
+      "name": "ULTRAOHMZPSEUDOSUPREME CAPSULES MOCKUP BOX MIXEDBERRY 010526",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-010526.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-110725",
+      "sku": "ULTRAOHMZPSEUDOSUPREME-CAPSULES-MOCKUP-BOX-MIXEDBERRY-110725",
+      "name": "ULTRAOHMZPSEUDOSUPREME CAPSULES MOCKUP BOX MIXEDBERRY 110725",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-110725.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-strawberry-010526",
+      "sku": "ULTRAOHMZPSEUDOSUPREME-CAPSULES-MOCKUP-BOX-STRAWBERRY-010526",
+      "name": "ULTRAOHMZPSEUDOSUPREME CAPSULES MOCKUP BOX STRAWBERRY 010526",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-strawberry-010526.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-strawberry-110725",
+      "sku": "ULTRAOHMZPSEUDOSUPREME-CAPSULES-MOCKUP-BOX-STRAWBERRY-110725",
+      "name": "ULTRAOHMZPSEUDOSUPREME CAPSULES MOCKUP BOX STRAWBERRY 110725",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-strawberry-110725.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-better-now-5ct-blueberry",
+      "sku": "BETTER-NOW-5CT-BLUEBERRY",
+      "name": "BETTER NOW 5CT (BLUEBERRY)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-5ct-blueberry.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-better-now-5ct-strawberry",
+      "sku": "BETTER-NOW-5CT-STRAWBERRY",
+      "name": "BETTER NOW 5CT (STRAWBERRY)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-5ct-strawberry.jpg",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-better-now-5ct-watermelon",
+      "sku": "BETTER-NOW-5CT-WATERMELON",
+      "name": "BETTER NOW 5CT (WATERMELON)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-5ct-watermelon.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-box-mockup-blueberry-012026",
+      "sku": "BETTERNOW-CAPSULES-BOX-MOCKUP-BLUEBERRY-012026",
+      "name": "BETTERNOW CAPSULES BOX MOCKUP BLUEBERRY 012026",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-box-mockup-blueberry-012026.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-box-mockup-strawberry-012026",
+      "sku": "BETTERNOW-CAPSULES-BOX-MOCKUP-STRAWBERRY-012026",
+      "name": "BETTERNOW CAPSULES BOX MOCKUP STRAWBERRY 012026",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-box-mockup-strawberry-012026.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-box-mockup-watermelon-012026",
+      "sku": "BETTERNOW-CAPSULES-BOX-MOCKUP-WATERMELON-012026",
+      "name": "BETTERNOW CAPSULES BOX MOCKUP WATERMELON 012026",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-box-mockup-watermelon-012026.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-jar-mockup-blueberry-012026",
+      "sku": "BETTERNOW-CAPSULES-JAR-MOCKUP-BLUEBERRY-012026",
+      "name": "BETTERNOW CAPSULES JAR MOCKUP BLUEBERRY 012026",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-jar-mockup-blueberry-012026.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-jar-mockup-strawberry-012026",
+      "sku": "BETTERNOW-CAPSULES-JAR-MOCKUP-STRAWBERRY-012026",
+      "name": "BETTERNOW CAPSULES JAR MOCKUP STRAWBERRY 012026",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-jar-mockup-strawberry-012026.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-jar-mockup-watermelon-012026",
+      "sku": "BETTERNOW-CAPSULES-JAR-MOCKUP-WATERMELON-012026",
+      "name": "BETTERNOW CAPSULES JAR MOCKUP WATERMELON 012026",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-jar-mockup-watermelon-012026.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-mockup-box-blueberry-020926",
+      "sku": "BETTERNOW-CAPSULES-MOCKUP-BOX-BLUEBERRY-020926",
+      "name": "BETTERNOW CAPSULES MOCKUP BOX BLUEBERRY 020926",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-mockup-box-blueberry-020926.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-mockup-box-strawberry-020926",
+      "sku": "BETTERNOW-CAPSULES-MOCKUP-BOX-STRAWBERRY-020926",
+      "name": "BETTERNOW CAPSULES MOCKUP BOX STRAWBERRY 020926",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-mockup-box-strawberry-020926.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-mockup-box-watermelon-020926",
+      "sku": "BETTERNOW-CAPSULES-MOCKUP-BOX-WATERMELON-020926",
+      "name": "BETTERNOW CAPSULES MOCKUP BOX WATERMELON 020926",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-whatsapp-image-2026-04-07-at-5-28-35-pm",
+      "sku": "WHATSAPP-IMAGE-2026-04-07-AT-5-28-35-PM",
+      "name": "WHATSAPP IMAGE 2026 04 07 AT 5 28 35 PM",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/whatsapp-image-2026-04-07-at-5-28-35-pm.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-whatsapp-image-2026-04-07-at-5-29-14-pm",
+      "sku": "WHATSAPP-IMAGE-2026-04-07-AT-5-29-14-PM",
+      "name": "WHATSAPP IMAGE 2026 04 07 AT 5 29 14 PM",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/whatsapp-image-2026-04-07-at-5-29-14-pm.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-kanna-kava-kanna-kava-relaxing-tonic",
+      "sku": "KANNA-KAVA-RELAXING-TONIC",
+      "name": "KANNA KAVA RELAXING TONIC",
+      "company": "kanna-kava",
+      "category": "supplements",
+      "image": "assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-strike-kava-shot-strike-kava-shot-strawberry",
+      "sku": "STRIKE-KAVA-SHOT-STRAWBERRY",
+      "name": "STRIKE KAVA SHOT (STRAWBERRY)",
+      "company": "strike-kava-shot",
+      "category": "supplements",
+      "image": "assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-zen-power-shot-img-7056",
+      "sku": "IMG-7056",
+      "name": "IMG 7056",
+      "company": "zen-power-shot",
+      "category": "supplements",
+      "image": "assets/categories/supplements/zen-power-shot/img-7056.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-zen-power-shot-img-7057",
+      "sku": "IMG-7057",
+      "name": "IMG 7057",
+      "company": "zen-power-shot",
+      "category": "supplements",
+      "image": "assets/categories/supplements/zen-power-shot/img-7057.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-file-003",
+      "sku": "FILE-003",
+      "name": "FILE 003",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/file-003.png",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-file-013",
+      "sku": "FILE-013",
+      "name": "FILE 013",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/file-013.png",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6230",
+      "sku": "IMG-6230",
+      "name": "IMG 6230",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6230.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6922",
+      "sku": "IMG-6922",
+      "name": "IMG 6922",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6922.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6923",
+      "sku": "IMG-6923",
+      "name": "IMG 6923",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6923.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6924",
+      "sku": "IMG-6924",
+      "name": "IMG 6924",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6924.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6925",
+      "sku": "IMG-6925",
+      "name": "IMG 6925",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6925.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6926",
+      "sku": "IMG-6926",
+      "name": "IMG 6926",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6926.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6927",
+      "sku": "IMG-6927",
+      "name": "IMG 6927",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6927.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6928",
+      "sku": "IMG-6928",
+      "name": "IMG 6928",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6928.gif",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6929",
+      "sku": "IMG-6929",
+      "name": "IMG 6929",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6929.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6930",
+      "sku": "IMG-6930",
+      "name": "IMG 6930",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6930.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6931",
+      "sku": "IMG-6931",
+      "name": "IMG 6931",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6931.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6933",
+      "sku": "IMG-6933",
+      "name": "IMG 6933",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6933.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6934",
+      "sku": "IMG-6934",
+      "name": "IMG 6934",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6934.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6935",
+      "sku": "IMG-6935",
+      "name": "IMG 6935",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6935.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6936",
+      "sku": "IMG-6936",
+      "name": "IMG 6936",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6936.jpg",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6937",
+      "sku": "IMG-6937",
+      "name": "IMG 6937",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6937.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-vapes-new-img-6938",
+      "sku": "IMG-6938",
+      "name": "IMG 6938",
+      "company": "vapes-new",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/img-6938.jpg",
+      "featured": false,
+      "inStock": true
+    }
+  ]
+}
