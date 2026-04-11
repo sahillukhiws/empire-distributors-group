@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details - Empire Distributors Group.">
+    <meta name="theme-color" content="#ffffff">
+    <title id="page-title">Product - Empire Distributors Group</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="grain"></div>
+
+    <div id="site-header"></div>
+
+    <main id="product-main">
+        <section class="section product-detail" id="product-detail">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <a id="bc-category" href="#">Category</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <span id="bc-product">Product</span>
+                </nav>
+
+                <div class="pd-grid" id="pd-grid">
+                    <div class="pd-media">
+                        <div class="pd-media__frame">
+                            <span class="pd-chip" id="pd-chip">Category</span>
+                            <img id="pd-image" src="" alt="">
+                        </div>
+                        <div class="pd-media__hint">Genuine product image from our catalog</div>
+                    </div>
+
+                    <div class="pd-info">
+                        <div class="pd-brand" id="pd-brand"></div>
+                        <h1 class="pd-name" id="pd-name">Loading…</h1>
+                        <div class="pd-meta">
+                            <div class="pd-meta__row">
+                                <span class="pd-meta__lbl">SKU</span>
+                                <span class="pd-meta__val" id="pd-sku">-</span>
+                            </div>
+                            <div class="pd-meta__row">
+                                <span class="pd-meta__lbl">Category</span>
+                                <span class="pd-meta__val" id="pd-category-name">-</span>
+                            </div>
+                            <div class="pd-meta__row">
+                                <span class="pd-meta__lbl">Brand</span>
+                                <span class="pd-meta__val" id="pd-brand-name">-</span>
+                            </div>
+                            <div class="pd-meta__row">
+                                <span class="pd-meta__lbl">Availability</span>
+                                <span class="pd-meta__val pd-meta__val--ok">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    In stock - ready to ship
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="pd-description" id="pd-description"></p>
+
+                        <div class="pd-features">
+                            <h4>Why wholesale partners choose this product</h4>
+                            <ul id="pd-features-list"></ul>
+                        </div>
+
+                        <div class="pd-cta">
+                            <a class="btn btn-primary pd-cta__main" id="pd-wa-main">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5z"/></svg>
+                                Inquire on WhatsApp
+                            </a>
+                            <a class="btn btn-ghost" id="pd-cta-category">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                                Back to Category
+                            </a>
+                        </div>
+
+                        <div class="pd-trust">
+                            <div class="pd-trust__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.2 8 10 4.5-.8 8-5 8-10V6z"/></svg>
+                                <span>Authentic product</span>
+                            </div>
+                            <div class="pd-trust__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l3 5h2v5h-3a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3z"/></svg>
+                                <span>Fast fulfillment</span>
+                            </div>
+                            <div class="pd-trust__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Live WhatsApp support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RELATED PRODUCTS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">You may also like</span>
+                    <h2>Related <span class="gradient-text">Products</span></h2>
+                    <p>More from the same brand and category.</p>
+                </div>
+                <div id="related-grid" class="prod-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="../js/age-gate.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/catalog.js"></script>
+    <script>
+    /* ---------- Product detail page controller ---------- */
+    (function () {
+        const { loadData, findProduct, findCategory, findCompany, getRelatedProducts,
+                renderProductGrid, wireReveal, wireWhatsapp, waLink,
+                escapeHtml, qs, BASE } = window.EDG;
+
+        const prodId = qs('id');
+
+        loadData().then(data => {
+            renderCatNav(data);
+
+            const p = findProduct(data, prodId);
+            if (!p) {
+                document.getElementById('product-main').innerHTML = `
+                    <section class="section"><div class="container">
+                        <div class="empty-state">
+                            <h2>Product not found</h2>
+                            <p>That product doesn't exist. <a href="${BASE}index.html">Return home</a>.</p>
+                        </div>
+                    </div></section>
+                `;
+                wireWhatsapp();
+                return;
+            }
+
+            const cat = findCategory(data, p.category);
+            const brand = findCompany(data, p.company);
+
+            // Set category color on detail page
+            const detail = document.getElementById('product-detail');
+            detail.style.setProperty('--c', `var(--c-${p.category})`);
+            detail.style.setProperty('--c-lt', `var(--c-${p.category}-lt)`);
+
+            // Fill in data
+            document.getElementById('page-title').textContent = `${p.name} - Empire Distributors Group`;
+            document.getElementById('pd-image').src = p.image;
+            document.getElementById('pd-image').alt = p.name;
+            document.getElementById('pd-chip').textContent = cat ? cat.name : '';
+            document.getElementById('pd-name').textContent = p.name;
+            document.getElementById('pd-brand').textContent = brand ? brand.name : '';
+            document.getElementById('pd-sku').textContent = p.sku;
+            document.getElementById('pd-category-name').textContent = cat ? cat.name : '';
+            document.getElementById('pd-brand-name').textContent = brand ? brand.name : '';
+
+            // Auto-generate description and features
+            const catName = cat ? cat.name : 'premium';
+            const brandName = brand ? brand.name : 'a trusted brand';
+            document.getElementById('pd-description').textContent =
+                `${p.name} is part of our curated ${catName} collection, sourced directly from ${brandName}. ` +
+                `Every unit in our inventory meets Empire Distributors Group's quality standards, so your customers get the authentic product every time. ` +
+                `Available for both wholesale and retail - contact us on WhatsApp to place an order, request pricing, or get shelf placement recommendations.`;
+
+            document.getElementById('pd-features-list').innerHTML = [
+                'Sourced directly from authorized channels - 100% authentic',
+                'Fast wholesale fulfillment with bulk-order discounts',
+                'Compliant packaging and labeling',
+                'Live WhatsApp support for reorders and questions',
+            ].map(f => `
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    ${escapeHtml(f)}
+                </li>
+            `).join('');
+
+            // Breadcrumb category link
+            const bcCat = document.getElementById('bc-category');
+            bcCat.textContent = cat ? cat.name : 'Category';
+            bcCat.href = cat ? `${BASE}pages/category.html?id=${cat.id}` : '#';
+            document.getElementById('bc-product').textContent = p.name;
+
+            // CTAs
+            document.getElementById('pd-wa-main').href = waLink(
+                `Inquiry: ${p.name} (SKU: ${p.sku}). I'd like pricing and availability for this ${catName} product.`
+            );
+            document.getElementById('pd-wa-main').target = '_blank';
+            document.getElementById('pd-wa-main').rel = 'noopener';
+
+            document.getElementById('pd-cta-category').href = cat ? `${BASE}pages/category.html?id=${cat.id}` : `${BASE}index.html`;
+
+            // Related products
+            const related = getRelatedProducts(data, p, 4);
+            renderProductGrid(related, data, document.getElementById('related-grid'));
+
+            wireWhatsapp();
+            wireReveal();
+        });
+
+        function renderCatNav(data) {
+            const el = document.getElementById('cat-nav-list');
+            if (!el) return;
+            el.innerHTML = `
+                ${data.categories.map(c => `
+                    <a class="cat-nav__item" style="--c: var(--c-${c.id}); --c-lt: var(--c-${c.id}-lt);" href="${BASE}pages/category.html?id=${c.id}">${escapeHtml(c.name)}</a>
+                `).join('')}
+                <a class="cat-nav__item" href="${BASE}pages/brands.html">Brands</a>
+                <a class="cat-nav__item" href="${BASE}pages/about.html">About</a>
+                <a class="cat-nav__item" href="${BASE}pages/contact.html">Contact</a>
+            `;
+        }
+    })();
+    </script>
+    <script src="../js/search.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+</html>

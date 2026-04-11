@@ -8,6 +8,10 @@
     const clearBtn = document.getElementById('search-clear');
     if (!input || !results) return;
 
+    const inPages = /\/pages\//.test(window.location.pathname);
+    const BASE = inPages ? '../' : '';
+    const ICONS = (window.EDG && window.EDG.ICONS) || {};
+
     let data = null;
     let activeIndex = -1;
     let currentItems = [];
@@ -90,7 +94,7 @@
             productMatches.forEach((p, i) => {
                 const company = data.companies.find(c => c.id === p.company);
                 html += `
-                    <a class="search__item" data-idx="${i}" href="pages/product.html?id=${p.id}">
+                    <a class="search__item" data-idx="${i}" href="${BASE}pages/product.html?id=${encodeURIComponent(p.id)}">
                         <img class="search__item-img" src="${p.image}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
                         <div class="search__item-text">
                             <div class="search__item-name">${highlight(p.name, query)}</div>
@@ -106,8 +110,8 @@
             html += '<div class="search__group"><div class="search__group-title">Brands</div>';
             companyList.forEach(c => {
                 html += `
-                    <a class="search__item" href="pages/brand.html?id=${c.id}">
-                        <div class="search__item-img" style="display:grid;place-items:center;font-weight:700;">${c.name[0]}</div>
+                    <a class="search__item" href="${BASE}pages/brands.html#${c.id}">
+                        <div class="search__item-img" style="display:grid;place-items:center;font-weight:700;color:var(--empire-teal);">${escapeHtml(c.name[0])}</div>
                         <div class="search__item-text">
                             <div class="search__item-name">${highlight(c.name, query)}</div>
                             <div class="search__item-meta">Brand</div>
@@ -122,8 +126,8 @@
             html += '<div class="search__group"><div class="search__group-title">Categories</div>';
             catMatches.forEach(c => {
                 html += `
-                    <a class="search__item" href="pages/category.html?id=${c.id}">
-                        <div class="search__item-img" style="display:grid;place-items:center;font-size:1.3rem;">${c.icon}</div>
+                    <a class="search__item" href="${BASE}pages/category.html?id=${c.id}">
+                        <div class="search__item-img" style="display:grid;place-items:center;color:var(--c-${c.id},var(--empire-teal));">${ICONS[c.id] || ''}</div>
                         <div class="search__item-text">
                             <div class="search__item-name">${highlight(c.name, query)}</div>
                             <div class="search__item-meta">Category</div>
@@ -188,9 +192,17 @@
         if (!results.contains(e.target) && e.target !== input) hideResults();
     });
 
-    // ---------- Load data ----------
-    fetch('data/products.json')
-        .then(r => r.json())
-        .then(json => { data = json; })
-        .catch(err => console.error('Search data load failed:', err));
+    // ---------- Load data (via shared catalog loader) ----------
+    if (window.EDG && window.EDG.loadData) {
+        window.EDG.loadData()
+            .then(json => { data = json; })
+            .catch(err => console.error('Search data load failed:', err));
+    } else {
+        const inPages = /\/pages\//.test(window.location.pathname);
+        const BASE = inPages ? '../' : '';
+        fetch(BASE + 'data/products.json')
+            .then(r => r.json())
+            .then(json => { data = json; })
+            .catch(err => console.error('Search data load failed:', err));
+    }
 })();

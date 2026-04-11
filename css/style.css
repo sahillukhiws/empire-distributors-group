@@ -64,7 +64,7 @@
     --r-lg: 22px;
     --r-xl: 32px;
 
-    --container: 1280px;
+    --container: 1480px;   /* generous default so gaps on 1536/1920 screens are small */
     --header-h: 84px;
     --nav-h: 56px;
 
@@ -159,7 +159,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
 }
 
 /* ---------- Layout ---------- */
-.container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; position: relative; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 6.5rem; position: relative; }
 .section { padding: 6rem 0; position: relative; }
 .section-head { text-align: center; margin-bottom: 3.5rem; }
 .section-head .eyebrow {
@@ -306,54 +306,134 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
 }
 
 /* ============================================
-   HEADER
+   HEADER + NAV - coordinated state machine
+   .site-top wraps header + nav + big logo overlay.
+
+   Two states toggled by JS via .is-expanded / .is-compact:
+     - expanded → big centered logo spans header+nav rows,
+                  inline .brand hidden, nav visible
+     - compact  → inline .brand shown at normal size, nav collapsed,
+                  bottom border line visible
+
+   Heights stay fixed (no layout jumps). The nav slides up behind
+   the header using transform + height collapse paired with the
+   header, so the whole .site-top shrinks from 140px to 84px
+   smoothly, and page content follows along with no jump.
    ============================================ */
+.site-top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Solid opaque background - NO backdrop-filter.
+       backdrop-filter on a resizing sticky element causes
+       repaint flicker during the nav collapse/expand animation
+       (the "white flash" bug). A solid 98% white reads nearly
+       identical visually, and renders stably on every GPU. */
+    background: #fbfbfd;
+    transition: box-shadow 0.45s var(--ease);
+    box-shadow: none;
+    --logo-big-w: 260px;
+    --logo-big-h: 118px;
+    --logo-pad: calc(var(--logo-big-w) + 2rem);
+}
+
+.site-top.is-compact {
+    box-shadow: 0 1px 2px rgba(15, 18, 38, 0.04), 0 6px 18px rgba(15, 18, 38, 0.06);
+}
+
 .site-header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(24px) saturate(150%);
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--sh-xs);
-    transform: translateY(0);
-    transition: transform 0.4s var(--ease), box-shadow 0.4s;
-    will-change: transform;
+    position: relative;
+    background: transparent;
+    z-index: 2;
 }
-.site-header.is-hidden { transform: translateY(-100%); }
-.site-header.is-scrolled { box-shadow: var(--sh-md); }
-/* Hover-zone strip at the very top — invisible band that catches mouse to reveal header */
-.header-hover-zone {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 12px;
-    z-index: 99;
-    pointer-events: auto;
-}
-/* Push body content below the fixed header + nav */
-body { padding-top: calc(var(--header-h) + var(--nav-h)); }
-.site-header::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 10%; right: 10%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--empire-teal), var(--violet), transparent);
-    opacity: 0.5;
-}
+
+/*
+   Header layout is IDENTICAL in both states - search bar and
+   WhatsApp button never move horizontally. The left column
+   always reserves --logo-pad (260px+2rem) for the logo.
+   In compact state, the small inline brand sits in that space.
+   In expanded state, the big brand sits in the same space.
+   Only the LOGO size changes, not the surrounding elements.
+*/
 .header-inner {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: var(--logo-pad) 1fr auto;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
     height: var(--header-h);
+    position: relative;
 }
-.brand { display: flex; align-items: center; gap: 0.8rem; }
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-self: start;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s var(--ease), visibility 0s linear 0s;
+}
 .brand__logo {
-    height: 58px;
+    height: 50px;
     width: auto;
-    filter: drop-shadow(0 4px 12px rgba(47, 138, 148, 0.2));
+    filter: drop-shadow(0 4px 12px rgba(47, 138, 148, 0.18));
     transition: transform 0.4s var(--ease);
 }
 .brand:hover .brand__logo { transform: scale(1.04); }
+
+/* Expanded state → inline brand fades out (big logo fades in on top) */
+.site-top.is-expanded .brand {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s var(--ease), visibility 0s linear 0.25s;
+}
+
+/* ---------- Big logo overlay - only visible when expanded ---------- */
+/*
+   Uses a centered container parent; the overlay inner is flex-aligned
+   to the start. Pointer events are restricted to the <img> so the rest
+   of the overlay rectangle never intercepts clicks on search/wa-btn.
+*/
+.brand-big-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+}
+.brand-big {
+    width: 100%;
+    max-width: var(--container);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    /* Opacity only - no transform. Any transform = visible movement
+       that the user perceives as "something sliding" during hover toggles. */
+    transition: opacity 0.3s var(--ease),
+                visibility 0s linear 0.3s;
+}
+.brand-big__img {
+    height: var(--logo-big-h);
+    width: auto;
+    max-width: var(--logo-big-w);
+    object-fit: contain;
+    filter: drop-shadow(0 10px 28px rgba(47, 138, 148, 0.22));
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Expanded state → big logo fades in, no movement */
+.site-top.is-expanded .brand-big {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.35s var(--ease),
+                visibility 0s linear 0s;
+}
 
 /* Search */
 .search {
@@ -427,23 +507,121 @@ body { padding-top: calc(var(--header-h) + var(--nav-h)); }
 .search__item-meta { font-size: 0.75rem; color: var(--text-mute); }
 .search__empty { padding: 2rem 1.3rem; text-align: center; color: var(--text-mute); font-size: 0.9rem; }
 
-/* WhatsApp button */
+/* ============================================
+   FLOATING ACTIONS - WhatsApp + Scroll-to-top
+   Fixed to bottom-right corner. Stack order (top → bottom):
+     1. WhatsApp
+     2. Scroll-to-top
+   Both hidden at top of page, both appear together once
+   the user scrolls past 400px.
+   ============================================ */
+.floating-actions {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(12px);
+    visibility: hidden;
+    transition: opacity 0.35s var(--ease),
+                transform 0.35s var(--ease),
+                visibility 0s linear 0.35s;
+}
+.floating-actions.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 0.35s var(--ease),
+                transform 0.35s var(--ease),
+                visibility 0s linear 0s;
+}
+
+.float-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.3s var(--ease),
+                box-shadow 0.3s var(--ease),
+                background 0.3s,
+                border-color 0.3s,
+                color 0.3s;
+    border: none;
+    color: #fff;
+    position: relative;
+}
+.float-btn--wa {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    box-shadow:
+        0 8px 20px rgba(37, 211, 102, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.float-btn--wa::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid rgba(37, 211, 102, 0.5);
+    animation: pulseRing 2.5s infinite;
+    pointer-events: none;
+}
+.float-btn--wa:hover {
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow:
+        0 10px 24px rgba(37, 211, 102, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.float-btn--top {
+    background: #fff;
+    color: var(--empire-teal-dk);
+    border: 1px solid var(--border-strong);
+    box-shadow:
+        0 6px 16px rgba(15, 18, 38, 0.12),
+        0 2px 4px rgba(15, 18, 38, 0.06);
+}
+.float-btn--top:hover {
+    background: var(--empire-teal);
+    color: #fff;
+    border-color: var(--empire-teal);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 10px 24px rgba(47, 138, 148, 0.35),
+        0 2px 4px rgba(15, 18, 38, 0.08);
+}
+
+@media (max-width: 720px) {
+    .floating-actions { right: 1rem; bottom: 1rem; gap: 0.6rem; }
+    .float-btn { width: 50px; height: 50px; }
+}
+
+/* WhatsApp button (header) */
 .wa-btn {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 52px; height: 52px;
+    width: 48px; height: 48px;
     border-radius: 50%;
     background: linear-gradient(135deg, #25d366, #128c7e);
     color: #fff;
     transition: transform 0.3s var(--ease);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35), inset 0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3), inset 0 1px 0 rgba(255,255,255,0.3);
     position: relative;
+    flex-shrink: 0;
 }
+.wa-btn svg { width: 20px; height: 20px; }
 .wa-btn::before {
     content: '';
-    position: absolute; inset: -6px;
+    position: absolute; inset: -4px;
     border-radius: 50%;
-    border: 2px solid rgba(37, 211, 102, 0.5);
+    border: 2px solid rgba(37, 211, 102, 0.45);
     animation: pulseRing 2.5s infinite;
+    pointer-events: none;
 }
 .wa-btn:hover { transform: scale(1.08); }
 @keyframes pulseRing {
@@ -451,23 +629,195 @@ body { padding-top: calc(var(--header-h) + var(--nav-h)); }
     100% { transform: scale(1.3); opacity: 0; }
 }
 
-/* ---------- Category Nav ---------- */
-.cat-nav {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(16px);
-    overflow-x: auto;
-    scrollbar-width: none;
+/* ---------- Hamburger (hidden on desktop) ---------- */
+.hamburger {
+    display: none;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: var(--sh-sm);
+    transition: background 0.25s, border-color 0.25s;
+    flex-shrink: 0;
 }
-.cat-nav::-webkit-scrollbar { display: none; }
+.hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.3s var(--ease), opacity 0.25s;
+}
+.hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Mobile drawer (hidden on desktop) ---------- */
+.mobile-drawer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+}
+.mobile-drawer.is-open { display: block; }
+.mobile-drawer__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 18, 38, 0.55);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    animation: fadeIn 0.25s var(--ease) forwards;
+}
+.mobile-drawer__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 86%;
+    max-width: 340px;
+    background: #fff;
+    box-shadow: 0 0 60px rgba(15, 18, 38, 0.25);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    animation: drawerIn 0.32s var(--ease) forwards;
+}
+@keyframes drawerIn { to { transform: translateX(0); } }
+.mobile-drawer__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.3rem;
+    border-bottom: 1px solid var(--border);
+}
+.mobile-drawer__logo { height: 42px; width: auto; }
+.mobile-drawer__close {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--bg-2);
+    color: var(--text-2);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: background 0.2s;
+}
+.mobile-drawer__close:hover { background: var(--bg-3); }
+.mobile-drawer__nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.drawer-link {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.2rem;
+    border-radius: 12px;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+    --c: var(--empire-teal);
+    --c-lt: var(--brand-lt);
+}
+.drawer-link::before {
+    content: '';
+    width: 3px;
+    height: 20px;
+    background: var(--c);
+    border-radius: 2px;
+    margin-right: 0.9rem;
+    transition: height 0.25s;
+}
+.drawer-link:hover,
+.drawer-link:active {
+    background: var(--c-lt);
+    color: var(--c);
+}
+.drawer-link:hover::before,
+.drawer-link:active::before { height: 26px; }
+.mobile-drawer__footer {
+    padding: 1.2rem 1.3rem calc(1.2rem + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--border);
+    background: var(--bg-2);
+}
+.mobile-drawer__wa { width: 100%; padding: 0.95rem 1rem; font-size: 0.9rem; }
+.mobile-drawer__note {
+    margin-top: 0.7rem;
+    font-size: 0.72rem;
+    color: var(--text-mute);
+    text-align: center;
+}
+
+/* ---------- Category Nav (part of .site-top) ---------- */
+/*
+   The nav sits underneath the header inside .site-top. Its HEIGHT
+   is what shrinks (not max-height) so the sticky container also
+   shrinks, and page content follows with no jump.
+*/
+.cat-nav {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    height: var(--nav-h);
+    overflow: hidden;
+    transition: height 0.45s var(--ease);
+    will-change: height;
+}
+.site-top.is-compact .cat-nav {
+    height: 0;
+    pointer-events: none;
+}
+.cat-nav__container {
+    max-width: var(--container);
+    margin: 0 auto;
+    /* Always reserve the same left space as the header logo column
+       + container padding + header grid gap, so nav pills align
+       with where the search bar starts.
+       Default laptop/desktop matches .container padding (6.5rem). */
+    padding: 0 6.5rem 0 calc(var(--logo-pad) + 6.5rem + 1.2rem);
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+}
 .cat-nav__list {
     display: flex;
     gap: 0.5rem;
-    height: var(--nav-h);
+    height: 100%;
     align-items: center;
-    padding: 0 1.5rem;
-    max-width: var(--container);
-    margin: 0 auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex: 1;
 }
+.cat-nav__list::-webkit-scrollbar { display: none; }
+
+/* Bottom border line - appears only when compact */
+.site-top::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: var(--border);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+    pointer-events: none;
+    z-index: 4;
+}
+.site-top.is-compact::after { opacity: 1; }
 .cat-nav__item {
     display: inline-flex; align-items: center; gap: 0.5rem;
     padding: 0.6rem 1.2rem;
@@ -613,80 +963,131 @@ body { padding-top: calc(var(--header-h) + var(--nav-h)); }
 @keyframes pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 0.9; } }
 
 /* ============================================
-   CATEGORY GRID - SVG icons, no tilt
+   CATEGORY GRID - editorial, classic, professional
+   Category color used sparingly (thin accent bar, icon
+   tint, subtle hover wash) - not flooded.
    ============================================ */
 .cat-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.4rem;
+    gap: 1.25rem;
 }
 .cat-card {
     position: relative;
     background: #fff;
-    border: 1px solid var(--border-strong);
-    border-radius: var(--r-lg);
-    padding: 1.6rem;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.5rem 1.5rem 1.4rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    min-height: 180px;
-    transition: transform 0.4s var(--ease), box-shadow 0.4s, border-color 0.3s;
-    box-shadow: var(--sh-sm);
-    /* Each card gets its category color via inline --c / --c-lt */
+    min-height: 190px;
+    transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease), border-color 0.35s;
+    box-shadow:
+        0 1px 2px rgba(15, 18, 38, 0.04),
+        0 4px 14px rgba(15, 18, 38, 0.04);
+    overflow: hidden;
     --c: var(--empire-teal);
     --c-lt: var(--brand-lt);
 }
-.cat-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sh-xl), 0 0 30px rgba(0,0,0,0.05), 0 0 24px var(--c, var(--empire-teal));
-    border-color: var(--c);
+
+/* Left accent bar - thin category color strip */
+.cat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 3px;
+    background: var(--c);
+    opacity: 0.85;
+    transition: width 0.4s var(--ease), opacity 0.4s;
 }
+
+/* Subtle diagonal wash behind the card - appears on hover only */
+.cat-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--c) 6%, transparent) 0%,
+        transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+    pointer-events: none;
+}
+
+.cat-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--c) 35%, var(--border-strong));
+    box-shadow:
+        0 2px 4px rgba(15, 18, 38, 0.05),
+        0 12px 28px rgba(15, 18, 38, 0.10),
+        0 28px 56px rgba(15, 18, 38, 0.06);
+}
+.cat-card:hover::before { width: 5px; opacity: 1; }
+.cat-card:hover::after { opacity: 1; }
+
 .cat-card__icon {
-    width: 56px; height: 56px;
-    border-radius: 14px;
-    background: var(--c-lt);
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+    background: #fff;
     color: var(--c);
     display: grid;
     place-items: center;
-    transition: background 0.3s var(--ease), color 0.3s, transform 0.4s var(--ease);
-    box-shadow: var(--sh-xs);
+    margin-bottom: 1.1rem;
+    border: 1px solid color-mix(in srgb, var(--c) 18%, var(--border));
+    box-shadow:
+        0 1px 2px rgba(15, 18, 38, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: color 0.35s, border-color 0.35s, transform 0.5s var(--ease);
+    position: relative;
+    z-index: 1;
 }
 .cat-card:hover .cat-card__icon {
-    background: var(--c);
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 0 24px var(--c);
+    border-color: color-mix(in srgb, var(--c) 55%, transparent);
+    transform: translateY(-2px);
 }
-.cat-card__icon svg { width: 30px; height: 30px; }
-.cat-card__body { flex: 1; }
+.cat-card__icon svg { width: 26px; height: 26px; }
+
+.cat-card__body { flex: 1; position: relative; z-index: 1; }
 .cat-card__name {
     font-family: var(--font-display);
-    font-size: 1.3rem;
+    font-size: 1.22rem;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+    transition: color 0.3s;
+}
+.cat-card:hover .cat-card__name {
+    color: color-mix(in srgb, var(--c) 85%, var(--text));
 }
 .cat-card__count {
-    font-size: 0.82rem;
+    font-size: 0.76rem;
     color: var(--text-mute);
     font-weight: 500;
+    letter-spacing: 0.02em;
 }
+
 .cat-card__arrow {
-    position: absolute; top: 1.4rem; right: 1.4rem;
-    width: 38px; height: 38px;
+    position: absolute;
+    bottom: 1.4rem;
+    right: 1.4rem;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: var(--bg-2);
-    border: 1px solid var(--border-strong);
-    display: grid; place-items: center;
-    transition: all 0.4s var(--ease);
-    color: var(--text-2);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    transition: background 0.35s, border-color 0.35s, color 0.35s, transform 0.4s var(--ease);
+    color: var(--text-mute);
+    z-index: 1;
 }
 .cat-card:hover .cat-card__arrow {
     background: var(--c);
     border-color: var(--c);
     color: #fff;
-    transform: translateX(4px);
-    box-shadow: 0 0 18px var(--c);
+    transform: translate(3px, -3px);
 }
 
 /* ============================================
@@ -899,60 +1300,298 @@ body { padding-top: calc(var(--header-h) + var(--nav-h)); }
 .feat__text { font-size: 0.88rem; color: var(--text-dim); line-height: 1.6; }
 
 /* ============================================
-   FOOTER
+   FOOTER - dark, professional, editorial
+   Base is a warm dark slate (#141a26) - deep enough
+   to feel premium, but with enough blue warmth that
+   the teal logo complements instead of fighting it.
+   Uses empire-logo-2.png inside a lighter glass card
+   so the logo pops off the background.
    ============================================ */
 .site-footer {
-    background: #fff;
-    border-top: 1px solid var(--border);
+    --f-bg: #141a26;                    /* warm dark slate base */
+    --f-bg-2: #1b222f;                  /* raised surface */
+    --f-text: #f0f2f8;
+    --f-text-dim: #a0a6b8;
+    --f-text-mute: #6e7486;
+    --f-border: rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(180deg, #0f1522 0%, var(--f-bg) 40%, var(--f-bg) 100%);
+    color: var(--f-text);
     padding: 5rem 0 2rem;
     margin-top: 5rem;
     position: relative;
+    overflow: hidden;
 }
+
+/* Soft teal radial accent in the top-left - bleeds in subtly */
 .site-footer::before {
     content: '';
     position: absolute;
-    top: 0; left: 20%; right: 20%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--empire-teal), var(--violet), transparent);
+    top: -220px;
+    left: -120px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(47, 138, 148, 0.25) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
 }
+
+/* Thin teal gradient hairline at the very top */
+.site-footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(94, 184, 194, 0.55) 50%, transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.site-footer > .container { z-index: 1; }
+
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
     gap: 3rem;
     margin-bottom: 3rem;
 }
-.footer-brand img { height: 64px; margin-bottom: 1rem; }
+
+/* ---------- Brand column ---------- */
+/* Logo card - a subtle lighter panel that lifts the logo off
+   the dark footer. Matches the logo's own teal accents. */
+.footer-brand__logo {
+    display: inline-flex;
+    padding: 0.3rem 0.3rem;
+    margin-bottom: 1.3rem;
+    background: linear-gradient(145deg,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(47, 138, 148, 0.06) 100%);
+    border: 1px solid rgba(94, 184, 194, 0.18);
+    border-radius: 14px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 2px 6px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: transform 0.4s var(--ease),
+                border-color 0.3s,
+                box-shadow 0.4s;
+}
+.footer-brand__logo:hover {
+    transform: translateY(-2px);
+    border-color: rgba(94, 184, 194, 0.35);
+    box-shadow:
+        0 14px 36px rgba(47, 138, 148, 0.25),
+        0 2px 6px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.footer-brand__logo img {
+    height: 68px;
+    width: auto;
+    display: block;
+    border-radius: 8px;
+}
+
 .footer-brand p {
-    color: var(--text-dim);
+    color: var(--f-text-dim);
     font-size: 0.92rem;
-    max-width: 340px;
-    line-height: 1.7;
+    max-width: 380px;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
 }
+
+/* Social icon row under the brand paragraph */
+.footer-brand__social {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.footer-brand__social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--f-border);
+    display: grid;
+    place-items: center;
+    color: var(--f-text-dim);
+    transition: background 0.3s var(--ease),
+                border-color 0.3s var(--ease),
+                color 0.3s,
+                transform 0.3s var(--ease),
+                box-shadow 0.3s var(--ease);
+    cursor: pointer;
+}
+.footer-brand__social a:hover {
+    background: var(--empire-teal);
+    border-color: var(--empire-teal);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(47, 138, 148, 0.35);
+}
+
+/* ---------- Link columns ---------- */
 .footer-col h4 {
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--text-mute);
-    margin-bottom: 1.2rem;
+    color: var(--f-text);
+    margin-bottom: 1.4rem;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 0.8rem;
 }
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 24px;
+    height: 2px;
+    background: var(--empire-teal);
+    border-radius: 1px;
+}
+
 .footer-col a {
     display: block;
-    padding: 0.4rem 0;
-    color: var(--text-dim);
-    font-size: 0.92rem;
-    transition: color 0.3s, transform 0.3s;
+    padding: 0.45rem 0 0.45rem 0;
+    color: var(--f-text-dim);
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.25s, padding-left 0.25s var(--ease);
+    cursor: pointer;
+    position: relative;
 }
-.footer-col a:hover { color: var(--empire-teal); transform: translateX(4px); }
+.footer-col a::before {
+    content: '→';
+    position: absolute;
+    left: -1.2rem;
+    top: 0.45rem;
+    opacity: 0;
+    color: var(--empire-teal);
+    transition: opacity 0.25s var(--ease), left 0.25s var(--ease);
+    font-size: 0.85rem;
+}
+.footer-col a:hover {
+    color: #fff;
+    padding-left: 1.2rem;
+}
+.footer-col a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+/* ---------- Contact column ---------- */
+/*
+   Each contact row = icon tile + text block (label + value).
+   Icon tile matches the social row visual language for consistency.
+   Label is a small uppercase hint; value is the address/email/phone.
+*/
+.footer-col--contact { min-width: 0; }
+.footer-contacts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.fc-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 0.85rem;
+    align-items: flex-start;
+}
+.fc-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(47, 138, 148, 0.1);
+    border: 1px solid rgba(94, 184, 194, 0.22);
+    color: var(--empire-teal);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    transition: background 0.3s var(--ease),
+                border-color 0.3s,
+                color 0.3s;
+}
+.fc-item:hover .fc-icon {
+    background: var(--empire-teal);
+    border-color: var(--empire-teal);
+    color: #fff;
+}
+.fc-text { min-width: 0; }
+.fc-label {
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--f-text-mute);
+    margin-bottom: 0.2rem;
+    line-height: 1;
+}
+.fc-value {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--f-text-dim);
+    font-style: normal;
+    word-break: break-word;
+    display: block;
+    transition: color 0.25s;
+}
+.fc-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+.fc-link:hover {
+    color: #fff;
+}
+/* Override the generic .footer-col a arrow for contact rows - they already have icons */
+.footer-col--contact a::before { display: none; }
+.footer-col--contact a { padding: 0; }
+.footer-col--contact a:hover { padding-left: 0; }
+
+/* ---------- Bottom bar ---------- */
 .footer-bot {
-    border-top: 1px solid var(--border);
-    padding-top: 2rem;
+    border-top: 1px solid var(--f-border);
+    padding-top: 1.8rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem 1.8rem;
     justify-content: space-between;
-    font-size: 0.82rem;
-    color: var(--text-mute);
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--f-text-mute);
+}
+.footer-bot > div { display: flex; align-items: center; }
+.footer-bot a {
+    color: var(--f-text-dim);
+    transition: color 0.25s;
+}
+.footer-bot a:hover { color: var(--empire-teal); }
+
+.footer-bot__legal {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+}
+.footer-bot__warning {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--f-text-mute);
+}
+.footer-bot__warning::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+    flex-shrink: 0;
 }
 
 /* ============================================
@@ -965,37 +1604,381 @@ body { padding-top: calc(var(--header-h) + var(--nav-h)); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE SYSTEM
+   Breakpoints (mobile-first mental model, but written max-width):
+     1537+     Large desktops / external monitors / 4K
+     1281-1536 Standard desktops / large laptops (default layout)
+     1025-1280 Small laptops / large tablets landscape
+     721-1024  Tablets (iPad portrait/landscape), small laptops
+     481-720   Large phones + small tablets portrait
+     381-480   Standard phones (iPhone 12/13/14, most Android)
+     ≤ 380     Small phones (iPhone SE, older Android)
    ============================================ */
-@media (max-width: 1024px) {
-    .hero__inner { grid-template-columns: 1fr; gap: 3rem; }
-    .hero__visual { max-width: 520px; margin: 0 auto; height: 440px; transform: rotateY(-6deg) rotateX(3deg); }
-    .cat-grid { grid-template-columns: repeat(3, 1fr); }
-    .prod-grid { grid-template-columns: repeat(3, 1fr); }
-    .feat { grid-template-columns: repeat(2, 1fr); }
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+/* ---------- Very large screens: expand container so side gaps shrink ---------- */
+@media (min-width: 1537px) {
+    :root { --container: 1720px; }
+    .hero__visual { height: 620px; }
 }
-@media (max-width: 720px) {
-    :root { --header-h: 72px; }
-    .header-inner { grid-template-columns: auto auto; gap: 0.8rem; }
-    .search { grid-column: 1 / -1; order: 3; max-width: none; }
-    .hero { padding: 3.5rem 0 4rem; }
-    .hero__visual { height: 380px; transform: none; }
-    .cat-grid, .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .section { padding: 4rem 0; }
-    .age-gate__card { padding: 2.2rem 1.5rem; }
-    .hero__stats { gap: 1.8rem; }
-    .hero__stat .num { font-size: 1.9rem; }
-    .brand__logo { height: 48px; }
-    .prod-card__name { font-size: 0.92rem; min-height: auto; }
-}
-@media (max-width: 480px) {
-    .cat-grid, .prod-grid { grid-template-columns: 1fr 1fr; }
-    .feat { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
-    body::before, body::after { width: 450px; height: 450px; }
+@media (min-width: 1921px) {
+    :root { --container: 1920px; }
 }
 
+/* ---------- Small laptops / large tablets landscape (≤ 1280px) ---------- */
+/* Keep the same layout as default laptop - just fluid container, no shrink */
+@media (max-width: 1280px) {
+    :root { --container: 100%; }
+    .container { padding: 0 4rem; }
+    .cat-nav__container { padding: 0 4rem 0 calc(var(--logo-pad) + 4rem + 1.2rem); }
+    .hero__visual { height: 520px; }
+}
+
+/* ---------- Tablets portrait/landscape (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+    :root {
+        --container: 100%;
+        --header-h: 76px;
+    }
+    .container { padding: 0 2.5rem; }
+    .cat-nav__container { padding: 0 2.5rem 0 calc(var(--logo-pad) + 2.5rem + 1rem); }
+    .section { padding: 4.5rem 0; }
+    .section-head { margin-bottom: 2.8rem; }
+
+    /* Tablet header: smaller search bar, smaller WA button */
+    .header-inner { gap: 1rem; }
+    .search { max-width: 420px; }
+    .search__input { height: 44px; font-size: 0.88rem; padding: 0 2.6rem; }
+    .search__icon { left: 1rem; }
+    .wa-btn { width: 44px; height: 44px; }
+    .wa-btn svg { width: 18px; height: 18px; }
+    .brand__logo { height: 46px; }
+
+    /* Tablet hero: keep 3D showcase visible but more compact, side-by-side stays */
+    .hero { padding: 4rem 0 3.5rem; }
+    .hero__inner { grid-template-columns: 1fr 1fr; gap: 2.2rem; }
+    .hero__visual {
+        max-width: none;
+        height: 420px;
+        transform: rotateY(-8deg) rotateX(4deg);
+    }
+    .hero__visual::before { inset: 15%; }
+    .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
+    .hero p.lead { font-size: 1rem; }
+    .hero__stats { gap: 2rem; }
+    .hero__stat .num { font-size: 2rem; }
+
+    .cat-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .prod-grid { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .feat { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+
+    /* Shrink big logo to fit narrower widths */
+    .site-top { --logo-big-w: 200px; --logo-big-h: 90px; --logo-pad: calc(200px + 1.4rem); }
+}
+
+/* ---------- Tablet portrait / small tablets (≤ 900px) ---------- */
+/* Hero stacks, but 3D visual stays */
+@media (max-width: 900px) {
+    .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero__visual {
+        max-width: 560px;
+        margin: 0 auto;
+        height: 440px;
+    }
+}
+
+/* ---------- Mobile (≤ 720px) ---------- */
+/*
+   Mobile header becomes:
+   Row 1 (fixed 64px): [☰]  [centered logo]  [WA]
+   Row 2 (50px):       [🔍 search input full width]
+   Total header height: 114px (big logo and nav bar hidden)
+   Nav pill bar is replaced entirely by the hamburger drawer.
+*/
+@media (max-width: 720px) {
+    :root {
+        --header-h: 114px;  /* 64 (row 1) + 50 (row 2) */
+        --nav-h: 0px;       /* hidden on mobile */
+    }
+    .container { padding: 0 1.25rem; }
+    .section { padding: 3.5rem 0; }
+    .section-head { margin-bottom: 2.2rem; }
+    .section-head p { font-size: 0.95rem; }
+
+    /* Hamburger becomes visible, WA becomes smaller */
+    .hamburger { display: flex; }
+
+    /* Header layout: 3-column grid in row 1, search takes full width of row 2 */
+    .header-inner {
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 64px 50px;
+        gap: 0 0.8rem;
+        height: auto;
+        padding: 0;
+        align-items: center;
+    }
+    .hamburger { grid-column: 1; grid-row: 1; }
+    .brand {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+        max-width: none;
+    }
+    .brand__logo { height: 38px; }
+    .wa-btn {
+        grid-column: 3;
+        grid-row: 1;
+        width: 42px;
+        height: 42px;
+    }
+    .wa-btn svg { width: 18px; height: 18px; }
+    .wa-btn::before { inset: -3px; }
+
+    /* Search on row 2, full width, smaller */
+    .search {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        max-width: none;
+        align-self: start;
+        padding-top: 0.2rem;
+        padding-bottom: 0.6rem;
+    }
+    .search__input {
+        height: 42px;
+        font-size: 0.88rem;
+        padding: 0 2.6rem;
+    }
+    .search__icon { left: 0.95rem; }
+    .search__clear { right: 0.95rem; }
+
+    /* Hide the big logo overlay on mobile */
+    .brand-big-wrap { display: none !important; }
+    .site-top.is-expanded .brand {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        max-width: none;
+        transform: none;
+    }
+
+    /* Hide the category pill nav bar entirely on mobile (replaced by drawer) */
+    .cat-nav { display: none; }
+
+    /* Hero: stack layout, show a simple vape-product visual like tablet but smaller */
+    .hero { padding: 2.5rem 0 3rem; }
+    .hero__inner { grid-template-columns: 1fr; gap: 2rem; }
+    .hero h1 {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+        margin-bottom: 0.8rem;
+    }
+    .hero p.lead { font-size: 0.96rem; margin-bottom: 1.4rem; }
+    .hero__cta { gap: 0.7rem; margin-bottom: 2rem; }
+    .hero__cta .btn { flex: 1; min-width: 0; padding: 0.85rem 0.9rem; font-size: 0.85rem; }
+
+    /* Hero visual: keep 4-card showcase but flattened & stacked as a 2x2 bento */
+    .hero__visual {
+        position: relative;
+        height: 280px;
+        max-width: 100%;
+        margin: 0 auto;
+        transform: none;
+        perspective: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.6rem;
+    }
+    .hero__visual::before { display: none; }
+    .showcase {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none !important;
+        animation: none !important;
+        border-radius: var(--r);
+    }
+    .showcase--1 { grid-column: 1; grid-row: 1; }
+    .showcase--2 { grid-column: 2; grid-row: 1; }
+    .showcase--3 { grid-column: 1; grid-row: 2; }
+    .showcase--4 { grid-column: 2; grid-row: 2; }
+    .showcase::after { font-size: 0.58rem; padding: 0.3rem 0.65rem; bottom: 0.5rem; left: 0.5rem; }
+
+    .hero__stats { gap: 1.8rem; padding-top: 0.4rem; }
+    .hero__stat .num { font-size: 1.7rem; }
+    .hero__stat .lbl { font-size: 0.64rem; }
+
+    /* Grids */
+    .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+    .cat-card { padding: 1.2rem 1.2rem 1.1rem; min-height: 160px; }
+    .cat-card__icon { width: 46px; height: 46px; }
+    .cat-card__icon svg { width: 22px; height: 22px; }
+    .cat-card__name { font-size: 1.08rem; }
+    .cat-card__arrow { width: 30px; height: 30px; bottom: 1.1rem; right: 1.1rem; }
+
+    .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+    .prod-card { border-radius: 16px; }
+    .prod-card__media { padding: 1rem; }
+    .prod-card__body { padding: 0.9rem 1rem 1rem; }
+    .prod-card__name { font-size: 0.88rem; min-height: auto; -webkit-line-clamp: 2; }
+    .prod-card__cta { padding: 0.6rem 0.8rem; font-size: 0.75rem; }
+    .prod-card__chip { font-size: 0.58rem; padding: 0.28rem 0.65rem; }
+
+    .feat { grid-template-columns: 1fr; gap: 1rem; }
+    .feat__item { padding: 1.5rem 1.3rem; }
+
+    /* Marquee */
+    .marquee { padding: 1.8rem 0; }
+    .marquee__item { font-size: 1.4rem; gap: 0.7rem; }
+    .marquee { --marq-gap: 2.5rem; }
+
+    /* Footer - dark theme mobile */
+    .site-footer { padding: 3.5rem 0 1.5rem; margin-top: 3rem; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2.2rem; margin-bottom: 2.2rem; }
+    .footer-brand__logo { padding: 0.75rem 1rem; margin-bottom: 1.1rem; }
+    .footer-brand__logo img { height: 58px; }
+    .footer-brand p { max-width: none; }
+    .footer-brand__social { gap: 0.5rem; }
+    .footer-brand__social a { width: 38px; height: 38px; }
+    .footer-col h4 { margin-bottom: 1rem; padding-bottom: 0.6rem; }
+    .footer-col a { padding: 0.4rem 0; font-size: 0.92rem; }
+    .footer-contacts { gap: 0.9rem; }
+    .fc-item { grid-template-columns: 34px 1fr; gap: 0.75rem; }
+    .fc-icon { width: 34px; height: 34px; }
+    .fc-label { font-size: 0.62rem; }
+    .fc-value { font-size: 0.86rem; }
+    /* Bottom bar stacks vertically, centered */
+    .footer-bot {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.9rem;
+        padding-top: 1.5rem;
+    }
+    .footer-bot__legal { justify-content: center; gap: 1rem; }
+    /* Glow orb smaller on mobile so it doesn't feel overwhelming */
+    .site-footer::before { width: 420px; height: 420px; top: -150px; left: -100px; }
+
+    /* Age gate */
+    .age-gate__card { padding: 2rem 1.3rem; }
+    .age-gate__title { font-size: 1.4rem; }
+    .age-gate__text { font-size: 0.88rem; }
+    .age-gate__btn { padding: 1rem; font-size: 0.92rem; }
+
+    /* Floating actions - tighter to corner */
+    .floating-actions { right: 0.9rem; bottom: 0.9rem; gap: 0.6rem; }
+    .float-btn { width: 48px; height: 48px; }
+    .float-btn svg { width: 20px; height: 20px; }
+
+    /* Buttons */
+    .btn { padding: 0.85rem 1.3rem; font-size: 0.88rem; }
+}
+
+/* ---------- Standard phones (≤ 480px) ---------- */
+@media (max-width: 480px) {
+    .container { padding: 0 1rem; }
+    .section { padding: 2.8rem 0; }
+    .hero { padding: 2rem 0 2.5rem; }
+    .hero__visual { height: 220px; }
+    .hero__cta { flex-direction: column; }
+    .hero__cta .btn { width: 100%; }
+    .hero__stats { gap: 1.2rem; justify-content: space-between; }
+    .hero__stat .num { font-size: 1.6rem; }
+
+    .feat { grid-template-columns: 1fr; }
+    .marquee__item { font-size: 1.2rem; }
+
+    body::before, body::after { width: 420px; height: 420px; filter: blur(100px); }
+
+    /* Keep 2 cols on category/product even on small phones so browsing is dense */
+    .cat-grid, .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .cat-card { min-height: 150px; padding: 1rem; }
+    .cat-card__name { font-size: 1rem; }
+    .prod-card__media { padding: 0.7rem; }
+    .prod-card__body { padding: 0.8rem 0.9rem 0.9rem; }
+    .prod-card__name { font-size: 0.82rem; }
+    .prod-card__brand { font-size: 0.62rem; }
+    .prod-card__cta { padding: 0.55rem 0.7rem; font-size: 0.72rem; }
+    .prod-card__cta svg { width: 13px; height: 13px; }
+
+    .site-footer { padding: 3rem 0 1.2rem; }
+    .footer-col h4 { margin-bottom: 0.9rem; }
+}
+
+/* ---------- Small phones (≤ 380px) ---------- */
+@media (max-width: 380px) {
+    :root { --header-h: 60px; }
+    .container { padding: 0 0.75rem; }
+    .brand__logo { height: 36px; }
+    .search__input { height: 42px; font-size: 0.85rem; padding: 0 2.6rem; }
+    .search__icon { left: 1rem; }
+    .wa-btn { width: 42px; height: 42px; }
+
+    .hero h1 { font-size: 1.9rem; }
+    .hero p.lead { font-size: 0.92rem; }
+    .hero__visual { height: 180px; }
+    .hero__stat .num { font-size: 1.4rem; }
+    .hero__stat .lbl { font-size: 0.62rem; letter-spacing: 0.08em; }
+
+    /* Single-column for very small screens - products become full-width */
+    .cat-grid { grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+    .prod-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+    .prod-card__media { aspect-ratio: 4 / 3; padding: 1rem; }
+    .prod-card__name { font-size: 0.92rem; }
+
+    .age-gate__card { padding: 1.6rem 1.1rem; }
+    .age-gate__title { font-size: 1.25rem; }
+
+    .float-btn { width: 44px; height: 44px; }
+    .float-btn svg { width: 18px; height: 18px; }
+}
+
+/* ============================================
+   TOUCH-DEVICE OVERRIDES
+   Disable hover lift/scale effects on devices that don't
+   have a real hover capability (phones, most tablets).
+   Replaces hover-style feedback with simple active-tap feedback.
+   ============================================ */
+@media (hover: none) {
+    .cat-card:hover,
+    .prod-card:hover,
+    .feat__item:hover,
+    .brand-card:hover,
+    .contact-card:hover,
+    .hours-card:hover {
+        transform: none;
+        box-shadow: var(--sh-sm);
+    }
+    .cat-card:hover::before,
+    .cat-card:hover::after { opacity: 0.85; width: 3px; }
+    .cat-card:hover .cat-card__icon,
+    .prod-card:hover .prod-card__media img,
+    .brand-card:hover .brand-card__media img { transform: none; }
+    .cat-card:hover .cat-card__arrow,
+    .brand-card:hover .brand-card__arrow { transform: none; background: var(--bg-2); color: var(--text-mute); }
+    .btn:hover,
+    .btn-primary:hover,
+    .btn-ghost:hover,
+    .wa-btn:hover,
+    .float-btn:hover,
+    .float-btn--wa:hover,
+    .float-btn--top:hover { transform: none; }
+    .brand:hover .brand__logo { transform: none; }
+    .chip:hover { transform: none; }
+
+    /* Active tap feedback - a small scale down so taps feel responsive */
+    .cat-card:active,
+    .prod-card:active,
+    .brand-card:active,
+    .feat__item:active,
+    .contact-card:active,
+    .btn:active,
+    .chip:active,
+    .float-btn:active { transform: scale(0.97); transition: transform 0.15s ease; }
+}
+
+/* ============================================
+   Reduced motion
+   ============================================ */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
