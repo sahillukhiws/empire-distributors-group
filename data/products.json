@@ -808,7 +808,7 @@
       "name": "MIT 45 GO BOLDLY",
       "company": "featured",
       "category": "kratom",
-      "image": "assets/categories/kratom/featured/mit-45-go-boldly.png",
+      "image": "assets/categories/kratom/featured/mit-45-go-boldly.jpg",
       "featured": false,
       "inStock": true
     },
@@ -1558,7 +1558,7 @@
       "name": "FILE 013",
       "company": "vapes-new",
       "category": "vape",
-      "image": "assets/categories/vape/vapes-new/file-013.png",
+      "image": "assets/categories/vape/vapes-new/file-013.jpg",
       "featured": true,
       "inStock": true
     },
@@ -1598,7 +1598,7 @@
       "name": "IMG 6924",
       "company": "vapes-new",
       "category": "vape",
-      "image": "assets/categories/vape/vapes-new/img-6924.png",
+      "image": "assets/categories/vape/vapes-new/img-6924.jpg",
       "featured": false,
       "inStock": true
     },

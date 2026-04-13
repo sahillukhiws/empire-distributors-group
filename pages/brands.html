@@ -9,13 +9,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mona+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pages.css">
 </head>
 <body>
-    <div class="grain"></div>
 
     <div id="site-header"></div>
 
@@ -85,15 +84,15 @@
         });
 
         function renderCatNav(data) {
-            const el = document.getElementById('cat-nav-list');
+            const el = document.getElementById('nav-bar-list');
             if (!el) return;
             el.innerHTML = `
                 ${data.categories.map(c => `
-                    <a class="cat-nav__item" style="--c: var(--c-${c.id}); --c-lt: var(--c-${c.id}-lt);" href="${BASE}pages/category.html?id=${c.id}">${escapeHtml(c.name)}</a>
+                    <a class="nav-link" style="--c: var(--c-${c.id}); --c-lt: var(--c-${c.id}-lt);" href="${BASE}pages/category.html?id=${c.id}">${escapeHtml(c.name)}</a>
                 `).join('')}
-                <a class="cat-nav__item active" href="${BASE}pages/brands.html">Brands</a>
-                <a class="cat-nav__item" href="${BASE}pages/about.html">About</a>
-                <a class="cat-nav__item" href="${BASE}pages/contact.html">Contact</a>
+                <a class="nav-link active" href="${BASE}pages/brands.html">Brands</a>
+                <a class="nav-link" href="${BASE}pages/about.html">About</a>
+                <a class="nav-link" href="${BASE}pages/contact.html">Contact</a>
             `;
         }
 

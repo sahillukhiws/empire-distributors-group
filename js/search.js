@@ -111,7 +111,7 @@
             companyList.forEach(c => {
                 html += `
                     <a class="search__item" href="${BASE}pages/brands.html#${c.id}">
-                        <div class="search__item-img" style="display:grid;place-items:center;font-weight:700;color:var(--empire-teal);">${escapeHtml(c.name[0])}</div>
+                        <div class="search__item-img" style="display:grid;place-items:center;font-weight:700;color:var(--brand);">${escapeHtml(c.name[0])}</div>
                         <div class="search__item-text">
                             <div class="search__item-name">${highlight(c.name, query)}</div>
                             <div class="search__item-meta">Brand</div>
@@ -127,7 +127,7 @@
             catMatches.forEach(c => {
                 html += `
                     <a class="search__item" href="${BASE}pages/category.html?id=${c.id}">
-                        <div class="search__item-img" style="display:grid;place-items:center;color:var(--c-${c.id},var(--empire-teal));">${ICONS[c.id] || ''}</div>
+                        <div class="search__item-img" style="display:grid;place-items:center;color:var(--c-${c.id},var(--brand));">${ICONS[c.id] || ''}</div>
                         <div class="search__item-text">
                             <div class="search__item-name">${highlight(c.name, query)}</div>
                             <div class="search__item-meta">Category</div>
@@ -151,7 +151,7 @@
     function runSearch(query) {
         if (!data) return;
         query = query.trim();
-        clearBtn.classList.toggle('visible', query.length > 0);
+        if (clearBtn) clearBtn.classList.toggle('visible', query.length > 0);
         if (!query) { hideResults(); return; }
 
         const scored = data.products
@@ -186,7 +186,7 @@
         } else if (e.key === 'Escape') { hideResults(); input.blur(); }
     });
 
-    clearBtn.addEventListener('click', () => { input.value = ''; hideResults(); clearBtn.classList.remove('visible'); input.focus(); });
+    if (clearBtn) clearBtn.addEventListener('click', () => { input.value = ''; hideResults(); clearBtn.classList.remove('visible'); input.focus(); });
 
     document.addEventListener('click', (e) => {
         if (!results.contains(e.target) && e.target !== input) hideResults();
