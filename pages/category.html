@@ -21,70 +21,45 @@
 
     <!-- Category page content -->
     <main id="category-main">
-        <!-- CATEGORY HERO BANNER -->
-        <section class="cat-hero" id="cat-hero">
+        <!-- Compact category header -->
+        <section class="cat-header" id="cat-hero">
             <div class="container">
                 <nav class="breadcrumb" aria-label="Breadcrumb">
                     <a href="../index.html">Home</a>
                     <span class="breadcrumb__sep">/</span>
                     <span id="bc-current">Category</span>
                 </nav>
-
-                <div class="cat-hero__grid">
-                    <div class="cat-hero__text">
-                        <div class="cat-hero__icon" id="cat-hero-icon"></div>
+                <div class="cat-header__row">
+                    <div class="cat-header__icon" id="cat-hero-icon"></div>
+                    <div>
                         <h1 id="cat-hero-title">Loading…</h1>
-                        <p class="cat-hero__tagline" id="cat-hero-tagline"></p>
-                        <p class="cat-hero__desc" id="cat-hero-desc"></p>
-                        <ul class="cat-hero__bullets" id="cat-hero-bullets"></ul>
-                        <div class="cat-hero__cta">
-                            <a class="btn btn-primary" href="#products">
-                                Browse Products
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                            </a>
-                            <a class="btn btn-ghost" id="cat-hero-wa">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5z"/></svg>
-                                Wholesale Inquiry
-                            </a>
-                        </div>
+                        <div class="cat-header__count" id="cat-hero-count"></div>
                     </div>
-                    <div class="cat-hero__stats" id="cat-hero-stats"></div>
                 </div>
             </div>
         </section>
 
-        <!-- FILTER + PRODUCT GRID -->
+        <!-- Brand filter chips (horizontal scroll, simple) -->
+        <section class="cat-filter-row">
+            <div class="container">
+                <div class="cat-filter__chips" id="brand-chips"></div>
+            </div>
+        </section>
+
+        <!-- Product grid -->
         <section class="section" id="products">
             <div class="container">
-                <div class="cat-filter">
-                    <div class="cat-filter__head">
-                        <div>
-                            <span class="eyebrow" id="filter-eyebrow">All products</span>
-                            <h2 class="cat-filter__title">Shop the <span id="filter-cat-name">Category</span> Collection</h2>
-                        </div>
-                        <div class="cat-filter__count" id="filter-count"></div>
-                    </div>
-                    <div class="cat-filter__chips" id="brand-chips"></div>
-                </div>
-                <div id="products-grid" class="prod-grid"></div>
+                <div id="products-grid" class="product-grid"></div>
             </div>
         </section>
 
-        <!-- CROSS-SELL: other categories -->
-        <section class="cross-sell">
+        <!-- Other categories - visual grid only -->
+        <section class="section section--white">
             <div class="container">
                 <div class="section-head">
-                    <div>
-                        <span class="eyebrow">Keep exploring</span>
-                        <h2>Other <span>Categories</span></h2>
-                        <p>Continue browsing the Empire catalog - every line is curated, stocked, and ready to ship.</p>
-                    </div>
-                    <a class="cross-sell__viewall" href="../index.html">
-                        Back to Home
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                    </a>
+                    <h2 class="section-head__title">Other Categories</h2>
                 </div>
-                <div id="cross-sell-grid" class="cat-grid"></div>
+                <div id="cross-sell-row" class="categories-row__track"></div>
             </div>
         </section>
     </main>
@@ -122,14 +97,13 @@
                 return;
             }
 
-            renderHero(data, cat);
+            renderHeader(data, cat);
             renderBrandFilter(data, cat);
             renderCrossSell(data, cat);
             filterAndRender(data, cat, 'all');
 
             document.getElementById('page-title').textContent = `${cat.name} - Empire Distributors Group`;
             document.getElementById('bc-current').textContent = cat.name;
-            document.getElementById('filter-cat-name').textContent = cat.name;
 
             wireWhatsapp();
             wireReveal();
@@ -148,46 +122,18 @@
             `;
         }
 
-        function renderHero(data, cat) {
+        function renderHeader(data, cat) {
             const hero = document.getElementById('cat-hero');
             hero.style.setProperty('--c', `var(--c-${cat.id})`);
             hero.style.setProperty('--c-lt', `var(--c-${cat.id}-lt)`);
-            hero.classList.add('is-ready');
 
             document.getElementById('cat-hero-icon').innerHTML = ICONS[cat.id] || '';
             document.getElementById('cat-hero-title').textContent = cat.name;
 
-            const copy = CAT_COPY[cat.id] || { tagline: '', description: '', bullets: [] };
-            document.getElementById('cat-hero-tagline').textContent = copy.tagline;
-            document.getElementById('cat-hero-desc').textContent = copy.description;
-
-            const bulletsEl = document.getElementById('cat-hero-bullets');
-            bulletsEl.innerHTML = copy.bullets.map(b => `
-                <li>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                    ${escapeHtml(b)}
-                </li>
-            `).join('');
-
             const products = getProductsByCategory(data, cat.id);
             const brands = getBrandsInCategory(data, cat.id);
-            document.getElementById('cat-hero-stats').innerHTML = `
-                <div class="cat-stat">
-                    <div class="cat-stat__num">${products.length}</div>
-                    <div class="cat-stat__lbl">Products</div>
-                </div>
-                <div class="cat-stat">
-                    <div class="cat-stat__num">${brands.length}</div>
-                    <div class="cat-stat__lbl">Brands</div>
-                </div>
-                <div class="cat-stat">
-                    <div class="cat-stat__num">24/7</div>
-                    <div class="cat-stat__lbl">WhatsApp</div>
-                </div>
-            `;
-
-            const wa = document.getElementById('cat-hero-wa');
-            wa.setAttribute('data-wa', `Hi, I'd like wholesale info for the ${cat.name} category.`);
+            document.getElementById('cat-hero-count').textContent =
+                `${products.length} products · ${brands.length} brands`;
         }
 
         function renderBrandFilter(data, cat) {
@@ -215,29 +161,25 @@
             const all = getProductsByCategory(data, cat.id);
             const filtered = brandFilter === 'all' ? all : all.filter(p => p.company === brandFilter);
             const grid = document.getElementById('products-grid');
-            renderProductGrid(filtered, data, grid, { showChip: false, fullCard: true, emptyText: 'No products from this brand yet.' });
-            document.getElementById('filter-count').textContent =
-                `Showing ${filtered.length} of ${all.length}`;
+            renderProductGrid(filtered, data, grid, { emptyText: 'No products yet.' });
             wireReveal();
             wireWhatsapp();
         }
 
         function renderCrossSell(data, currentCat) {
             const others = data.categories.filter(c => c.id !== currentCat.id);
-            const grid = document.getElementById('cross-sell-grid');
-            grid.innerHTML = others.map(c => {
+            const row = document.getElementById('cross-sell-row');
+            if (!row) return;
+            const catImages = (window.EDG && window.EDG.CAT_IMAGES) || {};
+            row.innerHTML = others.map(c => {
                 const count = getProductsByCategory(data, c.id).length;
-                const style = `--c: var(--c-${c.id}); --c-lt: var(--c-${c.id}-lt);`;
+                if (!count) return '';
+                const imgSrc = BASE + (catImages[c.id] || '');
                 return `
-                    <a class="cat-card reveal" style="${style}" href="${BASE}pages/category.html?id=${c.id}">
-                        <div class="cat-card__icon">${ICONS[c.id] || ''}</div>
-                        <div class="cat-card__body">
-                            <div class="cat-card__name">${escapeHtml(c.name)}</div>
-                            <div class="cat-card__count">${count} products</div>
-                        </div>
-                        <div class="cat-card__arrow" aria-hidden="true">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                        </div>
+                    <a class="cat-card-v2" style="--c:var(--c-${c.id})" href="${BASE}pages/category.html?id=${c.id}">
+                        <div class="cat-card-v2__bg"></div>
+                        <div class="cat-card-v2__img"><img src="${imgSrc}" alt="${escapeHtml(c.name)}" loading="lazy"></div>
+                        <div class="cat-card-v2__name">${escapeHtml(c.name)}</div>
                     </a>
                 `;
             }).join('');

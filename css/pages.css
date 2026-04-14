@@ -3,6 +3,92 @@
    Builds on style.css. Uses --c / --c-lt for per-category color theming.
    ============================================ */
 
+/* ============================================
+   SIMPLIFIED CATEGORY HEADER (new clean design)
+   ============================================ */
+.cat-header {
+    padding: 18px 0 8px;
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border);
+}
+.cat-header .breadcrumb { margin-bottom: 12px; font-size: 12px; }
+.cat-header__row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.cat-header__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--c-lt, var(--brand-xlt));
+    color: var(--c, var(--brand));
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+.cat-header__icon svg { width: 22px; height: 22px; }
+.cat-header h1 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.15;
+    margin: 0;
+}
+.cat-header__count {
+    font-size: 12px;
+    color: var(--text-mute);
+    margin-top: 2px;
+}
+
+/* Filter chips row */
+.cat-filter-row {
+    padding: 10px 0;
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.cat-filter-row .cat-filter__chips {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+}
+.cat-filter-row .cat-filter__chips::-webkit-scrollbar { display: none; }
+.cat-filter-row .chip {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 6px 12px;
+    white-space: nowrap;
+}
+.cat-filter-row .chip.active {
+    background: var(--c, var(--brand));
+    color: #fff;
+    border-color: var(--c, var(--brand));
+}
+
+/* Responsive for compact header */
+@media (max-width: 768px) {
+    .cat-header { padding: 12px 0 10px; }
+    .cat-header__icon { width: 38px; height: 38px; }
+    .cat-header__icon svg { width: 18px; height: 18px; }
+    .cat-header h1 { font-size: 1.1rem; }
+    .cat-filter-row { padding: 8px 0; }
+    .cat-filter-row .chip { font-size: 11px; padding: 5px 10px; }
+}
+@media (max-width: 480px) {
+    .cat-header { padding: 10px 0 8px; }
+    .cat-header__row { gap: 10px; }
+    .cat-header__icon { width: 34px; height: 34px; }
+    .cat-header__icon svg { width: 16px; height: 16px; }
+    .cat-header h1 { font-size: 1rem; }
+    .cat-header__count { font-size: 11px; }
+}
+
 /* ---------- Breadcrumb ---------- */
 .breadcrumb {
     display: flex;
@@ -491,12 +577,12 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     .cross-sell .section-head { grid-template-columns: 1fr; }
     .cross-sell .cat-grid { grid-template-columns: repeat(3, 1fr); }
     .cross-sell .cat-card { min-height: 220px; }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .cross-sell { padding: 3.5rem 0 4rem; }
     .cross-sell .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
     .cross-sell .cat-card { min-height: 200px; }
@@ -582,6 +668,26 @@
     text-transform: uppercase;
     color: var(--c, var(--brand-dk));
     margin-bottom: 0.7rem;
+}
+.pd-brand.has-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.pd-brand__logo {
+    height: 28px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.pd-brand.has-logo span {
+    color: var(--c, var(--brand));
 }
 .pd-name {
     font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -733,6 +839,15 @@
     object-fit: contain;
     position: relative;
     transition: transform 0.5s var(--ease);
+}
+/* Brand logo: larger, clean drop-shadow */
+.brand-card__logo {
+    max-width: 78% !important;
+    max-height: 82% !important;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
+}
+.brand-card.has-logo .brand-card__media {
+    background: linear-gradient(145deg, #fff, var(--bg-2));
 }
 .brand-card:hover .brand-card__media img { transform: scale(1.06); }
 .brand-card__placeholder {
@@ -1046,7 +1161,7 @@
    ============================================ */
 
 /* ---------- Small laptops / large tablets landscape (≤ 1280px) ---------- */
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
     .page-hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
     .cat-hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); }
     .brands-grid { gap: 1.3rem; }
@@ -1054,7 +1169,7 @@
 }
 
 /* ---------- Tablets (≤ 1024px) ---------- */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     /* Page hero */
     .page-hero { padding: 3rem 0 2.5rem; }
     .page-hero__lead { font-size: 1.02rem; }
@@ -1114,7 +1229,7 @@
 }
 
 /* ---------- Large phones / small tablets portrait (≤ 720px) ---------- */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     /* Breadcrumb */
     .breadcrumb { font-size: 0.8rem; margin-bottom: 1.2rem; }
 

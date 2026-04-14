@@ -28,9 +28,6 @@
                                 '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.png" alt="Empire Distributors Group">' +
                             '</a>' +
 
-                            /* Tagline */
-                            '<div class="header-tagline">#1 Wholesale For Vape &amp; Wellness</div>' +
-
                             /* Search */
                             '<div class="header-search" role="search">' +
                                 '<div class="header-search__form">' +
@@ -47,26 +44,10 @@
                                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>' +
                             '</button>' +
 
-                            /* WhatsApp */
+                            /* WhatsApp animated button */
                             '<a class="header-wa" data-wa="Hi, I\'d like to know more about Empire Distributors Group." aria-label="Chat on WhatsApp">' +
-                                '<svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.9.8.8-2.9-.2-.3a6.6 6.6 0 1 1 5.9 3.4zm3.6-4.9c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.4.1-.5.7-.6.8-.2.1-.4 0a5.4 5.4 0 0 1-2.7-2.3c-.2-.3.2-.3.5-1 0-.1 0-.2-.1-.3l-.6-1.4c-.1-.3-.3-.3-.4-.3h-.3a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5 3.5 3.5 0 0 0 .7 1.8 8 8 0 0 0 3.1 2.7c1.9.8 1.9.5 2.2.5s1.1-.4 1.2-.9.2-.8.1-.9-.2-.1-.4-.2z"/></svg>' +
+                                '<object class="header-wa__svg" type="image/svg+xml" data="' + BASE + 'assets/whatsapp-button-animated.svg" tabindex="-1" aria-hidden="true"></object>' +
                             '</a>' +
-
-                            /* Header icons - circle style like reference */
-                            '<div class="header-icons">' +
-                                '<a class="header-icon" href="' + BASE + 'pages/brands.html">' +
-                                    '<span class="header-icon__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>' +
-                                    '<span>Cart</span>' +
-                                '</a>' +
-                                '<a class="header-icon" href="' + BASE + 'pages/brands.html">' +
-                                    '<span class="header-icon__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>' +
-                                    '<span>Wishlist</span>' +
-                                '</a>' +
-                                '<a class="header-icon" href="' + BASE + 'pages/contact.html">' +
-                                    '<span class="header-icon__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>' +
-                                    '<span>Sign In</span>' +
-                                '</a>' +
-                            '</div>' +
                         '</div>' +
                     '</div>' +
                 '</div>' +
@@ -91,15 +72,6 @@
                         '</a>' +
                         '<div class="sticky-nav" id="sticky-nav"></div>' +
                         '<div class="sticky-icons">' +
-                            '<a class="sticky-icon" href="' + BASE + 'pages/brands.html" aria-label="Cart">' +
-                                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>' +
-                            '</a>' +
-                            '<a class="sticky-icon" href="' + BASE + 'pages/brands.html" aria-label="Wishlist">' +
-                                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
-                            '</a>' +
-                            '<a class="sticky-icon" href="' + BASE + 'pages/contact.html" aria-label="Account">' +
-                                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
-                            '</a>' +
                             '<button class="sticky-icon" id="sticky-search-toggle" aria-label="Search">' +
                                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>' +
                             '</button>' +
@@ -162,8 +134,8 @@
                             '<div class="footer-brand__social">' +
                                 '<a data-wa="Hi Empire!" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5z"/></svg></a>' +
                                 '<a href="mailto:empiredistributorsgroup@gmail.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>' +
-                                '<a href="tel:+14703753936" aria-label="Phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>' +
-                                '<a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>' +
+                                '<a href="tel:+16783036054" aria-label="Phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>' +
+                                '<a href="https://www.instagram.com/empire_distributors/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>' +
                             '</div>' +
                         '</div>' +
                         '<div class="footer-col">' +
@@ -186,7 +158,7 @@
                             '<ul class="footer-contacts">' +
                                 '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div class="fc-text"><div class="fc-label">Address</div><address class="fc-value">2725 Mountain Industrial Blvd, Suite A5, Tucker, GA 30084</address></div></li>' +
                                 '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div class="fc-text"><div class="fc-label">Email</div><a href="mailto:empiredistributorsgroup@gmail.com" class="fc-value fc-link">empiredistributorsgroup@gmail.com</a></div></li>' +
-                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span><div class="fc-text"><div class="fc-label">Phone</div><a href="tel:+14703753936" class="fc-value fc-link">470-375-3936</a></div></li>' +
+                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span><div class="fc-text"><div class="fc-label">Phone</div><a href="tel:+16783036054" class="fc-value fc-link">+1 (678) 303-6054</a><a href="tel:+14706404502" class="fc-value fc-link">+1 (470) 640-4502</a><a href="tel:+14709533565" class="fc-value fc-link">+1 (470) 953-3565</a></div></li>' +
                             '</ul>' +
                         '</div>' +
                     '</div>' +

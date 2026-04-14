@@ -4,7 +4,7 @@
 (function () {
     var inPages = /\/pages\//.test(window.location.pathname);
     var BASE = inPages ? '../' : '';
-    var WA_NUMBER = '14703753936';
+    var WA_NUMBER = '16783036054';
 
     var ICONS = {
         vape:        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h10v-2H4a2 2 0 0 0 0 4h12l4-3v8l-4-3H4a2 2 0 0 1 0-4z"/><path d="M18 8v2"/><path d="M14 6v4"/></svg>',
@@ -164,9 +164,14 @@
     function renderProductCard(p, data) {
         var company = findCompany(data, p.company);
         var brandName = company ? company.name : '';
+        var logoSrc = company && company.logo ? BASE + company.logo : '';
         var href = BASE + 'pages/product.html?id=' + encodeURIComponent(p.id);
         var grad = getProductGradient(p);
         var style = '--c:var(--c-' + p.category + ');--c-lt:var(--c-' + p.category + '-lt);--card-g1:' + grad[0] + ';--card-g2:' + grad[1];
+
+        var brandMarkup = logoSrc
+            ? '<div class="prod-card__brand"><img class="prod-card__brand-logo" src="' + logoSrc + '" alt="' + escapeHtml(brandName) + '" loading="lazy"><span>' + escapeHtml(brandName) + '</span></div>'
+            : '<div class="prod-card__brand">' + escapeHtml(brandName) + '</div>';
 
         return '<article class="prod-card reveal" style="' + style + '">' +
             '<a class="prod-card__media" href="' + href + '">' +
@@ -174,7 +179,7 @@
             '</a>' +
             '<div class="prod-card__info">' +
                 '<h3 class="prod-card__name"><a href="' + href + '">' + escapeHtml(p.name) + '</a></h3>' +
-                '<div class="prod-card__brand">' + escapeHtml(brandName) + '</div>' +
+                brandMarkup +
             '</div>' +
         '</article>';
     }
@@ -185,10 +190,15 @@
         var company = findCompany(data, p.company);
         var category = findCategory(data, p.category);
         var brandName = company ? company.name : '';
+        var logoSrc = company && company.logo ? BASE + company.logo : '';
         var catName = category ? category.name : '';
         var href = BASE + 'pages/product.html?id=' + encodeURIComponent(p.id);
         var style = '--c:var(--c-' + p.category + ');--c-lt:var(--c-' + p.category + '-lt)';
         var showChip = opts.showChip !== false;
+
+        var brandMarkup = logoSrc
+            ? '<div class="prod-card__brand"><img class="prod-card__brand-logo" src="' + logoSrc + '" alt="' + escapeHtml(brandName) + '" loading="lazy"><span>' + escapeHtml(brandName) + '</span></div>'
+            : '<div class="prod-card__brand">' + escapeHtml(brandName) + '</div>';
 
         return '<article class="prod-card reveal" style="' + style + '">' +
             '<a class="prod-card__media" href="' + href + '">' +
@@ -196,7 +206,7 @@
                 '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.closest(\'.prod-card__media\').classList.add(\'no-img\')">' +
             '</a>' +
             '<div class="prod-card__body">' +
-                '<div class="prod-card__brand">' + escapeHtml(brandName) + '</div>' +
+                brandMarkup +
                 '<h3 class="prod-card__name"><a href="' + href + '">' + escapeHtml(p.name) + '</a></h3>' +
                 '<a class="prod-card__cta" href="' + waLink('Inquiry: ' + p.name + ' (' + p.sku + ')') + '" target="_blank" rel="noopener">' +
                     '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5z"/></svg>' +

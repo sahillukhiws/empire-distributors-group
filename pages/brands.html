@@ -19,48 +19,36 @@
     <div id="site-header"></div>
 
     <main>
-        <!-- BRANDS HERO -->
-        <section class="page-hero">
+        <!-- Compact brands header -->
+        <section class="cat-header">
             <div class="container">
                 <nav class="breadcrumb" aria-label="Breadcrumb">
                     <a href="../index.html">Home</a>
                     <span class="breadcrumb__sep">/</span>
                     <span>Brands</span>
                 </nav>
-                <div class="page-hero__badge">
-                    <span class="dot"></span> 14 premium brands and growing
+                <div class="cat-header__row">
+                    <div>
+                        <h1>All Brands</h1>
+                        <div class="cat-header__count" id="brands-count"></div>
+                    </div>
                 </div>
-                <h1>Every brand, <span class="gradient-text">under one roof.</span></h1>
-                <p class="page-hero__lead">
-                    We partner with the brands that define today's vape, wellness, and lifestyle categories. From household names to the newest drops - Empire is where retailers source what sells.
-                </p>
             </div>
         </section>
 
-        <!-- BRANDS GRID -->
+        <!-- Category filter -->
+        <section class="cat-filter-row">
+            <div class="container">
+                <div class="cat-filter__chips" id="brands-filter">
+                    <button class="chip active" data-cat="all">All</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands grid -->
         <section class="section">
             <div class="container">
-                <div class="brands-filter" id="brands-filter">
-                    <button class="chip active" data-cat="all">All Categories</button>
-                </div>
                 <div id="brands-grid" class="brands-grid"></div>
-            </div>
-        </section>
-
-        <!-- WHOLESALE CTA -->
-        <section class="section wholesale-cta-section">
-            <div class="container">
-                <div class="wholesale-cta">
-                    <div class="wholesale-cta__text">
-                        <span class="eyebrow">Become a partner</span>
-                        <h2>Looking for a brand we don't carry yet?</h2>
-                        <p>We're always adding new partners. Tell us what your customers are asking for, and we'll source it.</p>
-                    </div>
-                    <a class="btn btn-primary" data-wa="Hi Empire! I'm a retailer looking for a specific brand. Can you help me source it?">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5z"/></svg>
-                        Request a Brand
-                    </a>
-                </div>
             </div>
         </section>
     </main>
@@ -79,6 +67,8 @@
             renderCatNav(data);
             renderFilter(data);
             renderBrands(data, 'all');
+            const countEl = document.getElementById('brands-count');
+            if (countEl) countEl.textContent = `${data.companies.length} brands`;
             wireWhatsapp();
             wireReveal();
         });
@@ -128,13 +118,21 @@
                 const cat = findCategory(data, b.category);
                 const products = getProductsByCompany(data, b.id);
                 const sampleImg = products[0]?.image || '';
+                const logoSrc = b.logo ? `${BASE}${b.logo}` : '';
                 const style = `--c: var(--c-${b.category}); --c-lt: var(--c-${b.category}-lt);`;
                 const catHref = `${BASE}pages/category.html?id=${b.category}`;
 
+                // Show brand logo if available, else fallback to sample product image / initial
+                const mediaInner = logoSrc
+                    ? `<img class="brand-card__logo" src="${logoSrc}" alt="${escapeHtml(b.name)} logo" loading="lazy">`
+                    : sampleImg
+                        ? `<img src="${sampleImg}" alt="" loading="lazy">`
+                        : `<div class="brand-card__placeholder">${escapeHtml(b.name[0])}</div>`;
+
                 return `
-                    <a class="brand-card reveal" id="${escapeHtml(b.id)}" style="${style}" href="${catHref}">
+                    <a class="brand-card reveal ${logoSrc ? 'has-logo' : ''}" id="${escapeHtml(b.id)}" style="${style}" href="${catHref}">
                         <div class="brand-card__media">
-                            ${sampleImg ? `<img src="${sampleImg}" alt="" loading="lazy">` : `<div class="brand-card__placeholder">${escapeHtml(b.name[0])}</div>`}
+                            ${mediaInner}
                         </div>
                         <div class="brand-card__body">
                             <div class="brand-card__cat">${escapeHtml(cat ? cat.name : '')}</div>

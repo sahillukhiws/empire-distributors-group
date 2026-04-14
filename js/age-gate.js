@@ -58,10 +58,10 @@
                         <a class="age-gate__social" href="mailto:empiredistributorsgroup@gmail.com" aria-label="Email">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
                         </a>
-                        <a class="age-gate__social" href="tel:+14703753936" aria-label="Phone">
+                        <a class="age-gate__social" href="tel:+16783036054" aria-label="Phone">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
                         </a>
-                        <a class="age-gate__social" href="#" aria-label="Instagram">
+                        <a class="age-gate__social" href="https://www.instagram.com/empire_distributors/" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
                         </a>
                     </div>
@@ -93,7 +93,7 @@
         const waLink = gate.querySelector('[data-wa]');
         if (waLink) {
             const msg = encodeURIComponent(waLink.getAttribute('data-wa') || 'Hi Empire!');
-            waLink.href = 'https://wa.me/14703753936?text=' + msg;
+            waLink.href = 'https://wa.me/16783036054?text=' + msg;
             waLink.target = '_blank';
             waLink.rel = 'noopener';
         }
