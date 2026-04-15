@@ -29,28 +29,39 @@
     };
 
     var CAT_IMAGES = {
-        vape: 'assets/categories/vape/vapes-new/img-6930.jpg',
-        kratom: 'assets/categories/kratom/featured/opms-gold.jpg',
-        delta: 'assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.jpg',
-        mushroom: 'assets/categories/mushroom/shroom-bang/shroom-bang-4grm-disposable.jpg',
-        pseudo: 'assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-blueberry-blast.jpg',
-        bluelotus: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable.jpg',
-        supplements: 'assets/categories/supplements/better-now/better-now-5ct-blueberry.jpg',
-        novelties: '',
+        vape:        'assets/category-tiles/vape.png',
+        kratom:      'assets/category-tiles/kratom.png',
+        delta:       'assets/category-tiles/delta.png',
+        mushroom:    'assets/category-tiles/mushroom.png',
+        pseudo:      'assets/category-tiles/pseudo.png',
+        bluelotus:   'assets/category-tiles/bluelotus.png',
+        supplements: 'assets/category-tiles/supplements.png',
+        novelties:   'assets/category-tiles/novelties.png',
     };
 
     var cachedData = null;
+    var cachedColors = null;
     function loadData() {
         if (cachedData) return Promise.resolve(cachedData);
-        return fetch(BASE + 'data/products.json')
-            .then(function (r) { return r.json(); })
-            .then(function (data) {
-                data.products = data.products.map(function (p) {
-                    return Object.assign({}, p, { image: BASE + p.image });
-                });
-                cachedData = data;
-                return data;
+        return Promise.all([
+            fetch(BASE + 'data/products.json').then(function (r) { return r.json(); }),
+            fetch(BASE + 'data/product_colors.json').then(function (r) { return r.json(); }).catch(function () { return {}; }),
+        ]).then(function (arr) {
+            var data = arr[0];
+            cachedColors = arr[1] || {};
+            data.products = data.products.map(function (p) {
+                return Object.assign({}, p, { image: BASE + p.image });
             });
+            data._colors = cachedColors;
+            cachedData = data;
+            return data;
+        });
+    }
+
+    function colorStyleFor(p, data) {
+        var c = (data && data._colors) ? data._colors[p.id] : null;
+        if (!c) return '';
+        return '--tc-g1:' + c.top + ';--tc-g2:' + c.middle + ';--tc-g3:' + c.bottom + ';--tc-chip:' + c.chip + ';';
     }
 
     function waLink(text) {
@@ -160,26 +171,26 @@
         return CAT_GRADIENT[p.category] || ['#475569', '#64748b'];
     }
 
-    /* Homepage card: colored gradient bg + image + name below */
+    /* Card (testing-card style): gradient media -> white info with centered name + pill chip.
+       If product image has its own background (scene/promo), image fills 100% of media and
+       the gradient is hidden under it. White-bg studio shots show the gradient frame. */
     function renderProductCard(p, data) {
         var company = findCompany(data, p.company);
         var brandName = company ? company.name : '';
-        var logoSrc = company && company.logo ? BASE + company.logo : '';
         var href = BASE + 'pages/product.html?id=' + encodeURIComponent(p.id);
         var grad = getProductGradient(p);
-        var style = '--c:var(--c-' + p.category + ');--c-lt:var(--c-' + p.category + '-lt);--card-g1:' + grad[0] + ';--card-g2:' + grad[1];
-
-        var brandMarkup = logoSrc
-            ? '<div class="prod-card__brand"><img class="prod-card__brand-logo" src="' + logoSrc + '" alt="' + escapeHtml(brandName) + '" loading="lazy"><span>' + escapeHtml(brandName) + '</span></div>'
-            : '<div class="prod-card__brand">' + escapeHtml(brandName) + '</div>';
+        var cc = (data && data._colors) ? data._colors[p.id] : null;
+        var hasOwnBg = !!(cc && cc.has_own_bg);
+        var mediaCls = 'prod-card__media' + (hasOwnBg ? ' prod-card__media--cover' : '');
+        var style = '--c:var(--c-' + p.category + ');--c-lt:var(--c-' + p.category + '-lt);--card-g1:' + grad[0] + ';--card-g2:' + grad[1] + ';' + colorStyleFor(p, data);
 
         return '<article class="prod-card reveal" style="' + style + '">' +
-            '<a class="prod-card__media" href="' + href + '">' +
+            '<a class="' + mediaCls + '" href="' + href + '">' +
                 '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.closest(\'.prod-card__media\').classList.add(\'no-img\')">' +
             '</a>' +
             '<div class="prod-card__info">' +
                 '<h3 class="prod-card__name"><a href="' + href + '">' + escapeHtml(p.name) + '</a></h3>' +
-                brandMarkup +
+                (brandName ? '<div class="prod-card__brandchip"><span>' + escapeHtml(brandName) + '</span></div>' : '') +
             '</div>' +
         '</article>';
     }
@@ -190,18 +201,18 @@
         var company = findCompany(data, p.company);
         var category = findCategory(data, p.category);
         var brandName = company ? company.name : '';
-        var logoSrc = company && company.logo ? BASE + company.logo : '';
         var catName = category ? category.name : '';
         var href = BASE + 'pages/product.html?id=' + encodeURIComponent(p.id);
-        var style = '--c:var(--c-' + p.category + ');--c-lt:var(--c-' + p.category + '-lt)';
+        var cc = (data && data._colors) ? data._colors[p.id] : null;
+        var hasOwnBg = !!(cc && cc.has_own_bg);
+        var mediaCls = 'prod-card__media' + (hasOwnBg ? ' prod-card__media--cover' : '');
+        var style = '--c:var(--c-' + p.category + ');--c-lt:var(--c-' + p.category + '-lt);' + colorStyleFor(p, data);
         var showChip = opts.showChip !== false;
 
-        var brandMarkup = logoSrc
-            ? '<div class="prod-card__brand"><img class="prod-card__brand-logo" src="' + logoSrc + '" alt="' + escapeHtml(brandName) + '" loading="lazy"><span>' + escapeHtml(brandName) + '</span></div>'
-            : '<div class="prod-card__brand">' + escapeHtml(brandName) + '</div>';
+        var brandMarkup = '<div class="prod-card__brand"><span>' + escapeHtml(brandName) + '</span></div>';
 
         return '<article class="prod-card reveal" style="' + style + '">' +
-            '<a class="prod-card__media" href="' + href + '">' +
+            '<a class="' + mediaCls + '" href="' + href + '">' +
                 (showChip ? '<span class="prod-card__chip" style="opacity:1">' + escapeHtml(catName) + '</span>' : '') +
                 '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.closest(\'.prod-card__media\').classList.add(\'no-img\')">' +
             '</a>' +

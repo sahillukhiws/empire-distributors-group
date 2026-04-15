@@ -70,16 +70,54 @@
         el.innerHTML = items.slice(0, 12).map(function (p) { return EDG.renderProductCard(p, data); }).join('');
     }
 
-    /* Category showcase */
-    function renderShowcase(data) {
-        var el = document.getElementById('showcase-grid');
+    /* Shop by Category - 8 tiles, 4x2 unique design (image + name over colored panel) */
+    function renderShopByCategory(data) {
+        var el = document.getElementById('shop-by-cat-grid');
         if (!el) return;
-        var items = [];
-        data.categories.forEach(function (c) {
-            var catP = data.products.filter(function (p) { return p.category === c.id; });
-            if (catP.length) items.push(catP[Math.floor(catP.length / 3)]);
+        el.innerHTML = data.categories.map(function (c) {
+            var count = data.products.filter(function (p) { return p.category === c.id; }).length;
+            var imgSrc = BASE + (EDG.CAT_IMAGES[c.id] || '');
+            return '<a class="shop-cat" style="--c:var(--c-' + c.id + ');--c-lt:var(--c-' + c.id + '-lt);" href="' + BASE + 'pages/category.html?id=' + c.id + '">' +
+                '<div class="shop-cat__img">' + (imgSrc ? '<img src="' + imgSrc + '" alt="' + EDG.escapeHtml(c.name) + '" loading="lazy">' : '') + '</div>' +
+                '<div class="shop-cat__meta">' +
+                    '<div class="shop-cat__name">' + EDG.escapeHtml(c.name) + '</div>' +
+                    (count ? '<div class="shop-cat__count">' + count + ' items</div>' : '<div class="shop-cat__count">Coming soon</div>') +
+                '</div>' +
+            '</a>';
+        }).join('');
+    }
+
+    /* Pick 10 featured products across categories for the hero slider */
+    function buildHeroSlides(data) {
+        var track = document.getElementById('hero-slider-track');
+        if (!track) return;
+        // one per category first, then fill
+        var picks = [];
+        var seenCats = {};
+        data.products.forEach(function (p) {
+            if (!seenCats[p.category]) {
+                picks.push(p);
+                seenCats[p.category] = true;
+            }
         });
-        el.innerHTML = items.slice(0, 8).map(function (p) { return EDG.renderProductCard(p, data); }).join('');
+        // fill to 10 from featured products
+        var featured = data.products.filter(function (p) { return p.featured; });
+        for (var i = 0; i < featured.length && picks.length < 10; i++) {
+            if (picks.indexOf(featured[i]) === -1) picks.push(featured[i]);
+        }
+        // final fallback
+        for (var j = 0; j < data.products.length && picks.length < 10; j++) {
+            if (picks.indexOf(data.products[j]) === -1) picks.push(data.products[j]);
+        }
+        track.innerHTML = picks.slice(0, 10).map(function (p) {
+            var cc = (data._colors || {})[p.id] || {};
+            var g1 = cc.top || '#eee', g2 = cc.middle || '#ddd', g3 = cc.bottom || g1;
+            var style = '--tc-g1:' + g1 + ';--tc-g2:' + g2 + ';--tc-g3:' + g3 + ';';
+            return '<a href="' + BASE + 'pages/product.html?id=' + encodeURIComponent(p.id) + '" class="hero__slide" style="' + style + '">' +
+                '<img src="' + p.image + '" alt="' + EDG.escapeHtml(p.name) + '">' +
+                '<div class="hero__slide-label">' + EDG.escapeHtml(p.name) + '</div>' +
+            '</a>';
+        }).join('');
     }
 
     /* Brands marquee */
@@ -99,7 +137,7 @@
         var dotsContainer = document.getElementById('hero-slider-dots');
         if (!track || !dotsContainer) return;
 
-        var slides = track.querySelectorAll('.hero-slider__slide');
+        var slides = track.querySelectorAll('.hero__slide');
         var total = slides.length;
         if (total < 2) return;
 
@@ -111,12 +149,12 @@
         dotsContainer.innerHTML = '';
         for (var i = 0; i < total; i++) {
             var dot = document.createElement('button');
-            dot.className = 'hero-slider__dot' + (i === 0 ? ' active' : '');
+            dot.className = 'hero__dot' + (i === 0 ? ' active' : '');
             dot.setAttribute('aria-label', 'Slide ' + (i + 1));
             dot.dataset.idx = i;
             dotsContainer.appendChild(dot);
         }
-        var dots = dotsContainer.querySelectorAll('.hero-slider__dot');
+        var dots = dotsContainer.querySelectorAll('.hero__dot');
 
         function goTo(idx) {
             current = ((idx % total) + total) % total;
@@ -139,14 +177,22 @@
 
         /* Dot clicks */
         dotsContainer.addEventListener('click', function (e) {
-            var dot = e.target.closest('.hero-slider__dot');
+            var dot = e.target.closest('.hero__dot');
             if (!dot) return;
             goTo(parseInt(dot.dataset.idx, 10));
             startAuto();
         });
 
-        /* Pause on hover */
+        /* Arrow buttons */
         var slider = document.getElementById('hero-slider');
+        if (slider) {
+            var prev = slider.querySelector('.hero__arrow--prev');
+            var nxt = slider.querySelector('.hero__arrow--next');
+            if (prev) prev.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+            if (nxt) nxt.addEventListener('click', function () { next(); startAuto(); });
+        }
+
+        /* Pause on hover */
         if (slider) {
             slider.addEventListener('mouseenter', stopAuto);
             slider.addEventListener('mouseleave', startAuto);
@@ -177,11 +223,11 @@
     /* Init */
     EDG.loadData().then(function (data) {
         renderNavBar(data);
-        renderCategoryRow(data);
+        buildHeroSlides(data);
         renderPopular(data);
         renderNew(data);
         renderTrending(data);
-        renderShowcase(data);
+        renderShopByCategory(data);
         renderBrands(data);
         EDG.wireWhatsapp();
         EDG.wireReveal();

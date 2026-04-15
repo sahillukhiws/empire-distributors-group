@@ -16,52 +16,47 @@
 <body>
     <div id="site-header"></div>
 
-    <!-- ========== HERO BENTO ========== -->
-    <section class="hero-bento">
-        <div class="hero-bento__grid">
-            <!-- LEFT: Auto-sliding carousel -->
-            <div class="hero-slider" id="hero-slider">
-                <div class="hero-slider__track" id="hero-slider-track">
-                    <a href="pages/category.html?id=vape" class="hero-slider__slide">
-                        <img src="assets/categories/vape/vapes-new/img-6937.png" alt="Premium Vape Collection">
+    <!-- ========== HERO: SLIDER (LEFT) + 2x2 GRID (RIGHT) ========== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <!-- LEFT: Auto-sliding product carousel (populated by JS from featured products) -->
+                <div class="hero__slider" id="hero-slider">
+                    <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="hero__track" id="hero-slider-track"></div>
+                    <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                    <div class="hero__dots" id="hero-slider-dots"></div>
+                </div>
+
+                <!-- RIGHT: 4 featured panels (Vape / Ultra Ohmz / Gushers / Mushroom) -->
+                <div class="hero__grid2x2">
+                    <a href="pages/category.html?id=vape" class="hero__tile">
+                        <img src="assets/categories/vape/vapes-new/img-6933.png" alt="Vape" loading="lazy">
+                        <span class="hero__tile-label">Vape</span>
                     </a>
-                    <a href="pages/category.html?id=vape" class="hero-slider__slide">
-                        <img src="assets/categories/vape/vapes-new/img-6931.jpg" alt="Vape Devices">
+                    <a href="pages/category.html?id=pseudo" class="hero__tile">
+                        <img src="assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.jpg" alt="Ultra Ohmz" loading="lazy">
+                        <span class="hero__tile-label">Ultra Ohmz</span>
                     </a>
-                    <a href="pages/category.html?id=delta" class="hero-slider__slide">
-                        <img src="assets/categories/delta/1-delta-8-9-gummies/delta-8-gummies-1.jpg" alt="Delta Gummies">
+                    <a href="pages/category.html?id=pseudo" class="hero__tile">
+                        <img src="assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png" alt="Gushers" loading="lazy">
+                        <span class="hero__tile-label">Gushers</span>
                     </a>
-                    <a href="pages/category.html?id=vape" class="hero-slider__slide">
-                        <img src="assets/categories/vape/vapes-new/img-6922.jpg" alt="Vape Selection">
-                    </a>
-                    <a href="pages/category.html?id=vape" class="hero-slider__slide">
-                        <img src="assets/categories/vape/vapes-new/img-6936.jpg" alt="GigaBar Collection">
-                    </a>
-                    <a href="pages/category.html?id=mushroom" class="hero-slider__slide">
-                        <img src="assets/categories/mushroom/shroom-puff/shroom-3grm-disposable.jpg" alt="Shroom Puff">
+                    <a href="pages/category.html?id=mushroom" class="hero__tile">
+                        <img src="assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.png" alt="Mushroom" loading="lazy">
+                        <span class="hero__tile-label">Mushroom</span>
                     </a>
                 </div>
-                <!-- Dots indicator -->
-                <div class="hero-slider__dots" id="hero-slider-dots"></div>
             </div>
-
-            <!-- RIGHT: 4 product panels with proper framing -->
-            <a href="pages/category.html?id=kratom" class="hero-bento__panel">
-                <img src="assets/categories/kratom/featured/opms-gold.jpg" alt="OPMS Gold Kratom">
-            </a>
-            <a href="pages/category.html?id=delta" class="hero-bento__panel">
-                <img src="assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.jpg" alt="Delta 9 Gummies">
-            </a>
-            <a href="pages/category.html?id=mushroom" class="hero-bento__panel">
-                <img src="assets/categories/mushroom/silly-dots/silly-dots-mega-dose.png" alt="Silly Dots">
-            </a>
-            <a href="pages/category.html?id=supplements" class="hero-bento__panel">
-                <img src="assets/categories/supplements/better-now/better-now-5ct-blueberry.jpg" alt="Better Now">
-            </a>
         </div>
     </section>
 
-    <!-- ========== TESTING SECTION ========== -->
+    <!-- ========== TESTING SECTION (commented out per request) ========== -->
+    <!--
     <section class="section testing-section" id="testing-section">
         <div class="container">
             <div class="section-head">
@@ -205,13 +200,16 @@
             </div>
         </div>
     </section>
+    -->
 
-    <!-- ========== CATEGORY CARDS ========== -->
+    <!-- ========== CATEGORY CARDS (hidden; replaced by new Shop by Category below) ========== -->
+    <!--
     <section class="categories-row">
         <div class="container">
             <div id="cat-row" class="categories-row__track"></div>
         </div>
     </section>
+    -->
 
     <!-- ========== POPULAR ITEMS ========== -->
     <section class="section" id="popular-section">
@@ -235,20 +233,6 @@
         </div>
     </section>
 
-    <!-- ========== PROMO BENTO ========== -->
-    <section class="promo-bento">
-        <div class="container">
-            <div class="promo-bento__grid">
-                <a href="pages/category.html?id=bluelotus" class="promo-bento__item"><img src="assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable.jpg" alt="Blue Lotus" loading="lazy"></a>
-                <a href="pages/category.html?id=pseudo" class="promo-bento__item"><img src="assets/categories/pseudo/lucid-50mg/photoroom-20260325-155055.jpg" alt="Lucid 50mg" loading="lazy"></a>
-                <a href="pages/category.html?id=vape" class="promo-bento__item"><img src="assets/categories/vape/vapes-new/img-6930.jpg" alt="Vape" loading="lazy"></a>
-                <a href="pages/category.html?id=pseudo" class="promo-bento__item"><img src="assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-blueberry-blast.jpg" alt="Gusherz" loading="lazy"></a>
-                <a href="pages/category.html?id=kratom" class="promo-bento__item"><img src="assets/categories/kratom/featured/mit-45-gold.jpg" alt="MIT 45" loading="lazy"></a>
-                <a href="pages/category.html?id=mushroom" class="promo-bento__item"><img src="assets/categories/mushroom/shroom-bang/shroom-bang-4grm-disposable.jpg" alt="Shroom Bang" loading="lazy"></a>
-            </div>
-        </div>
-    </section>
-
     <!-- ========== BRANDS BAR ========== -->
     <section class="brands-bar">
         <div class="container">
@@ -267,28 +251,14 @@
         </div>
     </section>
 
-    <!-- ========== PROMO BENTO 2 ========== -->
-    <section class="promo-bento promo-bento--alt">
-        <div class="container">
-            <div class="promo-bento__grid">
-                <a href="pages/category.html?id=vape" class="promo-bento__item"><img src="assets/categories/vape/vapes-new/img-6925.jpg" alt="Vape" loading="lazy"></a>
-                <a href="pages/category.html?id=kratom" class="promo-bento__item"><img src="assets/categories/kratom/featured/kshot-black.jpg" alt="K-Shot" loading="lazy"></a>
-                <a href="pages/category.html?id=supplements" class="promo-bento__item"><img src="assets/categories/supplements/zen-power-shot/img-7056.jpg" alt="Zen Power" loading="lazy"></a>
-                <a href="pages/category.html?id=delta" class="promo-bento__item"><img src="assets/categories/delta/rock-on/rock-on-blue.jpg" alt="Rock On" loading="lazy"></a>
-                <a href="pages/category.html?id=bluelotus" class="promo-bento__item"><img src="assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.jpg" alt="Blue Lotus" loading="lazy"></a>
-                <a href="pages/category.html?id=pseudo" class="promo-bento__item"><img src="assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-blueberry-011226.jpg" alt="Ultra Ohmz" loading="lazy"></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SHOP BY CATEGORY ========== -->
-    <section class="section section--white" id="category-showcase">
+    <!-- ========== SHOP BY CATEGORY (8 tiles, 4x2 responsive) ========== -->
+    <section class="section section--white" id="shop-by-cat">
         <div class="container">
             <div class="section-head">
                 <h2 class="section-head__title">Shop by Category</h2>
                 <p class="section-head__sub">Browse our curated collections.</p>
             </div>
-            <div id="showcase-grid" class="product-grid"></div>
+            <div id="shop-by-cat-grid" class="shop-cat-grid"></div>
         </div>
     </section>
 
