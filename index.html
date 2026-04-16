@@ -20,12 +20,19 @@
     <section class="hero">
         <div class="container">
             <div class="hero__grid">
-                <!-- LEFT: Auto-sliding product carousel (populated by JS from featured products) -->
+                <!-- LEFT: Auto-sliding product carousel (6 static promo images) -->
                 <div class="hero__slider" id="hero-slider">
                     <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
                     </button>
-                    <div class="hero__track" id="hero-slider-track"></div>
+                    <div class="hero__track" id="hero-slider-track">
+                        <a href="pages/category.html?id=mushroom" class="hero__slide hero__slide--cover"><img src="assets/products/Product/1.png" alt="Shroom Bang Pre-Rolls"></a>
+                        <a href="pages/category.html?id=delta" class="hero__slide hero__slide--cover"><img src="assets/products/Product/2.png" alt="Rock On Delta"></a>
+                        <a href="pages/category.html?id=pseudo" class="hero__slide hero__slide--cover"><img src="assets/products/Product/3.png" alt="Ultra Ohmz Mega"></a>
+                        <a href="pages/category.html?id=pseudo" class="hero__slide hero__slide--cover"><img src="assets/products/Product/4.png" alt="Gusherz Pseudo"></a>
+                        <a href="pages/category.html?id=pseudo" class="hero__slide hero__slide--cover"><img src="assets/products/Product/5.png" alt="Ultra Ohmz Strawberry"></a>
+                        <a href="pages/category.html?id=supplements" class="hero__slide hero__slide--cover"><img src="assets/products/Product/6.png" alt="Kanva Release + Relax"></a>
+                    </div>
                     <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </button>
@@ -35,11 +42,11 @@
                 <!-- RIGHT: 4 featured panels (Vape / Ultra Ohmz / Gushers / Mushroom) -->
                 <div class="hero__grid2x2">
                     <a href="pages/category.html?id=vape" class="hero__tile">
-                        <img src="assets/categories/vape/vapes-new/img-6933.png" alt="Vape" loading="lazy">
+                        <img src="assets/categories/vape/vapes-new/geekbar-pulse-collection-3colors.png" alt="Vape" loading="lazy">
                         <span class="hero__tile-label">Vape</span>
                     </a>
                     <a href="pages/category.html?id=pseudo" class="hero__tile">
-                        <img src="assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.jpg" alt="Ultra Ohmz" loading="lazy">
+                        <img src="assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png" alt="Ultra Ohmz" loading="lazy">
                         <span class="hero__tile-label">Ultra Ohmz</span>
                     </a>
                     <a href="pages/category.html?id=pseudo" class="hero__tile">
@@ -55,175 +62,83 @@
         </div>
     </section>
 
-    <!-- ========== TESTING SECTION (commented out per request) ========== -->
-    <!--
-    <section class="section testing-section" id="testing-section">
+    <!-- ========== CATEGORY SHOWCASE: 8 tiles, 2 rows of 4, testing-card style ========== -->
+    <section class="section section--pastel-blue" id="cat-showcase">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-head__title">Testing Section</h2>
-                <p class="section-head__sub">Preview products in Loud Panda-style colored cards.</p>
+                <h2 class="section-head__title">Shop by Category</h2>
+                <p class="section-head__sub">Browse our curated collections.</p>
             </div>
-            <div class="testing-scroll" id="testing-scroll">
+            <div id="cat-showcase-grid" class="cat-showcase-grid"></div>
+        </div>
+    </section>
 
-                <!-- 1. Cherry Bomb - pink haze bg -->
-                <a href="pages/category.html?id=mushroom" class="testing-card" style="--tc-g1:#b14c9c;--tc-g2:#863977;--tc-g3:#aa4996;--tc-chip:#7a2669;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/ChatGPT Image Apr 14, 2026, 03_35_29 PM.png" alt="Shroom Bang Cherry Bomb Pre-Rolls" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">CHERRY BOMB</div>
-                        <div class="testing-card__chip">PRE-ROLLS</div>
-                    </div>
-                </a>
+    <!-- ========== BEST SELLERS (3 swiper carousel rows) ========== -->
+    <section class="section best-sellers section--pastel-peach" id="best-sellers">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-head__title">Best Sellers</h2>
+                <p class="section-head__sub">Top picks from our hottest brands.</p>
+            </div>
 
-                <!-- 2. Shroom Bang display - hot pink bg -->
-                <a href="pages/category.html?id=mushroom" class="testing-card" style="--tc-g1:#7e3f7e;--tc-g2:#552a55;--tc-g3:#773b77;--tc-chip:#542054;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/1.png" alt="Shroom Bang Pre-Rolls Display" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">PRE-ROLLS DISPLAY</div>
-                        <div class="testing-card__chip">SHROOM BANG</div>
-                    </div>
-                </a>
+            <!-- Row 1: Ultra Ohmz -->
+            <div class="bs-row" id="bs-block-1">
+                <div class="bs-row__head">
+                    <h3 class="bs-row__brand">Ultra Ohmz</h3>
+                    <a href="pages/category.html?id=pseudo" class="bs-row__link">View All Products</a>
+                </div>
+                <div class="bs-carousel" data-direction="right">
+                    <button class="bs-arrow bs-arrow--prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                    <div class="bs-carousel__track" id="bs-row-1"></div>
+                    <button class="bs-arrow bs-arrow--next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                    <div class="bs-carousel__dots"></div>
+                </div>
+            </div>
 
-                <!-- 3. Lavender spa - lavender purple bg -->
-                <a href="pages/category.html?id=mushroom" class="testing-card" style="--tc-g1:#c588b5;--tc-g2:#b05f9c;--tc-g3:#c181b1;--tc-chip:#ae4293;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/Shroom Bang! pre-rolls in lavender spa.png" alt="Shroom Bang Lavender" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">LAVENDER SPA</div>
-                        <div class="testing-card__chip">PRE-ROLLS</div>
-                    </div>
-                </a>
+            <!-- Row 2: Mushroom -->
+            <div class="bs-row" id="bs-block-2">
+                <div class="bs-row__head">
+                    <h3 class="bs-row__brand">Mushroom</h3>
+                    <a href="pages/category.html?id=mushroom" class="bs-row__link">View All Products</a>
+                </div>
+                <div class="bs-carousel" data-direction="left">
+                    <button class="bs-arrow bs-arrow--prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                    <div class="bs-carousel__track" id="bs-row-2"></div>
+                    <button class="bs-arrow bs-arrow--next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                    <div class="bs-carousel__dots"></div>
+                </div>
+            </div>
 
-                <!-- 4. Silly Tablets - solid deep blue bg -->
-                <a href="pages/category.html?id=mushroom" class="testing-card" style="--tc-g1:#008dde;--tc-g2:#0066a1;--tc-g3:#0086d4;--tc-chip:#005f97;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/2.png" alt="Silly Mushroom Tablets Blueberry Blast" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">BLUEBERRY BLAST</div>
-                        <div class="testing-card__chip">TABLETS</div>
-                    </div>
-                </a>
-
-                <!-- 5. Mushroom tablets light - pale blue bg -->
-                <a href="pages/category.html?id=mushroom" class="testing-card" style="--tc-g1:#4787d5;--tc-g2:#2968b7;--tc-g3:#3f81d3;--tc-chip:#1058b0;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/ChatGPT Image Apr 14, 2026, 03_51_13 PM.png" alt="Silly Mushroom Tablets" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">MUSHROOM TABLETS</div>
-                        <div class="testing-card__chip">EXTREME</div>
-                    </div>
-                </a>
-
-                <!-- 6. Silly Blueberry - deep purple-blue -->
-                <a href="pages/category.html?id=mushroom" class="testing-card" style="--tc-g1:#0e75ee;--tc-g2:#0b58b5;--tc-g3:#0e70e5;--tc-chip:#0049a1;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/Silly mushroom tablets_ blueberry blast.png" alt="Silly Dots Blueberry" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">BLUEBERRY BLAST</div>
-                        <div class="testing-card__chip">SILLY DOTS</div>
-                    </div>
-                </a>
-
-                <!-- 7. Better Now Blueberry - solid sky blue -->
-                <a href="pages/category.html?id=supplements" class="testing-card" style="--tc-g1:#2caae0;--tc-g2:#1a87b6;--tc-g3:#23a6df;--tc-chip:#027aae;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/3.png" alt="Better Now Cats Claw Blueberry" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">CATS CLAW</div>
-                        <div class="testing-card__chip">BETTER NOW</div>
-                    </div>
-                </a>
-
-                <!-- 8. Better Now 30pk - light blue bg -->
-                <a href="pages/category.html?id=supplements" class="testing-card" style="--tc-g1:#58a6d5;--tc-g2:#3089c0;--tc-g3:#50a1d3;--tc-chip:#177cb9;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/ChatGPT Image Apr 14, 2026, 03_54_25 PM.png" alt="Better Now 30 Pack" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">BLUEBERRY 30PK</div>
-                        <div class="testing-card__chip">CATS CLAW</div>
-                    </div>
-                </a>
-
-                <!-- 9. K-Shot Black - solid black -->
-                <a href="pages/category.html?id=kratom" class="testing-card" style="--tc-g1:#f5f5f8;--tc-g2:#d2d4da;--tc-g3:#ebecf0;--tc-chip:#3c3c44;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/4.png" alt="K-Shot Black Kratom Extract" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">K-SHOT BLACK</div>
-                        <div class="testing-card__chip">EXTRA STRONG</div>
-                    </div>
-                </a>
-
-                <!-- 10. K-Shot smoky - dark gray -->
-                <a href="pages/category.html?id=kratom" class="testing-card" style="--tc-g1:#f5f5f8;--tc-g2:#d2d4da;--tc-g3:#ebecf0;--tc-chip:#3c3c44;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/ChatGPT Image Apr 14, 2026, 03_59_54 PM.png" alt="K-Shot Black Display" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">BLACK DISPLAY</div>
-                        <div class="testing-card__chip">KRATOM</div>
-                    </div>
-                </a>
-
-                <!-- 11. Ultra Ohmz Mega - solid deep blue -->
-                <a href="pages/category.html?id=pseudo" class="testing-card" style="--tc-g1:#008dde;--tc-g2:#0066a1;--tc-g3:#0086d4;--tc-chip:#005f97;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/5.png" alt="Ultra Ohmz Mega Blue Razz" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">PSEUDO MEGA</div>
-                        <div class="testing-card__chip">BLUE RAZZ</div>
-                    </div>
-                </a>
-
-                <!-- 12. Ultra Ohmz Display - light blue splashes -->
-                <a href="pages/category.html?id=pseudo" class="testing-card" style="--tc-g1:#3896e5;--tc-g2:#1977c6;--tc-g3:#2f91e4;--tc-chip:#0068c1;">
-                    <div class="testing-card__media">
-                        <img src="assets/images/ChatGPT Image Apr 14, 2026, 03_57_00 PM.png" alt="Ultra Ohmz Mega Display" loading="lazy">
-                    </div>
-                    <div class="testing-card__info">
-                        <div class="testing-card__name">MEGA DISPLAY</div>
-                        <div class="testing-card__chip">ULTRA OHMZ</div>
-                    </div>
-                </a>
-
+            <!-- Row 3: Gushers -->
+            <div class="bs-row" id="bs-block-3">
+                <div class="bs-row__head">
+                    <h3 class="bs-row__brand">Gushers</h3>
+                    <a href="pages/category.html?id=pseudo" class="bs-row__link">View All Products</a>
+                </div>
+                <div class="bs-carousel" data-direction="right">
+                    <button class="bs-arrow bs-arrow--prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                    <div class="bs-carousel__track" id="bs-row-3"></div>
+                    <button class="bs-arrow bs-arrow--next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                    <div class="bs-carousel__dots"></div>
+                </div>
             </div>
         </div>
     </section>
-    -->
 
-    <!-- ========== CATEGORY CARDS (hidden; replaced by new Shop by Category below) ========== -->
-    <!--
-    <section class="categories-row">
+    <!-- ========== OUR BRAND PARTNERS (logo slider gallery) ========== -->
+    <section class="brand-partners">
         <div class="container">
-            <div id="cat-row" class="categories-row__track"></div>
+            <h2 class="brand-partners__title">Our Brand Partners</h2>
         </div>
-    </section>
-    -->
-
-    <!-- ========== POPULAR ITEMS ========== -->
-    <section class="section" id="popular-section">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title">Popular Items</h2>
-                <p class="section-head__sub">The most popular this season. Tap to explore.</p>
-            </div>
-            <div id="popular-grid" class="product-grid"></div>
+        <div class="brand-partners__slider">
+            <button class="bp-arrow bp-arrow--left" id="bp-arrow-left" aria-label="Scroll left">&#10094;</button>
+            <div class="brand-partners__track" id="brand-partners-track"></div>
+            <button class="bp-arrow bp-arrow--right" id="bp-arrow-right" aria-label="Scroll right">&#10095;</button>
         </div>
     </section>
 
     <!-- ========== NEW PRODUCTS ========== -->
-    <section class="section section--white" id="new-section">
+    <section class="section section--pastel-mint" id="new-section">
         <div class="container">
             <div class="section-head">
                 <h2 class="section-head__title">New Products</h2>
@@ -233,32 +148,14 @@
         </div>
     </section>
 
-    <!-- ========== BRANDS BAR ========== -->
-    <section class="brands-bar">
-        <div class="container">
-            <div id="brands-bar-track" class="brands-bar__track"></div>
-        </div>
-    </section>
-
     <!-- ========== TRENDING ========== -->
-    <section class="section" id="trending-section">
+    <section class="section section--pastel-lavender" id="trending-section">
         <div class="container">
             <div class="section-head">
                 <h2 class="section-head__title">Trending Now</h2>
                 <p class="section-head__sub">What's moving fast across our categories.</p>
             </div>
             <div id="trending-grid" class="product-grid"></div>
-        </div>
-    </section>
-
-    <!-- ========== SHOP BY CATEGORY (8 tiles, 4x2 responsive) ========== -->
-    <section class="section section--white" id="shop-by-cat">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title">Shop by Category</h2>
-                <p class="section-head__sub">Browse our curated collections.</p>
-            </div>
-            <div id="shop-by-cat-grid" class="shop-cat-grid"></div>
         </div>
     </section>
 

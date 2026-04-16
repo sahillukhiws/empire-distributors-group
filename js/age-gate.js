@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="age-gate__banner">
-                    <img src="${BASE}assets/categories/vape/vapes-new/img-6937.png" alt="Featured product">
+                    <img src="${BASE}assets/categories/vape/vapes-new/long/long-img-6931.jpg" alt="Featured product">
                 </div>
 
                 <div class="age-gate__body">

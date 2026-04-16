@@ -34,7 +34,7 @@
         delta:       'assets/category-tiles/delta.png',
         mushroom:    'assets/category-tiles/mushroom.png',
         pseudo:      'assets/category-tiles/pseudo.png',
-        bluelotus:   'assets/category-tiles/bluelotus.png',
+        bluelotus:   'assets/category-tiles/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.png',
         supplements: 'assets/category-tiles/supplements.png',
         novelties:   'assets/category-tiles/novelties.png',
     };
@@ -61,7 +61,9 @@
     function colorStyleFor(p, data) {
         var c = (data && data._colors) ? data._colors[p.id] : null;
         if (!c) return '';
-        return '--tc-g1:' + c.top + ';--tc-g2:' + c.middle + ';--tc-g3:' + c.bottom + ';--tc-chip:' + c.chip + ';';
+        var s = '--tc-g1:' + c.top + ';--tc-g2:' + c.middle + ';--tc-g3:' + c.bottom + ';--tc-chip:' + c.chip + ';';
+        if (c.chip_text) s += '--tc-chip-text:' + c.chip_text + ';';
+        return s;
     }
 
     function waLink(text) {

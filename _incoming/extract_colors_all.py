@@ -80,13 +80,35 @@ def build_gradient(rgb):
     r, g, b = [c / 255 for c in base]
     h, l, s = rgb_to_hls(r, g, b)
 
-    # Very dark -> white/silver shine (matches homepage pipeline)
+    # Very dark -> lift the hue into a rich deep version instead of gray/silver.
+    # e.g. dark purple (#280818) -> deep purple gradient, not white/gray.
     if l < 0.2:
+        # If there's some saturation, use a deep-colored gradient in the same hue
+        if s > 0.15:
+            lifted = adjust_lightness(base, +0.30)
+            lifted = adjust_saturation(lifted, 1.4)
+            top = adjust_lightness(lifted, +0.06)
+            middle = adjust_lightness(lifted, -0.06)
+            bottom = adjust_lightness(lifted, +0.04)
+            chip = adjust_saturation(adjust_lightness(lifted, -0.10), 1.2)
+            cr, cg, cb = chip
+            lum = (0.299*cr + 0.587*cg + 0.114*cb) / 255
+            chip_text = "#1a1a2e" if lum > 0.55 else "#ffffff"
+            return {
+                "top": rgb_to_hex(top),
+                "middle": rgb_to_hex(middle),
+                "bottom": rgb_to_hex(bottom),
+                "chip": rgb_to_hex(chip),
+                "chip_text": chip_text,
+                "extracted": rgb_to_hex(rgb),
+            }
+        # Truly achromatic dark (black) -> silver shine fallback
         return {
             "top": rgb_to_hex((245, 245, 248)),
             "middle": rgb_to_hex((210, 212, 218)),
             "bottom": rgb_to_hex((235, 236, 240)),
             "chip": rgb_to_hex((60, 60, 68)),
+            "chip_text": "#ffffff",
             "extracted": rgb_to_hex(rgb),
         }
     if l > 0.82:
@@ -106,11 +128,18 @@ def build_gradient(rgb):
     else:
         chip = adjust_saturation(adjust_lightness(base, -0.18), 1.25)
 
+    # Determine readable text color for chip: dark text on light chips, white on dark
+    cr, cg, cb = chip
+    # Relative luminance (simplified)
+    lum = (0.299 * cr + 0.587 * cg + 0.114 * cb) / 255
+    chip_text = "#1a1a2e" if lum > 0.55 else "#ffffff"
+
     return {
         "top": rgb_to_hex(top),
         "middle": rgb_to_hex(middle),
         "bottom": rgb_to_hex(bottom),
         "chip": rgb_to_hex(chip),
+        "chip_text": chip_text,
         "extracted": rgb_to_hex(rgb),
     }
 

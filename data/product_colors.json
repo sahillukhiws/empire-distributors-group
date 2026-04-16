@@ -4,6 +4,7 @@
     "middle": "#4266ae",
     "bottom": "#6081c2",
     "chip": "#2a54a5",
+    "chip_text": "#ffffff",
     "extracted": "#5878b8",
     "has_own_bg": false
   },
@@ -12,6 +13,7 @@
     "middle": "#ffd352",
     "bottom": "#ffe085",
     "chip": "#fec215",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8d878",
     "has_own_bg": true
   },
@@ -20,6 +22,7 @@
     "middle": "#e778a5",
     "bottom": "#efa4c2",
     "chip": "#f1307e",
+    "chip_text": "#ffffff",
     "extracted": "#e898b8",
     "has_own_bg": true
   },
@@ -28,6 +31,7 @@
     "middle": "#863986",
     "bottom": "#aa49aa",
     "chip": "#7a267a",
+    "chip_text": "#ffffff",
     "extracted": "#984898",
     "has_own_bg": false
   },
@@ -36,6 +40,7 @@
     "middle": "#ed3247",
     "bottom": "#f16171",
     "chip": "#ff011e",
+    "chip_text": "#ffffff",
     "extracted": "#e85868",
     "has_own_bg": true
   },
@@ -44,6 +49,7 @@
     "middle": "#0095e0",
     "bottom": "#14b0ff",
     "chip": "#0080c1",
+    "chip_text": "#ffffff",
     "extracted": "#08a8f8",
     "has_own_bg": false
   },
@@ -52,6 +58,7 @@
     "middle": "#4266ae",
     "bottom": "#6081c2",
     "chip": "#2a54a5",
+    "chip_text": "#ffffff",
     "extracted": "#5878b8",
     "has_own_bg": false
   },
@@ -60,6 +67,7 @@
     "middle": "#9b549b",
     "bottom": "#b271b2",
     "chip": "#913f91",
+    "chip_text": "#ffffff",
     "extracted": "#a868a8",
     "has_own_bg": false
   },
@@ -68,6 +76,7 @@
     "middle": "#ed3247",
     "bottom": "#f16171",
     "chip": "#ff011e",
+    "chip_text": "#ffffff",
     "extracted": "#e85868",
     "has_own_bg": false
   },
@@ -76,22 +85,16 @@
     "middle": "#74ee21",
     "bottom": "#91f251",
     "chip": "#60f100",
+    "chip_text": "#1a1a2e",
     "extracted": "#88e848",
     "has_own_bg": true
-  },
-  "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-blue-razz-blast": {
-    "top": "#7aa7e3",
-    "middle": "#4786d8",
-    "bottom": "#71a2e1",
-    "chip": "#1571eb",
-    "extracted": "#6898d8",
-    "has_own_bg": false
   },
   "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-pineapple-paradise": {
     "top": "#ffe15f",
     "middle": "#ffd622",
     "bottom": "#ffdf55",
     "chip": "#ffd001",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8d848",
     "has_own_bg": false
   },
@@ -100,6 +103,7 @@
     "middle": "#da36b0",
     "bottom": "#e261c1",
     "chip": "#e50bae",
+    "chip_text": "#ffffff",
     "extracted": "#d858b8",
     "has_own_bg": false
   },
@@ -108,15 +112,17 @@
     "middle": "#ffd622",
     "bottom": "#ffdf55",
     "chip": "#ffd001",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8d848",
     "has_own_bg": false
   },
   "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-strawberry-splash": {
-    "top": "#b43939",
-    "middle": "#852a2a",
-    "bottom": "#ac3636",
-    "chip": "#791717",
-    "extracted": "#983838",
+    "top": "#7aa7e3",
+    "middle": "#4786d8",
+    "bottom": "#71a2e1",
+    "chip": "#1571eb",
+    "chip_text": "#ffffff",
+    "extracted": "#6898d8",
     "has_own_bg": false
   },
   "bluelotus-featured-mental-health-blue-lotus-4grm-disposable": {
@@ -124,6 +130,7 @@
     "middle": "#0095e0",
     "bottom": "#14b0ff",
     "chip": "#0080c1",
+    "chip_text": "#ffffff",
     "extracted": "#08a8f8",
     "has_own_bg": true
   },
@@ -132,6 +139,7 @@
     "middle": "#1a67a5",
     "bottom": "#2182d1",
     "chip": "#04589c",
+    "chip_text": "#ffffff",
     "extracted": "#2878b8",
     "has_own_bg": false
   },
@@ -140,6 +148,7 @@
     "middle": "#291c44",
     "bottom": "#3f2a68",
     "chip": "#221243",
+    "chip_text": "#ffffff",
     "extracted": "#382858",
     "has_own_bg": true
   },
@@ -148,6 +157,7 @@
     "middle": "#0066a1",
     "bottom": "#0086d4",
     "chip": "#005f97",
+    "chip_text": "#ffffff",
     "extracted": "#0878b8",
     "has_own_bg": false
   },
@@ -156,6 +166,7 @@
     "middle": "#c19400",
     "bottom": "#f4bb00",
     "chip": "#a27c00",
+    "chip_text": "#ffffff",
     "extracted": "#d8a808",
     "has_own_bg": false
   },
@@ -164,6 +175,7 @@
     "middle": "#d60958",
     "bottom": "#f41e71",
     "chip": "#c1004a",
+    "chip_text": "#ffffff",
     "extracted": "#e81868",
     "has_own_bg": true
   },
@@ -172,6 +184,7 @@
     "middle": "#68a739",
     "bottom": "#81c350",
     "chip": "#589e22",
+    "chip_text": "#ffffff",
     "extracted": "#78b848",
     "has_own_bg": false
   },
@@ -180,6 +193,7 @@
     "middle": "#9b549b",
     "bottom": "#b271b2",
     "chip": "#913f91",
+    "chip_text": "#ffffff",
     "extracted": "#a868a8",
     "has_own_bg": true
   },
@@ -188,6 +202,7 @@
     "middle": "#b5960b",
     "bottom": "#e5bd0e",
     "chip": "#a18300",
+    "chip_text": "#ffffff",
     "extracted": "#c8a818",
     "has_own_bg": false
   },
@@ -196,6 +211,7 @@
     "middle": "#0092a1",
     "bottom": "#00c0d4",
     "chip": "#008997",
+    "chip_text": "#ffffff",
     "extracted": "#08a8b8",
     "has_own_bg": false
   },
@@ -204,6 +220,7 @@
     "middle": "#00a0a1",
     "bottom": "#00d3d4",
     "chip": "#009597",
+    "chip_text": "#ffffff",
     "extracted": "#08b8b8",
     "has_own_bg": true
   },
@@ -212,6 +229,7 @@
     "middle": "#e40c42",
     "bottom": "#f42f60",
     "chip": "#d10033",
+    "chip_text": "#ffffff",
     "extracted": "#e82858",
     "has_own_bg": false
   },
@@ -220,6 +238,7 @@
     "middle": "#89549b",
     "bottom": "#a171b2",
     "chip": "#7c3f91",
+    "chip_text": "#ffffff",
     "extracted": "#9868a8",
     "has_own_bg": false
   },
@@ -228,6 +247,7 @@
     "middle": "#58a739",
     "bottom": "#71c350",
     "chip": "#459e22",
+    "chip_text": "#ffffff",
     "extracted": "#68b848",
     "has_own_bg": false
   },
@@ -236,6 +256,7 @@
     "middle": "#e967a8",
     "bottom": "#ef93c2",
     "chip": "#f61b8a",
+    "chip_text": "#ffffff",
     "extracted": "#e888b8",
     "has_own_bg": true
   },
@@ -244,6 +265,7 @@
     "middle": "#d5bf6b",
     "bottom": "#e0d092",
     "chip": "#d8b529",
+    "chip_text": "#1a1a2e",
     "extracted": "#d8c888",
     "has_own_bg": false
   },
@@ -252,6 +274,7 @@
     "middle": "#55bfea",
     "bottom": "#83d0f0",
     "chip": "#06b5fc",
+    "chip_text": "#ffffff",
     "extracted": "#78c8e8",
     "has_own_bg": false
   },
@@ -260,6 +283,7 @@
     "middle": "#4db24d",
     "bottom": "#71c271",
     "chip": "#35aa35",
+    "chip_text": "#ffffff",
     "extracted": "#68b868",
     "has_own_bg": false
   },
@@ -268,6 +292,7 @@
     "middle": "#97b729",
     "bottom": "#b2d33f",
     "chip": "#8cb010",
+    "chip_text": "#1a1a2e",
     "extracted": "#a8c838",
     "has_own_bg": false
   },
@@ -276,6 +301,7 @@
     "middle": "#00a2b1",
     "bottom": "#00d0e4",
     "chip": "#008592",
+    "chip_text": "#ffffff",
     "extracted": "#08b8c8",
     "has_own_bg": true
   },
@@ -284,6 +310,7 @@
     "middle": "#4db24d",
     "bottom": "#71c271",
     "chip": "#35aa35",
+    "chip_text": "#ffffff",
     "extracted": "#68b868",
     "has_own_bg": false
   },
@@ -292,15 +319,17 @@
     "middle": "#4db24d",
     "bottom": "#71c271",
     "chip": "#35aa35",
+    "chip_text": "#ffffff",
     "extracted": "#68b868",
     "has_own_bg": false
   },
   "delta-rock-on-img-20250522-wa0266": {
-    "top": "#97d479",
-    "middle": "#74c54a",
-    "bottom": "#91d171",
-    "chip": "#5dc927",
-    "extracted": "#88c868",
+    "top": "#97c578",
+    "middle": "#76b24d",
+    "bottom": "#91c271",
+    "chip": "#65aa35",
+    "chip_text": "#ffffff",
+    "extracted": "#88b868",
     "has_own_bg": false
   },
   "delta-rock-on-img-20250522-wa0267": {
@@ -308,6 +337,7 @@
     "middle": "#39b2c7",
     "bottom": "#60c2d2",
     "chip": "#1daac3",
+    "chip_text": "#ffffff",
     "extracted": "#58b8c8",
     "has_own_bg": false
   },
@@ -316,6 +346,7 @@
     "middle": "#ed3271",
     "bottom": "#f16192",
     "chip": "#ff0156",
+    "chip_text": "#ffffff",
     "extracted": "#e85888",
     "has_own_bg": false
   },
@@ -324,15 +355,17 @@
     "middle": "#c7b239",
     "bottom": "#d2c260",
     "chip": "#c3aa1d",
+    "chip_text": "#1a1a2e",
     "extracted": "#c8b858",
     "has_own_bg": false
   },
   "delta-rock-on-img-20250522-wa0270": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
-    "extracted": "#182828",
+    "top": "#b598c5",
+    "middle": "#9a71ae",
+    "bottom": "#b192c1",
+    "chip": "#8f52ad",
+    "chip_text": "#ffffff",
+    "extracted": "#a888b8",
     "has_own_bg": false
   },
   "delta-rock-on-img-20250523-wa0044": {
@@ -340,6 +373,7 @@
     "middle": "#1997c6",
     "bottom": "#2fb2e4",
     "chip": "#008bc1",
+    "chip_text": "#ffffff",
     "extracted": "#28a8d8",
     "has_own_bg": false
   },
@@ -348,6 +382,7 @@
     "middle": "#77a739",
     "bottom": "#91c350",
     "chip": "#689e22",
+    "chip_text": "#ffffff",
     "extracted": "#88b848",
     "has_own_bg": false
   },
@@ -356,6 +391,7 @@
     "middle": "#ee9c21",
     "bottom": "#f2b151",
     "chip": "#f19000",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8a848",
     "has_own_bg": false
   },
@@ -364,6 +400,7 @@
     "middle": "#db2462",
     "bottom": "#e25081",
     "chip": "#da064e",
+    "chip_text": "#ffffff",
     "extracted": "#d84878",
     "has_own_bg": false
   },
@@ -372,6 +409,7 @@
     "middle": "#0095d1",
     "bottom": "#05b7ff",
     "chip": "#007fb2",
+    "chip_text": "#ffffff",
     "extracted": "#08a8e8",
     "has_own_bg": false
   },
@@ -380,6 +418,7 @@
     "middle": "#0095d1",
     "bottom": "#05b7ff",
     "chip": "#007fb2",
+    "chip_text": "#ffffff",
     "extracted": "#08a8e8",
     "has_own_bg": true
   },
@@ -388,6 +427,7 @@
     "middle": "#0085b1",
     "bottom": "#00abe4",
     "chip": "#006d92",
+    "chip_text": "#ffffff",
     "extracted": "#0898c8",
     "has_own_bg": false
   },
@@ -396,6 +436,7 @@
     "middle": "#67962a",
     "bottom": "#82bd35",
     "chip": "#588b15",
+    "chip_text": "#ffffff",
     "extracted": "#78a838",
     "has_own_bg": false
   },
@@ -404,23 +445,26 @@
     "middle": "#c5770a",
     "bottom": "#f29410",
     "chip": "#b06600",
+    "chip_text": "#ffffff",
     "extracted": "#d88818",
     "has_own_bg": false
   },
   "delta-rock-on-img-20250604-wa0179": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#a94b4b",
+    "middle": "#7e3838",
+    "bottom": "#a24848",
+    "chip": "#762b2b",
+    "chip_text": "#ffffff",
     "extracted": "#281818",
     "has_own_bg": false
   },
   "delta-rock-on-rock-on-blue": {
-    "top": "#3867e5",
-    "middle": "#1949c6",
-    "bottom": "#2f60e4",
-    "chip": "#0035c1",
-    "extracted": "#2858d8",
+    "top": "#2c63e0",
+    "middle": "#1a49b6",
+    "bottom": "#235cdf",
+    "chip": "#0236ae",
+    "chip_text": "#ffffff",
+    "extracted": "#2858c8",
     "has_own_bg": false
   },
   "delta-rock-on-rock-on-green": {
@@ -428,6 +472,7 @@
     "middle": "#00b100",
     "bottom": "#00e400",
     "chip": "#009200",
+    "chip_text": "#ffffff",
     "extracted": "#08c808",
     "has_own_bg": false
   },
@@ -436,15 +481,17 @@
     "middle": "#ff11af",
     "bottom": "#ff44c0",
     "chip": "#f100a0",
+    "chip_text": "#ffffff",
     "extracted": "#f838b8",
     "has_own_bg": false
   },
   "delta-rock-on-rock-on-yellow": {
-    "top": "#eed900",
-    "middle": "#b1a200",
-    "bottom": "#e4d000",
-    "chip": "#928600",
-    "extracted": "#c8b808",
+    "top": "#eec600",
+    "middle": "#b19300",
+    "bottom": "#e4bd00",
+    "chip": "#927a00",
+    "chip_text": "#ffffff",
+    "extracted": "#c8a808",
     "has_own_bg": false
   },
   "delta-rock-on-whatsapp-image-2025-06-04-at-18-09-29-8f5e8ee6": {
@@ -452,6 +499,7 @@
     "middle": "#9b5489",
     "bottom": "#b271a1",
     "chip": "#913f7c",
+    "chip_text": "#ffffff",
     "extracted": "#a86898",
     "has_own_bg": false
   },
@@ -460,39 +508,44 @@
     "middle": "#b61a49",
     "bottom": "#df235c",
     "chip": "#ae0236",
+    "chip_text": "#ffffff",
     "extracted": "#c82858",
     "has_own_bg": false
   },
   "kratom-featured-bliss-xtra-100gm-p0wder": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
+    "chip_text": "#ffffff",
     "extracted": "#181828",
     "has_own_bg": false
   },
   "kratom-featured-bliss-xtra-84ct-capsule": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#6b6ba8",
+    "middle": "#4f4f87",
+    "bottom": "#6565a4",
+    "chip": "#42427f",
+    "chip_text": "#ffffff",
     "extracted": "#282838",
     "has_own_bg": false
   },
   "kratom-featured-bliss-xtra-black-shot": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#0000e5",
+    "middle": "#0000a8",
+    "bottom": "#0000db",
+    "chip": "#000093",
+    "chip_text": "#ffffff",
     "extracted": "#080828",
     "has_own_bg": false
   },
   "kratom-featured-bliss-xtra-gold-shot": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
-    "extracted": "#483818",
+    "top": "#745d19",
+    "middle": "#41340e",
+    "bottom": "#6b5617",
+    "chip": "#403204",
+    "chip_text": "#ffffff",
+    "extracted": "#584818",
     "has_own_bg": false
   },
   "kratom-featured-feek-free": {
@@ -500,6 +553,7 @@
     "middle": "#0d0081",
     "bottom": "#1300b4",
     "chip": "#0b0077",
+    "chip_text": "#ffffff",
     "extracted": "#180898",
     "has_own_bg": true
   },
@@ -508,30 +562,34 @@
     "middle": "#0176ff",
     "bottom": "#3491ff",
     "chip": "#0067e1",
+    "chip_text": "#ffffff",
     "extracted": "#2888f8",
     "has_own_bg": true
   },
   "kratom-featured-kanva-focus-flow-shot": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
-    "extracted": "#083808",
+    "top": "#b0fe00",
+    "middle": "#85c100",
+    "bottom": "#a9f400",
+    "chip": "#70a200",
+    "chip_text": "#ffffff",
+    "extracted": "#98d808",
     "has_own_bg": false
   },
   "kratom-featured-kshot-black": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#75e500",
+    "middle": "#56a800",
+    "bottom": "#70db00",
+    "chip": "#4a9300",
+    "chip_text": "#ffffff",
     "extracted": "#182808",
     "has_own_bg": true
   },
   "kratom-featured-kshot-regular": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#e50000",
+    "middle": "#a80000",
+    "bottom": "#db0000",
+    "chip": "#930000",
+    "chip_text": "#ffffff",
     "extracted": "#280808",
     "has_own_bg": false
   },
@@ -540,6 +598,7 @@
     "middle": "#1a67b6",
     "bottom": "#2381df",
     "chip": "#0257ae",
+    "chip_text": "#ffffff",
     "extracted": "#2878c8",
     "has_own_bg": false
   },
@@ -548,6 +607,7 @@
     "middle": "#c7b239",
     "bottom": "#d2c260",
     "chip": "#c3aa1d",
+    "chip_text": "#1a1a2e",
     "extracted": "#c8b858",
     "has_own_bg": false
   },
@@ -556,14 +616,16 @@
     "middle": "#ecd744",
     "bottom": "#f0e072",
     "chip": "#f2d300",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8d868",
     "has_own_bg": false
   },
   "kratom-featured-mit-45-purple-shot": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#e50075",
+    "middle": "#a80056",
+    "bottom": "#db0070",
+    "chip": "#93004a",
+    "chip_text": "#ffffff",
     "extracted": "#280818",
     "has_own_bg": false
   },
@@ -572,6 +634,7 @@
     "middle": "#0094c1",
     "bottom": "#00bbf4",
     "chip": "#007da2",
+    "chip_text": "#ffffff",
     "extracted": "#08a8d8",
     "has_own_bg": false
   },
@@ -580,6 +643,7 @@
     "middle": "#b19300",
     "bottom": "#e4bd00",
     "chip": "#927a00",
+    "chip_text": "#ffffff",
     "extracted": "#c8a808",
     "has_own_bg": false
   },
@@ -588,6 +652,7 @@
     "middle": "#499749",
     "bottom": "#60b260",
     "chip": "#348c34",
+    "chip_text": "#ffffff",
     "extracted": "#58a858",
     "has_own_bg": false
   },
@@ -596,6 +661,7 @@
     "middle": "#84571b",
     "bottom": "#ae7324",
     "chip": "#8d5307",
+    "chip_text": "#ffffff",
     "extracted": "#986828",
     "has_own_bg": false
   },
@@ -604,14 +670,16 @@
     "middle": "#f02410",
     "bottom": "#f35040",
     "chip": "#e11400",
+    "chip_text": "#ffffff",
     "extracted": "#e84838",
     "has_own_bg": false
   },
   "kratom-featured-opms": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4ba94b",
+    "middle": "#387e38",
+    "bottom": "#48a248",
+    "chip": "#2b762b",
+    "chip_text": "#ffffff",
     "extracted": "#182818",
     "has_own_bg": false
   },
@@ -620,6 +688,7 @@
     "middle": "#95a40b",
     "bottom": "#c0d40f",
     "chip": "#829000",
+    "chip_text": "#ffffff",
     "extracted": "#a8b818",
     "has_own_bg": false
   },
@@ -628,6 +697,7 @@
     "middle": "#498639",
     "bottom": "#5caa49",
     "chip": "#377a26",
+    "chip_text": "#ffffff",
     "extracted": "#589848",
     "has_own_bg": false
   },
@@ -636,6 +706,7 @@
     "middle": "#ff2611",
     "bottom": "#ff5444",
     "chip": "#f11500",
+    "chip_text": "#ffffff",
     "extracted": "#f84838",
     "has_own_bg": true
   },
@@ -644,6 +715,7 @@
     "middle": "#74651c",
     "bottom": "#9d8925",
     "chip": "#7a670b",
+    "chip_text": "#ffffff",
     "extracted": "#887828",
     "has_own_bg": true
   },
@@ -652,15 +724,17 @@
     "middle": "#d21e42",
     "bottom": "#e33f60",
     "chip": "#ce022a",
+    "chip_text": "#ffffff",
     "extracted": "#d83858",
     "has_own_bg": true
   },
   "mushroom-shroom-bang-shroom-bang-4grm-disposable": {
-    "top": "#e28ac5",
-    "middle": "#d759ac",
-    "bottom": "#e082c1",
-    "chip": "#d51c96",
-    "extracted": "#d878b8",
+    "top": "#bc50bc",
+    "middle": "#963996",
+    "bottom": "#b949b9",
+    "chip": "#8b258b",
+    "chip_text": "#ffffff",
+    "extracted": "#a848a8",
     "has_own_bg": false
   },
   "mushroom-shroom-puff-shroom-3grm-disposable": {
@@ -668,6 +742,7 @@
     "middle": "#c6a719",
     "bottom": "#e4c32f",
     "chip": "#c19e00",
+    "chip_text": "#1a1a2e",
     "extracted": "#d8b828",
     "has_own_bg": false
   },
@@ -676,15 +751,17 @@
     "middle": "#58a739",
     "bottom": "#71c350",
     "chip": "#459e22",
+    "chip_text": "#ffffff",
     "extracted": "#68b848",
     "has_own_bg": true
   },
   "mushroom-shroom-puff-shroom-puff-2ct-pre-roll": {
-    "top": "#2476c8",
-    "middle": "#1b5795",
-    "bottom": "#2371c0",
-    "chip": "#06478a",
-    "extracted": "#2868a8",
+    "top": "#3e86ce",
+    "middle": "#2967a6",
+    "bottom": "#3681cc",
+    "chip": "#12579e",
+    "chip_text": "#ffffff",
+    "extracted": "#3878b8",
     "has_own_bg": false
   },
   "mushroom-shroom-puff-shroom-puff-3grm-disposable": {
@@ -692,6 +769,7 @@
     "middle": "#d60919",
     "bottom": "#f41e2f",
     "chip": "#c1000f",
+    "chip_text": "#ffffff",
     "extracted": "#e81828",
     "has_own_bg": true
   },
@@ -700,6 +778,7 @@
     "middle": "#ffd701",
     "bottom": "#ffdf34",
     "chip": "#e1be00",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8d828",
     "has_own_bg": true
   },
@@ -708,6 +787,7 @@
     "middle": "#765839",
     "bottom": "#98724a",
     "chip": "#684927",
+    "chip_text": "#ffffff",
     "extracted": "#886848",
     "has_own_bg": true
   },
@@ -716,6 +796,7 @@
     "middle": "#d10077",
     "bottom": "#ff0593",
     "chip": "#b20066",
+    "chip_text": "#ffffff",
     "extracted": "#e80888",
     "has_own_bg": true
   },
@@ -724,6 +805,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -732,6 +814,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -740,6 +823,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -748,6 +832,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -756,6 +841,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -764,6 +850,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -772,6 +859,7 @@
     "middle": "#0094c1",
     "bottom": "#00bbf4",
     "chip": "#007da2",
+    "chip_text": "#ffffff",
     "extracted": "#08a8d8",
     "has_own_bg": false
   },
@@ -780,6 +868,7 @@
     "middle": "#392a75",
     "bottom": "#4c389a",
     "chip": "#2e1b7a",
+    "chip_text": "#ffffff",
     "extracted": "#483888",
     "has_own_bg": true
   },
@@ -788,6 +877,7 @@
     "middle": "#b1a200",
     "bottom": "#e4d000",
     "chip": "#928600",
+    "chip_text": "#ffffff",
     "extracted": "#c8b808",
     "has_own_bg": false
   },
@@ -796,6 +886,7 @@
     "middle": "#b1a200",
     "bottom": "#e4d000",
     "chip": "#928600",
+    "chip_text": "#ffffff",
     "extracted": "#c8b808",
     "has_own_bg": false
   },
@@ -804,6 +895,7 @@
     "middle": "#b1a200",
     "bottom": "#e4d000",
     "chip": "#928600",
+    "chip_text": "#ffffff",
     "extracted": "#c8b808",
     "has_own_bg": false
   },
@@ -812,6 +904,7 @@
     "middle": "#e4c00c",
     "bottom": "#f4d32f",
     "chip": "#d1ad00",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c828",
     "has_own_bg": false
   },
@@ -820,6 +913,7 @@
     "middle": "#e4c00c",
     "bottom": "#f4d32f",
     "chip": "#d1ad00",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c828",
     "has_own_bg": false
   },
@@ -828,6 +922,7 @@
     "middle": "#e4c00c",
     "bottom": "#f4d32f",
     "chip": "#d1ad00",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c828",
     "has_own_bg": false
   },
@@ -836,6 +931,7 @@
     "middle": "#e4c00c",
     "bottom": "#f4d32f",
     "chip": "#d1ad00",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c828",
     "has_own_bg": false
   },
@@ -844,6 +940,7 @@
     "middle": "#e4c00c",
     "bottom": "#f4d32f",
     "chip": "#d1ad00",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c828",
     "has_own_bg": false
   },
@@ -852,6 +949,7 @@
     "middle": "#e4c00c",
     "bottom": "#f4d32f",
     "chip": "#d1ad00",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c828",
     "has_own_bg": false
   },
@@ -860,6 +958,7 @@
     "middle": "#b1a200",
     "bottom": "#e4d000",
     "chip": "#928600",
+    "chip_text": "#ffffff",
     "extracted": "#c8b808",
     "has_own_bg": false
   },
@@ -868,6 +967,7 @@
     "middle": "#b1a200",
     "bottom": "#e4d000",
     "chip": "#928600",
+    "chip_text": "#ffffff",
     "extracted": "#c8b808",
     "has_own_bg": false
   },
@@ -876,6 +976,7 @@
     "middle": "#b1a200",
     "bottom": "#e4d000",
     "chip": "#928600",
+    "chip_text": "#ffffff",
     "extracted": "#c8b808",
     "has_own_bg": false
   },
@@ -884,6 +985,7 @@
     "middle": "#659100",
     "bottom": "#89c400",
     "chip": "#5d8700",
+    "chip_text": "#ffffff",
     "extracted": "#78a808",
     "has_own_bg": false
   },
@@ -892,6 +994,7 @@
     "middle": "#0066a1",
     "bottom": "#0086d4",
     "chip": "#005f97",
+    "chip_text": "#ffffff",
     "extracted": "#0878b8",
     "has_own_bg": true
   },
@@ -900,6 +1003,7 @@
     "middle": "#db2424",
     "bottom": "#e25050",
     "chip": "#da0606",
+    "chip_text": "#ffffff",
     "extracted": "#d84848",
     "has_own_bg": true
   },
@@ -908,6 +1012,7 @@
     "middle": "#007054",
     "bottom": "#00a37a",
     "chip": "#00664c",
+    "chip_text": "#ffffff",
     "extracted": "#088868",
     "has_own_bg": true
   },
@@ -916,6 +1021,7 @@
     "middle": "#006591",
     "bottom": "#0089c4",
     "chip": "#005d87",
+    "chip_text": "#ffffff",
     "extracted": "#0878a8",
     "has_own_bg": false
   },
@@ -924,6 +1030,7 @@
     "middle": "#963977",
     "bottom": "#b94994",
     "chip": "#8b2568",
+    "chip_text": "#ffffff",
     "extracted": "#a84888",
     "has_own_bg": false
   },
@@ -932,6 +1039,7 @@
     "middle": "#a1000e",
     "bottom": "#d40012",
     "chip": "#97000c",
+    "chip_text": "#ffffff",
     "extracted": "#b80818",
     "has_own_bg": false
   },
@@ -940,6 +1048,7 @@
     "middle": "#007054",
     "bottom": "#00a37a",
     "chip": "#00664c",
+    "chip_text": "#ffffff",
     "extracted": "#088868",
     "has_own_bg": false
   },
@@ -948,6 +1057,7 @@
     "middle": "#0066a1",
     "bottom": "#0086d4",
     "chip": "#005f97",
+    "chip_text": "#ffffff",
     "extracted": "#0878b8",
     "has_own_bg": false
   },
@@ -956,6 +1066,7 @@
     "middle": "#1a77a5",
     "bottom": "#2196d1",
     "chip": "#04699c",
+    "chip_text": "#ffffff",
     "extracted": "#2888b8",
     "has_own_bg": false
   },
@@ -964,6 +1075,7 @@
     "middle": "#a73977",
     "bottom": "#c35091",
     "chip": "#9e2268",
+    "chip_text": "#ffffff",
     "extracted": "#b84888",
     "has_own_bg": false
   },
@@ -972,6 +1084,7 @@
     "middle": "#b24d89",
     "bottom": "#c271a1",
     "chip": "#aa357b",
+    "chip_text": "#ffffff",
     "extracted": "#b86898",
     "has_own_bg": false
   },
@@ -980,6 +1093,7 @@
     "middle": "#c03030",
     "bottom": "#d35050",
     "chip": "#b91717",
+    "chip_text": "#ffffff",
     "extracted": "#c84848",
     "has_own_bg": false
   },
@@ -988,6 +1102,7 @@
     "middle": "#c54a4a",
     "bottom": "#d17171",
     "chip": "#c92727",
+    "chip_text": "#ffffff",
     "extracted": "#c86868",
     "has_own_bg": false
   },
@@ -996,6 +1111,7 @@
     "middle": "#006591",
     "bottom": "#0089c4",
     "chip": "#005d87",
+    "chip_text": "#ffffff",
     "extracted": "#0878a8",
     "has_own_bg": false
   },
@@ -1004,6 +1120,7 @@
     "middle": "#a1000e",
     "bottom": "#d40012",
     "chip": "#97000c",
+    "chip_text": "#ffffff",
     "extracted": "#b80818",
     "has_own_bg": false
   },
@@ -1012,6 +1129,7 @@
     "middle": "#49852a",
     "bottom": "#5eac36",
     "chip": "#387917",
+    "chip_text": "#ffffff",
     "extracted": "#589838",
     "has_own_bg": false
   },
@@ -1020,6 +1138,7 @@
     "middle": "#0076c1",
     "bottom": "#0095f4",
     "chip": "#0062a2",
+    "chip_text": "#ffffff",
     "extracted": "#0888d8",
     "has_own_bg": true
   },
@@ -1028,6 +1147,7 @@
     "middle": "#b50b0b",
     "bottom": "#e50e0e",
     "chip": "#a10000",
+    "chip_text": "#ffffff",
     "extracted": "#c81818",
     "has_own_bg": true
   },
@@ -1036,6 +1156,7 @@
     "middle": "#499639",
     "bottom": "#5cb949",
     "chip": "#368b25",
+    "chip_text": "#ffffff",
     "extracted": "#58a848",
     "has_own_bg": true
   },
@@ -1044,6 +1165,7 @@
     "middle": "#006591",
     "bottom": "#0089c4",
     "chip": "#005d87",
+    "chip_text": "#ffffff",
     "extracted": "#0878a8",
     "has_own_bg": false
   },
@@ -1052,6 +1174,7 @@
     "middle": "#a1000e",
     "bottom": "#d40012",
     "chip": "#97000c",
+    "chip_text": "#ffffff",
     "extracted": "#b80818",
     "has_own_bg": false
   },
@@ -1060,6 +1183,7 @@
     "middle": "#49852a",
     "bottom": "#5eac36",
     "chip": "#387917",
+    "chip_text": "#ffffff",
     "extracted": "#589838",
     "has_own_bg": false
   },
@@ -1068,6 +1192,7 @@
     "middle": "#1a87b6",
     "bottom": "#23a6df",
     "chip": "#027aae",
+    "chip_text": "#ffffff",
     "extracted": "#2898c8",
     "has_own_bg": false
   },
@@ -1076,6 +1201,7 @@
     "middle": "#b72939",
     "bottom": "#d33f50",
     "chip": "#b01022",
+    "chip_text": "#ffffff",
     "extracted": "#c83848",
     "has_own_bg": false
   },
@@ -1084,6 +1210,7 @@
     "middle": "#589749",
     "bottom": "#71b260",
     "chip": "#458c34",
+    "chip_text": "#ffffff",
     "extracted": "#68a858",
     "has_own_bg": false
   },
@@ -1092,6 +1219,7 @@
     "middle": "#49962a",
     "bottom": "#5cbd35",
     "chip": "#378b15",
+    "chip_text": "#ffffff",
     "extracted": "#58a838",
     "has_own_bg": false
   },
@@ -1100,6 +1228,7 @@
     "middle": "#0074a1",
     "bottom": "#0099d4",
     "chip": "#006c97",
+    "chip_text": "#ffffff",
     "extracted": "#0888b8",
     "has_own_bg": false
   },
@@ -1108,14 +1237,16 @@
     "middle": "#87b729",
     "bottom": "#a2d33f",
     "chip": "#7bb010",
+    "chip_text": "#1a1a2e",
     "extracted": "#98c838",
     "has_own_bg": true
   },
   "supplements-strike-kava-shot-strike-kava-shot-strawberry": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#0000f5",
+    "middle": "#0000b8",
+    "bottom": "#0000eb",
+    "chip": "#0000a3",
+    "chip_text": "#ffffff",
     "extracted": "#080838",
     "has_own_bg": true
   },
@@ -1124,6 +1255,7 @@
     "middle": "#b0ee21",
     "bottom": "#c1f251",
     "chip": "#a8f100",
+    "chip_text": "#1a1a2e",
     "extracted": "#b8e848",
     "has_own_bg": false
   },
@@ -1132,167 +1264,188 @@
     "middle": "#9ef010",
     "bottom": "#b1f340",
     "chip": "#8ee100",
+    "chip_text": "#1a1a2e",
     "extracted": "#a8e838",
     "has_own_bg": false
   },
   "vape-vapes-new-file-003": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#a200f5",
+    "middle": "#7900b8",
+    "bottom": "#9b00eb",
+    "chip": "#6c00a3",
+    "chip_text": "#ffffff",
     "extracted": "#280838",
     "has_own_bg": true
   },
-  "vape-vapes-new-file-013": {
+  "vape-geekbar-pulse-25k-3flavors": {
     "top": "#b589d4",
     "middle": "#9a5cc3",
     "bottom": "#b181d1",
     "chip": "#8f34cc",
+    "chip_text": "#ffffff",
     "extracted": "#a878c8",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6230": {
+  "vape-geekbar-pulse-25k-planet-edition": {
     "top": "#f34949",
     "middle": "#f01010",
     "bottom": "#f34040",
     "chip": "#e10000",
+    "chip_text": "#ffffff",
     "extracted": "#e83838",
     "has_own_bg": true
   },
   "vape-vapes-new-img-6922": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#00a2f5",
+    "middle": "#0079b8",
+    "bottom": "#009beb",
+    "chip": "#006ba3",
+    "chip_text": "#ffffff",
     "extracted": "#082838",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6923": {
+  "vape-foger-bit-35k-bitcoin-edition": {
     "top": "#3b8da2",
     "middle": "#2a6675",
     "bottom": "#38879a",
     "chip": "#1b657a",
+    "chip_text": "#ffffff",
     "extracted": "#387888",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6924": {
+  "vape-foger-switch-pro-kiwi-dragon-berry": {
     "top": "#a86ffe",
     "middle": "#8332fd",
     "bottom": "#a265fe",
     "chip": "#6000f2",
+    "chip_text": "#ffffff",
     "extracted": "#9858f8",
     "has_own_bg": true
   },
   "vape-vapes-new-img-6925": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#a200f5",
+    "middle": "#7900b8",
+    "bottom": "#9b00eb",
+    "chip": "#6c00a3",
+    "chip_text": "#ffffff",
     "extracted": "#280838",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6926": {
+  "vape-foger-switch-pro-pod-mexico-mango": {
     "top": "#ffb65f",
     "middle": "#ff9922",
     "bottom": "#ffb155",
     "chip": "#ff8b01",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8a848",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6927": {
+  "vape-foger-switch-pro-pod-watermelon-ice": {
     "top": "#0ffeff",
     "middle": "#00d0d1",
     "bottom": "#05fdff",
     "chip": "#00b1b2",
+    "chip_text": "#ffffff",
     "extracted": "#08e8e8",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6928": {
-    "top": "#ff9c8f",
-    "middle": "#ff6752",
-    "bottom": "#ff9385",
-    "chip": "#fe3015",
-    "extracted": "#f88878",
+  "vape-raz-ltx-25k-boost-mode": {
+    "top": "#fead9f",
+    "middle": "#fd7862",
+    "bottom": "#fea495",
+    "chip": "#ff4222",
+    "chip_text": "#ffffff",
+    "extracted": "#f89888",
     "has_own_bg": false
   },
-  "vape-vapes-new-img-6929": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+  "vape-raz-ltx-25k-fire-and-ice": {
+    "top": "#006ee5",
+    "middle": "#0051a8",
+    "bottom": "#0069db",
+    "chip": "#004793",
+    "chip_text": "#ffffff",
     "extracted": "#081828",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6930": {
+  "vape-raz-ltx-25k-bangin-sour-berries": {
     "top": "#59019c",
     "middle": "#36005f",
     "bottom": "#530192",
     "chip": "#2f0055",
+    "chip_text": "#ffffff",
     "extracted": "#480878",
     "has_own_bg": true
   },
   "vape-vapes-new-img-6931": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
+    "chip_text": "#ffffff",
     "extracted": "#181828",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6933": {
+  "vape-geekbar-pulse-collection-3colors": {
     "top": "#ff5d4e",
     "middle": "#ff2611",
     "bottom": "#ff5444",
     "chip": "#f11500",
+    "chip_text": "#ffffff",
     "extracted": "#f84838",
     "has_own_bg": false
   },
-  "vape-vapes-new-img-6934": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+  "vape-geekbar-pulse-x-3d-curved-screen": {
+    "top": "#0000f5",
+    "middle": "#0000b8",
+    "bottom": "#0000eb",
+    "chip": "#0000a3",
+    "chip_text": "#ffffff",
     "extracted": "#080838",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6935": {
+  "vape-geekbar-pulse-x-25k-constellation": {
     "top": "#ffb65f",
     "middle": "#ff9922",
     "bottom": "#ffb155",
     "chip": "#ff8b01",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8a848",
     "has_own_bg": true
   },
   "vape-vapes-new-img-6936": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#6e00e5",
+    "middle": "#5100a8",
+    "bottom": "#6900db",
+    "chip": "#470093",
+    "chip_text": "#ffffff",
     "extracted": "#180828",
     "has_own_bg": true
   },
   "vape-vapes-new-img-6937": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#0644ff",
+    "middle": "#0032c8",
+    "bottom": "#003ffb",
+    "chip": "#002db3",
+    "chip_text": "#ffffff",
     "extracted": "#081848",
-    "has_own_bg": true
+    "has_own_bg": false
   },
-  "vape-vapes-new-img-6938": {
+  "vape-gigabar-pulse-x-25k-curved-screen": {
     "top": "#f7f7b1",
     "middle": "#f2f27a",
     "bottom": "#f6f6a8",
     "chip": "#feff30",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8f8c8",
     "has_own_bg": true
   },
   "novelties-lighters-angel-torch-lighter-12ct-19630a": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
-    "extracted": "#182848",
+    "top": "#cc6411",
+    "middle": "#93490c",
+    "bottom": "#c26010",
+    "chip": "#944200",
+    "chip_text": "#ffffff",
+    "extracted": "#a85818",
     "has_own_bg": false
   },
   "novelties-lighters-assorted-torch-lighters-display-a": {
@@ -1300,6 +1453,7 @@
     "middle": "#dfe000",
     "bottom": "#feff14",
     "chip": "#c0c100",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8f808",
     "has_own_bg": false
   },
@@ -1308,6 +1462,7 @@
     "middle": "#c19400",
     "bottom": "#f4bb00",
     "chip": "#a27c00",
+    "chip_text": "#ffffff",
     "extracted": "#d8a808",
     "has_own_bg": false
   },
@@ -1316,6 +1471,7 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": false
   },
@@ -1324,6 +1480,7 @@
     "middle": "#ffbf42",
     "bottom": "#ffd075",
     "chip": "#ffaa04",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8c868",
     "has_own_bg": false
   },
@@ -1332,6 +1489,7 @@
     "middle": "#b6491a",
     "bottom": "#df5c23",
     "chip": "#ae3602",
+    "chip_text": "#ffffff",
     "extracted": "#c85828",
     "has_own_bg": true
   },
@@ -1340,14 +1498,16 @@
     "middle": "#867739",
     "bottom": "#aa9649",
     "chip": "#7a6926",
+    "chip_text": "#ffffff",
     "extracted": "#988848",
     "has_own_bg": true
   },
   "novelties-lighters-card-lighter-15ct1": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#a94b4b",
+    "middle": "#7e3838",
+    "bottom": "#a24848",
+    "chip": "#762b2b",
+    "chip_text": "#ffffff",
     "extracted": "#281818",
     "has_own_bg": true
   },
@@ -1356,6 +1516,7 @@
     "middle": "#474739",
     "bottom": "#636350",
     "chip": "#434331",
+    "chip_text": "#ffffff",
     "extracted": "#585848",
     "has_own_bg": false
   },
@@ -1364,6 +1525,7 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": false
   },
@@ -1372,14 +1534,16 @@
     "middle": "#d3bd7d",
     "bottom": "#e0d0a3",
     "chip": "#d1ad40",
+    "chip_text": "#1a1a2e",
     "extracted": "#d8c898",
     "has_own_bg": false
   },
   "novelties-lighters-card-lighter-20ct3": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#6ba7a8",
+    "middle": "#4f8687",
+    "bottom": "#65a3a4",
+    "chip": "#427e7f",
+    "chip_text": "#ffffff",
     "extracted": "#283838",
     "has_own_bg": true
   },
@@ -1388,22 +1552,25 @@
     "middle": "#d16800",
     "bottom": "#ff8205",
     "chip": "#b25900",
+    "chip_text": "#ffffff",
     "extracted": "#e87808",
     "has_own_bg": false
   },
   "novelties-lighters-color-torch-lighter-03006-12ct-box": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
+    "chip_text": "#ffffff",
     "extracted": "#181828",
     "has_own_bg": false
   },
   "novelties-lighters-double-barrel-shotgun-lighter-10ct-19024": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#d08434",
+    "middle": "#a26525",
+    "bottom": "#cb7f2e",
+    "chip": "#9c5b15",
+    "chip_text": "#ffffff",
     "extracted": "#382818",
     "has_own_bg": true
   },
@@ -1412,14 +1579,16 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": true
   },
   "novelties-lighters-dragon-lighter-25ct": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#0000e5",
+    "middle": "#0000a8",
+    "bottom": "#0000db",
+    "chip": "#000093",
+    "chip_text": "#ffffff",
     "extracted": "#080828",
     "has_own_bg": false
   },
@@ -1428,14 +1597,16 @@
     "middle": "#e0a400",
     "bottom": "#ffc014",
     "chip": "#c18e00",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8b808",
     "has_own_bg": false
   },
   "novelties-lighters-grenade-regular-flame-lighter-12ct-06666": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#6ba86b",
+    "middle": "#4f874f",
+    "bottom": "#65a465",
+    "chip": "#427f42",
+    "chip_text": "#ffffff",
     "extracted": "#283828",
     "has_own_bg": false
   },
@@ -1444,6 +1615,7 @@
     "middle": "#667789",
     "bottom": "#8191a1",
     "chip": "#54677c",
+    "chip_text": "#ffffff",
     "extracted": "#788898",
     "has_own_bg": false
   },
@@ -1452,6 +1624,7 @@
     "middle": "#fdff01",
     "bottom": "#feff34",
     "chip": "#dfe100",
+    "chip_text": "#1a1a2e",
     "extracted": "#f8f828",
     "has_own_bg": false
   },
@@ -1460,14 +1633,16 @@
     "middle": "#d19500",
     "bottom": "#ffb705",
     "chip": "#b27f00",
+    "chip_text": "#ffffff",
     "extracted": "#e8a808",
     "has_own_bg": false
   },
   "novelties-lighters-shoe-flame-lighter-12ct-00188a": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4ba9a9",
+    "middle": "#387e7e",
+    "bottom": "#48a2a2",
+    "chip": "#2b7676",
+    "chip_text": "#ffffff",
     "extracted": "#182828",
     "has_own_bg": false
   },
@@ -1476,38 +1651,43 @@
     "middle": "#776858",
     "bottom": "#94826f",
     "chip": "#685947",
+    "chip_text": "#ffffff",
     "extracted": "#887868",
     "has_own_bg": false
   },
   "novelties-lighters-techno-09169a-double-torch-flip-top-lighter-20ct-09169a": {
-    "top": "#594444",
-    "middle": "#362929",
-    "bottom": "#533f3f",
-    "chip": "#312323",
-    "extracted": "#483838",
+    "top": "#a94b4b",
+    "middle": "#7e3838",
+    "bottom": "#a24848",
+    "chip": "#762b2b",
+    "chip_text": "#ffffff",
+    "extracted": "#281818",
     "has_own_bg": false
   },
   "novelties-lighters-techno-119025-dual-flame-lighter-20ct": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4ba9a9",
+    "middle": "#387e7e",
+    "bottom": "#48a2a2",
+    "chip": "#2b7676",
+    "chip_text": "#ffffff",
     "extracted": "#182828",
     "has_own_bg": true
   },
   "novelties-lighters-techno-119025-dual-flame-lighter-20ct1": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#6ba7a8",
+    "middle": "#4f8687",
+    "bottom": "#65a3a4",
+    "chip": "#427e7f",
+    "chip_text": "#ffffff",
     "extracted": "#283838",
     "has_own_bg": true
   },
   "novelties-lighters-techno-19051-a-12ct": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#1717bd",
+    "middle": "#101086",
+    "bottom": "#1616b4",
+    "chip": "#03037e",
+    "chip_text": "#ffffff",
     "extracted": "#080818",
     "has_own_bg": true
   },
@@ -1516,22 +1696,25 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": true
   },
   "novelties-lighters-techno-asst-color-side-torch-lighter-19057-9ct-box": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4ba9a9",
+    "middle": "#387e7e",
+    "bottom": "#48a2a2",
+    "chip": "#2b7676",
+    "chip_text": "#ffffff",
     "extracted": "#182828",
     "has_own_bg": true
   },
   "novelties-lighters-techno-bbq-lighters-21064-91751-21265-91139-12ct-box": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#f55200",
+    "middle": "#b83d00",
+    "bottom": "#eb4e00",
+    "chip": "#a33600",
+    "chip_text": "#ffffff",
     "extracted": "#381808",
     "has_own_bg": false
   },
@@ -1540,22 +1723,25 @@
     "middle": "#d29b1e",
     "bottom": "#e3b23f",
     "chip": "#ce9102",
+    "chip_text": "#1a1a2e",
     "extracted": "#d8a838",
     "has_own_bg": false
   },
   "novelties-lighters-techno-carabiner-lighter-06832a-20ct-box": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
+    "chip_text": "#ffffff",
     "extracted": "#181828",
     "has_own_bg": true
   },
   "novelties-lighters-techno-derringer-torch-lighter-04991-1-16ct-box": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
+    "chip_text": "#ffffff",
     "extracted": "#181828",
     "has_own_bg": false
   },
@@ -1564,6 +1750,7 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": true
   },
@@ -1572,14 +1759,16 @@
     "middle": "#d1b200",
     "bottom": "#ffda05",
     "chip": "#b29800",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8c808",
     "has_own_bg": true
   },
   "novelties-lighters-techno-skull-side-torch-lighter-19052a-9ct-box": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#006ee5",
+    "middle": "#0051a8",
+    "bottom": "#0069db",
+    "chip": "#004793",
+    "chip_text": "#ffffff",
     "extracted": "#081828",
     "has_own_bg": true
   },
@@ -1588,6 +1777,7 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": true
   },
@@ -1596,6 +1786,7 @@
     "middle": "#9c8874",
     "bottom": "#b1a291",
     "chip": "#93795d",
+    "chip_text": "#ffffff",
     "extracted": "#a89888",
     "has_own_bg": true
   },
@@ -1604,6 +1795,7 @@
     "middle": "#45382a",
     "bottom": "#65523d",
     "chip": "#433321",
+    "chip_text": "#ffffff",
     "extracted": "#584838",
     "has_own_bg": true
   },
@@ -1612,6 +1804,7 @@
     "middle": "#775849",
     "bottom": "#96705c",
     "chip": "#694837",
+    "chip_text": "#ffffff",
     "extracted": "#886858",
     "has_own_bg": false
   },
@@ -1620,6 +1813,7 @@
     "middle": "#9b6654",
     "bottom": "#b28171",
     "chip": "#91543f",
+    "chip_text": "#ffffff",
     "extracted": "#a87868",
     "has_own_bg": false
   },
@@ -1628,6 +1822,7 @@
     "middle": "#eaaa55",
     "bottom": "#f0c183",
     "chip": "#fc9206",
+    "chip_text": "#1a1a2e",
     "extracted": "#e8b878",
     "has_own_bg": false
   },
@@ -1636,6 +1831,7 @@
     "middle": "#00e0d1",
     "bottom": "#14ffef",
     "chip": "#00c1b4",
+    "chip_text": "#ffffff",
     "extracted": "#08f8e8",
     "has_own_bg": false
   },
@@ -1644,23 +1840,26 @@
     "middle": "#00a192",
     "bottom": "#00d4c0",
     "chip": "#009789",
+    "chip_text": "#ffffff",
     "extracted": "#08b8a8",
     "has_own_bg": false
   },
   "novelties-accessories-azza-air-fresheners-200-300ml": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
-    "extracted": "#084838",
+    "top": "#178659",
+    "middle": "#0e5136",
+    "bottom": "#167d53",
+    "chip": "#015331",
+    "chip_text": "#ffffff",
+    "extracted": "#186848",
     "has_own_bg": false
   },
   "novelties-accessories-bracelet-display-50ct": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
-    "extracted": "#181828",
+    "top": "#0052f5",
+    "middle": "#003db8",
+    "bottom": "#004eeb",
+    "chip": "#0035a3",
+    "chip_text": "#ffffff",
+    "extracted": "#081838",
     "has_own_bg": false
   },
   "novelties-accessories-budeez-caps-display-144ct": {
@@ -1668,6 +1867,7 @@
     "middle": "#1b2734",
     "bottom": "#2c4156",
     "chip": "#142131",
+    "chip_text": "#ffffff",
     "extracted": "#283848",
     "has_own_bg": false
   },
@@ -1676,15 +1876,17 @@
     "middle": "#d2d4da",
     "bottom": "#ebecf0",
     "chip": "#3c3c44",
+    "chip_text": "#ffffff",
     "extracted": "#181818",
     "has_own_bg": true
   },
   "novelties-accessories-chorboy-scrubber-display": {
-    "top": "#d57758",
-    "middle": "#c05430",
-    "bottom": "#d37150",
-    "chip": "#b93f17",
-    "extracted": "#c86848",
+    "top": "#d58758",
+    "middle": "#c06630",
+    "bottom": "#d38150",
+    "chip": "#b95417",
+    "chip_text": "#ffffff",
+    "extracted": "#c87848",
     "has_own_bg": false
   },
   "novelties-accessories-digital-scales-display": {
@@ -1692,14 +1894,16 @@
     "middle": "#1c2a54",
     "bottom": "#293d7a",
     "chip": "#102154",
+    "chip_text": "#ffffff",
     "extracted": "#283868",
     "has_own_bg": false
   },
   "novelties-accessories-hidden-pocket-socks-48ct": {
-    "top": "#f5f5f8",
-    "middle": "#d2d4da",
-    "bottom": "#ebecf0",
-    "chip": "#3c3c44",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
+    "chip_text": "#ffffff",
     "extracted": "#181828",
     "has_own_bg": true
   },
@@ -1708,6 +1912,7 @@
     "middle": "#ff0129",
     "bottom": "#ff3454",
     "chip": "#e10022",
+    "chip_text": "#ffffff",
     "extracted": "#f82848",
     "has_own_bg": true
   },
@@ -1716,23 +1921,26 @@
     "middle": "#9b8954",
     "bottom": "#b2a171",
     "chip": "#917c3f",
+    "chip_text": "#ffffff",
     "extracted": "#a89868",
     "has_own_bg": true
   },
   "novelties-accessories-keychain-display-300ct": {
-    "top": "#ce0000",
-    "middle": "#910000",
-    "bottom": "#c40000",
-    "chip": "#870000",
-    "extracted": "#a80808",
+    "top": "#ad0000",
+    "middle": "#700000",
+    "bottom": "#a30000",
+    "chip": "#660000",
+    "chip_text": "#ffffff",
+    "extracted": "#880808",
     "has_own_bg": false
   },
   "novelties-accessories-knife-display-48ct-96ct": {
-    "top": "#976c15",
-    "middle": "#62450e",
-    "bottom": "#8e6514",
-    "chip": "#654200",
-    "extracted": "#785818",
+    "top": "#be9300",
+    "middle": "#816400",
+    "bottom": "#b48b00",
+    "chip": "#775b00",
+    "chip_text": "#ffffff",
+    "extracted": "#987808",
     "has_own_bg": false
   },
   "novelties-accessories-satya-nag-champa-84ct-display": {
@@ -1740,6 +1948,7 @@
     "middle": "#1c1c74",
     "bottom": "#25259d",
     "chip": "#0b0b7a",
+    "chip_text": "#ffffff",
     "extracted": "#282888",
     "has_own_bg": false
   },
@@ -1748,23 +1957,26 @@
     "middle": "#1d00c1",
     "bottom": "#2500f4",
     "chip": "#1700a2",
+    "chip_text": "#ffffff",
     "extracted": "#2808d8",
     "has_own_bg": false
   },
   "novelties-accessories-tactical-stoneman-knife-display": {
-    "top": "#976c15",
-    "middle": "#62450e",
-    "bottom": "#8e6514",
-    "chip": "#654200",
-    "extracted": "#785818",
+    "top": "#be9300",
+    "middle": "#816400",
+    "bottom": "#b48b00",
+    "chip": "#775b00",
+    "chip_text": "#ffffff",
+    "extracted": "#987808",
     "has_own_bg": false
   },
   "novelties-accessories-taisun-charger-display": {
-    "top": "#ff1e1e",
-    "middle": "#e00000",
-    "bottom": "#ff1414",
-    "chip": "#c10000",
-    "extracted": "#f80808",
+    "top": "#ff0f0f",
+    "middle": "#d10000",
+    "bottom": "#ff0505",
+    "chip": "#b20000",
+    "chip_text": "#ffffff",
+    "extracted": "#e80808",
     "has_own_bg": false
   },
   "novelties-accessories-warner-premium-pinnacle-batteries": {
@@ -1772,7 +1984,53 @@
     "middle": "#00a4e0",
     "bottom": "#14c0ff",
     "chip": "#008dc1",
+    "chip_text": "#ffffff",
     "extracted": "#08b8f8",
     "has_own_bg": false
+  },
+  "vape-foger-switch-pro-30k": {
+    "top": "#f08f65",
+    "middle": "#9084a5",
+    "bottom": "#694079",
+    "chip": "#685c7d",
+    "chip_text": "#ffffff",
+    "extracted": "#9084a5",
+    "has_own_bg": true
+  },
+  "vape-foger-bit-35k": {
+    "top": "#3e3a41",
+    "middle": "#9e98a8",
+    "bottom": "#42446d",
+    "chip": "#767080",
+    "chip_text": "#ffffff",
+    "extracted": "#9e98a8",
+    "has_own_bg": true
+  },
+  "vape-raz-ltx-25k": {
+    "top": "#756d92",
+    "middle": "#5b4e49",
+    "bottom": "#5c698b",
+    "chip": "#332621",
+    "chip_text": "#ffffff",
+    "extracted": "#5b4e49",
+    "has_own_bg": true
+  },
+  "vape-gigabar-pulse-25k": {
+    "top": "#9064ad",
+    "middle": "#374256",
+    "bottom": "#282f59",
+    "chip": "#0f1a2e",
+    "chip_text": "#ffffff",
+    "extracted": "#374256",
+    "has_own_bg": true
+  },
+  "vape-gigabar-pulse-x-space": {
+    "top": "#2f2741",
+    "middle": "#473e48",
+    "bottom": "#554156",
+    "chip": "#1f1620",
+    "chip_text": "#ffffff",
+    "extracted": "#473e48",
+    "has_own_bg": true
   }
 }
