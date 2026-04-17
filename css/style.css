@@ -125,7 +125,9 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     padding: 0 20px;
 }
 .section {
-    padding: 30px 0;
+    padding: clamp(20px, 3vw, 32px) 0;
+    position: relative;
+    z-index: 1;
 }
 .section--white {
     background: var(--bg-light);
@@ -137,7 +139,7 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
 .section--pastel-lavender { background: #f5f3ff; } /* light lavender */
 .section-head {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(14px, 2vw, 22px);
 }
 .section-head__title {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
@@ -1923,27 +1925,25 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
    HERO (NEW): slider LEFT + 2x2 grid RIGHT
    ============================================ */
 .hero {
-    padding: 36px 0;
+    padding: clamp(14px, 3vw, 36px) 0;
     background: var(--bg-white);
+    position: relative;
+    z-index: 1;
 }
 .hero__grid {
     display: grid;
-    grid-template-columns: 1.7fr 1fr;
-    gap: 24px;
+    grid-template-columns: 1.6fr 1fr;
+    gap: clamp(12px, 2vw, 24px);
     align-items: stretch;
 }
 
-/* Slider - 2x taller (was 460 -> 920) */
 .hero__slider {
     position: relative;
-    border-radius: 24px;
+    border-radius: clamp(12px, 1.5vw, 22px);
     overflow: hidden;
-    background: #f4f4f6;
+    background: #000;
     box-shadow: var(--sh-lg);
-    /* Match sketch: slider is tall rectangle, same height as the 2x2 grid column.
-       If tiles are 1:1 and grid is 2 cols x 2 rows, the grid column's rendered height
-       = (2 * tileWidth) + gap. Slider width = (heroWidth - gap - gridWidth).
-       Simplest: let the grid determine height and slider stretches to match via align-items: stretch. */
+    height: 100%;
 }
 .hero__track {
     display: flex;
@@ -1966,26 +1966,25 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     color: inherit;
 }
 .hero__slide img {
-    max-width: 92%;
-    max-height: 92%;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 24px 48px rgba(0,0,0,0.32));
     transition: transform 0.5s var(--ease);
 }
-.hero__slide:hover img { transform: scale(1.04); }
+.hero__slide:hover img { transform: scale(1.02); }
 /* Cover mode: promo images fill 100% of the slide with no gradient showing */
 .hero__slide--cover {
     padding: 0;
     background: none;
 }
 .hero__slide--cover img {
-    max-width: none;
-    max-height: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
+    object-fit: contain;
     filter: none;
 }
 .hero__slide-label {
@@ -2062,16 +2061,15 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     background: #fff;
 }
 
-/* 2x2 tile grid - 2x bigger */
+/* 2x2 tile grid */
 .hero__grid2x2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-content: start;
+    gap: clamp(10px, 1.5vw, 18px);
 }
 .hero__tile {
     position: relative;
-    border-radius: 20px;
+    border-radius: clamp(12px, 1.5vw, 20px);
     overflow: hidden;
     aspect-ratio: 1 / 1;
     background: linear-gradient(160deg, var(--c-lt, #f3f4f6), var(--c, #e5e7eb));
@@ -2126,17 +2124,17 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
    ============================================ */
 .cat-showcase-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: clamp(10px, 2vw, 18px);
 }
 .cat-tile {
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
+    border-radius: clamp(10px, 1.5vw, 14px);
     overflow: hidden;
-    background: var(--bg-white);
-    box-shadow: var(--sh-sm);
-    border: 1px solid var(--border);
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.06);
     position: relative;
     text-decoration: none;
     color: inherit;
@@ -2146,61 +2144,61 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     content: '';
     position: absolute;
     left: 0; right: 0; bottom: 0;
-    height: 6px;
+    height: 4px;
     background: var(--c, var(--brand));
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 14px 14px;
     z-index: 2;
 }
 .cat-tile:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--sh-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
 }
 .cat-tile__media {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     background: linear-gradient(160deg, var(--c-lt, #f3f4f6) 0%, var(--c, #6b7280) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: clamp(10px, 2vw, 18px);
     overflow: hidden;
 }
 .cat-tile__media img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.22));
     transition: transform 0.4s var(--ease);
 }
 .cat-tile:hover .cat-tile__media img {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 .cat-tile__info {
-    padding: 16px 14px 22px;
+    padding: clamp(8px, 1.5vw, 14px) clamp(6px, 1vw, 12px) clamp(10px, 1.5vw, 18px);
     text-align: center;
     background: #fff;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0,0,0,0.05);
     position: relative;
     z-index: 1;
 }
 .cat-tile__name {
     font-family: var(--font-display);
-    font-size: 15px;
-    font-weight: 800;
+    font-size: clamp(11px, 1.2vw, 15px);
+    font-weight: 700;
     color: var(--c, var(--text));
     letter-spacing: 0.02em;
-    margin-bottom: 10px;
+    margin-bottom: clamp(4px, 0.8vw, 8px);
     line-height: 1.2;
     text-transform: uppercase;
 }
 .cat-tile__chip {
     display: inline-block;
-    padding: 7px 22px;
+    padding: clamp(4px, 0.5vw, 6px) clamp(10px, 1.5vw, 18px);
     border-radius: 999px;
-    font-size: 12px;
+    font-size: clamp(9px, 1vw, 12px);
     font-weight: 700;
     color: #fff;
     background: var(--c, var(--brand));
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
@@ -2500,7 +2498,7 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
 
     /* Hero @ <=1200: step down from big desktop size */
     .hero { padding: 28px 0; }
-    .hero__grid { grid-template-columns: 1.55fr 1fr; gap: 20px; }
+    .hero__grid { grid-template-columns: 1.55fr 1fr; gap: 16px; }
     /* No aspect-ratio on slider here — stretch matches the 2x2 tile column height */
     .hero__arrow { width: 60px; height: 60px; }
     .hero__arrow svg { width: 28px; height: 28px; }
@@ -2524,22 +2522,17 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     /* Hero @ <=992: stack slider above 2x2 grid */
     .hero { padding: 20px 0; }
     .hero__grid { grid-template-columns: 1fr; gap: 14px; }
-    /* On tablet: stacked layout, slider is full width so use a shorter aspect */
-    .hero__slider { aspect-ratio: 21 / 9; }
+    .hero__slider { aspect-ratio: 21 / 9; height: auto; }
+    .hero__tile { border-radius: 16px; }
     .hero__slide { padding: 22px; }
-    .hero__slide img { max-width: 88%; max-height: 88%; }
-    .hero__tile { border-radius: 16px; aspect-ratio: 1 / 1; }
-    .hero__tile img { max-width: 82%; max-height: 82%; }
+    .hero__slide img { max-width: 100%; max-height: 100%; }
     .hero__slide-label { font-size: 14px; padding: 8px 18px; left: 22px; bottom: 22px; }
     .hero__tile-label { font-size: 12px; padding: 6px 16px; }
     .hero__arrow { width: 56px; height: 56px; }
     .hero__arrow svg { width: 26px; height: 26px; }
 
     /* Category showcase + shop by cat */
-    .cat-showcase-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .cat-tile__name { font-size: 13px; }
-    .cat-tile__chip { font-size: 10px; padding: 5px 16px; }
-    .cat-tile__media { padding: 14px; }
+    /* Category tiles: auto-fill handles columns, just tighten gap */
     .shop-cat-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .shop-cat__name { font-size: 14px; }
     .hero-bento__grid {
@@ -2583,11 +2576,11 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
 
     /* Hero @ <=768: slider shorter, tiles smaller */
     .hero { padding: 14px 0; }
-    .hero__slider { aspect-ratio: 16 / 9; }
+    .hero__slider { aspect-ratio: 16 / 9; height: auto; }
     .hero__slide { padding: 16px; }
-    .hero__slide img { max-width: 90%; max-height: 90%; }
+    .hero__slide img { max-width: 100%; max-height: 100%; }
     .hero__slide-label { font-size: 12px; padding: 6px 14px; left: 14px; bottom: 14px; }
-    .hero__tile { aspect-ratio: 1 / 1; border-radius: 14px; }
+    .hero__tile { border-radius: 14px; }
     .hero__tile img { max-width: 82%; max-height: 82%; }
     .hero__tile-label { font-size: 10px; padding: 4px 10px; letter-spacing: 0.08em; }
     .hero__arrow { width: 44px; height: 44px; }
@@ -2598,14 +2591,9 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     .hero__dot { width: 10px; height: 10px; }
     .hero__dot.active { width: 28px; }
 
-    /* Category showcase: 4 cols on mobile */
-    .cat-showcase-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
-    .cat-tile { border-radius: 12px; }
-    .cat-tile::after { height: 4px; border-radius: 0 0 12px 12px; }
-    .cat-tile__media { padding: 10px; }
-    .cat-tile__info { padding: 10px 8px 14px; }
-    .cat-tile__name { font-size: 11px; margin-bottom: 6px; }
-    .cat-tile__chip { font-size: 9px; padding: 4px 12px; }
+    /* Category showcase: clamp + auto-fill handles sizing */
+    .cat-showcase-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    .cat-tile::after { height: 3px; }
 
     /* Shop by cat */
     .shop-cat-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
@@ -2788,10 +2776,10 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     .cat-card-v2__img img { max-height: 65px; }
 
     /* Hero @ <=480 phones */
-    .hero__slider { aspect-ratio: 16 / 10; }
+    .hero__slider { aspect-ratio: 16 / 10; height: auto; }
     .hero__slide { padding: 12px; }
     .hero__grid2x2 { gap: 8px; }
-    .hero__tile { aspect-ratio: 1 / 1; border-radius: 12px; }
+    .hero__tile { border-radius: 12px; }
     .hero__tile img { max-width: 82%; max-height: 82%; }
     .hero__tile-label { font-size: 9px; padding: 3px 9px; }
     .hero__slide-label { font-size: 11px; padding: 5px 12px; left: 10px; bottom: 10px; }
@@ -2803,10 +2791,8 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     .hero__arrow--prev { left: 8px; }
     .hero__arrow--next { right: 8px; }
 
-    /* Category showcase + shop by cat: 2 cols on phones */
-    .cat-showcase-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .cat-tile__name { font-size: 12px; }
-    .cat-tile__chip { font-size: 9px; padding: 4px 10px; }
+    /* Category showcase: 2 cols min on phones */
+    .cat-showcase-grid { grid-template-columns: repeat(2, 1fr); }
     .shop-cat-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .shop-cat__name { font-size: 13px; }
     .shop-cat__count { font-size: 10px; }
@@ -2824,13 +2810,10 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     .header-main__inner { gap: 4px; padding: 6px; min-height: 60px; }
     .header-logo img { height: 48px; }
 
-    .cat-showcase-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-    .cat-tile__name { font-size: 11px; }
-    .cat-tile__chip { font-size: 8px; padding: 3px 8px; }
+    .cat-showcase-grid { grid-template-columns: repeat(2, 1fr); }
     .shop-cat-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .shop-cat__name { font-size: 12px; }
-    .hero__slider { aspect-ratio: 16 / 10; }
-    .hero__tile { aspect-ratio: 1 / 1; }
+    .hero__slider { aspect-ratio: 16 / 10; height: auto; }
     .hero__tile img { max-width: 80%; max-height: 80%; }
     .header-wa__svg { width: 138px; height: 48px; }
     .header-mobile-search { width: 30px; height: 30px; }

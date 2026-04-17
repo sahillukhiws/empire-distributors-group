@@ -10,7 +10,8 @@ The header and navbar are divided into several key components, primarily managed
 - **Main Header (`site-header`)**:
   - **Logo**: Links back to `index.html`.
   - **Search**: A live search bar for products and brands.
-- **WhatsApp**: Direct link for customer inquiries.
+  - **Icons**: Quick links for Cart, Wishlist, and Sign In.
+  - **WhatsApp**: Direct link for customer inquiries.
 - **Navigation Bar (`nav-bar`)**: Contains the category links and static links (Brands, About, Contact).
 - **Sticky Header (`site-header-sticky`)**: A condensed version of the header that appears when scrolling up.
 - **Mobile Drawer (`mobile-drawer`)**: A slide-out menu for mobile users containing navigation links and a search bar.

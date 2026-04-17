@@ -266,11 +266,124 @@
         return new URLSearchParams(window.location.search).get(name);
     }
 
+    /* ---------- Category Hero Data ---------- */
+    /* Each category gets slider images and 2x2 tile images for its hero section.
+       You can replace these placeholder paths with your own images. */
+    var CAT_HERO = {
+        vape: {
+            slides: [
+                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 17, 2026, 09_13_47 PM.png', label: 'Premium Vapes' },
+                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_41_01 AM.png', label: 'Top Devices' },
+                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_42_42 AM.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_44_30 AM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_48_10 AM.png', label: 'Vape Collection' },
+            ],
+            tiles: [
+                { img: 'assets/categories/vape/vapes-new/geekbar-pulse-collection-3colors.png', label: 'GeekBar', link: '' },
+                { img: 'assets/categories/vape/vapes-new/foger-switch-pro-30k.png', label: 'Foger', link: '' },
+                { img: 'assets/categories/vape/vapes-new/gigabar-pulse-x-space.png', label: 'GigaBar', link: '' },
+                { img: 'assets/categories/vape/vapes-new/foger-switch-pro-pod-watermelon-ice.jpg', label: 'More Vapes', link: '' },
+            ],
+        },
+        kratom: {
+            slides: [
+                { img: 'assets/categories/kratom/featured/opms-black.png', label: 'OPMS Black' },
+                { img: 'assets/categories/kratom/featured/kshot-black.jpg', label: 'K-Shot Black' },
+                { img: 'assets/categories/kratom/featured/mystic-lab-kratom-gummies.jpg', label: 'Mystic Lab Gummies' },
+            ],
+            tiles: [
+                { img: 'assets/categories/kratom/featured/opms-black.png', label: 'OPMS', link: '' },
+                { img: 'assets/categories/kratom/featured/kshot-black.jpg', label: 'K-Shot', link: '' },
+                { img: 'assets/categories/kratom/featured/mystic-lab-kratom-gummies.jpg', label: 'Mystic Lab', link: '' },
+                { img: 'assets/categories/kratom/featured/opms-black.jpg', label: 'More Kratom', link: '' },
+            ],
+        },
+        delta: {
+            slides: [
+                { img: 'assets/categories/delta/rock-on/rock-on-green.png', label: 'Rock On Green' },
+                { img: 'assets/categories/delta/rock-on/rock-on-blue.png', label: 'Rock On Blue' },
+                { img: 'assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.png', label: 'Delta 9 Gummies' },
+            ],
+            tiles: [
+                { img: 'assets/categories/delta/rock-on/rock-on-green.png', label: 'Rock On', link: '' },
+                { img: 'assets/categories/delta/rock-on/rock-on-pink.png', label: 'Rock On Pink', link: '' },
+                { img: 'assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.png', label: 'Gummies', link: '' },
+                { img: 'assets/categories/delta/rock-on/rock-on-yellow.png', label: 'More Delta', link: '' },
+            ],
+        },
+        mushroom: {
+            slides: [
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.jpg', label: 'Shroom Puff Pre-Roll' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg', label: 'Shroom Puff Blaster' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-1-grm-cartridge.jpg', label: 'Shroom Puff Cartridge' },
+            ],
+            tiles: [
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.jpg', label: 'Shroom Puff', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg', label: 'Blaster', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-1-grm-cartridge.jpg', label: 'Cartridges', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-pre-roll-40ct-jar.jpg', label: 'More Mushroom', link: '' },
+            ],
+        },
+        pseudo: {
+            slides: [
+                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png', label: 'Ultra Ohmz Blue Razz' },
+                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'Gusherz Blueberry Blast' },
+                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-cherry-011226.png', label: 'Ultra Ohmz Cherry' },
+            ],
+            tiles: [
+                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png', label: 'Ultra Ohmz', link: '' },
+                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'Gusherz', link: '' },
+                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-cherry-011226.png', label: 'Capsules', link: '' },
+                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'More Pseudo', link: '' },
+            ],
+        },
+        bluelotus: {
+            slides: [
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.png', label: 'Blue Lotus Cartridges' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.png', label: 'Blue Lotus Disposable' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.jpg', label: 'Blue Lotus Collection' },
+            ],
+            tiles: [
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.png', label: 'Cartridges', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.png', label: 'Disposables', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.jpg', label: 'Pre-Rolls', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.jpg', label: 'More Blue Lotus', link: '' },
+            ],
+        },
+        supplements: {
+            slides: [
+                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.png', label: 'Better Now Watermelon' },
+                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'Strike Kava Shot' },
+                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.jpg', label: 'Better Now Collection' },
+            ],
+            tiles: [
+                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.png', label: 'Better Now', link: '' },
+                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'Strike Kava', link: '' },
+                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.jpg', label: 'Capsules', link: '' },
+                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'More Supplements', link: '' },
+            ],
+        },
+        novelties: {
+            slides: [
+                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.png', label: 'Azza Air Fresheners' },
+                { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry & Crystals' },
+                { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains' },
+            ],
+            tiles: [
+                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.png', label: 'Air Fresheners', link: '' },
+                { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry', link: '' },
+                { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains', link: '' },
+                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'More Novelties', link: '' },
+            ],
+        },
+    };
+
     window.EDG = {
         BASE: BASE,
         ICONS: ICONS,
         CAT_COPY: CAT_COPY,
         CAT_IMAGES: CAT_IMAGES,
+        CAT_HERO: CAT_HERO,
         loadData: loadData,
         waLink: waLink,
         escapeHtml: escapeHtml,
