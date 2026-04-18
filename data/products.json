@@ -374,16 +374,6 @@
       "inStock": true
     },
     {
-      "id": "delta-1-delta-8-9-gummies-delta-8-gummies-1",
-      "sku": "MYSTIC-LABS-D8-GUMMIES-COLLECTION",
-      "name": "MYSTIC LABS DELTA-8 THC GUMMIES COLLECTION",
-      "company": "mystic-labs",
-      "category": "delta",
-      "image": "assets/categories/delta/1-delta-8-9-gummies/delta-8-gummies-1.jpg",
-      "featured": true,
-      "inStock": true
-    },
-    {
       "id": "delta-1-delta-8-9-gummies-ml-product-photo-12ct-gummies",
       "sku": "MYSTIC-LABS-D8-GUMMIES-12CT-VARIETY",
       "name": "MYSTIC LABS DELTA-8 GUMMIES 12CT VARIETY PACK",
@@ -720,46 +710,6 @@
       "company": "rock-on",
       "category": "delta",
       "image": "assets/categories/delta/rock-on/img-20250604-wa0179.png",
-      "featured": false,
-      "inStock": true
-    },
-    {
-      "id": "delta-rock-on-rock-on-blue",
-      "sku": "ROCK-ON-BLUE",
-      "name": "ROCK ON BLUE",
-      "company": "rock-on",
-      "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-blue.png",
-      "featured": false,
-      "inStock": true
-    },
-    {
-      "id": "delta-rock-on-rock-on-green",
-      "sku": "ROCK-ON-GREEN",
-      "name": "ROCK ON GREEN",
-      "company": "rock-on",
-      "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-green.png",
-      "featured": false,
-      "inStock": true
-    },
-    {
-      "id": "delta-rock-on-rock-on-pink",
-      "sku": "ROCK-ON-PINK",
-      "name": "ROCK ON PINK",
-      "company": "rock-on",
-      "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-pink.png",
-      "featured": false,
-      "inStock": true
-    },
-    {
-      "id": "delta-rock-on-rock-on-yellow",
-      "sku": "ROCK-ON-YELLOW",
-      "name": "ROCK ON YELLOW",
-      "company": "rock-on",
-      "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-yellow.png",
       "featured": false,
       "inStock": true
     },
@@ -1809,7 +1759,7 @@
       "name": "ANGEL TORCH LIGHTER 12CT 19630A",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/angel-torch-lighter-12ct-19630a.png",
+      "image": "assets/categories/novelties/lighters/angel-torch-lighter-12ct-19630a.jpg",
       "inStock": true
     },
     {
@@ -1818,7 +1768,7 @@
       "name": "ASSORTED TORCH LIGHTERS DISPLAY A",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-a.png",
+      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-a.jpg",
       "inStock": true
     },
     {
@@ -1827,7 +1777,7 @@
       "name": "ASSORTED TORCH LIGHTERS DISPLAY B",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-b.png",
+      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-b.jpg",
       "inStock": true
     },
     {
@@ -1836,7 +1786,7 @@
       "name": "ASSORTED TORCH LIGHTERS DISPLAY C",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-c.png",
+      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-c.jpg",
       "inStock": true
     },
     {
@@ -1845,7 +1795,7 @@
       "name": "BIC LIGHTER",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/bic-lighter.png",
+      "image": "assets/categories/novelties/lighters/bic-lighter.jpg",
       "inStock": true
     },
     {
@@ -1881,7 +1831,7 @@
       "name": "CARD LIGHTER 20CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/card-lighter-20ct.png",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct.jpg",
       "inStock": true
     },
     {
@@ -1890,7 +1840,7 @@
       "name": "CARD LIGHTER 20CT1",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/card-lighter-20ct1.png",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct1.jpg",
       "inStock": true
     },
     {
@@ -1899,7 +1849,7 @@
       "name": "CARD LIGHTER 20CT2",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/card-lighter-20ct2.png",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct2.jpg",
       "inStock": true
     },
     {
@@ -1917,7 +1867,7 @@
       "name": "COFFE CUP TORCH LIGHTER 12CT 19253A",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/coffe-cup-torch-lighter-12ct-19253a.png",
+      "image": "assets/categories/novelties/lighters/coffe-cup-torch-lighter-12ct-19253a.jpg",
       "inStock": true
     },
     {
@@ -1926,7 +1876,7 @@
       "name": "COLOR TORCH LIGHTER 03006 12CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/color-torch-lighter-03006-12ct-box.png",
+      "image": "assets/categories/novelties/lighters/color-torch-lighter-03006-12ct-box.jpg",
       "inStock": true
     },
     {
@@ -1953,7 +1903,7 @@
       "name": "DRAGON LIGHTER 25CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/dragon-lighter-25ct.png",
+      "image": "assets/categories/novelties/lighters/dragon-lighter-25ct.jpg",
       "inStock": true
     },
     {
@@ -1962,7 +1912,7 @@
       "name": "FIRE EXTINGUISHER LIGHTER 3.5 12CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/fire-extinguisher-lighter-3.5-12ct.png",
+      "image": "assets/categories/novelties/lighters/fire-extinguisher-lighter-3.5-12ct.jpg",
       "inStock": true
     },
     {
@@ -1971,7 +1921,7 @@
       "name": "GRENADE REGULAR FLAME LIGHTER 12CT 06666",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/grenade-regular-flame-lighter-12ct-06666.png",
+      "image": "assets/categories/novelties/lighters/grenade-regular-flame-lighter-12ct-06666.jpg",
       "inStock": true
     },
     {
@@ -1980,7 +1930,7 @@
       "name": "GUN TORCH LIGHTER 19056 8CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/gun-torch-lighter-19056-8ct.png",
+      "image": "assets/categories/novelties/lighters/gun-torch-lighter-19056-8ct.jpg",
       "inStock": true
     },
     {
@@ -1989,7 +1939,7 @@
       "name": "NEON LIGHTER 50CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/neon-lighter-50ct.png",
+      "image": "assets/categories/novelties/lighters/neon-lighter-50ct.jpg",
       "inStock": true
     },
     {
@@ -1998,7 +1948,7 @@
       "name": "OMBR COLOR SKULL TORCH 17017 9CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/ombr-color-skull-torch-17017-9ct.png",
+      "image": "assets/categories/novelties/lighters/ombr-color-skull-torch-17017-9ct.jpg",
       "inStock": true
     },
     {
@@ -2007,7 +1957,7 @@
       "name": "SHOE FLAME LIGHTER 12CT 00188A",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/shoe-flame-lighter-12ct-00188a.png",
+      "image": "assets/categories/novelties/lighters/shoe-flame-lighter-12ct-00188a.jpg",
       "inStock": true
     },
     {
@@ -2016,7 +1966,7 @@
       "name": "TECHNO 07418 DISPLAY",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/techno-07418-display.png",
+      "image": "assets/categories/novelties/lighters/techno-07418-display.jpg",
       "inStock": true
     },
     {
@@ -2025,7 +1975,7 @@
       "name": "TECHNO 09169A DOUBLE TORCH FLIP TOP LIGHTER 20CT 09169A",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/techno-09169a-double-torch-flip-top-lighter-20ct-09169a.png",
+      "image": "assets/categories/novelties/lighters/techno-09169a-double-torch-flip-top-lighter-20ct-09169a.jpg",
       "inStock": true
     },
     {
@@ -2079,7 +2029,7 @@
       "name": "TECHNO BBQ LIGHTERS 21064 91751 21265 91139 12CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box.png",
+      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box.jpg",
       "inStock": true
     },
     {
@@ -2088,7 +2038,7 @@
       "name": "TECHNO BBQ LIGHTERS 21064 91751 21265 91139 12CT BOX1",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box1.png",
+      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box1.jpg",
       "inStock": true
     },
     {
@@ -2106,7 +2056,7 @@
       "name": "TECHNO DERRINGER TORCH LIGHTER 04991 1 16CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/techno-derringer-torch-lighter-04991-1-16ct-box.png",
+      "image": "assets/categories/novelties/lighters/techno-derringer-torch-lighter-04991-1-16ct-box.jpg",
       "inStock": true
     },
     {
@@ -2169,7 +2119,7 @@
       "name": "X DOG COIN LIGHTER 20CT 00001B",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b.png",
+      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b.jpg",
       "inStock": true
     },
     {
@@ -2178,7 +2128,7 @@
       "name": "X DOG COIN LIGHTER 20CT 00001B1",
       "company": "novelties-lighters",
       "category": "novelties",
-      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b1.png",
+      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b1.jpg",
       "inStock": true
     },
     {
@@ -2187,7 +2137,7 @@
       "name": "ARIS BODY SPRAY & PERFUME SET",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/aris-body-spray-perfume-set.png",
+      "image": "assets/categories/novelties/misc/aris-body-spray-perfume-set.jpg",
       "inStock": true
     },
     {
@@ -2196,7 +2146,7 @@
       "name": "ASSORTED KNIFE JARS",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/assorted-knife-jars.png",
+      "image": "assets/categories/novelties/misc/assorted-knife-jars.jpg",
       "inStock": true
     },
     {
@@ -2205,7 +2155,7 @@
       "name": "ASSORTED PREMIUM KNIVES JARS",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/assorted-premium-knives-jars.png",
+      "image": "assets/categories/novelties/misc/assorted-premium-knives-jars.jpg",
       "inStock": true
     },
     {
@@ -2214,7 +2164,7 @@
       "name": "AZZA AIR FRESHENERS 200/300ML",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/azza-air-fresheners-200-300ml.png",
+      "image": "assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg",
       "inStock": true
     },
     {
@@ -2223,7 +2173,7 @@
       "name": "BRACELET DISPLAY 50CT",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/bracelet-display-50ct.png",
+      "image": "assets/categories/novelties/misc/bracelet-display-50ct.jpg",
       "inStock": true
     },
     {
@@ -2232,7 +2182,7 @@
       "name": "BUDEEZ CAPS DISPLAY 144CT",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/budeez-caps-display-144ct.png",
+      "image": "assets/categories/novelties/misc/budeez-caps-display-144ct.jpg",
       "inStock": true
     },
     {
@@ -2250,7 +2200,7 @@
       "name": "CHORBOY SCRUBBER DISPLAY",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/chorboy-scrubber-display.png",
+      "image": "assets/categories/novelties/misc/chorboy-scrubber-display.jpg",
       "inStock": true
     },
     {
@@ -2259,7 +2209,7 @@
       "name": "DIGITAL SCALES DISPLAY",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/digital-scales-display.png",
+      "image": "assets/categories/novelties/misc/digital-scales-display.jpg",
       "inStock": true
     },
     {
@@ -2295,7 +2245,7 @@
       "name": "KEYCHAIN DISPLAY 300CT",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/keychain-display-300ct.png",
+      "image": "assets/categories/novelties/misc/keychain-display-300ct.jpg",
       "inStock": true
     },
     {
@@ -2304,7 +2254,7 @@
       "name": "KNIFE DISPLAY 48CT / 96CT",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/knife-display-48ct-96ct.png",
+      "image": "assets/categories/novelties/misc/knife-display-48ct-96ct.jpg",
       "inStock": true
     },
     {
@@ -2313,7 +2263,7 @@
       "name": "SATYA NAG CHAMPA 84CT DISPLAY",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/satya-nag-champa-84ct-display.png",
+      "image": "assets/categories/novelties/misc/satya-nag-champa-84ct-display.jpg",
       "inStock": true
     },
     {
@@ -2322,7 +2272,7 @@
       "name": "SATYA NAG CHAMPA AGARBATTI",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/satya-nag-champa-agarbatti.png",
+      "image": "assets/categories/novelties/misc/satya-nag-champa-agarbatti.jpg",
       "inStock": true
     },
     {
@@ -2331,7 +2281,7 @@
       "name": "TACTICAL & STONEMAN KNIFE DISPLAY",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/tactical-stoneman-knife-display.png",
+      "image": "assets/categories/novelties/misc/tactical-stoneman-knife-display.jpg",
       "inStock": true
     },
     {
@@ -2340,7 +2290,7 @@
       "name": "TAISUN CHARGER DISPLAY",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/taisun-charger-display.png",
+      "image": "assets/categories/novelties/misc/taisun-charger-display.jpg",
       "inStock": true
     },
     {
@@ -2349,7 +2299,7 @@
       "name": "WARNER PREMIUM/PINNACLE BATTERIES",
       "company": "novelties-accessories",
       "category": "novelties",
-      "image": "assets/categories/novelties/misc/warner-premium-pinnacle-batteries.png",
+      "image": "assets/categories/novelties/misc/warner-premium-pinnacle-batteries.jpg",
       "inStock": true
     }
   ]

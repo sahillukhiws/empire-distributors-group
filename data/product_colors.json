@@ -143,15 +143,6 @@
     "extracted": "#2878b8",
     "has_own_bg": false
   },
-  "delta-1-delta-8-9-gummies-delta-8-gummies-1": {
-    "top": "#442d6f",
-    "middle": "#291c44",
-    "bottom": "#3f2a68",
-    "chip": "#221243",
-    "chip_text": "#ffffff",
-    "extracted": "#382858",
-    "has_own_bg": true
-  },
   "delta-1-delta-8-9-gummies-ml-product-photo-12ct-gummies": {
     "top": "#008dde",
     "middle": "#0066a1",
@@ -456,42 +447,6 @@
     "chip": "#762b2b",
     "chip_text": "#ffffff",
     "extracted": "#281818",
-    "has_own_bg": false
-  },
-  "delta-rock-on-rock-on-blue": {
-    "top": "#2c63e0",
-    "middle": "#1a49b6",
-    "bottom": "#235cdf",
-    "chip": "#0236ae",
-    "chip_text": "#ffffff",
-    "extracted": "#2858c8",
-    "has_own_bg": false
-  },
-  "delta-rock-on-rock-on-green": {
-    "top": "#00ee00",
-    "middle": "#00b100",
-    "bottom": "#00e400",
-    "chip": "#009200",
-    "chip_text": "#ffffff",
-    "extracted": "#08c808",
-    "has_own_bg": false
-  },
-  "delta-rock-on-rock-on-pink": {
-    "top": "#ff4ec4",
-    "middle": "#ff11af",
-    "bottom": "#ff44c0",
-    "chip": "#f100a0",
-    "chip_text": "#ffffff",
-    "extracted": "#f838b8",
-    "has_own_bg": false
-  },
-  "delta-rock-on-rock-on-yellow": {
-    "top": "#eec600",
-    "middle": "#b19300",
-    "bottom": "#e4bd00",
-    "chip": "#927a00",
-    "chip_text": "#ffffff",
-    "extracted": "#c8a808",
     "has_own_bg": false
   },
   "delta-rock-on-whatsapp-image-2025-06-04-at-18-09-29-8f5e8ee6": {
@@ -1268,22 +1223,22 @@
     "extracted": "#a8e838",
     "has_own_bg": false
   },
-  "vape-vapes-new-file-003": {
-    "top": "#a200f5",
-    "middle": "#7900b8",
-    "bottom": "#9b00eb",
-    "chip": "#6c00a3",
+  "vape-foger-switch-pro-30k": {
+    "top": "#a65af3",
+    "middle": "#8721ee",
+    "bottom": "#a151f2",
+    "chip": "#7700f1",
     "chip_text": "#ffffff",
-    "extracted": "#280838",
+    "extracted": "#9848e8",
     "has_own_bg": true
   },
   "vape-geekbar-pulse-25k-3flavors": {
-    "top": "#b589d4",
-    "middle": "#9a5cc3",
-    "bottom": "#b181d1",
-    "chip": "#8f34cc",
+    "top": "#a9a94b",
+    "middle": "#7e7e38",
+    "bottom": "#a2a248",
+    "chip": "#76762b",
     "chip_text": "#ffffff",
-    "extracted": "#a878c8",
+    "extracted": "#282818",
     "has_own_bg": true
   },
   "vape-geekbar-pulse-25k-planet-edition": {
@@ -1295,7 +1250,7 @@
     "extracted": "#e83838",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6922": {
+  "vape-foger-bit-35k": {
     "top": "#00a2f5",
     "middle": "#0079b8",
     "bottom": "#009beb",
@@ -1320,15 +1275,6 @@
     "chip": "#6000f2",
     "chip_text": "#ffffff",
     "extracted": "#9858f8",
-    "has_own_bg": true
-  },
-  "vape-vapes-new-img-6925": {
-    "top": "#a200f5",
-    "middle": "#7900b8",
-    "bottom": "#9b00eb",
-    "chip": "#6c00a3",
-    "chip_text": "#ffffff",
-    "extracted": "#280838",
     "has_own_bg": true
   },
   "vape-foger-switch-pro-pod-mexico-mango": {
@@ -1368,21 +1314,21 @@
     "has_own_bg": true
   },
   "vape-raz-ltx-25k-bangin-sour-berries": {
-    "top": "#59019c",
-    "middle": "#36005f",
-    "bottom": "#530192",
-    "chip": "#2f0055",
+    "top": "#a016ff",
+    "middle": "#8000d8",
+    "bottom": "#9c0cff",
+    "chip": "#7300c3",
     "chip_text": "#ffffff",
-    "extracted": "#480878",
+    "extracted": "#380858",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6931": {
-    "top": "#4b4ba9",
-    "middle": "#38387e",
-    "bottom": "#4848a2",
-    "chip": "#2b2b76",
+  "vape-raz-ltx-25k": {
+    "top": "#00d6fe",
+    "middle": "#00a3c1",
+    "bottom": "#00cef4",
+    "chip": "#0088a2",
     "chip_text": "#ffffff",
-    "extracted": "#181828",
+    "extracted": "#08b8d8",
     "has_own_bg": true
   },
   "vape-geekbar-pulse-collection-3colors": {
@@ -1404,31 +1350,22 @@
     "has_own_bg": true
   },
   "vape-geekbar-pulse-x-25k-constellation": {
-    "top": "#ffb65f",
-    "middle": "#ff9922",
-    "bottom": "#ffb155",
-    "chip": "#ff8b01",
-    "chip_text": "#1a1a2e",
-    "extracted": "#f8a848",
+    "top": "#a9a94b",
+    "middle": "#7e7e38",
+    "bottom": "#a2a248",
+    "chip": "#76762b",
+    "chip_text": "#ffffff",
+    "extracted": "#282818",
     "has_own_bg": true
   },
-  "vape-vapes-new-img-6936": {
-    "top": "#6e00e5",
-    "middle": "#5100a8",
-    "bottom": "#6900db",
-    "chip": "#470093",
+  "vape-gigabar-pulse-x-space": {
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
     "chip_text": "#ffffff",
-    "extracted": "#180828",
+    "extracted": "#181828",
     "has_own_bg": true
-  },
-  "vape-vapes-new-img-6937": {
-    "top": "#0644ff",
-    "middle": "#0032c8",
-    "bottom": "#003ffb",
-    "chip": "#002db3",
-    "chip_text": "#ffffff",
-    "extracted": "#081848",
-    "has_own_bg": false
   },
   "vape-gigabar-pulse-x-25k-curved-screen": {
     "top": "#f7f7b1",
@@ -1439,13 +1376,22 @@
     "extracted": "#f8f8c8",
     "has_own_bg": true
   },
-  "novelties-lighters-angel-torch-lighter-12ct-19630a": {
-    "top": "#cc6411",
-    "middle": "#93490c",
-    "bottom": "#c26010",
-    "chip": "#944200",
+  "vape-gigabar-pulse-25k": {
+    "top": "#273da5",
+    "middle": "#1c2a74",
+    "bottom": "#253a9d",
+    "chip": "#0b1d7a",
     "chip_text": "#ffffff",
-    "extracted": "#a85818",
+    "extracted": "#283888",
+    "has_own_bg": true
+  },
+  "novelties-lighters-angel-torch-lighter-12ct-19630a": {
+    "top": "#2e6be6",
+    "middle": "#164fc0",
+    "bottom": "#2565e5",
+    "chip": "#0442bd",
+    "chip_text": "#ffffff",
+    "extracted": "#182848",
     "has_own_bg": false
   },
   "novelties-lighters-assorted-torch-lighters-display-a": {
@@ -1656,12 +1602,12 @@
     "has_own_bg": false
   },
   "novelties-lighters-techno-09169a-double-torch-flip-top-lighter-20ct-09169a": {
-    "top": "#a94b4b",
-    "middle": "#7e3838",
-    "bottom": "#a24848",
-    "chip": "#762b2b",
+    "top": "#594444",
+    "middle": "#362929",
+    "bottom": "#533f3f",
+    "chip": "#312323",
     "chip_text": "#ffffff",
-    "extracted": "#281818",
+    "extracted": "#483838",
     "has_own_bg": false
   },
   "novelties-lighters-techno-119025-dual-flame-lighter-20ct": {
@@ -1719,12 +1665,12 @@
     "has_own_bg": false
   },
   "novelties-lighters-techno-bbq-lighters-21064-91751-21265-91139-12ct-box1": {
-    "top": "#e4b548",
-    "middle": "#d29b1e",
-    "bottom": "#e3b23f",
-    "chip": "#ce9102",
+    "top": "#d5b558",
+    "middle": "#c09b30",
+    "bottom": "#d3b250",
+    "chip": "#b99117",
     "chip_text": "#1a1a2e",
-    "extracted": "#d8a838",
+    "extracted": "#c8a848",
     "has_own_bg": false
   },
   "novelties-lighters-techno-carabiner-lighter-06832a-20ct-box": {
@@ -1737,12 +1683,12 @@
     "has_own_bg": true
   },
   "novelties-lighters-techno-derringer-torch-lighter-04991-1-16ct-box": {
-    "top": "#4b4ba9",
-    "middle": "#38387e",
-    "bottom": "#4848a2",
-    "chip": "#2b2b76",
+    "top": "#f5f5f8",
+    "middle": "#d2d4da",
+    "bottom": "#ebecf0",
+    "chip": "#3c3c44",
     "chip_text": "#ffffff",
-    "extracted": "#181828",
+    "extracted": "#181818",
     "has_own_bg": false
   },
   "novelties-lighters-techno-flexi-torch-lighter-10703": {
@@ -1827,12 +1773,12 @@
     "has_own_bg": false
   },
   "novelties-accessories-assorted-knife-jars": {
-    "top": "#1efff0",
-    "middle": "#00e0d1",
-    "bottom": "#14ffef",
-    "chip": "#00c1b4",
+    "top": "#1efeff",
+    "middle": "#00dfe0",
+    "bottom": "#14feff",
+    "chip": "#00c0c1",
     "chip_text": "#ffffff",
-    "extracted": "#08f8e8",
+    "extracted": "#08f8f8",
     "has_own_bg": false
   },
   "novelties-accessories-assorted-premium-knives-jars": {
@@ -1845,30 +1791,30 @@
     "has_own_bg": false
   },
   "novelties-accessories-azza-air-fresheners-200-300ml": {
-    "top": "#178659",
-    "middle": "#0e5136",
-    "bottom": "#167d53",
-    "chip": "#015331",
+    "top": "#ff1e1e",
+    "middle": "#e00000",
+    "bottom": "#ff1414",
+    "chip": "#c10000",
     "chip_text": "#ffffff",
-    "extracted": "#186848",
+    "extracted": "#f80808",
     "has_own_bg": false
   },
   "novelties-accessories-bracelet-display-50ct": {
-    "top": "#0052f5",
-    "middle": "#003db8",
-    "bottom": "#004eeb",
-    "chip": "#0035a3",
+    "top": "#4b4ba9",
+    "middle": "#38387e",
+    "bottom": "#4848a2",
+    "chip": "#2b2b76",
     "chip_text": "#ffffff",
-    "extracted": "#081838",
+    "extracted": "#181828",
     "has_own_bg": false
   },
   "novelties-accessories-budeez-caps-display-144ct": {
-    "top": "#30465d",
-    "middle": "#1b2734",
-    "bottom": "#2c4156",
-    "chip": "#142131",
+    "top": "#1ee1ff",
+    "middle": "#00c2e0",
+    "bottom": "#14dfff",
+    "chip": "#00a7c1",
     "chip_text": "#ffffff",
-    "extracted": "#283848",
+    "extracted": "#08d8f8",
     "has_own_bg": false
   },
   "novelties-accessories-car-logo-keychains": {
@@ -1881,21 +1827,21 @@
     "has_own_bg": true
   },
   "novelties-accessories-chorboy-scrubber-display": {
-    "top": "#d58758",
-    "middle": "#c06630",
-    "bottom": "#d38150",
-    "chip": "#b95417",
+    "top": "#d57747",
+    "middle": "#b75829",
+    "bottom": "#d3713f",
+    "chip": "#b04510",
     "chip_text": "#ffffff",
-    "extracted": "#c87848",
+    "extracted": "#c86838",
     "has_own_bg": false
   },
   "novelties-accessories-digital-scales-display": {
-    "top": "#2b4181",
-    "middle": "#1c2a54",
-    "bottom": "#293d7a",
-    "chip": "#102154",
+    "top": "#de0000",
+    "middle": "#a10000",
+    "bottom": "#d40000",
+    "chip": "#970000",
     "chip_text": "#ffffff",
-    "extracted": "#283868",
+    "extracted": "#b80808",
     "has_own_bg": false
   },
   "novelties-accessories-hidden-pocket-socks-48ct": {
@@ -1926,21 +1872,21 @@
     "has_own_bg": true
   },
   "novelties-accessories-keychain-display-300ct": {
-    "top": "#ad0000",
-    "middle": "#700000",
-    "bottom": "#a30000",
-    "chip": "#660000",
+    "top": "#be0000",
+    "middle": "#810000",
+    "bottom": "#b40000",
+    "chip": "#770000",
     "chip_text": "#ffffff",
-    "extracted": "#880808",
+    "extracted": "#980808",
     "has_own_bg": false
   },
   "novelties-accessories-knife-display-48ct-96ct": {
-    "top": "#be9300",
-    "middle": "#816400",
-    "bottom": "#b48b00",
-    "chip": "#775b00",
+    "top": "#976c15",
+    "middle": "#62450e",
+    "bottom": "#8e6514",
+    "chip": "#654200",
     "chip_text": "#ffffff",
-    "extracted": "#987808",
+    "extracted": "#785818",
     "has_own_bg": false
   },
   "novelties-accessories-satya-nag-champa-84ct-display": {
@@ -1953,30 +1899,30 @@
     "has_own_bg": false
   },
   "novelties-accessories-satya-nag-champa-agarbatti": {
-    "top": "#2600fe",
-    "middle": "#1d00c1",
-    "bottom": "#2500f4",
-    "chip": "#1700a2",
+    "top": "#310fff",
+    "middle": "#1d00d1",
+    "bottom": "#2805ff",
+    "chip": "#1900b2",
     "chip_text": "#ffffff",
-    "extracted": "#2808d8",
+    "extracted": "#2808e8",
     "has_own_bg": false
   },
   "novelties-accessories-tactical-stoneman-knife-display": {
-    "top": "#be9300",
-    "middle": "#816400",
-    "bottom": "#b48b00",
-    "chip": "#775b00",
+    "top": "#976c15",
+    "middle": "#62450e",
+    "bottom": "#8e6514",
+    "chip": "#654200",
     "chip_text": "#ffffff",
-    "extracted": "#987808",
+    "extracted": "#785818",
     "has_own_bg": false
   },
   "novelties-accessories-taisun-charger-display": {
-    "top": "#ff0f0f",
-    "middle": "#d10000",
-    "bottom": "#ff0505",
-    "chip": "#b20000",
+    "top": "#ff1e1e",
+    "middle": "#e00000",
+    "bottom": "#ff1414",
+    "chip": "#c10000",
     "chip_text": "#ffffff",
-    "extracted": "#e80808",
+    "extracted": "#f80808",
     "has_own_bg": false
   },
   "novelties-accessories-warner-premium-pinnacle-batteries": {
@@ -1987,50 +1933,5 @@
     "chip_text": "#ffffff",
     "extracted": "#08b8f8",
     "has_own_bg": false
-  },
-  "vape-foger-switch-pro-30k": {
-    "top": "#f08f65",
-    "middle": "#9084a5",
-    "bottom": "#694079",
-    "chip": "#685c7d",
-    "chip_text": "#ffffff",
-    "extracted": "#9084a5",
-    "has_own_bg": true
-  },
-  "vape-foger-bit-35k": {
-    "top": "#3e3a41",
-    "middle": "#9e98a8",
-    "bottom": "#42446d",
-    "chip": "#767080",
-    "chip_text": "#ffffff",
-    "extracted": "#9e98a8",
-    "has_own_bg": true
-  },
-  "vape-raz-ltx-25k": {
-    "top": "#756d92",
-    "middle": "#5b4e49",
-    "bottom": "#5c698b",
-    "chip": "#332621",
-    "chip_text": "#ffffff",
-    "extracted": "#5b4e49",
-    "has_own_bg": true
-  },
-  "vape-gigabar-pulse-25k": {
-    "top": "#9064ad",
-    "middle": "#374256",
-    "bottom": "#282f59",
-    "chip": "#0f1a2e",
-    "chip_text": "#ffffff",
-    "extracted": "#374256",
-    "has_own_bg": true
-  },
-  "vape-gigabar-pulse-x-space": {
-    "top": "#2f2741",
-    "middle": "#473e48",
-    "bottom": "#554156",
-    "chip": "#1f1620",
-    "chip_text": "#ffffff",
-    "extracted": "#473e48",
-    "has_own_bg": true
   }
 }

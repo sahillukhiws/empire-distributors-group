@@ -272,24 +272,27 @@
     var CAT_HERO = {
         vape: {
             slides: [
-                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 17, 2026, 09_13_47 PM.png', label: 'Premium Vapes' },
                 { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_41_01 AM.png', label: 'Top Devices' },
                 { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_42_42 AM.png', label: 'Best Sellers' },
                 { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_44_30 AM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 17, 2026, 09_13_47 PM.png', label: 'Premium Vapes' },
                 { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_48_10 AM.png', label: 'Vape Collection' },
             ],
             tiles: [
                 { img: 'assets/categories/vape/vapes-new/geekbar-pulse-collection-3colors.png', label: 'GeekBar', link: '' },
-                { img: 'assets/categories/vape/vapes-new/foger-switch-pro-30k.png', label: 'Foger', link: '' },
-                { img: 'assets/categories/vape/vapes-new/gigabar-pulse-x-space.png', label: 'GigaBar', link: '' },
+                { img: '/assets/categories/vape/vapes-new/raz-ltx-25k-boost-mode-animated.gif', label: 'Raz ITX', link: '' },
+                { img: 'assets/categories/vape/vapes-new/geekbar-pulse-x-3d-curved-screen.jpg', label: 'GeekBar Plus', link: '' },
                 { img: 'assets/categories/vape/vapes-new/foger-switch-pro-pod-watermelon-ice.jpg', label: 'More Vapes', link: '' },
             ],
         },
         kratom: {
             slides: [
-                { img: 'assets/categories/kratom/featured/opms-black.png', label: 'OPMS Black' },
-                { img: 'assets/categories/kratom/featured/kshot-black.jpg', label: 'K-Shot Black' },
-                { img: 'assets/categories/kratom/featured/mystic-lab-kratom-gummies.jpg', label: 'Mystic Lab Gummies' },
+                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_27_19 PM.png', label: 'Top Kratom' },
+                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_28_43 PM.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_32_08 PM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_33_23 PM.png', label: 'Premium Kratom' },
+                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_35_09 PM.png', label: 'Kratom Collection' },
+                { img: 'assets/products/Product/karatomScroll/Gemini_Generated_Image_basgmsbasgmsbasg.png', label: 'Featured Kratom' },
             ],
             tiles: [
                 { img: 'assets/categories/kratom/featured/opms-black.png', label: 'OPMS', link: '' },
@@ -365,12 +368,12 @@
         },
         novelties: {
             slides: [
-                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.png', label: 'Azza Air Fresheners' },
+                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'Azza Air Fresheners' },
                 { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry & Crystals' },
                 { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains' },
             ],
             tiles: [
-                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.png', label: 'Air Fresheners', link: '' },
+                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'Air Fresheners', link: '' },
                 { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry', link: '' },
                 { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains', link: '' },
                 { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'More Novelties', link: '' },

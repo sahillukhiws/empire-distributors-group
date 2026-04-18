@@ -134,7 +134,7 @@
                             '<div class="footer-brand__social">' +
                                 '<a data-wa="Hi Empire!" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5z"/></svg></a>' +
                                 '<a href="mailto:empiredistributorsgroup@gmail.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>' +
-                                '<a href="tel:+14703753936" aria-label="Phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>' +
+                                '<a href="tel:+16783036054" aria-label="Phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></a>' +
                                 '<a href="https://www.instagram.com/empire_distributors/" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>' +
                             '</div>' +
                         '</div>' +
@@ -144,7 +144,10 @@
                             '<a href="' + BASE + 'pages/category.html?id=kratom">Kratom</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=delta">Delta</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=mushroom">Mushroom</a>' +
+                            '<a href="' + BASE + 'pages/category.html?id=pseudo">Pseudo</a>' +
+                            '<a href="' + BASE + 'pages/category.html?id=bluelotus">Blue Lotus</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=supplements">Supplements</a>' +
+                            '<a href="' + BASE + 'pages/category.html?id=novelties">Novelties</a>' +
                         '</div>' +
                         '<div class="footer-col">' +
                             '<h4>Company</h4>' +
@@ -156,15 +159,15 @@
                         '<div class="footer-col footer-col--contact">' +
                             '<h4>Contact</h4>' +
                             '<ul class="footer-contacts">' +
-                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div class="fc-text"><div class="fc-label">Address</div><address class="fc-value">2725 Mountain Industrial Blvd, Suite A5, Tucker, GA 30084</address></div></li>' +
+                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div class="fc-text"><div class="fc-label">Address</div><a href="https://www.google.com/maps/search/?api=1&query=2725+Mountain+Industrial+Blvd+Suite+A5+Tucker+GA+30084" target="_blank" rel="noopener" class="fc-value fc-link">2725 Mountain Industrial Blvd, Suite A5, Tucker, GA 30084</a></div></li>' +
                                 '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div class="fc-text"><div class="fc-label">Email</div><a href="mailto:empiredistributorsgroup@gmail.com" class="fc-value fc-link">empiredistributorsgroup@gmail.com</a></div></li>' +
-                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span><div class="fc-text"><div class="fc-label">Phone</div><a href="tel:+14703753936" class="fc-value fc-link">470-375-3936</a></div></li>' +
+                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span><div class="fc-text"><div class="fc-label">WhatsApp</div><a href="tel:+16783036054" class="fc-value fc-link">+1 (678) 303-6054</a></div></li>' +
+                                '<li class="fc-item"><span class="fc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span><div class="fc-text"><div class="fc-label">Phone</div><a href="tel:+14706404502" class="fc-value fc-link">+1 (470) 640-4502</a><a href="tel:+14709533565" class="fc-value fc-link">+1 (470) 953-3565</a></div></li>' +
                             '</ul>' +
                         '</div>' +
                     '</div>' +
                     '<div class="footer-bot">' +
                         '<div>&copy; 2026 Empire Distributors Group. All rights reserved.</div>' +
-                        '<div class="footer-bot__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>' +
                         '<div class="footer-bot__warning">Must be 21+ to purchase</div>' +
                     '</div>' +
                 '</div>' +

@@ -1,91 +1,140 @@
-# Empire Distributors Group - Project Tasks
+# Empire Distributors Group — Working Tasks
 
-## Brand Identity
-- **Color**: Dark Blue `#1a3a5c` (accent on white page)
-- **Fonts**: Poppins (body) + Mona Sans (display)
-- **Logo**: `assets/logos/empire-logo-removebg-preview.png`
+> This is the **active working file** for the project. Project overview lives in [CASE-STUDY.md](CASE-STUDY.md). Site structure reference lives in [SITE-REFERENCE.md](SITE-REFERENCE.md).
+>
+> **How to use this file:**
+> - Move items between sections as work progresses (Active → In Progress → Done).
+> - Run the **Permanent Checks** (section at bottom) after *every* change, big or small.
+> - When Done items pile up, trim them — this is not a changelog.
 
-## Contact
-- WhatsApp: +1 (678) 303-6054 (primary)
-- Phone: +1 (470) 640-4502 · +1 (470) 953-3565
-- Instagram: https://www.instagram.com/empire_distributors/
+---
+
+## Quick Reference
+
+**Brand**
+- Color: Dark Blue `#1a3a5c` (accent on white)
+- Fonts: Poppins (body) + Mona Sans (display)
+- Logo: [assets/logos/empire-logo-removebg-preview.png](assets/logos/empire-logo-removebg-preview.png)
+
+**Contact**
+- WhatsApp (primary): +1 (678) 303-6054
+- Phones: +1 (470) 640-4502 · +1 (470) 953-3565
+- Instagram: [@empire_distributors](https://www.instagram.com/empire_distributors/)
 - Email: empiredistributorsgroup@gmail.com
 - Address: 2725 Mountain Industrial Blvd, Suite A5, Tucker, GA 30084
 
 ---
 
-## ✅ COMPLETED
+## 🔁 Permanent Checks — Run After EVERY Change
 
-### Foundation
-- Images optimized: 38MB → 28MB
-- Fonts + dark blue accent
-- All 6 pages serve 200
-- 161 products, 0 missing images
+These are non-negotiable. Every time a page, component, stylesheet, or JS module is touched, walk this list before marking work done.
 
-### Header
-- 3-layer: warning bar + main row + nav bar
-- Sticky header with search dialog
-- **Animated WhatsApp SVG button** in header (green with confetti particles)
+### Responsiveness
+- [ ] Desktop (1400+) — layout holds, no horizontal scroll
+- [ ] Laptop (1200) — breakpoints transition cleanly
+- [ ] Tablet (992) — nav collapses properly, touch targets work
+- [ ] Mobile (768) — mobile drawer opens, content stacks
+- [ ] Phone (480) — all text readable, no overflow
+- [ ] Small phone (380) — nothing clipped, buttons tappable
+- [ ] Touch targets ≥ 44px on all interactive elements (buttons, links, nav items)
+- [ ] No horizontal scrollbar appears at any breakpoint
 
-### Homepage
-- Hero bento: auto-slider + 4 panels
-- Category horizontal scroll cards
-- Product cards with gradient bg from product packaging color
-- Promo bento grids + brands marquee
-- Dark blue footer
+### Structure & Consistency
+- [ ] Header renders correctly on the changed page (logo, search, WhatsApp, nav)
+- [ ] Footer renders correctly (all 4 columns, links, social icons)
+- [ ] Mobile drawer opens/closes and mirrors main nav
+- [ ] Sticky header appears when scrolling up
+- [ ] Category colors apply correctly if page uses `--c` tokens
+- [ ] Fonts load (Poppins + Mona Sans) — no FOUC
+- [ ] Dark blue accent `#1a3a5c` used consistently, no stray colors
 
-### Product Data
-- 84 bad-named products renamed based on visual analysis
-- Rock On: 35 products / 7 product lines
-- Vape brands split: Foger, Geek Bar, RAZ, Giga Bar
-- Ultra Ohmz / Better Now variants differentiated
+### Functional Integrity
+- [ ] All pages still return 200 (home, category, product, brands, about, contact)
+- [ ] Age gate modal appears on first visit, dismisses on "Yes 21+"
+- [ ] Search dropdown works (type 2+ chars, results appear, keyboard nav works)
+- [ ] WhatsApp CTAs open `wa.me/16783036054` with pre-filled SKU message
+- [ ] Contact form builds correct WhatsApp URL on submit
+- [ ] Product images load (lazy-loaded, no broken `src`)
+- [ ] Category filter chips on brands.html / category.html filter correctly
+- [ ] Related products render on product detail page
+- [ ] No JS console errors on any page
 
-### Brand Logos
-- 16 real brand logos downloaded (from official sites)
-- Displayed on: product cards, brands.html, product detail page
-- 9 brands still need logos (not publicly available)
+### Data Integrity
+- [ ] [data/products.json](data/products.json) is valid JSON (no trailing commas)
+- [ ] Every product has: id, sku, name, company, category, image, featured, inStock
+- [ ] Every `image` path points to an existing file in [assets/](assets/)
+- [ ] Every `category` value matches one of the 8 defined categories
+- [ ] `inStock: false` products hide/grey-out correctly
 
-### Contact Info
-- WhatsApp updated to +1 (678) 303-6054 site-wide
-- Instagram link wired: @empire_distributors
-- 3 phone numbers in footer + contact page
-- Extra numbers listed on contact page
+### Performance & SEO
+- [ ] All `<img>` tags have `loading="lazy"` (except above-the-fold hero)
+- [ ] All `<img>` tags have meaningful `alt` text
+- [ ] No render-blocking JS added (defer/async where possible)
+- [ ] Page weight stays reasonable (home + all assets should stay well under 2 MB)
+- [ ] `<title>` and `<meta name="description">` set on every page
 
-### Inner Pages Simplification (just done)
-- **category.html**: Removed text-heavy hero → simple compact header with icon + count + scrolling brand filter
-- **product.html**: Removed description paragraph, "why partners choose" feature list, 3-item trust row → just SKU + category + stock + CTAs
-- **brands.html**: Removed page hero + wholesale CTA section → compact header + filter + grid only
-- **about.html**: Removed "4 values" feature strip, final CTA section → compact header + brief story + categories showcase
-- **contact.html**: Removed wordy hero → compact header + existing cards
-- All pages now use consistent `.cat-header` design
-- Categories in about/category cross-sell use home page's `.cat-card-v2` style
+### Accessibility
+- [ ] All interactive elements reachable via keyboard (Tab / Shift+Tab)
+- [ ] Focus ring visible on focused elements
+- [ ] Color contrast passes WCAG AA on text over backgrounds
+- [ ] Icons that convey meaning have `aria-label`
+
+### Git Hygiene
+- [ ] Changes don't break any other page (cross-page regression test)
+- [ ] Commit message describes the *why*, not just the *what*
+- [ ] No debug `console.log` or commented-out code left behind
 
 ---
 
-## 🔄 PENDING
+## 🔴 Active — Pick Up Next
 
-### Phase A (in progress): Responsive Refinement
-- Unify breakpoints between style.css and pages.css (currently inconsistent: 1280/1024/720 vs 1200/992/768)
-- Test each breakpoint across all pages:
-  - Desktop (1400+)
-  - Laptop (1200)
-  - Tablet (992)
-  - Mobile (768)
-  - Phone (480)
-  - Small phone (380)
-- Touch targets ≥44px on mobile
-- Verify animated WhatsApp SVG scales properly
+### Phase A — Responsive Refinement
+- [x] ~~Unify breakpoints between style.css and pages.css~~ — verified already unified at `1400 / 1200 / 992 / 768 / 480 / 380`. No conflicts found.
+- [ ] Walk each breakpoint across all 6 pages (manual browser test, record any layout issues)
+- [ ] Verify animated WhatsApp SVG scales properly at all sizes
+- [ ] Audit `.cat-header` consistency across category/product/brands/about/contact pages
 
 ### Not Started
-- Age gate styling refresh to match brand
-- Footer visual polish
-- Image lazy-loading optimization
-- Performance audit
+- [ ] Age gate styling refresh to match brand (currently generic)
+- [ ] Source remaining 11 brand logos (or design fallback placeholder)
+- [ ] Run image-framing pass via [_incoming/check_image_framing.py](_incoming/check_image_framing.py)
+- [ ] Performance audit (Lighthouse on all pages, record baseline)
+- [ ] Design a proper dedicated favicon (currently using full logo PNG — works but not optimal size)
+- [ ] Add canonical URL meta tags once production domain is confirmed
 
 ---
 
-## 📝 NOTES
-- Products.json backup: `data/products.json.backup`
-- Rename scripts in `_incoming/`
-- No wholesale pricing anywhere - WhatsApp inquiry only
-- Cart/Wishlist/SignIn icons are decorative
+## 🟡 In Progress
+
+*(Move items here when actively being worked on. Empty means nothing is blocked mid-flight.)*
+
+---
+
+## ✅ Recently Done
+
+*(Keep a short rolling list — prune when it gets long. This is not a full history.)*
+
+- **Footer mobile layout + clickable address** — on mobile (≤768px), Shop and Company columns now sit side-by-side instead of stacking, reducing scroll height; Brand and Contact remain full-width. Address is now a clickable Google Maps link (opens in new tab with `rel="noopener"`). Desktop and tablet layouts untouched.
+- **Footer polish + bug fixes** — fixed wrong phone number in footer (was `470-375-3936`, replaced with real numbers: WhatsApp `+1 (678) 303-6054`, plus `+1 (470) 640-4502` and `+1 (470) 953-3565`). Completed Shop column to all 8 categories (added Pseudo, Blue Lotus, Novelties). Removed dead Privacy/Terms/Cookies placeholder links. Added small CSS polish for stacked contact values.
+- **SEO + social polish** — added Open Graph tags, Twitter Card, favicon, and apple-touch-icon to all 6 pages. Normalized `theme-color` to brand `#1a3a5c` site-wide. WhatsApp/social link previews now render properly with logo + description.
+- **Alt-text audit** — confirmed 100% `alt` coverage across all HTML and JS-generated `<img>` tags.
+- **Breakpoint audit** — confirmed style.css and pages.css already share unified breakpoints (`1400 / 1200 / 992 / 768 / 480 / 380`). No unification work needed.
+- Removed time-bound sections from case-study doc; split into project description + working tasks
+- Deleted stale `NAVBAR-HEADER-ANALYSIS.md` (covered by CASE-STUDY.md now)
+- Inner page simplification: category / product / brands / about / contact now use consistent `.cat-header`
+- 16 brand logos sourced and wired into product cards, brands.html, product detail
+- Contact info unified across site (WhatsApp +1 678-303-6054, Instagram, 3 phone numbers)
+- 84 products renamed based on visual analysis (Rock On split, vape brands separated, Ultra Ohmz variants)
+- Homepage rebuilt: hero bento + auto-slider, category horizontal scroll, gradient product cards, brand marquee
+- Animated WhatsApp SVG button in header
+- Age gate (21+) with 30-day localStorage TTL
+
+---
+
+## 📝 Notes
+
+- Products JSON backup: [data/products.json.backup](data/products.json.backup)
+- Asset pipeline scripts: [_incoming/](_incoming/)
+- No wholesale pricing anywhere on site — WhatsApp inquiry only
+- Cart / Wishlist / SignIn icons in header are decorative (no functionality)
+- NOVELTIES bulk imports arrive as zip files; use [_incoming/regenerate.py](_incoming/regenerate.py) to rebuild products.json
