@@ -104,11 +104,15 @@ A single `products.json` file holds everything:
       "category": "vape",
       "image": "assets/categories/vape/rock-on/blue-razz.png",
       "featured": true,
-      "inStock": true
+      "inStock": true,
+      "description": "(optional) Overrides the auto-generated marketing description",
+      "features": ["(optional)", "Array of bullet strings", "shown on the product page"]
     }
   ]
 }
 ```
+
+The product detail page auto-generates a marketing description and 4–5 feature bullets from `name` + `company` + `category` + flavor keywords parsed from the product name (`generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js)). Optional `description` / `features` fields override the auto-generated copy per product — keeping the zero-effort default while giving non-developers a way to hand-tune specific SKUs.
 
 **By the numbers:**
 

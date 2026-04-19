@@ -88,26 +88,29 @@ empire-distributors-group/
 ## 4. Pages & Their Purpose
 
 ### index.html (Home)
-- Hero section with headline, CTA buttons, stats (8+ categories, 160+ products, 24/7 WhatsApp)
-- 3D floating product showcase (4 images with CSS perspective + float animations)
-- "Shop by Category" grid (8 cards with SVG icons, per-category colors)
-- "Featured Drops" product grid (first 2 products per category marked as featured)
-- Brand marquee (scrolling brand names)
-- "The Empire Advantage" feature strip (4 value props: Authentic, 8+ Categories, Fast Fulfillment, WhatsApp Support)
+- Hero: auto-sliding product carousel (left) + 2x2 featured grid (right). Every slide and tile is a clickable link to a category or product page.
+- "Shop by Category" grid (8 category tiles, each linked to its category page)
+- "Best Sellers" — 3 swiper-style carousel rows (Ultra Ohmz / Mushroom / Gushers) with product cards linked to product pages
+- **"Our Brand Partners" logo slider** — every logo is a clickable link. Logos mapped to their brand's category page when the brand exists in `data.companies`; unmatched reference logos (Elf Bar, CloudMax, etc.) fall back to the vape category.
+- "New Products" grid (latest 2 per category)
+- "Trending Now" grid (mid-index products per category)
 - Shared header, nav, footer injected by components.js
 
 ### pages/category.html?id={categoryId}
-- Category-colored hero banner with icon, tagline, description, bullet points, stats
+- Category-specific hero (slider + 2x2 tile grid) at top — **each slide and tile is clickable**: matched to a real product by image filename and linked to that product's page, with category-page fallback when no match
+- Category-colored header section (breadcrumb, icon, title, product/brand count)
 - Brand filter chips (click to filter products by brand within the category)
-- Full product grid for that category
-- "Keep Exploring / Other Categories" cross-sell section at the bottom
+- Full product grid for that category (cards link to product detail)
+- "Other Categories" cross-sell section at the bottom (clickable category cards)
 - Works for all 8 categories via the `?id=` query parameter
 
 ### pages/product.html?id={productId}
-- Large product image (sticky on desktop, stacks on mobile)
-- Product details: brand, name, SKU, category, availability
-- Auto-generated marketing description
-- 4 feature bullets (authentic, fast fulfillment, compliant packaging, WhatsApp support)
+- **Borderless fixed-size product frame** (520px desktop → 480/440/360/300 responsive), image always 100% visible (no crop), sticky on desktop, stacks on mobile
+- **Hover lens zoom** — circular magnifier (160px → 130/110 responsive) follows cursor with 2.5x zoom on desktop (`hover: hover` + `pointer: fine`); default cursor hidden during hover (`cursor: none`) and a small magnifier-glass icon shown inside the lens. Touch / coarse-pointer devices skip the lens.
+- **Click-to-open full-screen lightbox** — click anywhere on the image opens a dark-backdrop lightbox with the full-res image. Close: × button, ESC key, or click backdrop. Body scroll locked while open.
+- Product details: brand (logo + name), name, SKU, category, availability
+- Auto-generated marketing description (helpers `generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js) — auto-build from brand + category + flavor parsed from name; optional `description` / `features` fields in [data/products.json](data/products.json) override the auto-generated text per product)
+- 4–5 feature bullets (authentic brand, premium category, flavor profile, wholesale packaging, nationwide shipping)
 - "Inquire on WhatsApp" CTA (pre-filled with product name + SKU)
 - Trust row (authentic / fast / live support)
 - Related products grid (same brand first, then same category)

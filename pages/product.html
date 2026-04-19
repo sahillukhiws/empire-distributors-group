@@ -41,9 +41,10 @@
 
                 <div class="pd-grid" id="pd-grid">
                     <div class="pd-media">
-                        <div class="pd-media__frame">
+                        <div class="pd-media__frame" id="pd-media-frame">
                             <span class="pd-chip" id="pd-chip">Category</span>
                             <img id="pd-image" src="" alt="">
+                            <div class="pd-lens" id="pd-lens" aria-hidden="true"></div>
                         </div>
                     </div>
 
@@ -66,6 +67,13 @@
                                     In stock
                                 </span>
                             </div>
+                        </div>
+
+                        <p class="pd-description" id="pd-description"></p>
+
+                        <div class="pd-features" id="pd-features" hidden>
+                            <h4>Product Highlights</h4>
+                            <ul id="pd-features-list"></ul>
                         </div>
 
                         <div class="pd-cta">
@@ -92,6 +100,12 @@
                 <div id="related-grid" class="product-grid"></div>
             </div>
         </section>
+
+        <!-- Full-screen image lightbox -->
+        <div class="pd-lightbox" id="pd-lightbox" role="dialog" aria-modal="true" aria-label="Product image">
+            <button class="pd-lightbox__close" id="pd-lightbox-close" aria-label="Close">&times;</button>
+            <img class="pd-lightbox__img" id="pd-lightbox-img" src="" alt="">
+        </div>
     </main>
 
     <div id="site-footer"></div>
@@ -103,6 +117,7 @@
     /* ---------- Product detail page controller ---------- */
     (function () {
         const { loadData, findProduct, findCategory, findCompany, getRelatedProducts,
+                generateDescription, generateFeatures,
                 renderProductGrid, wireReveal, wireWhatsapp, waLink,
                 escapeHtml, qs, BASE } = window.EDG;
 
@@ -150,6 +165,18 @@
             document.getElementById('pd-sku').textContent = p.sku;
             document.getElementById('pd-category-name').textContent = cat ? cat.name : '';
 
+            // Description + feature highlights (auto-generated unless product has overrides)
+            document.getElementById('pd-description').textContent = generateDescription(p, data);
+            const features = generateFeatures(p, data);
+            if (features && features.length) {
+                const featEl = document.getElementById('pd-features');
+                const listEl = document.getElementById('pd-features-list');
+                listEl.innerHTML = features.map(f =>
+                    '<li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>' + escapeHtml(f) + '</span></li>'
+                ).join('');
+                featEl.hidden = false;
+            }
+
             const catName = cat ? cat.name : 'premium';
 
             // Breadcrumb category link
@@ -171,9 +198,107 @@
             const related = getRelatedProducts(data, p, 4);
             renderProductGrid(related, data, document.getElementById('related-grid'));
 
+            // Lens-zoom + lightbox for main product image
+            wireLensAndLightbox(p.image, p.name);
+
             wireWhatsapp();
             wireReveal();
         });
+
+        /* Lens-zoom on hover (desktop) + click-to-open lightbox.
+           Lens size & magnification are responsive. Touch devices skip the lens and go straight to lightbox. */
+        function wireLensAndLightbox(imgSrc, altText) {
+            const frame = document.getElementById('pd-media-frame');
+            const img = document.getElementById('pd-image');
+            const lens = document.getElementById('pd-lens');
+            const lightbox = document.getElementById('pd-lightbox');
+            const lightboxImg = document.getElementById('pd-lightbox-img');
+            const lightboxClose = document.getElementById('pd-lightbox-close');
+            if (!frame || !img || !lens || !lightbox) return;
+
+            const ZOOM = 2.5;
+            const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+            function lensSize() {
+                const cs = getComputedStyle(lens);
+                return { w: parseFloat(cs.width) || 160, h: parseFloat(cs.height) || 160 };
+            }
+
+            // Preload natural dims so background sizing is correct
+            function setupLensBackground() {
+                lens.style.backgroundImage = 'url("' + imgSrc + '")';
+                // Use rendered image box (contain-fit) for zoom mapping, not raw natural size
+                const r = img.getBoundingClientRect();
+                lens.style.backgroundSize = (r.width * ZOOM) + 'px ' + (r.height * ZOOM) + 'px';
+            }
+
+            function onMove(e) {
+                if (!hasHover) return;
+                const fr = frame.getBoundingClientRect();
+                const ir = img.getBoundingClientRect();
+                const { w: lw, h: lh } = lensSize();
+
+                const x = e.clientX - fr.left;
+                const y = e.clientY - fr.top;
+
+                // Position of cursor relative to image (not frame) for zoom mapping
+                const ix = e.clientX - ir.left;
+                const iy = e.clientY - ir.top;
+
+                // If cursor leaves actual image area (into letterbox whitespace), hide lens
+                if (ix < 0 || iy < 0 || ix > ir.width || iy > ir.height) {
+                    frame.classList.remove('lens-active');
+                    return;
+                }
+                frame.classList.add('lens-active');
+
+                // Clamp lens center inside frame
+                const halfW = lw / 2, halfH = lh / 2;
+                const lx = Math.max(halfW, Math.min(fr.width - halfW, x)) - halfW;
+                const ly = Math.max(halfH, Math.min(fr.height - halfH, y)) - halfH;
+                lens.style.left = lx + 'px';
+                lens.style.top = ly + 'px';
+
+                // Background offset: center the zoom on cursor within rendered image box
+                const imgOffsetX = ir.left - fr.left;
+                const imgOffsetY = ir.top - fr.top;
+                const bgX = -(ix * ZOOM - lw / 2) - imgOffsetX * ZOOM + imgOffsetX;
+                const bgY = -(iy * ZOOM - lh / 2) - imgOffsetY * ZOOM + imgOffsetY;
+                lens.style.backgroundPosition = bgX + 'px ' + bgY + 'px';
+            }
+
+            function onLeave() {
+                frame.classList.remove('lens-active');
+            }
+
+            function openLightbox() {
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = altText || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            if (img.complete) setupLensBackground();
+            else img.addEventListener('load', setupLensBackground);
+            window.addEventListener('resize', setupLensBackground);
+
+            frame.addEventListener('mousemove', onMove);
+            frame.addEventListener('mouseleave', onLeave);
+            frame.addEventListener('click', openLightbox);
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function (e) {
+                // Click on backdrop (not the img) closes
+                if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+            });
+        }
 
         function renderCatNav(data) {
             const el = document.getElementById('nav-bar-list');

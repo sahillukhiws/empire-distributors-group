@@ -289,16 +289,30 @@
             var nameLC = c.name.toLowerCase();
             var alreadyIn = refNames.some(function (rn) { return nameLC.indexOf(rn) >= 0 || rn.indexOf(nameLC) >= 0; });
             if (!alreadyIn) {
-                refLogos.push({ name: c.name, src: c.logo });
+                refLogos.push({ name: c.name, src: c.logo, companyId: c.id, categoryId: c.category });
             }
         });
+
+        // Resolve each logo to a destination href:
+        //   1. matching company in data -> its category page
+        //   2. reference-only logo (Elf Bar, CloudMax, etc.) -> vape category (all are vape brands)
+        function hrefForLogo(l) {
+            if (l.categoryId) return BASE + 'pages/category.html?id=' + l.categoryId;
+            var nameLC = l.name.toLowerCase();
+            var match = data.companies.find(function (c) {
+                var cn = c.name.toLowerCase();
+                return cn === nameLC || cn.indexOf(nameLC) >= 0 || nameLC.indexOf(cn) >= 0;
+            });
+            if (match) return BASE + 'pages/category.html?id=' + match.category;
+            return BASE + 'pages/category.html?id=vape';
+        }
 
         // Triple the logos so we have room to wrap in both directions
         var tripled = refLogos.concat(refLogos).concat(refLogos);
         el.innerHTML = tripled.map(function (l) {
-            return '<div class="bp-logo">' +
+            return '<a class="bp-logo" href="' + hrefForLogo(l) + '" aria-label="' + EDG.escapeHtml(l.name) + '">' +
                 '<img src="' + BASE + l.src + '" alt="' + EDG.escapeHtml(l.name) + '" loading="lazy">' +
-            '</div>';
+            '</a>';
         }).join('');
 
         // Arrow button scroll controls with circular wrapping

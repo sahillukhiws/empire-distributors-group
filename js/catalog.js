@@ -95,6 +95,67 @@
         return sameBrand.concat(sameCat).slice(0, limit);
     }
 
+    /* Match a hero slide/tile image path to a real product (by filename basename).
+       Useful for making category hero imagery link to an actual product page. */
+    function findProductByImagePath(data, imgPath) {
+        if (!imgPath) return null;
+        var norm = String(imgPath).toLowerCase().replace(/^\/+/, '').split('?')[0].split('#')[0];
+        var base = norm.split('/').pop();
+        if (!base) return null;
+        return data.products.find(function (p) {
+            var pi = String(p.image || '').toLowerCase().split('/').pop();
+            return pi && pi === base;
+        }) || null;
+    }
+
+    /* Auto-generate a product description when no explicit one is set.
+       Uses brand + category + flavor/keywords parsed from the name. */
+    var FLAVOR_WORDS = [
+        'blue razz blast','blue razz','blueberry blast','blueberry','pineapple paradise','pineapple',
+        'pink champagne','purple dragon','strawberry splash','strawberry','watermelon ice','watermelon',
+        'mango','peach','lemon','lime','mint','mixed berry','mixed','cherry','grape','gummy bear',
+        'sour','apple','orange','banana','coconut','vanilla','chocolate','caramel','tropical'
+    ];
+    function extractFlavor(name) {
+        var n = String(name || '').toLowerCase();
+        for (var i = 0; i < FLAVOR_WORDS.length; i++) {
+            if (n.indexOf(FLAVOR_WORDS[i]) !== -1) return FLAVOR_WORDS[i];
+        }
+        var m = n.match(/\(([^)]+)\)/);
+        return m ? m[1].trim() : '';
+    }
+    function titleCase(s) {
+        return String(s || '').toLowerCase().replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+    }
+    function generateDescription(p, data) {
+        if (p && p.description) return p.description;
+        var cat = findCategory(data, p.category);
+        var brand = findCompany(data, p.company);
+        var brandName = brand ? titleCase(brand.name) : '';
+        var catName = cat ? cat.name : 'premium';
+        var flavor = extractFlavor(p.name);
+        var cleanName = titleCase(String(p.name || '').replace(/\([^)]*\)/g, '').trim());
+        var parts = [];
+        parts.push(cleanName + (brandName ? ' by ' + brandName : '') + '.');
+        if (flavor) parts.push('Available in ' + titleCase(flavor) + '.');
+        parts.push('A premium ' + catName.toLowerCase() + ' product curated by Empire Distributors Group for wholesale partners.');
+        parts.push('Consistent quality, fast fulfillment, and nationwide shipping from Tucker, GA.');
+        return parts.join(' ');
+    }
+    function generateFeatures(p, data) {
+        if (p && Array.isArray(p.features) && p.features.length) return p.features;
+        var cat = findCategory(data, p.category);
+        var brand = findCompany(data, p.company);
+        var feats = [];
+        if (brand) feats.push('Authentic ' + titleCase(brand.name) + ' product');
+        if (cat) feats.push('Premium ' + cat.name + ' category');
+        var flavor = extractFlavor(p.name);
+        if (flavor) feats.push(titleCase(flavor) + ' flavor profile');
+        feats.push('Wholesale-ready packaging');
+        feats.push('Nationwide shipping from Tucker, GA');
+        return feats;
+    }
+
     /* ---------- Product color extraction from name/brand ---------- */
     /* Maps flavor/color keywords in product names to gradient colors */
     var COLOR_MAP = {
@@ -293,6 +354,7 @@
                 { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_33_23 PM.png', label: 'Premium Kratom' },
                 { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_35_09 PM.png', label: 'Kratom Collection' },
                 { img: 'assets/products/Product/karatomScroll/Gemini_Generated_Image_basgmsbasgmsbasg.png', label: 'Featured Kratom' },
+                { img: 'assets/products/Product/karatomScroll/karatom.png', label: 'Kratom Collection' },
             ],
             tiles: [
                 { img: 'assets/categories/kratom/featured/opms-black.png', label: 'OPMS', link: '' },
@@ -303,35 +365,44 @@
         },
         delta: {
             slides: [
-                { img: 'assets/categories/delta/rock-on/rock-on-green.png', label: 'Rock On Green' },
-                { img: 'assets/categories/delta/rock-on/rock-on-blue.png', label: 'Rock On Blue' },
-                { img: 'assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.png', label: 'Delta 9 Gummies' },
+                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_15_20 PM.png', label: 'Top Delta' },
+                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_22_53 PM.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_23_53 PM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_27_32 PM.png', label: 'Premium Delta' },
+                { img: 'assets/products/Product/daltaScroll/Gemini_Generated_Image_10jmga10jmga10jm.png', label: 'Featured Delta' },
+                { img: 'assets/products/Product/daltaScroll/delta.png', label: 'Delta Collection' },
             ],
             tiles: [
-                { img: 'assets/categories/delta/rock-on/rock-on-green.png', label: 'Rock On', link: '' },
-                { img: 'assets/categories/delta/rock-on/rock-on-pink.png', label: 'Rock On Pink', link: '' },
-                { img: 'assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.png', label: 'Gummies', link: '' },
-                { img: 'assets/categories/delta/rock-on/rock-on-yellow.png', label: 'More Delta', link: '' },
+                { img: 'assets/categories/delta/1-delta-8-9-gummies/ml-product-photo-12ct-gummies.png', label: 'Delta Gummies', link: '' },
+                { img: 'assets/categories/delta/rock-on/img-20250411-wa0077.png', label: 'THC-P Pre-Rolls', link: '' },
+                { img: 'assets/categories/delta/rock-on/img-20250411-wa0103.png', label: 'Live Resin Disposables', link: '' },
+                { img: 'assets/categories/delta/rock-on/img-20250411-wa0088.png', label: 'Live Resin Dabs', link: '' },
             ],
         },
         mushroom: {
             slides: [
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.jpg', label: 'Shroom Puff Pre-Roll' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg', label: 'Shroom Puff Blaster' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-1-grm-cartridge.jpg', label: 'Shroom Puff Cartridge' },
+                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_29_14 PM.png', label: 'Top Mushroom' },
+                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_34_36 PM.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_36_03 PM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_36_19 PM.png', label: 'Premium Mushroom' },
+                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_38_51 PM.png', label: 'Featured Mushroom' },
+                { img: 'assets/products/Product/mashroomScroll/mashroom.png', label: 'Mushroom Collection' },
             ],
             tiles: [
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.jpg', label: 'Shroom Puff', link: '' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg', label: 'Blaster', link: '' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-1-grm-cartridge.jpg', label: 'Cartridges', link: '' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-pre-roll-40ct-jar.jpg', label: 'More Mushroom', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.png', label: 'Shroom Puff Pre-Roll', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg', label: 'Blaster Disposable', link: '' },
+                { img: 'assets/categories/mushroom/silly-dots/silly-dots-mega-dose-blue-razz.jpg', label: 'Silly Dots Gummies', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-pugg-gummies.jpg', label: 'Shroom Puff Gummies', link: '' },
             ],
         },
         pseudo: {
             slides: [
-                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png', label: 'Ultra Ohmz Blue Razz' },
-                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'Gusherz Blueberry Blast' },
-                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-cherry-011226.png', label: 'Ultra Ohmz Cherry' },
+                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 02_53_21 PM.png', label: 'Top Pseudo' },
+                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 02_57_32 PM.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 03_00_14 PM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 03_03_36 PM.png', label: 'Premium Pseudo' },
+                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 03_08_21 PM.png', label: 'Featured Pseudo' },
+                { img: 'assets/products/Product/pseudoScroll/psuedo.png', label: 'Pseudo Collection' },
             ],
             tiles: [
                 { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png', label: 'Ultra Ohmz', link: '' },
@@ -342,9 +413,9 @@
         },
         bluelotus: {
             slides: [
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.png', label: 'Blue Lotus Cartridges' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.png', label: 'Blue Lotus Disposable' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.jpg', label: 'Blue Lotus Collection' },
+                { img: 'assets/products/Product/bluelotusScroll/ChatGPT Image Apr 19, 2026, 03_21_20 PM.png', label: 'Top Blue Lotus' },
+                { img: 'assets/products/Product/bluelotusScroll/ChatGPT Image Apr 19, 2026, 03_31_38 PM.png', label: 'Premium Blue Lotus' },
+                { img: 'assets/products/Product/bluelotusScroll/bluelotus.png', label: 'Blue Lotus Collection' },
             ],
             tiles: [
                 { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.png', label: 'Cartridges', link: '' },
@@ -355,9 +426,12 @@
         },
         supplements: {
             slides: [
-                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.png', label: 'Better Now Watermelon' },
-                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'Strike Kava Shot' },
-                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.jpg', label: 'Better Now Collection' },
+                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_34_50 PM.png', label: 'Top Supplements' },
+                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_37_04 PM.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_41_07 PM.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_58_00 PM.png', label: 'Premium Supplements' },
+                { img: 'assets/products/Product/supplimentsScroll/Gemini_Generated_Image_y8vjlpy8vjlpy8vj.png', label: 'Featured Supplements' },
+                { img: 'assets/products/Product/supplimentsScroll/supliments.png', label: 'Supplements Collection' },
             ],
             tiles: [
                 { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.png', label: 'Better Now', link: '' },
@@ -368,9 +442,13 @@
         },
         novelties: {
             slides: [
-                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'Azza Air Fresheners' },
-                { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry & Crystals' },
-                { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains' },
+                { img: 'assets/products/Product/noveltiesScroll/ChatGPT Image Apr 19, 2026, 04_03_10 PM.png', label: 'Top Novelties' },
+                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_6gynyq6gynyq6gyn.png', label: 'Best Sellers' },
+                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_70y3ug70y3ug70y3.png', label: 'New Arrivals' },
+                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_88pzra88pzra88pz (2).png', label: 'Premium Novelties' },
+                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_cx62w8cx62w8cx62.png', label: 'Featured Novelties' },
+                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_kp56mgkp56mgkp56-ezremove.png', label: 'Novelties Collection' },
+                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_mfgdnqmfgdnqmfgd (1).png', label: 'More Novelties' },
             ],
             tiles: [
                 { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'Air Fresheners', link: '' },
@@ -397,6 +475,9 @@
         getProductsByCompany: getProductsByCompany,
         getBrandsInCategory: getBrandsInCategory,
         getRelatedProducts: getRelatedProducts,
+        findProductByImagePath: findProductByImagePath,
+        generateDescription: generateDescription,
+        generateFeatures: generateFeatures,
         renderProductCard: renderProductCard,
         renderProductCardFull: renderProductCardFull,
         renderProductGrid: renderProductGrid,

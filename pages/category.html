@@ -103,7 +103,8 @@
     /* ---------- Category page controller ---------- */
     (function () {
         const { loadData, ICONS, CAT_COPY, CAT_HERO, findCategory, getProductsByCategory, getBrandsInCategory,
-                renderProductGrid, renderProductCard, wireReveal, wireWhatsapp, waLink,
+                renderProductGrid, renderProductCard, findProductByImagePath,
+                wireReveal, wireWhatsapp, waLink,
                 escapeHtml, qs, BASE } = window.EDG;
 
         const catId = qs('id');
@@ -126,7 +127,7 @@
                 return;
             }
 
-            renderCatHero(cat);
+            renderCatHero(cat, data);
             renderHeader(data, cat);
             renderBrandFilter(data, cat);
             renderCrossSell(data, cat);
@@ -196,29 +197,37 @@
             wireWhatsapp();
         }
 
-        function renderCatHero(cat) {
+        function renderCatHero(cat, data) {
             var heroData = CAT_HERO[cat.id];
             if (!heroData) {
                 document.getElementById('cat-page-hero').style.display = 'none';
                 return;
             }
 
+            var catHref = BASE + 'pages/category.html?id=' + cat.id;
+            function hrefForImg(imgPath) {
+                var match = findProductByImagePath(data, imgPath);
+                return match
+                    ? BASE + 'pages/product.html?id=' + encodeURIComponent(match.id)
+                    : catHref;
+            }
+
             // Build slider slides (use --cover so images fill 100% of the frame)
             var track = document.getElementById('cat-hero-slider-track');
             track.innerHTML = heroData.slides.map(function (s) {
-                return '<div class="hero__slide hero__slide--cover">' +
+                return '<a class="hero__slide hero__slide--cover" href="' + hrefForImg(s.img) + '">' +
                     '<img src="' + BASE + s.img + '" alt="' + escapeHtml(s.label) + '">' +
                     '<span class="hero__slide-label">' + escapeHtml(s.label) + '</span>' +
-                '</div>';
+                '</a>';
             }).join('');
 
             // Build 2x2 tiles
             var tilesEl = document.getElementById('cat-hero-tiles');
             tilesEl.innerHTML = heroData.tiles.map(function (t) {
-                return '<div class="hero__tile" style="--c:var(--c-' + cat.id + '); --c-lt:var(--c-' + cat.id + '-lt);">' +
+                return '<a class="hero__tile" href="' + hrefForImg(t.img) + '" style="--c:var(--c-' + cat.id + '); --c-lt:var(--c-' + cat.id + '-lt);">' +
                     '<img src="' + BASE + t.img + '" alt="' + escapeHtml(t.label) + '" loading="lazy">' +
                     '<span class="hero__tile-label">' + escapeHtml(t.label) + '</span>' +
-                '</div>';
+                '</a>';
             }).join('');
 
             // Init slider
