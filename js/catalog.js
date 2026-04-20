@@ -407,8 +407,8 @@
             tiles: [
                 { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png', label: 'Ultra Ohmz', link: '' },
                 { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'Gusherz', link: '' },
-                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-cherry-011226.png', label: 'Capsules', link: '' },
-                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'More Pseudo', link: '' },
+                { img: 'assets/categories/pseudo/lucid-50mg/photoroom-20260325-155055.png', label: 'Lucid 50mg', link: '' },
+                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-watermelon-gushers.png', label: 'Watermelon Gusherz', link: '' },
             ],
         },
         bluelotus: {
@@ -420,8 +420,8 @@
             tiles: [
                 { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.png', label: 'Cartridges', link: '' },
                 { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.png', label: 'Disposables', link: '' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.jpg', label: 'Pre-Rolls', link: '' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.jpg', label: 'More Blue Lotus', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon.png', label: 'Pre-Rolls', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-strawberry-splash.png', label: 'Strawberry Splash', link: '' },
             ],
         },
         supplements: {
@@ -436,8 +436,8 @@
             tiles: [
                 { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.png', label: 'Better Now', link: '' },
                 { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'Strike Kava', link: '' },
-                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.jpg', label: 'Capsules', link: '' },
-                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'More Supplements', link: '' },
+                { img: 'assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.jpg', label: 'Kanna Kava', link: '' },
+                { img: 'assets/categories/supplements/zen-power-shot/img-7056.png', label: 'Zen Power Shot', link: '' },
             ],
         },
         novelties: {
@@ -454,7 +454,7 @@
                 { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'Air Fresheners', link: '' },
                 { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry', link: '' },
                 { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains', link: '' },
-                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'More Novelties', link: '' },
+                { img: 'assets/categories/novelties/misc/tactical-stoneman-knife-display.jpg', label: 'Knives', link: '' },
             ],
         },
     };
