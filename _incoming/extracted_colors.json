@@ -1,0 +1,86 @@
+{
+  "1.png": {
+    "top": "#7e3f7e",
+    "middle": "#552a55",
+    "bottom": "#773b77",
+    "chip": "#542054",
+    "extracted": "#683868"
+  },
+  "2.png": {
+    "top": "#008dde",
+    "middle": "#0066a1",
+    "bottom": "#0086d4",
+    "chip": "#005f97",
+    "extracted": "#0878b8"
+  },
+  "3.png": {
+    "top": "#2caae0",
+    "middle": "#1a87b6",
+    "bottom": "#23a6df",
+    "chip": "#027aae",
+    "extracted": "#2898c8"
+  },
+  "4.png": {
+    "top": "#f5f5f8",
+    "middle": "#d2d4da",
+    "bottom": "#ebecf0",
+    "chip": "#3c3c44",
+    "extracted": "#181818"
+  },
+  "5.png": {
+    "top": "#008dde",
+    "middle": "#0066a1",
+    "bottom": "#0086d4",
+    "chip": "#005f97",
+    "extracted": "#0878b8"
+  },
+  "ChatGPT Image Apr 14, 2026, 03_35_29 PM.png": {
+    "top": "#b14c9c",
+    "middle": "#863977",
+    "bottom": "#aa4996",
+    "chip": "#7a2669",
+    "extracted": "#984888"
+  },
+  "ChatGPT Image Apr 14, 2026, 03_51_13 PM.png": {
+    "top": "#4787d5",
+    "middle": "#2968b7",
+    "bottom": "#3f81d3",
+    "chip": "#1058b0",
+    "extracted": "#3878c8"
+  },
+  "ChatGPT Image Apr 14, 2026, 03_54_25 PM.png": {
+    "top": "#58a6d5",
+    "middle": "#3089c0",
+    "bottom": "#50a1d3",
+    "chip": "#177cb9",
+    "extracted": "#4898c8"
+  },
+  "ChatGPT Image Apr 14, 2026, 03_57_00 PM.png": {
+    "top": "#3896e5",
+    "middle": "#1977c6",
+    "bottom": "#2f91e4",
+    "chip": "#0068c1",
+    "extracted": "#2888d8"
+  },
+  "ChatGPT Image Apr 14, 2026, 03_59_54 PM.png": {
+    "top": "#f5f5f8",
+    "middle": "#d2d4da",
+    "bottom": "#ebecf0",
+    "chip": "#3c3c44",
+    "extracted": "#181818"
+  },
+  "Shroom Bang! pre-rolls in lavender spa.png": {
+    "top": "#c588b5",
+    "middle": "#b05f9c",
+    "bottom": "#c181b1",
+    "chip": "#ae4293",
+    "extracted": "#b878a8"
+  },
+  "Silly mushroom tablets_ blueberry blast.png": {
+    "top": "#0e75ee",
+    "middle": "#0b58b5",
+    "bottom": "#0e70e5",
+    "chip": "#0049a1",
+    "extracted": "#1868c8"
+  }
+}

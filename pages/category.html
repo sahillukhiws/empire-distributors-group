@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse premium products by category at Empire Distributors Group.">
+    <meta name="theme-color" content="#1a3a5c">
+    <title id="page-title">Category - Empire Distributors Group</title>
+
+    <link rel="icon" type="image/png" href="../assets/logos/empire-logo.png">
+    <link rel="apple-touch-icon" href="../assets/logos/empire-logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Empire Distributors Group">
+    <meta property="og:title" content="Category - Empire Distributors Group">
+    <meta property="og:description" content="Browse premium products by category.">
+    <meta property="og:image" content="../assets/logos/empire-logo.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mona+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+    <!-- Header injected -->
+    <div id="site-header"></div>
+
+    <!-- Category page content -->
+    <main id="category-main">
+        <!-- Hero: same structure as home page (slider left + 2x2 grid right) -->
+        <section class="hero" id="cat-page-hero">
+            <div class="container">
+                <div class="hero__grid">
+                    <div class="hero__slider" id="cat-hero-slider">
+                        <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                        </button>
+                        <div class="hero__track" id="cat-hero-slider-track"></div>
+                        <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                        <div class="hero__dots" id="cat-hero-slider-dots"></div>
+                    </div>
+                    <div class="hero__grid2x2" id="cat-hero-tiles"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compact category header -->
+        <section class="cat-header" id="cat-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <span id="bc-current">Category</span>
+                </nav>
+                <div class="cat-header__row">
+                    <div class="cat-header__icon" id="cat-hero-icon"></div>
+                    <div>
+                        <h1 id="cat-hero-title">Loading…</h1>
+                        <div class="cat-header__count" id="cat-hero-count"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand filter chips (horizontal scroll, simple) -->
+        <section class="cat-filter-row">
+            <div class="container">
+                <div class="cat-filter__chips" id="brand-chips"></div>
+            </div>
+        </section>
+
+        <!-- Product grid -->
+        <section class="section" id="products">
+            <div class="container">
+                <div id="products-grid" class="product-grid"></div>
+            </div>
+        </section>
+
+        <!-- Other categories - visual grid only -->
+        <section class="section section--white">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">Other Categories</h2>
+                </div>
+                <div id="cross-sell-row" class="categories-row__track"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer injected -->
+    <div id="site-footer"></div>
+
+    <script src="../js/age-gate.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/catalog.js"></script>
+    <script>
+    /* ---------- Category page controller ---------- */
+    (function () {
+        const { loadData, ICONS, CAT_COPY, CAT_HERO, findCategory, getProductsByCategory, getBrandsInCategory,
+                renderProductGrid, renderProductCard, findProductByImagePath,
+                wireReveal, wireWhatsapp, waLink,
+                escapeHtml, qs, BASE } = window.EDG;
+
+        const catId = qs('id');
+
+        loadData().then(data => {
+            // Fill category nav pills (reused from home)
+            renderCatNav(data);
+
+            const cat = findCategory(data, catId);
+            if (!cat) {
+                document.getElementById('category-main').innerHTML = `
+                    <section class="section"><div class="container">
+                        <div class="empty-state">
+                            <h2>Category not found</h2>
+                            <p>That category doesn't exist. <a href="${BASE}index.html">Return home</a>.</p>
+                        </div>
+                    </div></section>
+                `;
+                wireWhatsapp();
+                return;
+            }
+
+            renderCatHero(cat, data);
+            renderHeader(data, cat);
+            renderBrandFilter(data, cat);
+            renderCrossSell(data, cat);
+            filterAndRender(data, cat, 'all');
+
+            document.getElementById('page-title').textContent = `${cat.name} - Empire Distributors Group`;
+            document.getElementById('bc-current').textContent = cat.name;
+
+            wireWhatsapp();
+            wireReveal();
+        });
+
+        function renderCatNav(data) {
+            const el = document.getElementById('nav-bar-list');
+            if (!el) return;
+            el.innerHTML = `
+                ${data.categories.map(c => `
+                    <a class="nav-link" style="--c: var(--c-${c.id}); --c-lt: var(--c-${c.id}-lt);" href="${BASE}pages/category.html?id=${c.id}">${escapeHtml(c.name)}</a>
+                `).join('')}
+                <a class="nav-link" href="${BASE}pages/brands.html">Brands</a>
+                <a class="nav-link" href="${BASE}pages/about.html">About</a>
+                <a class="nav-link" href="${BASE}pages/contact.html">Contact</a>
+            `;
+        }
+
+        function renderHeader(data, cat) {
+            const hero = document.getElementById('cat-hero');
+            hero.style.setProperty('--c', `var(--c-${cat.id})`);
+            hero.style.setProperty('--c-lt', `var(--c-${cat.id}-lt)`);
+
+            document.getElementById('cat-hero-icon').innerHTML = ICONS[cat.id] || '';
+            document.getElementById('cat-hero-title').textContent = cat.name;
+
+            const products = getProductsByCategory(data, cat.id);
+            const brands = getBrandsInCategory(data, cat.id);
+            document.getElementById('cat-hero-count').textContent =
+                `${products.length} products · ${brands.length} brands`;
+        }
+
+        function renderBrandFilter(data, cat) {
+            const brands = getBrandsInCategory(data, cat.id);
+            const chipsEl = document.getElementById('brand-chips');
+            const products = getProductsByCategory(data, cat.id);
+
+            let html = `<button class="chip active" data-brand="all">All (${products.length})</button>`;
+            brands.forEach(b => {
+                const count = products.filter(p => p.company === b.id).length;
+                html += `<button class="chip" data-brand="${b.id}">${escapeHtml(b.name)} (${count})</button>`;
+            });
+            chipsEl.innerHTML = html;
+
+            chipsEl.addEventListener('click', e => {
+                const btn = e.target.closest('.chip');
+                if (!btn) return;
+                chipsEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                filterAndRender(data, cat, btn.dataset.brand);
+            });
+        }
+
+        function filterAndRender(data, cat, brandFilter) {
+            const all = getProductsByCategory(data, cat.id);
+            const filtered = brandFilter === 'all' ? all : all.filter(p => p.company === brandFilter);
+            const grid = document.getElementById('products-grid');
+            renderProductGrid(filtered, data, grid, { emptyText: 'No products yet.' });
+            wireReveal();
+            wireWhatsapp();
+        }
+
+        function renderCatHero(cat, data) {
+            var heroData = CAT_HERO[cat.id];
+            if (!heroData) {
+                document.getElementById('cat-page-hero').style.display = 'none';
+                return;
+            }
+
+            var catHref = BASE + 'pages/category.html?id=' + cat.id;
+            function hrefForImg(imgPath) {
+                var match = findProductByImagePath(data, imgPath);
+                return match
+                    ? BASE + 'pages/product.html?id=' + encodeURIComponent(match.id)
+                    : catHref;
+            }
+
+            // Build slider slides (use --cover so images fill 100% of the frame)
+            var track = document.getElementById('cat-hero-slider-track');
+            track.innerHTML = heroData.slides.map(function (s) {
+                return '<a class="hero__slide hero__slide--cover" href="' + hrefForImg(s.img) + '">' +
+                    '<img src="' + BASE + s.img + '" alt="' + escapeHtml(s.label) + '">' +
+                    '<span class="hero__slide-label">' + escapeHtml(s.label) + '</span>' +
+                '</a>';
+            }).join('');
+
+            // Build 2x2 tiles
+            var tilesEl = document.getElementById('cat-hero-tiles');
+            tilesEl.innerHTML = heroData.tiles.map(function (t) {
+                return '<a class="hero__tile" href="' + hrefForImg(t.img) + '" style="--c:var(--c-' + cat.id + '); --c-lt:var(--c-' + cat.id + '-lt);">' +
+                    '<img src="' + BASE + t.img + '" alt="' + escapeHtml(t.label) + '" loading="lazy">' +
+                    '<span class="hero__tile-label">' + escapeHtml(t.label) + '</span>' +
+                '</a>';
+            }).join('');
+
+            // Init slider
+            initCatHeroSlider();
+        }
+
+        function initCatHeroSlider() {
+            var track = document.getElementById('cat-hero-slider-track');
+            var dotsContainer = document.getElementById('cat-hero-slider-dots');
+            if (!track || !dotsContainer) return;
+
+            var slides = track.querySelectorAll('.hero__slide');
+            var total = slides.length;
+            if (total < 2) return;
+
+            var current = 0;
+            var interval = null;
+            var DELAY = 4000;
+
+            dotsContainer.innerHTML = '';
+            for (var i = 0; i < total; i++) {
+                var dot = document.createElement('button');
+                dot.className = 'hero__dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                dot.dataset.idx = i;
+                dotsContainer.appendChild(dot);
+            }
+            var dots = dotsContainer.querySelectorAll('.hero__dot');
+
+            function goTo(idx) {
+                current = ((idx % total) + total) % total;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                dots.forEach(function (d, j) {
+                    d.classList.toggle('active', j === current);
+                });
+            }
+            function next() { goTo(current + 1); }
+            function startAuto() { stopAuto(); interval = setInterval(next, DELAY); }
+            function stopAuto() { if (interval) { clearInterval(interval); interval = null; } }
+
+            dotsContainer.addEventListener('click', function (e) {
+                var dot = e.target.closest('.hero__dot');
+                if (!dot) return;
+                goTo(parseInt(dot.dataset.idx, 10));
+                startAuto();
+            });
+
+            var slider = document.getElementById('cat-hero-slider');
+            if (slider) {
+                var prev = slider.querySelector('.hero__arrow--prev');
+                var nxt = slider.querySelector('.hero__arrow--next');
+                if (prev) prev.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+                if (nxt) nxt.addEventListener('click', function () { next(); startAuto(); });
+                slider.addEventListener('mouseenter', stopAuto);
+                slider.addEventListener('mouseleave', startAuto);
+            }
+
+            var startX = 0;
+            var dragging = false;
+            track.addEventListener('touchstart', function (e) {
+                startX = e.touches[0].clientX;
+                dragging = true;
+                stopAuto();
+            }, { passive: true });
+            track.addEventListener('touchend', function (e) {
+                if (!dragging) return;
+                dragging = false;
+                var diff = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 40) {
+                    if (diff > 0) next();
+                    else goTo(current - 1);
+                }
+                startAuto();
+            }, { passive: true });
+
+            startAuto();
+        }
+
+        function renderCrossSell(data, currentCat) {
+            const others = data.categories.filter(c => c.id !== currentCat.id);
+            const row = document.getElementById('cross-sell-row');
+            if (!row) return;
+            const catImages = (window.EDG && window.EDG.CAT_IMAGES) || {};
+            row.innerHTML = others.map(c => {
+                const count = getProductsByCategory(data, c.id).length;
+                if (!count) return '';
+                const imgSrc = BASE + (catImages[c.id] || '');
+                return `
+                    <a class="cat-card-v2" style="--c:var(--c-${c.id})" href="${BASE}pages/category.html?id=${c.id}">
+                        <div class="cat-card-v2__bg"></div>
+                        <div class="cat-card-v2__img"><img src="${imgSrc}" alt="${escapeHtml(c.name)}" loading="lazy"></div>
+                        <div class="cat-card-v2__name">${escapeHtml(c.name)}</div>
+                    </a>
+                `;
+            }).join('');
+        }
+    })();
+    </script>
+    <script src="../js/search.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+</html>
