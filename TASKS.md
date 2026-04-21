@@ -1,11 +1,11 @@
-# Empire Distributors Group — Working Tasks
+# Empire Distributors Group - Working Tasks
 
 > This is the **active working file** for the project. Project overview lives in [CASE-STUDY.md](CASE-STUDY.md). Site structure reference lives in [SITE-REFERENCE.md](SITE-REFERENCE.md).
 >
 > **How to use this file:**
 > - Move items between sections as work progresses (Active → In Progress → Done).
 > - Run the **Permanent Checks** (section at bottom) after *every* change, big or small.
-> - When Done items pile up, trim them — this is not a changelog.
+> - When Done items pile up, trim them - this is not a changelog.
 
 ---
 
@@ -25,17 +25,17 @@
 
 ---
 
-## 🔁 Permanent Checks — Run After EVERY Change
+## 🔁 Permanent Checks - Run After EVERY Change
 
 These are non-negotiable. Every time a page, component, stylesheet, or JS module is touched, walk this list before marking work done.
 
 ### Responsiveness
-- [ ] Desktop (1400+) — layout holds, no horizontal scroll
-- [ ] Laptop (1200) — breakpoints transition cleanly
-- [ ] Tablet (992) — nav collapses properly, touch targets work
-- [ ] Mobile (768) — mobile drawer opens, content stacks
-- [ ] Phone (480) — all text readable, no overflow
-- [ ] Small phone (380) — nothing clipped, buttons tappable
+- [ ] Desktop (1400+) - layout holds, no horizontal scroll
+- [ ] Laptop (1200) - breakpoints transition cleanly
+- [ ] Tablet (992) - nav collapses properly, touch targets work
+- [ ] Mobile (768) - mobile drawer opens, content stacks
+- [ ] Phone (480) - all text readable, no overflow
+- [ ] Small phone (380) - nothing clipped, buttons tappable
 - [ ] Touch targets ≥ 44px on all interactive elements (buttons, links, nav items)
 - [ ] No horizontal scrollbar appears at any breakpoint
 
@@ -45,7 +45,7 @@ These are non-negotiable. Every time a page, component, stylesheet, or JS module
 - [ ] Mobile drawer opens/closes and mirrors main nav
 - [ ] Sticky header appears when scrolling up
 - [ ] Category colors apply correctly if page uses `--c` tokens
-- [ ] Fonts load (Poppins + Mona Sans) — no FOUC
+- [ ] Fonts load (Poppins + Mona Sans) - no FOUC
 - [ ] Dark blue accent `#1a3a5c` used consistently, no stray colors
 
 ### Functional Integrity
@@ -86,10 +86,10 @@ These are non-negotiable. Every time a page, component, stylesheet, or JS module
 
 ---
 
-## 🔴 Active — Pick Up Next
+## 🔴 Active - Pick Up Next
 
-### Phase A — Responsive Refinement
-- [x] ~~Unify breakpoints between style.css and pages.css~~ — verified already unified at `1400 / 1200 / 992 / 768 / 480 / 380`. No conflicts found.
+### Phase A - Responsive Refinement
+- [x] ~~Unify breakpoints between style.css and pages.css~~ - verified already unified at `1400 / 1200 / 992 / 768 / 480 / 380`. No conflicts found.
 - [ ] Walk each breakpoint across all 6 pages (manual browser test, record any layout issues)
 - [ ] Verify animated WhatsApp SVG scales properly at all sizes
 - [ ] Audit `.cat-header` consistency across category/product/brands/about/contact pages
@@ -99,7 +99,7 @@ These are non-negotiable. Every time a page, component, stylesheet, or JS module
 - [ ] Source remaining 11 brand logos (or design fallback placeholder)
 - [ ] Run image-framing pass via [_incoming/check_image_framing.py](_incoming/check_image_framing.py)
 - [ ] Performance audit (Lighthouse on all pages, record baseline)
-- [ ] Design a proper dedicated favicon (currently using full logo PNG — works but not optimal size)
+- [ ] Design a proper dedicated favicon (currently using full logo PNG - works but not optimal size)
 - [ ] Add canonical URL meta tags once production domain is confirmed
 
 ---
@@ -112,15 +112,15 @@ These are non-negotiable. Every time a page, component, stylesheet, or JS module
 
 ## ✅ Recently Done
 
-*(Keep a short rolling list — prune when it gets long. This is not a full history.)*
+*(Keep a short rolling list - prune when it gets long. This is not a full history.)*
 
-- **Product detail page upgrade — borderless fixed frame + hover lens-zoom + click-to-open lightbox** — [pages/product.html](pages/product.html) main image now renders in a fixed-size, borderless area (520px → 480/440/360/300 responsive) so every product presents at identical dimensions with `object-fit: contain` keeping the image 100% visible (no crop). On desktop (`hover: hover` + `pointer: fine`) a 160px circular lens follows the cursor at 2.5x zoom, default cursor is hidden (`cursor: none`) and a small magnifier icon shows inside the lens. Touch / coarse-pointer devices skip the lens. Click the image → full-screen lightbox with × button, ESC, and backdrop-click close; body scroll locked while open. All CSS lives in [css/pages.css](css/pages.css); JS wiring in `wireLensAndLightbox()` inside the product page IIFE.
-- **Site-wide image clickability + auto product descriptions** — every product image / category image / brand logo now leads somewhere. (1) Category-page hero slider slides and 2x2 tiles switched from `<div>` to `<a>`, matched to real products by image filename via `findProductByImagePath()` with category-page fallback. (2) Home-page "Our Brand Partners" logos wrapped in `<a>` — known brands go to their category page, unmatched reference logos (Elf Bar, CloudMax, Hyppe Bar, etc.) fall back to vape. (3) Product detail page now shows an auto-generated marketing description + 4–5 feature bullets, built from brand + category + flavor keywords parsed from the product name (`generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js)). Hybrid design: if a product defines its own `description` or `features` array in [data/products.json](data/products.json), those override the auto-generated text.
-- **Footer mobile layout + clickable address** — on mobile (≤768px), Shop and Company columns now sit side-by-side instead of stacking, reducing scroll height; Brand and Contact remain full-width. Address is now a clickable Google Maps link (opens in new tab with `rel="noopener"`). Desktop and tablet layouts untouched.
-- **Footer polish + bug fixes** — fixed wrong phone number in footer (was `470-375-3936`, replaced with real numbers: WhatsApp `+1 (678) 303-6054`, plus `+1 (470) 640-4502` and `+1 (470) 953-3565`). Completed Shop column to all 8 categories (added Pseudo, Blue Lotus, Novelties). Removed dead Privacy/Terms/Cookies placeholder links. Added small CSS polish for stacked contact values.
-- **SEO + social polish** — added Open Graph tags, Twitter Card, favicon, and apple-touch-icon to all 6 pages. Normalized `theme-color` to brand `#1a3a5c` site-wide. WhatsApp/social link previews now render properly with logo + description.
-- **Alt-text audit** — confirmed 100% `alt` coverage across all HTML and JS-generated `<img>` tags.
-- **Breakpoint audit** — confirmed style.css and pages.css already share unified breakpoints (`1400 / 1200 / 992 / 768 / 480 / 380`). No unification work needed.
+- **Product detail page upgrade - borderless fixed frame + hover lens-zoom + click-to-open lightbox** - [pages/product.html](pages/product.html) main image now renders in a fixed-size, borderless area (520px → 480/440/360/300 responsive) so every product presents at identical dimensions with `object-fit: contain` keeping the image 100% visible (no crop). On desktop (`hover: hover` + `pointer: fine`) a 160px circular lens follows the cursor at 2.5x zoom, default cursor is hidden (`cursor: none`) and a small magnifier icon shows inside the lens. Touch / coarse-pointer devices skip the lens. Click the image → full-screen lightbox with × button, ESC, and backdrop-click close; body scroll locked while open. All CSS lives in [css/pages.css](css/pages.css); JS wiring in `wireLensAndLightbox()` inside the product page IIFE.
+- **Site-wide image clickability + auto product descriptions** - every product image / category image / brand logo now leads somewhere. (1) Category-page hero slider slides and 2x2 tiles switched from `<div>` to `<a>`, matched to real products by image filename via `findProductByImagePath()` with category-page fallback. (2) Home-page "Our Brand Partners" logos wrapped in `<a>` - known brands go to their category page, unmatched reference logos (Elf Bar, CloudMax, Hyppe Bar, etc.) fall back to vape. (3) Product detail page now shows an auto-generated marketing description + 4–5 feature bullets, built from brand + category + flavor keywords parsed from the product name (`generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js)). Hybrid design: if a product defines its own `description` or `features` array in [data/products.json](data/products.json), those override the auto-generated text.
+- **Footer mobile layout + clickable address** - on mobile (≤768px), Shop and Company columns now sit side-by-side instead of stacking, reducing scroll height; Brand and Contact remain full-width. Address is now a clickable Google Maps link (opens in new tab with `rel="noopener"`). Desktop and tablet layouts untouched.
+- **Footer polish + bug fixes** - fixed wrong phone number in footer (was `470-375-3936`, replaced with real numbers: WhatsApp `+1 (678) 303-6054`, plus `+1 (470) 640-4502` and `+1 (470) 953-3565`). Completed Shop column to all 8 categories (added Pseudo, Blue Lotus, Novelties). Removed dead Privacy/Terms/Cookies placeholder links. Added small CSS polish for stacked contact values.
+- **SEO + social polish** - added Open Graph tags, Twitter Card, favicon, and apple-touch-icon to all 6 pages. Normalized `theme-color` to brand `#1a3a5c` site-wide. WhatsApp/social link previews now render properly with logo + description.
+- **Alt-text audit** - confirmed 100% `alt` coverage across all HTML and JS-generated `<img>` tags.
+- **Breakpoint audit** - confirmed style.css and pages.css already share unified breakpoints (`1400 / 1200 / 992 / 768 / 480 / 380`). No unification work needed.
 - Removed time-bound sections from case-study doc; split into project description + working tasks
 - Deleted stale `NAVBAR-HEADER-ANALYSIS.md` (covered by CASE-STUDY.md now)
 - Inner page simplification: category / product / brands / about / contact now use consistent `.cat-header`
@@ -137,6 +137,6 @@ These are non-negotiable. Every time a page, component, stylesheet, or JS module
 
 - Products JSON backup: [data/products.json.backup](data/products.json.backup)
 - Asset pipeline scripts: [_incoming/](_incoming/)
-- No wholesale pricing anywhere on site — WhatsApp inquiry only
+- No wholesale pricing anywhere on site - WhatsApp inquiry only
 - Cart / Wishlist / SignIn icons in header are decorative (no functionality)
 - NOVELTIES bulk imports arrive as zip files; use [_incoming/regenerate.py](_incoming/regenerate.py) to rebuild products.json

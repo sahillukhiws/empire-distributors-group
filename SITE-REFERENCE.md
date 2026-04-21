@@ -1,4 +1,4 @@
-# Empire Distributors Group — Complete Site Reference
+# Empire Distributors Group - Complete Site Reference
 
 > This document contains everything needed to understand, maintain, or recreate this website from scratch.
 > Last updated: April 13, 2026
@@ -7,7 +7,7 @@
 
 ## 1. Project Overview
 
-**Business:** Empire Distributors Group — premium wholesale & retail distributor for vape, kratom, delta, mushroom, blue lotus, pseudo, supplements, and lifestyle products.
+**Business:** Empire Distributors Group - premium wholesale & retail distributor for vape, kratom, delta, mushroom, blue lotus, pseudo, supplements, and lifestyle products.
 
 **Site type:** Static marketing + product catalog website. No backend, no database, no payment. All product data lives in a single JSON file. All interactions (inquiries, orders) go through WhatsApp.
 
@@ -90,14 +90,14 @@ empire-distributors-group/
 ### index.html (Home)
 - Hero: auto-sliding product carousel (left) + 2x2 featured grid (right). Every slide and tile is a clickable link to a category or product page.
 - "Shop by Category" grid (8 category tiles, each linked to its category page)
-- "Best Sellers" — 3 swiper-style carousel rows (Ultra Ohmz / Mushroom / Gushers) with product cards linked to product pages
-- **"Our Brand Partners" logo slider** — every logo is a clickable link. Logos mapped to their brand's category page when the brand exists in `data.companies`; unmatched reference logos (Elf Bar, CloudMax, etc.) fall back to the vape category.
+- "Best Sellers" - 3 swiper-style carousel rows (Ultra Ohmz / Mushroom / Gushers) with product cards linked to product pages
+- **"Our Brand Partners" logo slider** - every logo is a clickable link. Logos mapped to their brand's category page when the brand exists in `data.companies`; unmatched reference logos (Elf Bar, CloudMax, etc.) fall back to the vape category.
 - "New Products" grid (latest 2 per category)
 - "Trending Now" grid (mid-index products per category)
 - Shared header, nav, footer injected by components.js
 
 ### pages/category.html?id={categoryId}
-- Category-specific hero (slider + 2x2 tile grid) at top — **each slide and tile is clickable**: matched to a real product by image filename and linked to that product's page, with category-page fallback when no match
+- Category-specific hero (slider + 2x2 tile grid) at top - **each slide and tile is clickable**: matched to a real product by image filename and linked to that product's page, with category-page fallback when no match
 - Category-colored header section (breadcrumb, icon, title, product/brand count)
 - Brand filter chips (click to filter products by brand within the category)
 - Full product grid for that category (cards link to product detail)
@@ -106,10 +106,10 @@ empire-distributors-group/
 
 ### pages/product.html?id={productId}
 - **Borderless fixed-size product frame** (520px desktop → 480/440/360/300 responsive), image always 100% visible (no crop), sticky on desktop, stacks on mobile
-- **Hover lens zoom** — circular magnifier (160px → 130/110 responsive) follows cursor with 2.5x zoom on desktop (`hover: hover` + `pointer: fine`); default cursor hidden during hover (`cursor: none`) and a small magnifier-glass icon shown inside the lens. Touch / coarse-pointer devices skip the lens.
-- **Click-to-open full-screen lightbox** — click anywhere on the image opens a dark-backdrop lightbox with the full-res image. Close: × button, ESC key, or click backdrop. Body scroll locked while open.
+- **Hover lens zoom** - circular magnifier (160px → 130/110 responsive) follows cursor with 2.5x zoom on desktop (`hover: hover` + `pointer: fine`); default cursor hidden during hover (`cursor: none`) and a small magnifier-glass icon shown inside the lens. Touch / coarse-pointer devices skip the lens.
+- **Click-to-open full-screen lightbox** - click anywhere on the image opens a dark-backdrop lightbox with the full-res image. Close: × button, ESC key, or click backdrop. Body scroll locked while open.
 - Product details: brand (logo + name), name, SKU, category, availability
-- Auto-generated marketing description (helpers `generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js) — auto-build from brand + category + flavor parsed from name; optional `description` / `features` fields in [data/products.json](data/products.json) override the auto-generated text per product)
+- Auto-generated marketing description (helpers `generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js) - auto-build from brand + category + flavor parsed from name; optional `description` / `features` fields in [data/products.json](data/products.json) override the auto-generated text per product)
 - 4–5 feature bullets (authentic brand, premium category, flavor profile, wholesale packaging, nationwide shipping)
 - "Inquire on WhatsApp" CTA (pre-filled with product name + SKU)
 - Trust row (authentic / fast / live support)
@@ -125,7 +125,7 @@ empire-distributors-group/
 ### pages/about.html
 - Hero with mission statement
 - "Our Story" section (2-column: logo + 3 paragraphs)
-- "The Empire Standard" — 4 values (Authenticity, Fast Fulfillment, Real-Time Support, Partner Pricing)
+- "The Empire Standard" - 4 values (Authenticity, Fast Fulfillment, Real-Time Support, Partner Pricing)
 - 8 Core Categories grid
 - Final wholesale CTA
 
@@ -140,8 +140,8 @@ empire-distributors-group/
 ## 5. Design System
 
 ### Fonts
-- **Display:** Space Grotesk (weights: 500, 600, 700, 800) — headings, product names, stats
-- **Body:** Inter (weights: 400, 500, 600, 700) — paragraphs, UI text, labels
+- **Display:** Space Grotesk (weights: 500, 600, 700, 800) - headings, product names, stats
+- **Body:** Inter (weights: 400, 500, 600, 700) - paragraphs, UI text, labels
 - Loaded from Google Fonts CDN
 
 ### Color Palette
@@ -251,12 +251,12 @@ empire-distributors-group/
 
 ### Script load order (every page)
 ```
-1. age-gate.js      — blocks site until 21+ verified
-2. components.js    — injects shared header/nav/footer/floating-actions
-3. catalog.js       — loads data, exports window.EDG helpers
-4. [page script]    — page-specific rendering (main.js for home, inline for others)
-5. search.js        — live search dropdown
-6. header.js        — scroll/hover state machine
+1. age-gate.js      - blocks site until 21+ verified
+2. components.js    - injects shared header/nav/footer/floating-actions
+3. catalog.js       - loads data, exports window.EDG helpers
+4. [page script]    - page-specific rendering (main.js for home, inline for others)
+5. search.js        - live search dropdown
+6. header.js        - scroll/hover state machine
 ```
 
 ### window.EDG API (exported by catalog.js)
@@ -336,7 +336,7 @@ Two states: `.is-expanded` (big logo + nav visible) and `.is-compact` (small log
         {
             "id": "vape",
             "name": "Vape",
-            "icon": "...",          // emoji (legacy, not used — SVG icons in catalog.js)
+            "icon": "...",          // emoji (legacy, not used - SVG icons in catalog.js)
             "description": "Premium vape devices and disposables"
         }
     ],
@@ -420,11 +420,11 @@ The header + nav are wrapped in `.site-top` (sticky):
 └─────────────────────────────────────────────┘
 ```
 
-- `.header-inner` grid: `var(--logo-pad) 1fr auto` — left column ALWAYS reserved for logo (260px+2rem), never transitions
+- `.header-inner` grid: `var(--logo-pad) 1fr auto` - left column ALWAYS reserved for logo (260px+2rem), never transitions
 - `.brand` (inline small logo) fades in/out (opacity only, no movement)
 - `.brand-big-wrap` → `.brand-big` → `<img>` overlay fades in/out on top of the logo column
 - `.cat-nav` collapses via `height` transition (56px → 0)
-- Background is solid `#fbfbfd` on `.site-top` — no backdrop-filter (prevents repaint flicker during height animation)
+- Background is solid `#fbfbfd` on `.site-top` - no backdrop-filter (prevents repaint flicker during height animation)
 
 ### Mobile (≤ 720px)
 ```
@@ -468,7 +468,7 @@ Compact marketing card matching My Smoke Wholesale reference:
 
 ```
 ┌─────────────────────────────────┐
-│     [EMPIRE LOGO — 180px]       │
+│     [EMPIRE LOGO - 180px]       │
 ├─────────────────────────────────┤
 │ [GIGA BAR PULSE X banner]      │  ← thin wide strip (1:3 ratio)
 ├─────────────────────────────────┤
@@ -496,8 +496,8 @@ Compact marketing card matching My Smoke Wholesale reference:
 Fixed bottom-right corner. Both hidden at top, appear together after scrolling past 400px:
 
 ```
-[WhatsApp — green, pulse ring]   ← top
-[Scroll to top — white, teal ↑]  ← bottom
+[WhatsApp - green, pulse ring]   ← top
+[Scroll to top - white, teal ↑]  ← bottom
 ```
 
 - Injected by `components.js` into `<body>`
@@ -547,7 +547,7 @@ Or use VS Code Live Server, or any static file server. No build step needed.
 
 1. Drop product images into `assets/categories/{category}/{brand}/`
 2. Run `python3 _incoming/regenerate.py` to rebuild `data/products.json`
-3. Refresh the site — new products appear automatically
+3. Refresh the site - new products appear automatically
 
 ---
 
@@ -567,7 +567,7 @@ Or use VS Code Live Server, or any static file server. No build step needed.
 Search and replace `14703753936` across:
 - `js/catalog.js` (line 10, `WA_NUMBER`)
 - `js/age-gate.js` (line in `waLink` builder)
-- Nowhere else — all other WhatsApp links use `[data-wa]` attributes wired by `wireWhatsapp()`
+- Nowhere else - all other WhatsApp links use `[data-wa]` attributes wired by `wireWhatsapp()`
 
 ---
 

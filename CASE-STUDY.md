@@ -1,6 +1,6 @@
-# Empire Distributors Group — Case Study & Project Documentation
+# Empire Distributors Group - Case Study & Project Documentation
 
-> A zero-dependency, static B2B catalog site built for a wholesale distributor of age-restricted lifestyle products. 216 products, 27 brands, 8 categories — no backend, no checkout, no framework. Inquiries flow through WhatsApp.
+> A zero-dependency, static B2B catalog site built for a wholesale distributor of age-restricted lifestyle products. 216 products, 27 brands, 8 categories - no backend, no checkout, no framework. Inquiries flow through WhatsApp.
 
 ---
 
@@ -10,7 +10,7 @@
 |---|---|
 | **Client** | Empire Distributors Group (Tucker, Georgia) |
 | **Type** | B2B / B2C wholesale product catalog |
-| **Stack** | Pure HTML5 + vanilla JS (ES5) + CSS3 — no frameworks, no build step |
+| **Stack** | Pure HTML5 + vanilla JS (ES5) + CSS3 - no frameworks, no build step |
 | **Data** | Single `products.json` (2,305 lines, 216 SKUs) |
 | **Pages** | 6 HTML files (1 home + 5 templates) |
 | **JS** | 6 modules, ~1,681 lines |
@@ -24,12 +24,12 @@
 
 ## 1. The Brief
 
-Empire Distributors Group needed an online presence for their wholesale operation — vape, kratom, Δ-products, mushroom, pseudo-cannabinoids, blue lotus, supplements, and novelty accessories. The catch: this isn't a Shopify store. Wholesale pricing is **negotiated**, not published. Retail buyers want to browse what's in stock, then talk to a human.
+Empire Distributors Group needed an online presence for their wholesale operation - vape, kratom, Δ-products, mushroom, pseudo-cannabinoids, blue lotus, supplements, and novelty accessories. The catch: this isn't a Shopify store. Wholesale pricing is **negotiated**, not published. Retail buyers want to browse what's in stock, then talk to a human.
 
 The brief, distilled:
 
 1. Showcase the full catalog with rich category/brand browsing.
-2. Drive every inquiry into a single channel — **WhatsApp**.
+2. Drive every inquiry into a single channel - **WhatsApp**.
 3. Comply with 21+ age verification on every visit.
 4. Stay cheap to host, cheap to update, no developer required to add products.
 
@@ -41,10 +41,10 @@ We deliberately chose **vanilla HTML/CSS/JS** over React, Next.js, or even a sta
 
 - **One JSON file is the entire CMS.** A non-developer can rename an image, drop it in a folder, run one Python script ([_incoming/regenerate.py](_incoming/regenerate.py)), and ship.
 - **Zero npm dependencies = zero security patch treadmill.** No `npm audit`, no Dependabot noise.
-- **190 KB total payload.** No hydration, no bundle splitting needed — the site is already smaller than most React framework chunks.
+- **190 KB total payload.** No hydration, no bundle splitting needed - the site is already smaller than most React framework chunks.
 - **Anywhere it runs.** Drag-and-drop to Netlify, push to GitHub Pages, or `python3 -m http.server`. Deploy in 30 seconds.
 
-The trade-off — no component reuse via JSX — is solved by a tiny home-grown injector ([js/components.js](js/components.js)) that builds the header, nav, footer, and floating action buttons into placeholder divs on every page.
+The trade-off - no component reuse via JSX - is solved by a tiny home-grown injector ([js/components.js](js/components.js)) that builds the header, nav, footer, and floating action buttons into placeholder divs on every page.
 
 ---
 
@@ -99,7 +99,7 @@ A single `products.json` file holds everything:
     {
       "id": "rock-on-disposable-blue-razz",
       "sku": "RO-BR-5K",
-      "name": "Rock On Disposable — Blue Razz",
+      "name": "Rock On Disposable - Blue Razz",
       "company": "Rock On",
       "category": "vape",
       "image": "assets/categories/vape/rock-on/blue-razz.png",
@@ -112,7 +112,7 @@ A single `products.json` file holds everything:
 }
 ```
 
-The product detail page auto-generates a marketing description and 4–5 feature bullets from `name` + `company` + `category` + flavor keywords parsed from the product name (`generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js)). Optional `description` / `features` fields override the auto-generated copy per product — keeping the zero-effort default while giving non-developers a way to hand-tune specific SKUs.
+The product detail page auto-generates a marketing description and 4–5 feature bullets from `name` + `company` + `category` + flavor keywords parsed from the product name (`generateDescription` / `generateFeatures` in [js/catalog.js](js/catalog.js)). Optional `description` / `features` fields override the auto-generated copy per product - keeping the zero-effort default while giving non-developers a way to hand-tune specific SKUs.
 
 **By the numbers:**
 
@@ -128,7 +128,7 @@ The product detail page auto-generates a marketing description and 4–5 feature
 | Blue Lotus | 16 |
 | **Total** | **216** |
 
-**Notably missing: prices.** Wholesale pricing is intentional — every product card routes to WhatsApp with the SKU pre-filled, e.g.:
+**Notably missing: prices.** Wholesale pricing is intentional - every product card routes to WhatsApp with the SKU pre-filled, e.g.:
 
 ```
 https://wa.me/16783036054?text=Hi%2C%20interested%20in%20RO-BR-5K%20%E2%80%94%20Rock%20On%20Blue%20Razz
@@ -144,7 +144,7 @@ Pages live in `/` and `/pages/`. Rather than hard-code asset paths, [catalog.js]
 
 ### 5.2 Component injection via `outerHTML`
 
-[components.js](js/components.js) finds `<div id="edg-header"></div>` placeholders and replaces them with the full header markup — including the search bar, category nav, and mobile drawer. A `MutationObserver` keeps the drawer in sync if the data loads after the DOM. One source of truth, zero duplication across 6 HTML files.
+[components.js](js/components.js) finds `<div id="edg-header"></div>` placeholders and replaces them with the full header markup - including the search bar, category nav, and mobile drawer. A `MutationObserver` keeps the drawer in sync if the data loads after the DOM. One source of truth, zero duplication across 6 HTML files.
 
 ### 5.3 Custom fuzzy search
 
@@ -172,16 +172,16 @@ The chip color, hover border, CTA background, and link color all key off `--c`. 
 
 ### 5.5 Header state machine
 
-[header.js](js/header.js) — only 46 lines — manages a tricky animation: the big logo collapses into a compact nav on scroll. A 600 ms lock window after a transition prevents phantom flips during the collapse keyframes. Small detail, big difference in feel.
+[header.js](js/header.js) - only 46 lines - manages a tricky animation: the big logo collapses into a compact nav on scroll. A 600 ms lock window after a transition prevents phantom flips during the collapse keyframes. Small detail, big difference in feel.
 
 ### 5.6 Asset preparation pipeline (`_incoming/`)
 
 Nineteen Python scripts handle the unglamorous work:
 
-- **regenerate.py** — walks `assets/categories/{category}/{brand}/` and rebuilds `products.json` with human-readable names restored from slugified filenames.
-- **check_image_framing.py** — uses PIL + NumPy on transparent PNG alpha channels to flag products that are off-center, undersized, or touching edges before they ship.
-- **rename_products.py** — fixes 84 camera-original filenames in one pass.
-- **remove_bg.py**, **extract_colors.py** — cleanup utilities.
+- **regenerate.py** - walks `assets/categories/{category}/{brand}/` and rebuilds `products.json` with human-readable names restored from slugified filenames.
+- **check_image_framing.py** - uses PIL + NumPy on transparent PNG alpha channels to flag products that are off-center, undersized, or touching edges before they ship.
+- **rename_products.py** - fixes 84 camera-original filenames in one pass.
+- **remove_bg.py**, **extract_colors.py** - cleanup utilities.
 
 This is what makes the "non-developer can ship a product" promise real.
 
@@ -189,11 +189,11 @@ This is what makes the "non-developer can ship a product" promise real.
 
 ## 6. Compliance & UX Touches
 
-- **Age gate** ([js/age-gate.js](js/age-gate.js)) — full-screen modal blocks all interaction until 21+ confirmation. Verified state cached in `localStorage` for 30 days. Required by the regulated nature of the catalog.
-- **Lazy-loaded images** — every `<img>` uses native `loading="lazy"`. No JS observer needed; modern browsers handle it.
-- **Scroll-reveal animations** — `IntersectionObserver` adds `.is-visible` to `.reveal` elements with staggered 30 ms delays. Subtle, not distracting.
-- **Sticky WhatsApp FAB** — pulse animation, present on every page, never more than a thumb-tap away.
-- **Mobile drawer** — auto-syncs with the desktop nav via `MutationObserver`. Touch targets sized to the 44 px guideline.
+- **Age gate** ([js/age-gate.js](js/age-gate.js)) - full-screen modal blocks all interaction until 21+ confirmation. Verified state cached in `localStorage` for 30 days. Required by the regulated nature of the catalog.
+- **Lazy-loaded images** - every `<img>` uses native `loading="lazy"`. No JS observer needed; modern browsers handle it.
+- **Scroll-reveal animations** - `IntersectionObserver` adds `.is-visible` to `.reveal` elements with staggered 30 ms delays. Subtle, not distracting.
+- **Sticky WhatsApp FAB** - pulse animation, present on every page, never more than a thumb-tap away.
+- **Mobile drawer** - auto-syncs with the desktop nav via `MutationObserver`. Touch targets sized to the 44 px guideline.
 
 ---
 
@@ -228,7 +228,7 @@ Result: zero backend, zero spam, zero email-deliverability headaches. Every lead
 
 ## 9. Lessons & Takeaways
 
-1. **The right stack is the smallest one that works.** A React app would have done the same job — at 50× the bundle size and 100× the maintenance overhead.
+1. **The right stack is the smallest one that works.** A React app would have done the same job - at 50× the bundle size and 100× the maintenance overhead.
 2. **JSON-as-CMS scales further than you'd expect.** 216 products is fine. 2,000 would still be fine if pagination or virtual scrolling is added.
 3. **Build the content pipeline first.** The Python scripts in `_incoming/` are what make the site sustainable. Without them, the JSON file would rot.
 4. **WhatsApp is a legitimate backend.** For B2B inquiry funnels in markets where messaging is the dominant channel, skipping email/forms entirely is a feature, not a limitation.
@@ -238,10 +238,10 @@ Result: zero backend, zero spam, zero email-deliverability headaches. Every lead
 
 ## 10. Tech Credits
 
-- **Fonts** — Poppins + Mona Sans (Google Fonts)
-- **Icons** — Inline SVG (no icon font, no library)
-- **Image processing** — PIL + NumPy (Python tooling)
-- **Hosting** — Static (any provider)
+- **Fonts** - Poppins + Mona Sans (Google Fonts)
+- **Icons** - Inline SVG (no icon font, no library)
+- **Image processing** - PIL + NumPy (Python tooling)
+- **Hosting** - Static (any provider)
 
 ---
 

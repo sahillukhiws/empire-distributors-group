@@ -57,7 +57,7 @@ def main():
             fail += 1
 
     json.dump(data, open(PRODUCTS, "w"), indent=2)
-    print(f"\n=== {ok} OK, {fail} failed — products.json updated ===")
+    print(f"\n=== {ok} OK, {fail} failed - products.json updated ===")
 
 
 if __name__ == "__main__":

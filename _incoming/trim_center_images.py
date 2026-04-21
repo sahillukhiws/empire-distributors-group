@@ -77,7 +77,7 @@ def main():
             continue
         success, msg = process(path)
         if success:
-            print(f"  [{i:3d}] OK {path.name} — {msg}")
+            print(f"  [{i:3d}] OK {path.name} - {msg}")
             ok += 1
         else:
             skip += 1

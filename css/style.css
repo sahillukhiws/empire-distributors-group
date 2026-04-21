@@ -132,7 +132,7 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
 .section--white {
     background: var(--bg-light);
 }
-/* Pastel section backgrounds — subtle, professional tints */
+/* Pastel section backgrounds - subtle, professional tints */
 .section--pastel-blue    { background: #eff6ff; } /* very light blue */
 .section--pastel-peach   { background: #fef7f0; } /* warm cream/peach */
 .section--pastel-mint    { background: #f0fdf4; } /* soft mint green */
@@ -1290,7 +1290,7 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     max-width: 100%;
     vertical-align: middle;
 }
-/* legacy — kept so older .prod-card__brand markup in product page doesn't break */
+/* legacy - kept so older .prod-card__brand markup in product page doesn't break */
 .prod-card__brand {
     font-size: 0.68rem;
     color: var(--text-mute);
@@ -2447,7 +2447,7 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     background: var(--brand);
 }
 
-/* Carousel arrows — no background, just visible chevron, positioned inside */
+/* Carousel arrows - no background, just visible chevron, positioned inside */
 .bs-arrow {
     position: absolute;
     top: 50%;
@@ -2500,7 +2500,7 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     /* Hero @ <=1200: step down from big desktop size */
     .hero { padding: 28px 0; }
     .hero__grid { grid-template-columns: 1.55fr 1fr; gap: 16px; }
-    /* No aspect-ratio on slider here — stretch matches the 2x2 tile column height */
+    /* No aspect-ratio on slider here - stretch matches the 2x2 tile column height */
     .hero__arrow { width: 50px; height: 50px; }
     .hero__arrow svg { width: 28px; height: 28px; }
     .hero__slide-label { font-size: 15px; padding: 10px 22px; }

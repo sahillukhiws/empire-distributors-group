@@ -612,7 +612,7 @@
     top: calc(var(--header-h) + 1rem);
 }
 /* Borderless fixed-area frame: always 100% visible, no crop, professional.
-   The frame has no visible background/border — only the image is shown. */
+   The frame has no visible background/border - only the image is shown. */
 .pd-media__frame {
     position: relative;
     width: 100%;
@@ -717,7 +717,7 @@
 }
 @keyframes pdLbFade { from { opacity: 0; } to { opacity: 1; } }
 
-/* Disable lens on touch devices (no hover) — tap opens lightbox directly */
+/* Disable lens on touch devices (no hover) - tap opens lightbox directly */
 @media (hover: none), (pointer: coarse) {
     .pd-media__frame { cursor: pointer; }
     .pd-media__frame.lens-active { cursor: pointer; }
@@ -1483,7 +1483,7 @@
 }
 
 /* ============================================
-   ABOUT PAGE — v2 (structured, animated)
+   ABOUT PAGE - v2 (structured, animated)
    ============================================ */
 
 /* Reveal variants for the about page */
@@ -2106,7 +2106,7 @@
 .btn-lg { padding: 14px 32px; font-size: 0.98rem; }
 
 /* ============================================
-   ABOUT PAGE — Responsive
+   ABOUT PAGE - Responsive
    ============================================ */
 @media (max-width: 1024px) {
     .about-stats { grid-template-columns: repeat(2, 1fr); }
