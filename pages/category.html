@@ -170,12 +170,10 @@
         function renderBrandFilter(data, cat) {
             const brands = getBrandsInCategory(data, cat.id);
             const chipsEl = document.getElementById('brand-chips');
-            const products = getProductsByCategory(data, cat.id);
 
-            let html = `<button class="chip active" data-brand="all">All (${products.length})</button>`;
+            let html = `<button class="chip active" data-brand="all">All</button>`;
             brands.forEach(b => {
-                const count = products.filter(p => p.company === b.id).length;
-                html += `<button class="chip" data-brand="${b.id}">${escapeHtml(b.name)} (${count})</button>`;
+                html += `<button class="chip" data-brand="${b.id}">${escapeHtml(b.name)}</button>`;
             });
             chipsEl.innerHTML = html;
 

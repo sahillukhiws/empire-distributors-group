@@ -46,6 +46,10 @@
                             <img id="pd-image" src="" alt="">
                             <div class="pd-lens" id="pd-lens" aria-hidden="true"></div>
                         </div>
+                        <div class="pd-flavors" id="pd-flavors" hidden>
+                            <div class="pd-flavors__label">Flavor</div>
+                            <div class="pd-flavors__chips" id="pd-flavors-chips"></div>
+                        </div>
                     </div>
 
                     <div class="pd-info">
@@ -116,14 +120,18 @@
     <script>
     /* ---------- Product detail page controller ---------- */
     (function () {
-        const { loadData, findProduct, findCategory, findCompany, getRelatedProducts,
+        const { loadData, findProduct, findCategory, findCompany, getRelatedProducts, getFlavorVariants,
                 generateDescription, generateFeatures,
                 renderProductGrid, wireReveal, wireWhatsapp, waLink,
                 escapeHtml, qs, BASE } = window.EDG;
 
         const prodId = qs('id');
+        let lensCleanup = null; // Store cleanup function to remove old listeners
 
         loadData().then(data => {
+            // Store data globally for flavor switching
+            window.productData = data;
+
             renderCatNav(data);
 
             const p = findProduct(data, prodId);
@@ -198,6 +206,12 @@
             const related = getRelatedProducts(data, p, 4);
             renderProductGrid(related, data, document.getElementById('related-grid'));
 
+            // Flavor variants
+            const variants = getFlavorVariants(data, p);
+            if (variants && variants.length > 1) {
+                renderFlavorVariants(variants, data, p);
+            }
+
             // Lens-zoom + lightbox for main product image
             wireLensAndLightbox(p.image, p.name);
 
@@ -260,10 +274,8 @@
                 lens.style.top = ly + 'px';
 
                 // Background offset: center the zoom on cursor within rendered image box
-                const imgOffsetX = ir.left - fr.left;
-                const imgOffsetY = ir.top - fr.top;
-                const bgX = -(ix * ZOOM - lw / 2) - imgOffsetX * ZOOM + imgOffsetX;
-                const bgY = -(iy * ZOOM - lh / 2) - imgOffsetY * ZOOM + imgOffsetY;
+                const bgX = -(ix * ZOOM - lw / 2);
+                const bgY = -(iy * ZOOM - lh / 2);
                 lens.style.backgroundPosition = bgX + 'px ' + bgY + 'px';
             }
 
@@ -311,6 +323,165 @@
                 <a class="nav-link" href="${BASE}pages/about.html">About</a>
                 <a class="nav-link" href="${BASE}pages/contact.html">Contact</a>
             `;
+        }
+
+        function renderFlavorVariants(variants, data, currentProduct) {
+            const flavorsEl = document.getElementById('pd-flavors');
+            const chipsEl = document.getElementById('pd-flavors-chips');
+            if (!flavorsEl || !chipsEl) return;
+
+            // Show the flavor section
+            flavorsEl.hidden = false;
+
+            // Store variants globally for switching
+            window.currentVariants = variants;
+
+            // Render flavor chips with images and individual colors
+            chipsEl.innerHTML = variants.map(v => {
+                const flavorName = v.flavor || 'Default';
+                const activeClass = v.isActive ? 'pd-flavor-chip--active' : '';
+                const imgSrc = v.image || ''; // Image already has BASE prepended in data
+
+                // Get color from product_colors.json
+                const colorData = data._colors && data._colors[v.id];
+                const chipColor = colorData && colorData.chip ? colorData.chip : 'var(--c, var(--brand))';
+                const chipBg = colorData && colorData.extracted ? colorData.extracted : 'var(--c-lt, var(--brand-lt))';
+
+                return `<button class="pd-flavor-chip ${activeClass}" data-variant-id="${v.id}" aria-label="Select ${flavorName} flavor" style="--flavor-chip: ${chipColor}; --flavor-bg: ${chipBg};">
+                    <div class="pd-flavor-chip__img">
+                        ${imgSrc ? `<img src="${imgSrc}" alt="${escapeHtml(flavorName)}" loading="lazy">` : ''}
+                    </div>
+                    <div class="pd-flavor-chip__name">${escapeHtml(flavorName)}</div>
+                </button>`;
+            }).join('');
+        }
+
+        // Handle flavor switching (event delegation - single listener)
+        document.addEventListener('click', function(e) {
+            const chip = e.target.closest('.pd-flavor-chip');
+            if (!chip) return;
+
+            const variantId = chip.dataset.variantId;
+            if (!variantId || !window.currentVariants) return;
+
+            const variant = window.currentVariants.find(v => v.id === variantId);
+            if (!variant || variant.isActive) return; // Already on this variant
+
+            // Update UI without page reload
+            switchToVariant(variant, window.currentVariants);
+        });
+
+        function switchToVariant(variant, variants) {
+            const data = window.productData;
+            if (!data) return;
+
+            // Update image
+            const img = document.getElementById('pd-image');
+            if (img) {
+                img.src = variant.image;
+                img.alt = variant.name;
+            }
+
+            // Update product name
+            const nameEl = document.getElementById('pd-name');
+            if (nameEl) {
+                nameEl.textContent = variant.name;
+            }
+
+            // Update SKU
+            const skuEl = document.getElementById('pd-sku');
+            if (skuEl) {
+                skuEl.textContent = variant.sku;
+            }
+
+            // Update breadcrumb product name
+            const bcProduct = document.getElementById('bc-product');
+            if (bcProduct) {
+                bcProduct.textContent = variant.name;
+            }
+
+            // Update page title
+            const pageTitle = document.getElementById('page-title');
+            if (pageTitle) {
+                pageTitle.textContent = `${variant.name} - Empire Distributors Group`;
+            }
+
+            // Update WhatsApp link
+            const cat = findCategory(data, variant.category);
+            const catName = cat ? cat.name : 'premium';
+            const waLinkEl = document.getElementById('pd-wa-main');
+            if (waLinkEl) {
+                waLinkEl.href = waLink(
+                    `Inquiry: ${variant.name} (SKU: ${variant.sku}). I'd like pricing and availability for this ${catName} product.`
+                );
+            }
+
+            // Update description and features
+            const variantProduct = findProduct(data, variant.id);
+            if (variantProduct) {
+                const descEl = document.getElementById('pd-description');
+                if (descEl) {
+                    descEl.textContent = generateDescription(variantProduct, data);
+                }
+
+                const features = generateFeatures(variantProduct, data);
+                const featEl = document.getElementById('pd-features');
+                const listEl = document.getElementById('pd-features-list');
+                if (features && features.length && featEl && listEl) {
+                    listEl.innerHTML = features.map(f =>
+                        '<li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>' + escapeHtml(f) + '</span></li>'
+                    ).join('');
+                    featEl.hidden = false;
+                }
+
+                // Update lens background and lightbox with new image
+                const lens = document.getElementById('pd-lens');
+                const lightboxImg = document.getElementById('pd-lightbox-img');
+                const img = document.getElementById('pd-image');
+
+                if (lightboxImg) {
+                    lightboxImg.src = variant.image;
+                    lightboxImg.alt = variant.name;
+                }
+
+                // Remove and recreate lens element to force fresh setup with new image
+                if (lens) {
+                    const frame = document.getElementById('pd-media-frame');
+                    frame.removeChild(lens);
+                    const newLens = document.createElement('div');
+                    newLens.id = 'pd-lens';
+                    newLens.className = 'pd-lens';
+                    newLens.setAttribute('aria-hidden', 'true');
+                    frame.appendChild(newLens);
+
+                    // Wait for image to load before re-wiring lens
+                    const img = document.getElementById('pd-image');
+                    if (img.complete) {
+                        wireLensAndLightbox(variant.image, variant.name);
+                    } else {
+                        img.addEventListener('load', function() {
+                            wireLensAndLightbox(variant.image, variant.name);
+                        });
+                    }
+                }
+            }
+
+            // Update URL without page reload
+            const newUrl = `${BASE}pages/product.html?id=${variant.id}`;
+            window.history.replaceState({ variantId: variant.id }, '', newUrl);
+
+            // Update active state on chips and in variants array
+            variants.forEach(v => {
+                v.isActive = (v.id === variant.id);
+            });
+            const chips = document.querySelectorAll('.pd-flavor-chip');
+            chips.forEach(chip => {
+                if (chip.dataset.variantId === variant.id) {
+                    chip.classList.add('pd-flavor-chip--active');
+                } else {
+                    chip.classList.remove('pd-flavor-chip--active');
+                }
+            });
         }
     })();
     </script>

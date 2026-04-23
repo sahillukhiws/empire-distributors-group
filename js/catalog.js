@@ -92,7 +92,181 @@
         limit = limit || 4;
         var sameBrand = data.products.filter(function (p) { return p.company === product.company && p.id !== product.id; });
         var sameCat = data.products.filter(function (p) { return p.category === product.category && p.company !== product.company; });
-        return sameBrand.concat(sameCat).slice(0, limit);
+
+        // Combine and take up to limit
+        var related = sameBrand.concat(sameCat).slice(0, limit);
+
+        // If we don't have enough related products, fill with featured products from other categories
+        if (related.length < limit) {
+            var featured = data.products.filter(function (p) {
+                return p.featured && p.id !== product.id && p.category !== product.category;
+            });
+            related = related.concat(featured).slice(0, limit);
+        }
+
+        // If still not enough, fill with random products from other categories
+        if (related.length < limit) {
+            var others = data.products.filter(function (p) {
+                return p.id !== product.id && p.category !== product.category;
+            });
+            related = related.concat(others).slice(0, limit);
+        }
+
+        return related;
+    }
+
+    var FLAVOR_VARIANT_WORDS = [
+        // Colors
+        'RED', 'GOLD', 'BLACK', 'BLUE', 'PURPLE', 'PINK', 'GREEN', 'WHITE', 'YELLOW',
+        'ORANGE', 'SILVER', 'BROWN', 'NATURAL', 'REGULAR', 'BLACK SHOT', 'BLUE SHOT',
+        'PURPLE SHOT', 'GOLD SHOT', 'GO BOLDLY',
+
+        // Fruits and flavors
+        'OG KUSH', 'BLUE RAZZ', 'STRAWBERRY', 'WATERMELON', 'GRAPE', 'MANGO', 'PINEAPPLE',
+        'CHERRY', 'PEACH', 'LEMON', 'LIME', 'ORANGE', 'APPLE', 'BERRY', 'RASPBERRY',
+        'BLUEBERRY', 'BLACKBERRY', 'CRANBERRY', 'HONEYDEW', 'CANTALOUPE', 'KIWI',
+        'BANANA', 'COCONUT', 'MELON', 'TROPICAL', 'FRUIT', 'CITRUS', 'MIX', 'MIXED BERRY',
+        'CHERRY BERRY', 'BLUE RAZZ BURST', 'WATERMELON GUSHERS', 'TROPICAL PUNCH',
+        'STRAWBERRY HAZE', 'STRAWBERRY SPLASH', 'BLUEBERRY BLAST', 'SOUR DIESEL',
+        'BERRY DREAM', 'CALI RUNTZ', 'FRUITY PEBBLES', 'PINEAPPLE EXPRESS', 'SOUR SPACE CANDY',
+        'BLUE RAZZ BLAST', 'PINEAPPLE PARADISE', 'PINK CHAMPAGNE', 'PURPLE DRAGON',
+        'KIWI DRAGON BERRY', 'MEXICO MANGO', 'WATERMELON ICE', 'PLANET EDITION',
+        'FIRE & ICE', 'BANGIN SOUR BERRIES', 'SPACE EDITION', 'CONSTELLATION',
+
+        // Sizes/measurements (to exclude from flavor detection)
+        'ML', 'L', 'MG', 'GRM', 'GRAM', 'KG', 'CT', 'PACK', 'JAR', 'TABLET', 'DISPOSABLE',
+        'CARTRIDGE', 'PRE ROLL', 'PREROLL', 'CAPSULE', 'GUMMIES', 'DISPLAY', 'DOSE',
+        'HERO DOSE', 'MEGA DOSE', 'SUPER DOSE', '1CT', '2CT', '3CT', '4CT', '5CT', '6CT',
+        '10CT', '10PK', '10-PACK', '20CT', '30CT', '40CT', '50CT', '84CT', '100MG', '125MG',
+        '160MG', '200MG', '250MG', '500MG', '1000MG', '1600MG', '1GRM', '1.5GRM', '2GRM', '3GRM', '4GRM',
+        'EDITION', 'ANIMATED', 'GAME-CHANGER', 'COLLECTION', 'BOOST MODE', 'CURVED SCREEN'
+    ];
+
+    /* Detect flavor variants for a product.
+       Groups products by company + base name (name without flavor).
+       Detects flavors in parentheses OR using flavor word list.
+       Returns array of variant objects with id, name, flavor, and isActive flag. */
+    function getFlavorVariants(data, product) {
+        if (!product || !product.name) return [];
+
+        var productName = String(product.name);
+
+        // Sort flavor words by length (longest first) to match compound flavors
+        var sortedFlavorWords = FLAVOR_VARIANT_WORDS.slice().sort(function(a, b) {
+            return b.length - a.length;
+        });
+
+        // First, try to extract flavor from parentheses
+        var flavorMatch = productName.match(/\(([^)]+)\)$/);
+        var baseName, flavor;
+
+        if (flavorMatch) {
+            // Has parentheses - use existing logic
+            baseName = productName.replace(/\s*\([^)]+\)\s*$/g, '').trim();
+            flavor = flavorMatch[1].trim();
+        } else {
+            // No parentheses - try to detect flavor word at the end
+            var detectedFlavor = '';
+            var detectedBaseName = productName;
+
+            // Check if any flavor word matches at the end of the name
+            for (var i = 0; i < sortedFlavorWords.length; i++) {
+                var flavorWord = sortedFlavorWords[i];
+                if (productName.endsWith(' ' + flavorWord) || productName === flavorWord) {
+                    detectedFlavor = flavorWord;
+                    detectedBaseName = productName.substring(0, productName.lastIndexOf(flavorWord)).trim();
+                    break;
+                }
+            }
+
+            // Only use detected flavor if we found one and it's not the whole name
+            if (detectedFlavor && detectedBaseName) {
+                baseName = detectedBaseName.trim();
+                flavor = detectedFlavor;
+            } else {
+                // No flavor detected - treat as single product
+                return [];
+            }
+        }
+
+        if (!baseName) return [];
+
+        // Find all products with same company, category, and base name
+        var variants = data.products.filter(function (p) {
+            if (p.company !== product.company || p.category !== product.category) return false;
+            var pName = String(p.name || '');
+
+            // Check if this product matches our base name pattern
+            var pBaseName, pFlavor;
+            var pFlavorMatch = pName.match(/\(([^)]+)\)$/);
+
+            if (pFlavorMatch) {
+                pBaseName = pName.replace(/\s*\([^)]+\)\s*$/g, '').trim();
+                pFlavor = pFlavorMatch[1].trim();
+            } else {
+                // Try to detect flavor word at the end using sorted flavor words
+                var pDetectedFlavor = '';
+                var pDetectedBaseName = pName;
+
+                // Reuse the same sorted flavor words for consistency
+                for (var j = 0; j < sortedFlavorWords.length; j++) {
+                    var pFlavorWord = sortedFlavorWords[j];
+                    if (pName.endsWith(' ' + pFlavorWord) || pName === pFlavorWord) {
+                        pDetectedFlavor = pFlavorWord;
+                        pDetectedBaseName = pName.substring(0, pName.lastIndexOf(pFlavorWord)).trim();
+                        break;
+                    }
+                }
+
+                if (pDetectedFlavor && pDetectedBaseName) {
+                    pBaseName = pDetectedBaseName.trim();
+                    pFlavor = pDetectedFlavor;
+                } else {
+                    pBaseName = pName;
+                    pFlavor = '';
+                }
+            }
+
+            return pBaseName === baseName;
+        });
+
+        // If only 1 variant (current product), return empty array
+        if (variants.length <= 1) {
+            return [];
+        }
+
+        // Extract flavor from each variant and build result
+        return variants.map(function (p) {
+            var pName = String(p.name || '');
+            var pFlavorMatch = pName.match(/\(([^)]+)\)$/);
+            var pFlavor = pFlavorMatch ? pFlavorMatch[1].trim() : '';
+
+            // If no parentheses, detect from flavor words using sorted list
+            if (!pFlavor) {
+                for (var k = 0; k < sortedFlavorWords.length; k++) {
+                    var flavorWord = sortedFlavorWords[k];
+                    if (pName.endsWith(' ' + flavorWord) || pName === flavorWord) {
+                        pFlavor = flavorWord;
+                        break;
+                    }
+                }
+            }
+
+            return {
+                id: p.id,
+                name: p.name,
+                flavor: pFlavor,
+                image: p.image,
+                sku: p.sku,
+                category: p.category,
+                isActive: p.id === product.id
+            };
+        }).sort(function (a, b) {
+            // Sort: active first, then alphabetically by flavor
+            if (a.isActive) return -1;
+            if (b.isActive) return 1;
+            return a.flavor.localeCompare(b.flavor);
+        });
     }
 
     /* Match a hero slide/tile image path to a real product (by filename basename).
@@ -418,7 +592,7 @@
                 { img: 'assets/products/Product/bluelotusScroll/bluelotus.png', label: 'Blue Lotus Collection' },
             ],
             tiles: [
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges.png', label: 'Cartridges', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-purple-dragon.png', label: 'Cartridges', link: '' },
                 { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.png', label: 'Disposables', link: '' },
                 { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon.png', label: 'Pre-Rolls', link: '' },
                 { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-strawberry-splash.png', label: 'Strawberry Splash', link: '' },
@@ -475,6 +649,7 @@
         getProductsByCompany: getProductsByCompany,
         getBrandsInCategory: getBrandsInCategory,
         getRelatedProducts: getRelatedProducts,
+        getFlavorVariants: getFlavorVariants,
         findProductByImagePath: findProductByImagePath,
         generateDescription: generateDescription,
         generateFeatures: generateFeatures,

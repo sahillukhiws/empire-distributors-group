@@ -202,7 +202,6 @@
         var el = document.getElementById('cat-showcase-grid');
         if (!el) return;
         el.innerHTML = data.categories.map(function (c) {
-            var count = data.products.filter(function (p) { return p.category === c.id; }).length;
             var imgSrc = BASE + (EDG.CAT_IMAGES[c.id] || '');
             return '<a class="cat-tile" style="--c:var(--c-' + c.id + ');--c-lt:var(--c-' + c.id + '-lt);" href="' + BASE + 'pages/category.html?id=' + c.id + '">' +
                 '<div class="cat-tile__media">' +
@@ -210,7 +209,6 @@
                 '</div>' +
                 '<div class="cat-tile__info">' +
                     '<div class="cat-tile__name">' + EDG.escapeHtml(c.name) + '</div>' +
-                    '<div class="cat-tile__chip">' + (count ? count + ' Products' : 'Coming Soon') + '</div>' +
                 '</div>' +
             '</a>';
         }).join('');

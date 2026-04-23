@@ -2483,6 +2483,14 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     .hero-bento { padding: 6px 20px; }
 }
 
+/* Laptop screens 1024px+ - ensure exactly 2x4 grid for cat-showcase */
+@media (min-width: 1024px) {
+    .cat-showcase-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
 /* Laptop <=1200 */
 @media (max-width: 1200px) {
     .container { padding: 0 16px; }

@@ -867,6 +867,84 @@
 }
 .pd-cta__main { flex: 1; min-width: 220px; padding: 1.1rem 1.8rem; font-size: 1rem; }
 
+/* Flavor variants section */
+.pd-flavors {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+.pd-flavors__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    margin-bottom: 0.8rem;
+}
+.pd-flavors__chips {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.pd-flavor-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    height: 100px;
+    padding: 0.5rem;
+    background: #fff;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-2);
+    cursor: pointer;
+    transition: all 0.25s var(--ease);
+    box-shadow: var(--sh-xs);
+    white-space: nowrap;
+}
+.pd-flavor-chip:hover {
+    border-color: var(--flavor-chip, var(--c, var(--brand)));
+    background: var(--flavor-bg, var(--c-lt, var(--brand-lt)));
+    transform: translateY(-2px);
+    box-shadow: var(--sh-sm);
+}
+.pd-flavor-chip--active {
+    background: var(--flavor-chip, var(--c, var(--brand)));
+    border-color: var(--flavor-chip, var(--c, var(--brand)));
+    color: #fff;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--flavor-chip, var(--c, var(--brand))) 35%, transparent);
+}
+.pd-flavor-chip__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-2);
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.4rem;
+}
+.pd-flavor-chip__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.pd-flavor-chip__name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 .pd-trust {
     display: flex;
     gap: 1.2rem;
