@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#1a3a5c">
     <title>Brands - Empire Distributors Group</title>
 
-    <link rel="icon" type="image/png" href="../assets/logos/empire-logo.png">
-    <link rel="apple-touch-icon" href="../assets/logos/empire-logo.png">
+    <link rel="icon" type="image/png" href="../assets/logos/empire-logo.webp">
+    <link rel="apple-touch-icon" href="../assets/logos/empire-logo.webp">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Empire Distributors Group">
     <meta property="og:title" content="Brands - Empire Distributors Group">
     <meta property="og:description" content="Every brand we carry - premium names in vape, kratom, delta, mushroom, pseudo, blue lotus, and supplements.">
-    <meta property="og:image" content="../assets/logos/empire-logo.png">
+    <meta property="og:image" content="../assets/logos/empire-logo.webp">
     <meta name="twitter:card" content="summary">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +78,8 @@
             renderFilter(data);
             renderBrands(data, 'all');
             const countEl = document.getElementById('brands-count');
-            if (countEl) countEl.textContent = `${data.companies.length} brands`;
+            const visibleCount = data.companies.filter(c => !c.hideFromBrands).length;
+            if (countEl) countEl.textContent = `${visibleCount} brands`;
             wireWhatsapp();
             wireReveal();
         });
@@ -99,7 +100,7 @@
         function renderFilter(data) {
             const filter = document.getElementById('brands-filter');
             data.categories.forEach(c => {
-                const companyCount = data.companies.filter(co => co.category === c.id).length;
+                const companyCount = data.companies.filter(co => co.category === c.id && !co.hideFromBrands).length;
                 if (companyCount === 0) return;
                 const btn = document.createElement('button');
                 btn.className = 'chip';
@@ -120,9 +121,10 @@
 
         function renderBrands(data, catFilter) {
             const grid = document.getElementById('brands-grid');
+            const visibleCompanies = data.companies.filter(c => !c.hideFromBrands);
             const brands = catFilter === 'all'
-                ? data.companies
-                : data.companies.filter(c => c.category === catFilter);
+                ? visibleCompanies
+                : visibleCompanies.filter(c => c.category === catFilter);
 
             grid.innerHTML = brands.map(b => {
                 const cat = findCategory(data, b.category);

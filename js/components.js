@@ -25,7 +25,7 @@
 
                             /* Logo */
                             '<a href="' + BASE + 'index.html" class="header-logo">' +
-                                '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.png" alt="Empire Distributors Group">' +
+                                '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.webp" alt="Empire Distributors Group">' +
                             '</a>' +
 
                             /* Search */
@@ -95,7 +95,7 @@
                 '<div class="mobile-drawer__backdrop" data-close-drawer></div>' +
                 '<div class="mobile-drawer__panel">' +
                     '<div class="mobile-drawer__head">' +
-                        '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.png" alt="Empire" class="mobile-drawer__logo">' +
+                        '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.webp" alt="Empire" class="mobile-drawer__logo">' +
                         '<button class="mobile-drawer__close" type="button" data-close-drawer>' +
                             '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>' +
                         '</button>' +
@@ -128,7 +128,7 @@
                     '<div class="footer-grid">' +
                         '<div class="footer-brand">' +
                             '<div class="footer-brand__logo">' +
-                                '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.png" alt="Empire Distributors Group">' +
+                                '<img src="' + BASE + 'assets/logos/empire-logo-removebg-preview.webp" alt="Empire Distributors Group">' +
                             '</div>' +
                             '<p>Premium wholesale &amp; retail distribution for vape, wellness, and lifestyle products. Shipping nationwide from Tucker, GA.</p>' +
                             '<div class="footer-brand__social">' +

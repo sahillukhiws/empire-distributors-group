@@ -1,15 +1,15 @@
 {
   "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-blue-razz-blast": {
-    "top": "#6887c5",
-    "middle": "#4266ae",
-    "bottom": "#6081c2",
+    "top": "#bccff7",
+    "middle": "#8da9e3",
+    "bottom": "#bccff7",
     "chip": "#2a54a5",
     "chip_text": "#ffffff",
     "extracted": "#5878b8",
     "has_own_bg": false
   },
   "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-pineapple-paradise": {
-    "top": "#ffe28f",
+    "top": "#ffe28f", 
     "middle": "#ffd352",
     "bottom": "#ffe085",
     "chip": "#fec215",
@@ -152,7 +152,7 @@
     "extracted": "#0878b8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0077": {
+  "delta-rock-on-thcp-preroll-3ct-og-kush": {
     "top": "#fec300",
     "middle": "#c19400",
     "bottom": "#f4bb00",
@@ -161,7 +161,7 @@
     "extracted": "#d8a808",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0078": {
+  "delta-rock-on-thcp-preroll-3ct-fruity-pebbles": {
     "top": "#f52877",
     "middle": "#d60958",
     "bottom": "#f41e71",
@@ -170,7 +170,7 @@
     "extracted": "#e81868",
     "has_own_bg": true
   },
-  "delta-rock-on-img-20250411-wa0079": {
+  "delta-rock-on-thcp-preroll-3ct-sour-diesel": {
     "top": "#87c557",
     "middle": "#68a739",
     "bottom": "#81c350",
@@ -179,7 +179,7 @@
     "extracted": "#78b848",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0080": {
+  "delta-rock-on-thcp-preroll-3ct-berry-dream": {
     "top": "#b577b5",
     "middle": "#9b549b",
     "bottom": "#b271b2",
@@ -188,7 +188,7 @@
     "extracted": "#a868a8",
     "has_own_bg": true
   },
-  "delta-rock-on-img-20250411-wa0081": {
+  "delta-rock-on-thcp-preroll-10pk-og-kush": {
     "top": "#eec50e",
     "middle": "#b5960b",
     "bottom": "#e5bd0e",
@@ -197,7 +197,7 @@
     "extracted": "#c8a818",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0082": {
+  "delta-rock-on-thcp-preroll-10pk-cali-runtz": {
     "top": "#00c9de",
     "middle": "#0092a1",
     "bottom": "#00c0d4",
@@ -206,7 +206,7 @@
     "extracted": "#08a8b8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0083": {
+  "delta-rock-on-thcp-preroll-3ct-cali-runtz": {
     "top": "#00ddde",
     "middle": "#00a0a1",
     "bottom": "#00d3d4",
@@ -215,7 +215,7 @@
     "extracted": "#08b8b8",
     "has_own_bg": true
   },
-  "delta-rock-on-img-20250411-wa0084": {
+  "delta-rock-on-thcp-preroll-10pk-fruity-pebbles": {
     "top": "#f43968",
     "middle": "#e40c42",
     "bottom": "#f42f60",
@@ -224,7 +224,7 @@
     "extracted": "#e82858",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0085": {
+  "delta-rock-on-thcp-preroll-10pk-berry-dream": {
     "top": "#a677b5",
     "middle": "#89549b",
     "bottom": "#a171b2",
@@ -233,7 +233,7 @@
     "extracted": "#9868a8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0086": {
+  "delta-rock-on-thcp-preroll-10pk-sour-diesel": {
     "top": "#77c557",
     "middle": "#58a739",
     "bottom": "#71c350",
@@ -242,7 +242,7 @@
     "extracted": "#68b848",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0087": {
+  "delta-rock-on-thcp-dabs-6pk-sour-space-candy": {
     "top": "#f09cc7",
     "middle": "#e967a8",
     "bottom": "#ef93c2",
@@ -251,7 +251,7 @@
     "extracted": "#e888b8",
     "has_own_bg": true
   },
-  "delta-rock-on-img-20250411-wa0088": {
+  "delta-rock-on-thcp-dabs-6pk-pineapple-express": {
     "top": "#e2d49a",
     "middle": "#d5bf6b",
     "bottom": "#e0d092",
@@ -260,7 +260,7 @@
     "extracted": "#d8c888",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0089": {
+  "delta-rock-on-thcp-dabs-6pk-blueberry-kush": {
     "top": "#8cd4f1",
     "middle": "#55bfea",
     "bottom": "#83d0f0",
@@ -269,7 +269,7 @@
     "extracted": "#78c8e8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0103": {
+  "delta-rock-on-d9-disposable-6g-alaskan-thunderfuck": {
     "top": "#78c578",
     "middle": "#4db24d",
     "bottom": "#71c271",
@@ -278,7 +278,7 @@
     "extracted": "#68b868",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0105": {
+  "delta-rock-on-d9-disposable-6g-green-crack": {
     "top": "#b5d547",
     "middle": "#97b729",
     "bottom": "#b2d33f",
@@ -287,7 +287,7 @@
     "extracted": "#a8c838",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0107": {
+  "delta-rock-on-d9-disposable-6g-blue-dream": {
     "top": "#00d9ee",
     "middle": "#00a2b1",
     "bottom": "#00d0e4",
@@ -296,7 +296,7 @@
     "extracted": "#08b8c8",
     "has_own_bg": true
   },
-  "delta-rock-on-img-20250411-wa0108": {
+  "delta-rock-on-d9-disposable-6g-super-boof": {
     "top": "#78c578",
     "middle": "#4db24d",
     "bottom": "#71c271",
@@ -305,7 +305,7 @@
     "extracted": "#68b868",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250411-wa0113": {
+  "delta-rock-on-d9-disposable-6g-purple-punch": {
     "top": "#78c578",
     "middle": "#4db24d",
     "bottom": "#71c271",
@@ -314,7 +314,7 @@
     "extracted": "#68b868",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250522-wa0266": {
+  "delta-rock-on-thcp-jar-40ct-sour-diesel": {
     "top": "#97c578",
     "middle": "#76b24d",
     "bottom": "#91c271",
@@ -323,7 +323,7 @@
     "extracted": "#88b868",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250522-wa0267": {
+  "delta-rock-on-thcp-jar-40ct-cali-runtz": {
     "top": "#68c5d4",
     "middle": "#39b2c7",
     "bottom": "#60c2d2",
@@ -332,7 +332,7 @@
     "extracted": "#58b8c8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250522-wa0268": {
+  "delta-rock-on-thcp-jar-40ct-fruity-pebbles": {
     "top": "#f26b98",
     "middle": "#ed3271",
     "bottom": "#f16192",
@@ -341,7 +341,7 @@
     "extracted": "#e85888",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250522-wa0269": {
+  "delta-rock-on-thcp-jar-40ct-og-kush": {
     "top": "#d4c568",
     "middle": "#c7b239",
     "bottom": "#d2c260",
@@ -350,7 +350,7 @@
     "extracted": "#c8b858",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250522-wa0270": {
+  "delta-rock-on-thcp-jar-40ct-berry-dream": {
     "top": "#b598c5",
     "middle": "#9a71ae",
     "bottom": "#b192c1",
@@ -359,7 +359,7 @@
     "extracted": "#a888b8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250523-wa0044": {
+  "delta-rock-on-pure-thc-gummies-20ct-blue-razz-burst": {
     "top": "#38b5e5",
     "middle": "#1997c6",
     "bottom": "#2fb2e4",
@@ -368,7 +368,7 @@
     "extracted": "#28a8d8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250523-wa0045": {
+  "delta-rock-on-pure-thc-gummies-20ct-watermelon-gushers": {
     "top": "#96c557",
     "middle": "#77a739",
     "bottom": "#91c350",
@@ -377,7 +377,7 @@
     "extracted": "#88b848",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250523-wa0046": {
+  "delta-rock-on-pure-thc-gummies-20ct-tropical-punch": {
     "top": "#f3b55a",
     "middle": "#ee9c21",
     "bottom": "#f2b151",
@@ -386,7 +386,7 @@
     "extracted": "#e8a848",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250523-wa0047": {
+  "delta-rock-on-pure-thc-gummies-20ct-strawberry-haze": {
     "top": "#e45987",
     "middle": "#db2462",
     "bottom": "#e25081",
@@ -395,7 +395,7 @@
     "extracted": "#d84878",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250523-wa0048": {
+  "delta-rock-on-pure-thc-gummies-display-blue-razz": {
     "top": "#0fbaff",
     "middle": "#0095d1",
     "bottom": "#05b7ff",
@@ -404,7 +404,7 @@
     "extracted": "#08a8e8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250523-wa0049": {
+  "delta-rock-on-pure-thc-gummies-display-variety": {
     "top": "#0fbaff",
     "middle": "#0095d1",
     "bottom": "#05b7ff",
@@ -413,7 +413,7 @@
     "extracted": "#08a8e8",
     "has_own_bg": true
   },
-  "delta-rock-on-img-20250604-wa0176": {
+  "delta-rock-on-live-resin-gummies-30bag-blue-razz-burst": {
     "top": "#00b2ee",
     "middle": "#0085b1",
     "bottom": "#00abe4",
@@ -422,7 +422,7 @@
     "extracted": "#0898c8",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250604-wa0177": {
+  "delta-rock-on-live-resin-gummies-30bag-watermelon-gushers": {
     "top": "#88c537",
     "middle": "#67962a",
     "bottom": "#82bd35",
@@ -431,7 +431,7 @@
     "extracted": "#78a838",
     "has_own_bg": false
   },
-  "delta-rock-on-img-20250604-wa0178": {
+  "delta-rock-on-live-resin-gummies-30bag-tropical-punch": {
     "top": "#f2981a",
     "middle": "#c5770a",
     "bottom": "#f29410",
@@ -449,7 +449,7 @@
     "extracted": "#281818",
     "has_own_bg": false
   },
-  "delta-rock-on-whatsapp-image-2025-06-04-at-18-09-29-8f5e8ee6": {
+  "delta-rock-on-live-resin-gummies-30bag-grape-ape": {
     "top": "#b577a6",
     "middle": "#9b5489",
     "bottom": "#b271a1",
@@ -458,7 +458,7 @@
     "extracted": "#a86898",
     "has_own_bg": false
   },
-  "delta-rock-on-whatsapp-image-2025-06-04-at-18-15-28-64b204f4": {
+  "delta-rock-on-live-resin-gummies-30bag-strawberry-haze": {
     "top": "#e02c63",
     "middle": "#b61a49",
     "bottom": "#df235c",
@@ -1169,7 +1169,7 @@
     "extracted": "#68a858",
     "has_own_bg": false
   },
-  "supplements-better-now-whatsapp-image-2026-04-07-at-5-28-35-pm": {
+  "supplements-better-now-cats-claw-200mg-2ct-watermelon": {
     "top": "#60c537",
     "middle": "#49962a",
     "bottom": "#5cbd35",
@@ -1178,7 +1178,7 @@
     "extracted": "#58a838",
     "has_own_bg": false
   },
-  "supplements-better-now-whatsapp-image-2026-04-07-at-5-29-14-pm": {
+  "supplements-better-now-cats-claw-200mg-2ct-blueberry": {
     "top": "#00a1de",
     "middle": "#0074a1",
     "bottom": "#0099d4",

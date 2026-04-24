@@ -29,14 +29,14 @@
     };
 
     var CAT_IMAGES = {
-        vape:        'assets/category-tiles/vape.png',
-        kratom:      'assets/category-tiles/kratom.png',
-        delta:       'assets/category-tiles/delta.png',
-        mushroom:    'assets/category-tiles/mushroom.png',
-        pseudo:      'assets/category-tiles/pseudo.png',
-        bluelotus:   'assets/category-tiles/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.png',
-        supplements: 'assets/category-tiles/supplements.png',
-        novelties:   'assets/category-tiles/novelties.png',
+        vape:        'assets/category-tiles/vape.webp',
+        kratom:      'assets/category-tiles/kratom.webp',
+        delta:       'assets/category-tiles/delta.webp',
+        mushroom:    'assets/category-tiles/mushroom.webp',
+        pseudo:      'assets/category-tiles/pseudo.webp',
+        bluelotus:   'assets/category-tiles/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.webp',
+        supplements: 'assets/category-tiles/supplements.webp',
+        novelties:   'assets/category-tiles/novelties.webp',
     };
 
     var cachedData = null;
@@ -142,115 +142,72 @@
         'EDITION', 'ANIMATED', 'GAME-CHANGER', 'COLLECTION', 'BOOST MODE', 'CURVED SCREEN'
     ];
 
-    /* Detect flavor variants for a product.
-       Groups products by company + base name (name without flavor).
-       Detects flavors in parentheses OR using flavor word list.
-       Returns array of variant objects with id, name, flavor, and isActive flag. */
+    /* Detect flavor/variant siblings for a product.
+       Priority: explicit `variantGroup` field > parentheses anywhere in name > trailing flavor word.
+       Siblings share the same company + category + variantGroup (if set) OR same base name.
+       Returns an array of variant objects with id, name, flavor, isActive. */
     function getFlavorVariants(data, product) {
         if (!product || !product.name) return [];
 
         var productName = String(product.name);
 
-        // Sort flavor words by length (longest first) to match compound flavors
-        var sortedFlavorWords = FLAVOR_VARIANT_WORDS.slice().sort(function(a, b) {
-            return b.length - a.length;
-        });
-
-        // First, try to extract flavor from parentheses
-        var flavorMatch = productName.match(/\(([^)]+)\)$/);
-        var baseName, flavor;
-
-        if (flavorMatch) {
-            // Has parentheses - use existing logic
-            baseName = productName.replace(/\s*\([^)]+\)\s*$/g, '').trim();
-            flavor = flavorMatch[1].trim();
-        } else {
-            // No parentheses - try to detect flavor word at the end
-            var detectedFlavor = '';
-            var detectedBaseName = productName;
-
-            // Check if any flavor word matches at the end of the name
-            for (var i = 0; i < sortedFlavorWords.length; i++) {
-                var flavorWord = sortedFlavorWords[i];
-                if (productName.endsWith(' ' + flavorWord) || productName === flavorWord) {
-                    detectedFlavor = flavorWord;
-                    detectedBaseName = productName.substring(0, productName.lastIndexOf(flavorWord)).trim();
-                    break;
+        // Helper: extract (flavor) from anywhere in the name + compute base
+        function parseFlavorFromName(name) {
+            var m = name.match(/\(([^)]+)\)/);
+            if (m) {
+                return {
+                    base: name.replace(/\s*\([^)]+\)\s*/, ' ').replace(/\s+/g, ' ').trim(),
+                    flavor: m[1].trim()
+                };
+            }
+            // Fallback: check known flavor words at end
+            var sorted = FLAVOR_VARIANT_WORDS.slice().sort(function(a,b){ return b.length - a.length; });
+            for (var i = 0; i < sorted.length; i++) {
+                var fw = sorted[i];
+                if (name.endsWith(' ' + fw) || name === fw) {
+                    return {
+                        base: name.substring(0, name.lastIndexOf(fw)).trim(),
+                        flavor: fw
+                    };
                 }
             }
-
-            // Only use detected flavor if we found one and it's not the whole name
-            if (detectedFlavor && detectedBaseName) {
-                baseName = detectedBaseName.trim();
-                flavor = detectedFlavor;
-            } else {
-                // No flavor detected - treat as single product
-                return [];
-            }
+            return { base: name, flavor: '' };
         }
 
-        if (!baseName) return [];
+        var variants;
 
-        // Find all products with same company, category, and base name
-        var variants = data.products.filter(function (p) {
-            if (p.company !== product.company || p.category !== product.category) return false;
-            var pName = String(p.name || '');
+        // PRIORITY 1: explicit variantGroup
+        if (product.variantGroup) {
+            variants = data.products.filter(function (p) {
+                return p.variantGroup === product.variantGroup;
+            });
+        } else {
+            // PRIORITY 2: match by base name (anywhere parentheses, or trailing flavor word)
+            var parsed = parseFlavorFromName(productName);
+            if (!parsed.flavor) return []; // no flavor found -> no siblings
+            var baseName = parsed.base;
+            if (!baseName) return [];
 
-            // Check if this product matches our base name pattern
-            var pBaseName, pFlavor;
-            var pFlavorMatch = pName.match(/\(([^)]+)\)$/);
+            variants = data.products.filter(function (p) {
+                if (p.company !== product.company || p.category !== product.category) return false;
+                // Skip products in an explicit group (they were already matched above)
+                if (p.variantGroup) return false;
+                var pParsed = parseFlavorFromName(String(p.name || ''));
+                return pParsed.base === baseName;
+            });
+        }
 
-            if (pFlavorMatch) {
-                pBaseName = pName.replace(/\s*\([^)]+\)\s*$/g, '').trim();
-                pFlavor = pFlavorMatch[1].trim();
-            } else {
-                // Try to detect flavor word at the end using sorted flavor words
-                var pDetectedFlavor = '';
-                var pDetectedBaseName = pName;
-
-                // Reuse the same sorted flavor words for consistency
-                for (var j = 0; j < sortedFlavorWords.length; j++) {
-                    var pFlavorWord = sortedFlavorWords[j];
-                    if (pName.endsWith(' ' + pFlavorWord) || pName === pFlavorWord) {
-                        pDetectedFlavor = pFlavorWord;
-                        pDetectedBaseName = pName.substring(0, pName.lastIndexOf(pFlavorWord)).trim();
-                        break;
-                    }
-                }
-
-                if (pDetectedFlavor && pDetectedBaseName) {
-                    pBaseName = pDetectedBaseName.trim();
-                    pFlavor = pDetectedFlavor;
-                } else {
-                    pBaseName = pName;
-                    pFlavor = '';
-                }
-            }
-
-            return pBaseName === baseName;
-        });
-
-        // If only 1 variant (current product), return empty array
+        // If only the current product matches, no siblings to show
         if (variants.length <= 1) {
             return [];
         }
 
-        // Extract flavor from each variant and build result
+        // Build result list; extract flavor/variant label per sibling
         return variants.map(function (p) {
-            var pName = String(p.name || '');
-            var pFlavorMatch = pName.match(/\(([^)]+)\)$/);
-            var pFlavor = pFlavorMatch ? pFlavorMatch[1].trim() : '';
-
-            // If no parentheses, detect from flavor words using sorted list
-            if (!pFlavor) {
-                for (var k = 0; k < sortedFlavorWords.length; k++) {
-                    var flavorWord = sortedFlavorWords[k];
-                    if (pName.endsWith(' ' + flavorWord) || pName === flavorWord) {
-                        pFlavor = flavorWord;
-                        break;
-                    }
-                }
-            }
+            var pParsed = parseFlavorFromName(String(p.name || ''));
+            var pFlavor = pParsed.flavor;
+            // If still no flavor, use variantLabel field (explicit) or fall back to the full name
+            if (!pFlavor) pFlavor = p.variantLabel || p.name;
 
             return {
                 id: p.id,
@@ -507,128 +464,129 @@
     var CAT_HERO = {
         vape: {
             slides: [
-                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_41_01 AM.png', label: 'Top Devices' },
-                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_42_42 AM.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_44_30 AM.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 17, 2026, 09_13_47 PM.png', label: 'Premium Vapes' },
-                { img: 'assets/products/Product/vapeScroll/ChatGPT Image Apr 18, 2026, 12_48_10 AM.png', label: 'Vape Collection' },
+                { img: 'assets/products/Product/vapeScroll/vape-scroll-01.webp', label: 'Foger Bit 35K', link: 'pages/product.html?id=vape-foger-bit-35k-bitcoin-edition' },
+                { img: 'assets/products/Product/vapeScroll/vape-scroll-02.webp', label: 'Foger Switch Pro', link: 'pages/product.html?id=vape-foger-switch-pro-kiwi-dragon-berry' },
+                { img: 'assets/products/Product/vapeScroll/vape-scroll-03.webp', label: 'Raz Smart', link: 'pages/product.html?id=vape-raz-ltx-25k-boost-mode' },
+                { img: 'assets/products/Product/vapeScroll/vape-scroll-04.webp', label: 'Gigabar Next Gen', link: 'pages/product.html?id=vape-gigabar-pulse-x-25k-curved-screen' },
+                { img: 'assets/products/Product/vapeScroll/vape-scroll-05.webp', label: 'Gigabar Pulse X', link: 'pages/product.html?id=vape-gigabar-pulse-x-25k-curved-screen' },
+                { img: 'assets/products/Product/vapeScroll/vape-scroll-06.webp', label: 'Geek Bar 25K', link: 'pages/product.html?id=vape-geekbar-pulse-25k-3flavors' },
             ],
             tiles: [
-                { img: 'assets/categories/vape/vapes-new/geekbar-pulse-collection-3colors.png', label: 'GeekBar', link: '' },
-                { img: '/assets/categories/vape/vapes-new/raz-ltx-25k-boost-mode-animated.gif', label: 'Raz ITX', link: '' },
-                { img: 'assets/categories/vape/vapes-new/geekbar-pulse-x-3d-curved-screen.jpg', label: 'GeekBar Plus', link: '' },
-                { img: 'assets/categories/vape/vapes-new/foger-switch-pro-pod-watermelon-ice.jpg', label: 'More Vapes', link: '' },
+                { img: 'assets/categories/vape/vapes-new/geekbar-pulse-collection-3colors.webp', label: 'GeekBar', link: 'pages/product.html?id=vape-geekbar-pulse-collection-3colors' },
+                { img: 'assets/categories/vape/vapes-new/raz-ltx-25k-boost-mode-animated.webp', label: 'Raz ITX', link: 'pages/product.html?id=vape-raz-ltx-25k-boost-mode' },
+                { img: 'assets/categories/vape/vapes-new/geekbar-pulse-x-3d-curved-screen.webp', label: 'GeekBar Plus', link: 'pages/product.html?id=vape-geekbar-pulse-x-3d-curved-screen' },
+                { img: 'assets/categories/vape/vapes-new/foger-switch-pro-pod-watermelon-ice.webp', label: 'More Vapes', link: 'pages/product.html?id=vape-foger-switch-pro-pod-watermelon-ice' },
             ],
         },
         kratom: {
             slides: [
-                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_27_19 PM.png', label: 'Top Kratom' },
-                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_28_43 PM.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_32_08 PM.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_33_23 PM.png', label: 'Premium Kratom' },
-                { img: 'assets/products/Product/karatomScroll/ChatGPT Image Apr 18, 2026, 04_35_09 PM.png', label: 'Kratom Collection' },
-                { img: 'assets/products/Product/karatomScroll/Gemini_Generated_Image_basgmsbasgmsbasg.png', label: 'Featured Kratom' },
-                { img: 'assets/products/Product/karatomScroll/karatom.png', label: 'Kratom Collection' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-01.webp', label: 'Kanva Focus + Flow', link: 'pages/product.html?id=kratom-featured-kanva-focus-flow-shot' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-02.webp', label: 'Bliss Xtra Gold', link: 'pages/product.html?id=kratom-featured-bliss-xtra-gold-shot' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-03.webp', label: 'Feel Free Classic', link: 'pages/product.html?id=kratom-featured-feel-free-shot' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-04.webp', label: 'MIT 45 Blue Shot', link: 'pages/product.html?id=kratom-featured-mit-45-blue-shot' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-05.webp', label: 'OPMS Black', link: 'pages/product.html?id=kratom-featured-opms-black' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-06.webp', label: 'Mystic Labs Gummies', link: 'pages/product.html?id=kratom-featured-mystic-lab-kratom-gummies' },
+                { img: 'assets/products/Product/karatomScroll/karatom-scroll-07.webp', label: 'Viva Xtreme Kratom', link: 'pages/product.html?id=kratom-featured-viva-xtreme' },
             ],
             tiles: [
-                { img: 'assets/categories/kratom/featured/opms-black.png', label: 'OPMS', link: '' },
-                { img: 'assets/categories/kratom/featured/kshot-black.jpg', label: 'K-Shot', link: '' },
-                { img: 'assets/categories/kratom/featured/mystic-lab-kratom-gummies.jpg', label: 'Mystic Lab', link: '' },
-                { img: 'assets/categories/kratom/featured/opms-black.jpg', label: 'More Kratom', link: '' },
+                { img: 'assets/categories/kratom/featured/opms-black.webp', label: 'OPMS Black', link: 'pages/product.html?id=kratom-featured-opms-black' },
+                { img: 'assets/categories/kratom/featured/kshot-black.webp', label: 'K-Shot Black', link: 'pages/product.html?id=kratom-featured-kshot-black' },
+                { img: 'assets/categories/kratom/featured/mystic-lab-kratom-gummies.webp', label: 'Mystic Lab Gummies', link: 'pages/product.html?id=kratom-featured-mystic-lab-kratom-gummies' },
+                { img: 'assets/categories/kratom/featured/bliss-xtra-gold-shot.webp', label: 'Bliss Xtra Gold', link: 'pages/product.html?id=kratom-featured-bliss-xtra-gold-shot' },
             ],
         },
         delta: {
             slides: [
-                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_15_20 PM.png', label: 'Top Delta' },
-                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_22_53 PM.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_23_53 PM.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 19, 2026, 02_27_32 PM.png', label: 'Premium Delta' },
-                { img: 'assets/products/Product/daltaScroll/Gemini_Generated_Image_10jmga10jmga10jm.png', label: 'Featured Delta' },
-                { img: 'assets/products/Product/daltaScroll/delta.png', label: 'Delta Collection' },
+                { img: 'assets/products/Product/daltaScroll/delta-scroll-01.webp', label: 'Rock On Live Resin Gummies', link: 'pages/product.html?id=delta-rock-on-live-resin-gummies-30bag-blue-razz-burst' },
+                { img: 'assets/products/Product/daltaScroll/delta-scroll-02.webp', label: 'Rock On THC-P Pre-Rolls', link: 'pages/product.html?id=delta-rock-on-thcp-preroll-10pk-og-kush' },
+                { img: 'assets/products/Product/daltaScroll/delta-scroll-03.webp', label: 'Rock On 2G Pre-Roll Jars', link: 'pages/product.html?id=delta-rock-on-thcp-jar-40ct-sour-diesel' },
+                { img: 'assets/products/Product/daltaScroll/delta-scroll-04.webp', label: 'Rock On Liquid Diamonds Dabs', link: 'pages/product.html?id=delta-rock-on-thcp-dabs-6pk-sour-space-candy' },
+                { img: 'assets/products/Product/daltaScroll/delta-scroll-05.webp', label: 'Rock On Liquid Diamonds Disposables', link: 'pages/product.html?id=delta-rock-on-d9-disposable-6g-blue-dream' },
+                { img: 'assets/products/Product/daltaScroll/delta-scroll-06.webp', label: 'Rock On Pure THC Gummies', link: 'pages/product.html?id=delta-rock-on-pure-thc-gummies-20ct-blue-razz-burst' },
             ],
             tiles: [
-                { img: 'assets/categories/delta/1-delta-8-9-gummies/ml-product-photo-12ct-gummies.png', label: 'Delta Gummies', link: '' },
-                { img: 'assets/categories/delta/rock-on/img-20250411-wa0077.png', label: 'THC-P Pre-Rolls', link: '' },
-                { img: 'assets/categories/delta/rock-on/img-20250411-wa0103.png', label: 'Live Resin Disposables', link: '' },
-                { img: 'assets/categories/delta/rock-on/img-20250411-wa0088.png', label: 'Live Resin Dabs', link: '' },
+                { img: 'assets/categories/delta/1-delta-8-9-gummies/ml-product-photo-12ct-gummies.webp', label: 'Delta Gummies', link: '' },
+                { img: 'assets/categories/delta/rock-on/rock-on-thcp-preroll-3ct-og-kush.webp', label: 'THC-P Pre-Rolls', link: '' },
+                { img: 'assets/categories/delta/rock-on/rock-on-d9-disposable-6g-alaskan-thunderfuck.webp', label: 'Live Resin Disposables', link: '' },
+                { img: 'assets/categories/delta/rock-on/rock-on-thcp-dabs-6pk-pineapple-express.webp', label: 'Live Resin Dabs', link: '' },
             ],
         },
         mushroom: {
             slides: [
-                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_29_14 PM.png', label: 'Top Mushroom' },
-                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_34_36 PM.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_36_03 PM.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_36_19 PM.png', label: 'Premium Mushroom' },
-                { img: 'assets/products/Product/mashroomScroll/ChatGPT Image Apr 19, 2026, 02_38_51 PM.png', label: 'Featured Mushroom' },
-                { img: 'assets/products/Product/mashroomScroll/mashroom.png', label: 'Mushroom Collection' },
+                { img: 'assets/products/Product/mashroomScroll/mushroom-scroll-01.webp', label: 'Extreme Mushroom Pre-Rolls', link: 'pages/product.html?id=mushroom-shroom-puff-shroom-puff-pre-roll-40ct-jar' },
+                { img: 'assets/products/Product/mashroomScroll/mushroom-scroll-02.webp', label: 'Shroom Puff Blasters', link: 'pages/product.html?id=mushroom-shroom-puff-shroom-puff-blaster' },
+                { img: 'assets/products/Product/mashroomScroll/mushroom-scroll-03.webp', label: 'Silly Dots Super Dose', link: 'pages/product.html?id=mushroom-silly-dots-silly-dots-super-dose' },
+                { img: 'assets/products/Product/mashroomScroll/mushroom-scroll-04.webp', label: 'Shroom Puff Cartridge', link: 'pages/product.html?id=mushroom-shroom-puff-shroom-puff-1-grm-cartridge' },
+                { img: 'assets/products/Product/mashroomScroll/mushroom-scroll-05.webp', label: 'Shroom Bang Tablet', link: 'pages/product.html?id=mushroom-shroom-bang-shroom-bang-4ct-tablet' },
+                { img: 'assets/products/Product/mashroomScroll/mushroom-scroll-06.webp', label: 'Shroom Bang Disposable', link: 'pages/product.html?id=mushroom-shroom-bang-shroom-bang-4grm-disposable' },
             ],
             tiles: [
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.png', label: 'Shroom Puff Pre-Roll', link: '' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.jpg', label: 'Blaster Disposable', link: '' },
-                { img: 'assets/categories/mushroom/silly-dots/silly-dots-mega-dose-blue-razz.jpg', label: 'Silly Dots Gummies', link: '' },
-                { img: 'assets/categories/mushroom/shroom-puff/shroom-pugg-gummies.jpg', label: 'Shroom Puff Gummies', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.webp', label: 'Shroom Puff Pre-Roll', link: '' },
+                { img: 'assets/categories/mushroom/shroom-puff/shroom-puff-blaster.webp', label: 'Blaster Disposable', link: '' },
+                { img: 'assets/categories/mushroom/silly-dots/silly-dots-mega-dose-blue-razz.webp', label: 'Silly Dots Gummies', link: '' },
+                { img: 'assets/categories/mushroom/shroom-bang/shroom-bang-4ct-tablet.webp', label: 'Shroom Bang Tablet', link: '' },
             ],
         },
         pseudo: {
             slides: [
-                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 02_53_21 PM.png', label: 'Top Pseudo' },
-                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 02_57_32 PM.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 03_00_14 PM.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 03_03_36 PM.png', label: 'Premium Pseudo' },
-                { img: 'assets/products/Product/pseudoScroll/ChatGPT Image Apr 19, 2026, 03_08_21 PM.png', label: 'Featured Pseudo' },
-                { img: 'assets/products/Product/pseudoScroll/psuedo.png', label: 'Pseudo Collection' },
+                { img: 'assets/products/Product/pseudoScroll/pseudo-scroll-01.webp', label: 'Ultra Ohmz Pseudo Supreme', link: 'pages/product.html?id=pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-010526' },
+                { img: 'assets/products/Product/pseudoScroll/pseudo-scroll-02.webp', label: 'Ultra Ohmz Pseudo Mega Bottles', link: 'pages/product.html?id=pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-blueberry-011226' },
+                { img: 'assets/products/Product/pseudoScroll/pseudo-scroll-03.webp', label: 'Ultra Ohmz Pseudo Mega Display', link: 'pages/product.html?id=pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426' },
+                { img: 'assets/products/Product/pseudoScroll/pseudo-scroll-04.webp', label: 'Lucid Pseudo Blend', link: 'pages/product.html?id=pseudo-lucid-50mg-photoroom-20260325-155055' },
+                { img: 'assets/products/Product/pseudoScroll/pseudo-scroll-05.webp', label: 'Gusherz Pseudo Tablets', link: 'pages/product.html?id=pseudo-gushers-gusherz-pseudo-1ct-tablet-blueberry-blast' },
+                { img: 'assets/products/Product/pseudoScroll/pseudo-scroll-06.webp', label: 'Gusherz Pseudo Jars', link: 'pages/product.html?id=pseudo-gushers-gusherz-pseudo-10ct-jar-blueberry-blast' },
             ],
             tiles: [
-                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.png', label: 'Ultra Ohmz', link: '' },
-                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.png', label: 'Gusherz', link: '' },
-                { img: 'assets/categories/pseudo/lucid-50mg/photoroom-20260325-155055.png', label: 'Lucid 50mg', link: '' },
-                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-watermelon-gushers.png', label: 'Watermelon Gusherz', link: '' },
+                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.webp', label: 'Ultra Ohmz', link: '' },
+                { img: 'assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-blueberry-011226.webp', label: 'Ultra Ohmz Mega', link: 'pages/product.html?id=pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-blueberry-011226' },
+                { img: 'assets/categories/pseudo/lucid-50mg/lucid-50mg-pseudo-blend-chewables-display.webp', label: 'Lucid 50mg', link: '' },
+                { img: 'assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-watermelon-gushers.webp', label: 'Watermelon Gusherz', link: '' },
             ],
         },
         bluelotus: {
             slides: [
-                { img: 'assets/products/Product/bluelotusScroll/ChatGPT Image Apr 19, 2026, 03_21_20 PM.png', label: 'Top Blue Lotus' },
-                { img: 'assets/products/Product/bluelotusScroll/ChatGPT Image Apr 19, 2026, 03_31_38 PM.png', label: 'Premium Blue Lotus' },
-                { img: 'assets/products/Product/bluelotusScroll/bluelotus.png', label: 'Blue Lotus Collection' },
+                { img: 'assets/products/Product/bluelotusScroll/bluelotus-scroll-01.webp', label: 'Blue Lotus 4G Disposables', link: 'pages/product.html?id=bluelotus-featured-mental-health-blue-lotus-4grm-disposable-blue-razz-blast' },
+                { img: 'assets/products/Product/bluelotusScroll/bluelotus-scroll-02.webp', label: 'Blue Lotus 2CT Prerolls', link: 'pages/product.html?id=bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-blue-razz-blast' },
+                { img: 'assets/products/Product/bluelotusScroll/bluelotus-scroll-03.webp', label: 'Blue Lotus 1G Cartridges', link: 'pages/product.html?id=bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-blue-razz-blast' },
             ],
             tiles: [
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-purple-dragon.png', label: 'Cartridges', link: '' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.png', label: 'Disposables', link: '' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon.png', label: 'Pre-Rolls', link: '' },
-                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-strawberry-splash.png', label: 'Strawberry Splash', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-purple-dragon.webp', label: 'Cartridges', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.webp', label: 'Disposables', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon.webp', label: 'Pre-Rolls', link: '' },
+                { img: 'assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-strawberry-splash.webp', label: 'Strawberry Splash', link: '' },
             ],
         },
         supplements: {
             slides: [
-                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_34_50 PM.png', label: 'Top Supplements' },
-                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_37_04 PM.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_41_07 PM.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/supplimentsScroll/ChatGPT Image Apr 19, 2026, 03_58_00 PM.png', label: 'Premium Supplements' },
-                { img: 'assets/products/Product/supplimentsScroll/Gemini_Generated_Image_y8vjlpy8vjlpy8vj.png', label: 'Featured Supplements' },
-                { img: 'assets/products/Product/supplimentsScroll/supliments.png', label: 'Supplements Collection' },
+                { img: 'assets/products/Product/supplimentsScroll/suppliments-scroll-01.webp', label: 'Better Now 30-Pack Dispenser', link: 'pages/product.html?id=supplements-better-now-betternow-capsules-mockup-box-blueberry-020926' },
+                { img: 'assets/products/Product/supplimentsScroll/suppliments-scroll-02.webp', label: 'Better Now Card Display', link: 'pages/product.html?id=supplements-better-now-betternow-capsules-box-mockup-blueberry-012026' },
+                { img: 'assets/products/Product/supplimentsScroll/suppliments-scroll-03.webp', label: 'Better Now 5CT', link: 'pages/product.html?id=supplements-better-now-better-now-5ct-blueberry' },
+                { img: 'assets/products/Product/supplimentsScroll/suppliments-scroll-04.webp', label: 'Kanna + Kava Tonic', link: 'pages/product.html?id=supplements-kanna-kava-kanna-kava-relaxing-tonic' },
+                { img: 'assets/products/Product/supplimentsScroll/suppliments-scroll-05.webp', label: 'Zen Power Shots', link: 'pages/product.html?id=supplements-zen-power-shot-img-7056' },
+                { img: 'assets/products/Product/supplimentsScroll/suppliments-scroll-06.webp', label: 'Strike Kava Shot', link: 'pages/product.html?id=supplements-strike-kava-shot-strike-kava-shot-strawberry' },
             ],
             tiles: [
-                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.png', label: 'Better Now', link: '' },
-                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.jpg', label: 'Strike Kava', link: '' },
-                { img: 'assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.jpg', label: 'Kanna Kava', link: '' },
-                { img: 'assets/categories/supplements/zen-power-shot/img-7056.png', label: 'Zen Power Shot', link: '' },
+                { img: 'assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.webp', label: 'Better Now', link: '' },
+                { img: 'assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.webp', label: 'Strike Kava', link: '' },
+                { img: 'assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.webp', label: 'Kanna Kava', link: '' },
+                { img: 'assets/categories/supplements/zen-power-shot/zen-power-shot-2oz-display-box.webp', label: 'Zen Power Shot', link: '' },
             ],
         },
         novelties: {
             slides: [
-                { img: 'assets/products/Product/noveltiesScroll/ChatGPT Image Apr 19, 2026, 04_03_10 PM.png', label: 'Top Novelties' },
-                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_6gynyq6gynyq6gyn.png', label: 'Best Sellers' },
-                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_70y3ug70y3ug70y3.png', label: 'New Arrivals' },
-                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_88pzra88pzra88pz (2).png', label: 'Premium Novelties' },
-                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_cx62w8cx62w8cx62.png', label: 'Featured Novelties' },
-                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_kp56mgkp56mgkp56-ezremove.png', label: 'Novelties Collection' },
-                { img: 'assets/products/Product/noveltiesScroll/Gemini_Generated_Image_mfgdnqmfgdnqmfgd (1).png', label: 'More Novelties' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-01.webp', label: 'Coffee Cup Torch Lighter', link: 'pages/product.html?id=novelties-lighters-coffe-cup-torch-lighter-12ct-19253a' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-02.webp', label: 'ChoreBoy Copper Scrubbers', link: 'pages/product.html?id=novelties-accessories-chorboy-scrubber-display' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-03.webp', label: 'Card Lighter 20CT', link: 'pages/product.html?id=novelties-lighters-card-lighter-20ct' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-04.webp', label: 'BIC Lighter', link: 'pages/product.html?id=novelties-lighters-bic-lighter' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-05.webp', label: 'Card Lighter 20CT Variant', link: 'pages/product.html?id=novelties-lighters-card-lighter-20ct1' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-06.webp', label: 'Azza Air Fresheners', link: 'pages/product.html?id=novelties-accessories-azza-air-fresheners-200-300ml' },
+                { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-07.webp', label: 'X Dog Coin Lighter', link: 'pages/product.html?id=novelties-lighters-x-dog-coin-lighter-20ct-00001b' },
             ],
             tiles: [
-                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.jpg', label: 'Air Fresheners', link: '' },
-                { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.jpg', label: 'Jewelry', link: '' },
-                { img: 'assets/categories/novelties/misc/car-logo-keychains.jpg', label: 'Keychains', link: '' },
-                { img: 'assets/categories/novelties/misc/tactical-stoneman-knife-display.jpg', label: 'Knives', link: '' },
+                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.webp', label: 'Air Fresheners', link: '' },
+                { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.webp', label: 'Jewelry', link: '' },
+                { img: 'assets/categories/novelties/misc/car-logo-keychains.webp', label: 'Keychains', link: '' },
+                { img: 'assets/categories/novelties/misc/tactical-stoneman-knife-display.webp', label: 'Knives', link: '' },
             ],
         },
     };

@@ -33,11 +33,11 @@
         gate.innerHTML = `
             <div class="age-gate__card">
                 <div class="age-gate__head">
-                    <img class="age-gate__logo" src="${BASE}assets/logos/empire-logo-removebg-preview.png" alt="Empire Distributors Group">
+                    <img class="age-gate__logo" src="${BASE}assets/logos/empire-logo-removebg-preview.webp" alt="Empire Distributors Group">
                 </div>
 
                 <div class="age-gate__banner">
-                    <img src="${BASE}assets/categories/vape/vapes-new/long/long-img-6931.jpg" alt="Featured product">
+                    <img src="${BASE}assets/products/Product/vap.webp" alt="Featured product">
                 </div>
 
                 <div class="age-gate__body">

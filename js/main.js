@@ -249,32 +249,32 @@
 
     /* Brands marquee */
     /* Brand Partners - logo slider gallery (auto-scrolling infinite).
-       Combines logos from reference site + our own brand logos. */
+       Client-approved brand partner logos (provided by Empire Distributors Group). */
     function renderBrands(data) {
         var el = document.getElementById('brand-partners-track');
         if (!el) return;
 
-        // Original logos from empiredistributorsgroup.com
         var refLogos = [
-            { name: 'Empire', src: 'assets/brand-logos-new/empire.png' },
-            { name: 'Alien', src: 'assets/brand-logos-new/alien.png' },
-            { name: 'Bang', src: 'assets/brand-logos-new/bang.webp' },
-            { name: 'Cake', src: 'assets/brand-logos-new/cake.jpg' },
-            { name: 'CloudMax', src: 'assets/brand-logos-new/cloudmax.jpg' },
-            { name: 'Elf Bar', src: 'assets/brand-logos-new/elfbar.png' },
-            { name: 'Enoubar', src: 'assets/brand-logos-new/enoubar.jpg' },
-            { name: 'Fume', src: 'assets/brand-logos-new/fume.png' },
-            { name: 'HITT', src: 'assets/brand-logos-new/hitt.png' },
-            { name: 'Hyppe Bar', src: 'assets/brand-logos-new/hyppebar.webp' },
-            { name: 'Juucy', src: 'assets/brand-logos-new/juucy.jpg' },
-            { name: 'KangVape', src: 'assets/brand-logos-new/kangvape.webp' },
-            { name: 'Mega', src: 'assets/brand-logos-new/mega.png' },
-            { name: 'Monster', src: 'assets/brand-logos-new/monster.png' },
-            { name: 'Outro', src: 'assets/brand-logos-new/outro.webp' },
-            { name: 'OxBar', src: 'assets/brand-logos-new/oxbar.png' },
-            { name: 'PuffMi', src: 'assets/brand-logos-new/puffmi.png' },
-            { name: 'Torch', src: 'assets/brand-logos-new/torch.png' },
-            { name: 'XTRA', src: 'assets/brand-logos-new/xtra.webp' },
+            { name: 'BiC',             src: 'assets/brand-logos/bic.webp' },
+            { name: 'Bliss Xtra',      src: 'assets/brand-logos/bliss-xtra.webp' },
+            { name: 'Crownzen',        src: 'assets/brand-logos/crownzen.webp' },
+            { name: 'Dozo',            src: 'assets/brand-logos/dozo.webp' },
+            { name: 'Flying Monkey',   src: 'assets/brand-logos/flying-monkey.webp' },
+            { name: 'Foger',           src: 'assets/brand-logos/foger.webp' },
+            { name: 'Fume',            src: 'assets/brand-logos/fume.webp' },
+            { name: 'Geek Bar',        src: 'assets/brand-logos/geek-bar.webp' },
+            { name: 'Kanva',           src: 'assets/brand-logos/kanva.webp' },
+            { name: 'Lost THC',        src: 'assets/brand-logos/lost-thc.webp' },
+            { name: 'MIT 45',          src: 'assets/brand-logos/mit-45.webp' },
+            { name: 'Mystic Labs',     src: 'assets/brand-logos/mystic-labs.webp' },
+            { name: 'Purple',          src: 'assets/brand-logos/purple.webp' },
+            { name: 'Rock On',         src: 'assets/brand-logos/rock-on.webp' },
+            { name: 'Shroom Puff',     src: 'assets/brand-logos/shroom-puff.webp' },
+            { name: 'Techno Torch',    src: 'assets/brand-logos/techno-torch.webp' },
+            { name: 'Tyson 2.0',       src: 'assets/brand-logos/tyson-2.webp' },
+            { name: 'Ultra Ohmz',      src: 'assets/brand-logos/ultra-ohmz.webp' },
+            { name: 'Ultra Ohmz Mega', src: 'assets/brand-logos/ultra-ohmz-mega.webp' },
+            { name: 'Vivazen',         src: 'assets/brand-logos/vivazen.webp' },
         ];
 
         // Also add our own brand logos that aren't in the ref list

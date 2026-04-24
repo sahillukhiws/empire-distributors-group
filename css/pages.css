@@ -1016,11 +1016,18 @@
     position: relative;
     transition: transform 0.5s var(--ease);
 }
-/* Brand logo: larger, clean drop-shadow */
+/* Brand logo: properly sized to fit without cutoff, clean drop-shadow */
 .brand-card__logo {
-    max-width: 78% !important;
-    max-height: 82% !important;
+    max-width: 75% !important;
+    max-height: 75% !important;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
+}
+/* Shroom Puff logo: move up for better visibility */
+#shroom-puff .brand-card__logo {
+    transform: translateY(-10%);
 }
 .brand-card.has-logo .brand-card__media {
     background: linear-gradient(145deg, #fff, var(--bg-2));
@@ -1080,6 +1087,72 @@
     background: var(--c, var(--brand));
     color: #fff;
     transform: translateX(4px);
+}
+
+/* Responsive brands grid */
+@media (max-width: 992px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem;
+    }
+    .brand-card {
+        min-height: 280px;
+    }
+    .brand-card__media {
+        padding: 1.2rem;
+    }
+    .brand-card__logo {
+        max-width: 70% !important;
+        max-height: 70% !important;
+    }
+    .brand-card__body {
+        padding: 1rem 1.1rem 1.1rem;
+    }
+    .brand-card__name {
+        font-size: 1.1rem;
+    }
+    .brand-card__arrow {
+        width: 34px;
+        height: 34px;
+        bottom: 1.1rem;
+        right: 1.1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .brands-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.9rem;
+    }
+    .brand-card {
+        min-height: 240px;
+    }
+    .brand-card__media {
+        padding: 1rem;
+    }
+    .brand-card__logo {
+        max-width: 65% !important;
+        max-height: 65% !important;
+    }
+    .brand-card__body {
+        padding: 0.9rem 1rem 1rem;
+    }
+    .brand-card__cat {
+        font-size: 0.6rem;
+    }
+    .brand-card__name {
+        font-size: 0.95rem;
+    }
+    .brand-card__arrow {
+        width: 30px;
+        height: 30px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .brand-card__arrow svg {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 /* ============================================

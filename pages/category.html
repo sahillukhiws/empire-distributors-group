@@ -7,14 +7,14 @@
     <meta name="theme-color" content="#1a3a5c">
     <title id="page-title">Category - Empire Distributors Group</title>
 
-    <link rel="icon" type="image/png" href="../assets/logos/empire-logo.png">
-    <link rel="apple-touch-icon" href="../assets/logos/empire-logo.png">
+    <link rel="icon" type="image/png" href="../assets/logos/empire-logo.webp">
+    <link rel="apple-touch-icon" href="../assets/logos/empire-logo.webp">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Empire Distributors Group">
     <meta property="og:title" content="Category - Empire Distributors Group">
     <meta property="og:description" content="Browse premium products by category.">
-    <meta property="og:image" content="../assets/logos/empire-logo.png">
+    <meta property="og:image" content="../assets/logos/empire-logo.webp">
     <meta name="twitter:card" content="summary">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,8 +203,9 @@
             }
 
             var catHref = BASE + 'pages/category.html?id=' + cat.id;
-            function hrefForImg(imgPath) {
-                var match = findProductByImagePath(data, imgPath);
+            function hrefForItem(item) {
+                if (item.link) return BASE + item.link;
+                var match = findProductByImagePath(data, item.img);
                 return match
                     ? BASE + 'pages/product.html?id=' + encodeURIComponent(match.id)
                     : catHref;
@@ -213,7 +214,7 @@
             // Build slider slides (use --cover so images fill 100% of the frame)
             var track = document.getElementById('cat-hero-slider-track');
             track.innerHTML = heroData.slides.map(function (s) {
-                return '<a class="hero__slide hero__slide--cover" href="' + hrefForImg(s.img) + '">' +
+                return '<a class="hero__slide hero__slide--cover" href="' + hrefForItem(s) + '">' +
                     '<img src="' + BASE + s.img + '" alt="' + escapeHtml(s.label) + '">' +
                     '<span class="hero__slide-label">' + escapeHtml(s.label) + '</span>' +
                 '</a>';
@@ -222,7 +223,7 @@
             // Build 2x2 tiles
             var tilesEl = document.getElementById('cat-hero-tiles');
             tilesEl.innerHTML = heroData.tiles.map(function (t) {
-                return '<a class="hero__tile" href="' + hrefForImg(t.img) + '" style="--c:var(--c-' + cat.id + '); --c-lt:var(--c-' + cat.id + '-lt);">' +
+                return '<a class="hero__tile" href="' + hrefForItem(t) + '" style="--c:var(--c-' + cat.id + '); --c-lt:var(--c-' + cat.id + '-lt);">' +
                     '<img src="' + BASE + t.img + '" alt="' + escapeHtml(t.label) + '" loading="lazy">' +
                     '<span class="hero__tile-label">' + escapeHtml(t.label) + '</span>' +
                 '</a>';
