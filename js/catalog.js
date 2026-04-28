@@ -502,6 +502,8 @@
                 { img: 'assets/products/Product/daltaScroll/delta-scroll-03.webp', label: 'Rock On 2G Pre-Roll Jars', link: 'pages/product.html?id=delta-rock-on-thcp-jar-40ct-sour-diesel' },
                 { img: 'assets/products/Product/daltaScroll/delta-scroll-04.webp', label: 'Rock On Liquid Diamonds Dabs', link: 'pages/product.html?id=delta-rock-on-thcp-dabs-6pk-sour-space-candy' },
                 { img: 'assets/products/Product/daltaScroll/delta-scroll-05.webp', label: 'Rock On Liquid Diamonds Disposables', link: 'pages/product.html?id=delta-rock-on-d9-disposable-6g-blue-dream' },
+                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 28, 2026, 08_10_25 PM.png', label: 'Delta 8 Disposables', link: 'pages/product.html?id=delta-1-delta-8-9-gummies-ml-product-photo-12ct-gummies' },
+                { img: 'assets/products/Product/daltaScroll/ChatGPT Image Apr 28, 2026, 08_07_51 PM.png', label: 'Delta 9 Gummies', link: 'pages/product.html?id=delta-1-delta-8-9-gummies-12ct-delta-9-gummies' },
                 { img: 'assets/products/Product/daltaScroll/delta-scroll-06.webp', label: 'Rock On Pure THC Gummies', link: 'pages/product.html?id=delta-rock-on-pure-thc-gummies-20ct-blue-razz-burst' },
             ],
             tiles: [
@@ -583,10 +585,10 @@
                 { img: 'assets/products/Product/noveltiesScroll/novelties-scroll-07.webp', label: 'X Dog Coin Lighter', link: 'pages/product.html?id=novelties-lighters-x-dog-coin-lighter-20ct-00001b' },
             ],
             tiles: [
-                { img: 'assets/categories/novelties/misc/azza-air-fresheners-200-300ml.webp', label: 'Air Fresheners', link: '' },
-                { img: 'assets/categories/novelties/misc/jewelry-display-crystals-roses.webp', label: 'Jewelry', link: '' },
-                { img: 'assets/categories/novelties/misc/car-logo-keychains.webp', label: 'Keychains', link: '' },
-                { img: 'assets/categories/novelties/misc/tactical-stoneman-knife-display.webp', label: 'Knives', link: '' },
+                { img: 'assets/categories/novelties/misc/air-fresheners-200-300ml.webp', label: 'Air Fresheners', link: 'pages/product.html?id=novelties-misc-air-fresheners-200-300ml' },
+                { img: 'assets/categories/novelties/misc/4-sided-jewelry-display.webp', label: 'Jewelry', link: 'pages/product.html?id=novelties-misc-4-sided-jewelry-display' },
+                { img: 'assets/categories/novelties/misc/kaychain-display-300ct.webp', label: 'Keychains', link: 'pages/product.html?id=novelties-misc-kaychain-display-300ct' },
+                { img: 'assets/categories/novelties/misc/knives-big-display-96ct.webp', label: 'Knives', link: 'pages/product.html?id=novelties-misc-knives-big-display-96ct' },
             ],
         },
     };

@@ -1,0 +1,2280 @@
+{
+  "categories": [
+    {
+      "id": "vape",
+      "name": "Vape",
+      "icon": "\ud83d\udca8",
+      "description": "Premium vape devices and disposables"
+    },
+    {
+      "id": "kratom",
+      "name": "Kratom",
+      "icon": "\ud83c\udf3f",
+      "description": "Premium kratom shots, powders and capsules"
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "icon": "\ud83d\udd25",
+      "description": "Delta-8, Delta-9 edibles and disposables"
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "icon": "\ud83c\udf44",
+      "description": "Functional mushroom gummies and more"
+    },
+    {
+      "id": "pseudo",
+      "name": "Pseudo",
+      "icon": "\u26a1",
+      "description": "Premium pseudo products"
+    },
+    {
+      "id": "bluelotus",
+      "name": "Blue Lotus",
+      "icon": "\ud83c\udf38",
+      "description": "Blue lotus carts, prerolls and disposables"
+    },
+    {
+      "id": "supplements",
+      "name": "Supplements",
+      "icon": "\ud83d\udc8a",
+      "description": "Wellness shots and supplement blends"
+    },
+    {
+      "id": "novelties",
+      "name": "Novelties",
+      "icon": "\ud83c\udf81",
+      "description": "Unique lifestyle accessories"
+    }
+  ],
+  "companies": [
+    {
+      "id": "better-now",
+      "name": "BETTER NOW",
+      "category": "supplements",
+      "hideFromBrands": true
+    },
+    {
+      "id": "bliss-xtra",
+      "name": "BLISS XTRA",
+      "category": "kratom",
+      "logo": "assets/brand-logos/bliss-xtra.webp"
+    },
+    {
+      "id": "feel-free",
+      "name": "FEEL FREE",
+      "category": "kratom",
+      "logo": "assets/brand-logos/feel-free.webp",
+      "hideFromBrands": true
+    },
+    {
+      "id": "foger",
+      "name": "FOGER",
+      "category": "vape",
+      "logo": "assets/brand-logos/foger.webp"
+    },
+    {
+      "id": "geek-bar",
+      "name": "GEEK BAR",
+      "category": "vape",
+      "logo": "assets/brand-logos/geek-bar.webp"
+    },
+    {
+      "id": "giga-bar",
+      "name": "GIGA BAR",
+      "category": "vape",
+      "hideFromBrands": true
+    },
+    {
+      "id": "gushers",
+      "name": "GUSHERS",
+      "category": "pseudo",
+      "hideFromBrands": true
+    },
+    {
+      "id": "kanna-kava",
+      "name": "KANNA KAVA",
+      "category": "supplements",
+      "logo": "assets/brand-logos/kanva.webp"
+    },
+    {
+      "id": "kanva",
+      "name": "KANVA BOTANICALS",
+      "category": "kratom",
+      "logo": "assets/brand-logos/kanva.webp"
+    },
+    {
+      "id": "kshot",
+      "name": "KSHOT",
+      "category": "kratom",
+      "logo": "assets/brand-logos/kshot.webp",
+      "hideFromBrands": true
+    },
+    {
+      "id": "lucid-50mg",
+      "name": "LUCID 50MG",
+      "category": "pseudo",
+      "hideFromBrands": true
+    },
+    {
+      "id": "mental-health",
+      "name": "MENTAL HEALTH",
+      "category": "bluelotus",
+      "logo": "assets/brand-logos/mental-health.webp",
+      "hideFromBrands": true
+    },
+    {
+      "id": "mit-45",
+      "name": "MIT 45",
+      "category": "kratom",
+      "logo": "assets/brand-logos/mit-45.webp"
+    },
+    {
+      "id": "mystic-labs",
+      "name": "MYSTIC LABS",
+      "category": "kratom",
+      "logo": "assets/brand-logos/mystic-labs.webp"
+    },
+    {
+      "id": "opms",
+      "name": "OPMS",
+      "category": "kratom",
+      "logo": "assets/brand-logos/opms.webp",
+      "hideFromBrands": true
+    },
+    {
+      "id": "raz",
+      "name": "RAZ",
+      "category": "vape",
+      "logo": "assets/brand-logos/raz.webp",
+      "hideFromBrands": true
+    },
+    {
+      "id": "rock-on",
+      "name": "ROCK ON",
+      "category": "delta",
+      "logo": "assets/brand-logos/rock-on.webp"
+    },
+    {
+      "id": "shroom-bang",
+      "name": "SHROOM BANG",
+      "category": "mushroom",
+      "hideFromBrands": true
+    },
+    {
+      "id": "shroom-puff",
+      "name": "SHROOM PUFF",
+      "category": "mushroom",
+      "logo": "assets/brand-logos/shroom-puff.webp"
+    },
+    {
+      "id": "silly-dots",
+      "name": "SILLY DOTS",
+      "category": "mushroom",
+      "logo": "assets/brand-logos/silly-dots.webp",
+      "hideFromBrands": true
+    },
+    {
+      "id": "strike-kava-shot",
+      "name": "STRIKE KAVA SHOT",
+      "category": "supplements",
+      "hideFromBrands": true
+    },
+    {
+      "id": "ultra-ohmz",
+      "name": "ULTRA OHMZ",
+      "category": "pseudo",
+      "logo": "assets/brand-logos/ultra-ohmz.webp"
+    },
+    {
+      "id": "viva-xtreme",
+      "name": "VIVA XTREME",
+      "category": "kratom",
+      "hideFromBrands": true
+    },
+    {
+      "id": "vivazen",
+      "name": "VIVAZEN",
+      "category": "kratom",
+      "logo": "assets/brand-logos/vivazen.webp"
+    },
+    {
+      "id": "zen-power-shot",
+      "name": "ZEN POWER SHOT",
+      "category": "supplements",
+      "hideFromBrands": true
+    },
+    {
+      "id": "novelties-lighters",
+      "name": "NOVELTY LIGHTERS",
+      "category": "novelties",
+      "hideFromBrands": true
+    },
+    {
+      "id": "novelties-accessories",
+      "name": "NOVELTY ACCESSORIES",
+      "category": "novelties",
+      "hideFromBrands": true
+    },
+    {
+      "id": "bic",
+      "name": "BIC",
+      "category": "novelties",
+      "logo": "assets/brand-logos/bic.webp"
+    },
+    {
+      "id": "crownzen",
+      "name": "CROWNZEN",
+      "category": "kratom",
+      "logo": "assets/brand-logos/crownzen.webp"
+    },
+    {
+      "id": "dozo",
+      "name": "DOZO",
+      "category": "delta",
+      "logo": "assets/brand-logos/dozo.webp"
+    },
+    {
+      "id": "flying-monkey",
+      "name": "FLYING MONKEY",
+      "category": "delta",
+      "logo": "assets/brand-logos/flying-monkey.webp"
+    },
+    {
+      "id": "lost-thc",
+      "name": "LOST THC",
+      "category": "delta",
+      "logo": "assets/brand-logos/lost-thc.webp"
+    },
+    {
+      "id": "purple",
+      "name": "PURPLE",
+      "category": "delta",
+      "logo": "assets/brand-logos/purple.webp"
+    },
+    {
+      "id": "tyson-2",
+      "name": "TYSON 2.0",
+      "category": "delta",
+      "logo": "assets/brand-logos/tyson-2.webp"
+    },
+    {
+      "id": "techno-torch",
+      "name": "TECHNO TORCH",
+      "category": "novelties",
+      "logo": "assets/brand-logos/techno-torch.webp"
+    },
+    {
+      "id": "fume",
+      "name": "FUME",
+      "category": "vape",
+      "logo": "assets/brand-logos/fume.webp"
+    }
+  ],
+  "products": [
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-blue-razz-blast",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-BLUE-RAZZ-BLAST",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (BLUE RAZZ BLAST)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-blue-razz-blast.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-pineapple-paradise",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-PINEAPPLE-PARADISE",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PINEAPPLE PARADISE)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-pineapple-paradise.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-pink-champagne",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-PINK-CHAMPAGNE",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PINK CHAMPAGNE)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-pink-champagne.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-purple-dragon",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-PURPLE-DRAGON",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PURPLE DRAGON)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-purple-dragon.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-strawberry-splash",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-1GRM-CARTRIDGES-STRAWBERRY-SPLASH",
+      "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (STRAWBERRY SPLASH)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-strawberry-splash.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-blue-razz-blast",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH-BLUE-RAZZ-BLAST",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH (BLUE RAZZ BLAST)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-blue-razz-blast.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH-PURPLE-DRAGON",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH (PURPLE DRAGON)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-purple-dragon.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-strawberry-splash",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-2CT-PREROLL-1-5GRM-EACH-STRAWBERRY-SPLASH",
+      "name": "MENTAL HEALTH BLUE LOTUS 2CT PREROLL 1.5GRM EACH (STRAWBERRY SPLASH)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-2ct-preroll-1-5grm-each-strawberry-splash.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-blue-razz-blast",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-BLUE-RAZZ-BLAST",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (BLUE RAZZ BLAST)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-pineapple-paradise",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-PINEAPPLE-PARADISE",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (PINEAPPLE PARADISE)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pineapple-paradise.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-pink-champagne",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-PINK-CHAMPAGNE",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (PINK CHAMPAGNE)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-pink-champagne.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-purple-dragon",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-PURPLE-DRAGON",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (PURPLE DRAGON)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-purple-dragon.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "bluelotus-featured-mental-health-blue-lotus-4grm-disposable-strawberry-splash",
+      "sku": "MENTAL-HEALTH-BLUE-LOTUS-4GRM-DISPOSABLE-STRAWBERRY-SPLASH",
+      "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (STRAWBERRY SPLASH)",
+      "company": "mental-health",
+      "category": "bluelotus",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-strawberry-splash.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-1-delta-8-9-gummies-12ct-delta-9-gummies",
+      "sku": "12CT-DELTA-9-GUMMIES",
+      "name": "12CT DELTA 9 GUMMIES",
+      "company": "mystic-labs",
+      "category": "delta",
+      "image": "assets/categories/delta/1-delta-8-9-gummies/12ct-delta-9-gummies.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "delta-1-delta-8-9-gummies-ml-product-photo-12ct-gummies",
+      "sku": "MYSTIC-LABS-D8-GUMMIES-12CT-VARIETY",
+      "name": "MYSTIC LABS DELTA-8 GUMMIES 12CT VARIETY PACK",
+      "company": "mystic-labs",
+      "category": "delta",
+      "image": "assets/categories/delta/1-delta-8-9-gummies/ml-product-photo-12ct-gummies.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-3ct-og-kush",
+      "sku": "ROCK-ON-THCP-PREROLL-3CT-OG-KUSH",
+      "name": "ROCK ON THC-P PRE-ROLL 3CT (OG KUSH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-3ct-og-kush.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-3ct-fruity-pebbles",
+      "sku": "ROCK-ON-THCP-PREROLL-3CT-FRUITY-PEBBLES",
+      "name": "ROCK ON THC-P PRE-ROLL 3CT (FRUITY PEBBLES)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-3ct-fruity-pebbles.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-3ct-sour-diesel",
+      "sku": "ROCK-ON-THCP-PREROLL-3CT-SOUR-DIESEL",
+      "name": "ROCK ON THC-P PRE-ROLL 3CT (SOUR DIESEL)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-3ct-sour-diesel.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-3ct-berry-dream",
+      "sku": "ROCK-ON-THCP-PREROLL-3CT-BERRY-DREAM",
+      "name": "ROCK ON THC-P PRE-ROLL 3CT (BERRY DREAM)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-3ct-berry-dream.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-10pk-og-kush",
+      "sku": "ROCK-ON-THCP-PREROLL-10PK-OG-KUSH",
+      "name": "ROCK ON THC-P PRE-ROLL 10-PACK DISPLAY (OG KUSH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-10pk-og-kush.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-10pk-cali-runtz",
+      "sku": "ROCK-ON-THCP-PREROLL-10PK-CALI-RUNTZ",
+      "name": "ROCK ON THC-P PRE-ROLL 10-PACK DISPLAY (CALI RUNTZ)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-10pk-cali-runtz.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-3ct-cali-runtz",
+      "sku": "ROCK-ON-THCP-PREROLL-3CT-CALI-RUNTZ",
+      "name": "ROCK ON THC-P PRE-ROLL 3CT (CALI RUNTZ)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-3ct-cali-runtz.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-10pk-fruity-pebbles",
+      "sku": "ROCK-ON-THCP-PREROLL-10PK-FRUITY-PEBBLES",
+      "name": "ROCK ON THC-P PRE-ROLL 10-PACK DISPLAY (FRUITY PEBBLES)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-10pk-fruity-pebbles.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-10pk-berry-dream",
+      "sku": "ROCK-ON-THCP-PREROLL-10PK-BERRY-DREAM",
+      "name": "ROCK ON THC-P PRE-ROLL 10-PACK DISPLAY (BERRY DREAM)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-10pk-berry-dream.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-preroll-10pk-sour-diesel",
+      "sku": "ROCK-ON-THCP-PREROLL-10PK-SOUR-DIESEL",
+      "name": "ROCK ON THC-P PRE-ROLL 10-PACK DISPLAY (SOUR DIESEL)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-preroll-10pk-sour-diesel.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-dabs-6pk-sour-space-candy",
+      "sku": "ROCK-ON-THCP-DABS-6PK-SOUR-SPACE-CANDY",
+      "name": "ROCK ON THC-P LIVE RESIN DABS 6-PACK (SOUR SPACE CANDY)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-dabs-6pk-sour-space-candy.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-dabs-6pk-pineapple-express",
+      "sku": "ROCK-ON-THCP-DABS-6PK-PINEAPPLE-EXPRESS",
+      "name": "ROCK ON THC-P LIVE RESIN DABS 6-PACK (PINEAPPLE EXPRESS)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-dabs-6pk-pineapple-express.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-dabs-6pk-blueberry-kush",
+      "sku": "ROCK-ON-THCP-DABS-6PK-BLUEBERRY-KUSH",
+      "name": "ROCK ON THC-P LIVE RESIN DABS 6-PACK (BLUEBERRY KUSH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-dabs-6pk-blueberry-kush.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-d9-disposable-6g-alaskan-thunderfuck",
+      "sku": "ROCK-ON-D9-DISPOSABLE-6G-ALASKAN-THUNDERFUCK",
+      "name": "ROCK ON D9 LIVE RESIN DISPOSABLE 6G 35K (ALASKAN THUNDERFUCK)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-alaskan-thunderfuck.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-d9-disposable-6g-green-crack",
+      "sku": "ROCK-ON-D9-DISPOSABLE-6G-GREEN-CRACK",
+      "name": "ROCK ON D9 LIVE RESIN DISPOSABLE 6G 35K (GREEN CRACK)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-green-crack.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-d9-disposable-6g-blue-dream",
+      "sku": "ROCK-ON-D9-DISPOSABLE-6G-BLUE-DREAM",
+      "name": "ROCK ON D9 LIVE RESIN DISPOSABLE 6G 35K (BLUE DREAM)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-blue-dream.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-d9-disposable-6g-super-boof",
+      "sku": "ROCK-ON-D9-DISPOSABLE-6G-SUPER-BOOF",
+      "name": "ROCK ON D9 LIVE RESIN DISPOSABLE 6G 35K (SUPER BOOF)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-super-boof.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-d9-disposable-6g-purple-punch",
+      "sku": "ROCK-ON-D9-DISPOSABLE-6G-PURPLE-PUNCH",
+      "name": "ROCK ON D9 LIVE RESIN DISPOSABLE 6G 35K (PURPLE PUNCH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-purple-punch.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-jar-40ct-sour-diesel",
+      "sku": "ROCK-ON-THCP-JAR-40CT-SOUR-DIESEL",
+      "name": "ROCK ON THC-P LIVE RESIN 2G PRE-ROLL JAR 40CT (SOUR DIESEL)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-jar-40ct-sour-diesel.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-jar-40ct-cali-runtz",
+      "sku": "ROCK-ON-THCP-JAR-40CT-CALI-RUNTZ",
+      "name": "ROCK ON THC-P LIVE RESIN 2G PRE-ROLL JAR 40CT (CALI RUNTZ)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-jar-40ct-cali-runtz.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-jar-40ct-fruity-pebbles",
+      "sku": "ROCK-ON-THCP-JAR-40CT-FRUITY-PEBBLES",
+      "name": "ROCK ON THC-P LIVE RESIN 2G PRE-ROLL JAR 40CT (FRUITY PEBBLES)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-jar-40ct-fruity-pebbles.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-jar-40ct-og-kush",
+      "sku": "ROCK-ON-THCP-JAR-40CT-OG-KUSH",
+      "name": "ROCK ON THC-P LIVE RESIN 2G PRE-ROLL JAR 40CT (OG KUSH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-jar-40ct-og-kush.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-thcp-jar-40ct-berry-dream",
+      "sku": "ROCK-ON-THCP-JAR-40CT-BERRY-DREAM",
+      "name": "ROCK ON THC-P LIVE RESIN 2G PRE-ROLL JAR 40CT (BERRY DREAM)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-jar-40ct-berry-dream.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-pure-thc-gummies-20ct-blue-razz-burst",
+      "sku": "ROCK-ON-PURE-THC-GUMMIES-20CT-BLUE-RAZZ",
+      "name": "ROCK ON PURE THC GUMMIES 20CT 1000MG (BLUE RAZZ BURST)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-20ct-blue-razz-burst.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-pure-thc-gummies-20ct-watermelon-gushers",
+      "sku": "ROCK-ON-PURE-THC-GUMMIES-20CT-WATERMELON",
+      "name": "ROCK ON PURE THC GUMMIES 20CT 1000MG (WATERMELON GUSHERS)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-20ct-watermelon-gushers.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-pure-thc-gummies-20ct-tropical-punch",
+      "sku": "ROCK-ON-PURE-THC-GUMMIES-20CT-TROPICAL",
+      "name": "ROCK ON PURE THC GUMMIES 20CT 1000MG (TROPICAL PUNCH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-20ct-tropical-punch.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-pure-thc-gummies-20ct-strawberry-haze",
+      "sku": "ROCK-ON-PURE-THC-GUMMIES-20CT-STRAWBERRY",
+      "name": "ROCK ON PURE THC GUMMIES 20CT 1000MG (STRAWBERRY HAZE)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-20ct-strawberry-haze.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-pure-thc-gummies-display-blue-razz",
+      "sku": "ROCK-ON-PURE-THC-GUMMIES-DISPLAY-BLUE-RAZZ",
+      "name": "ROCK ON PURE THC GUMMIES DISPLAY BOX 6CT (BLUE RAZZ BURST)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-display-blue-razz-burst-a.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-pure-thc-gummies-display-variety",
+      "sku": "ROCK-ON-PURE-THC-GUMMIES-DISPLAY-VARIETY",
+      "name": "ROCK ON PURE THC GUMMIES DISPLAY BOX 6CT (VARIETY)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-display-blue-razz-burst-b.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-live-resin-gummies-30bag-blue-razz-burst",
+      "sku": "ROCK-ON-LIVE-RESIN-GUMMIES-30BAG-BLUE-RAZZ",
+      "name": "ROCK ON THC LIVE RESIN GUMMIES 30-BAG COUNTER DISPLAY (BLUE RAZZ BURST)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-live-resin-gummies-30bag-blue-razz-burst.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-live-resin-gummies-30bag-watermelon-gushers",
+      "sku": "ROCK-ON-LIVE-RESIN-GUMMIES-30BAG-WATERMELON",
+      "name": "ROCK ON THC LIVE RESIN GUMMIES 30-BAG COUNTER DISPLAY (WATERMELON GUSHERS)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-live-resin-gummies-30bag-watermelon-gushers.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-live-resin-gummies-30bag-tropical-punch",
+      "sku": "ROCK-ON-LIVE-RESIN-GUMMIES-30BAG-TROPICAL",
+      "name": "ROCK ON THC LIVE RESIN GUMMIES 30-BAG COUNTER DISPLAY (TROPICAL PUNCH)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-live-resin-gummies-30bag-tropical-punch.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-live-resin-gummies-30bag-grape-ape",
+      "sku": "ROCK-ON-LIVE-RESIN-GUMMIES-30BAG-GRAPE-APE",
+      "name": "ROCK ON THC LIVE RESIN GUMMIES 30-BAG COUNTER DISPLAY (GRAPE APE)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-live-resin-gummies-30bag-grape-ape.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-rock-on-live-resin-gummies-30bag-strawberry-haze",
+      "sku": "ROCK-ON-LIVE-RESIN-GUMMIES-30BAG-STRAWBERRY",
+      "name": "ROCK ON THC LIVE RESIN GUMMIES 30-BAG COUNTER DISPLAY (STRAWBERRY HAZE)",
+      "company": "rock-on",
+      "category": "delta",
+      "image": "assets/categories/delta/rock-on/rock-on-live-resin-gummies-30bag-strawberry-haze.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-100gm-p0wder",
+      "sku": "BLISS-XTRA-100GM-P0WDER",
+      "name": "BLISS XTRA 100GM P0WDER",
+      "company": "bliss-xtra",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-100gm-p0wder.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-84ct-capsule",
+      "sku": "BLISS-XTRA-84CT-CAPSULE",
+      "name": "BLISS XTRA 84CT CAPSULE",
+      "company": "bliss-xtra",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-84ct-capsule.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-black-shot",
+      "sku": "BLISS-XTRA-BLACK-SHOT",
+      "name": "BLISS XTRA BLACK SHOT",
+      "company": "bliss-xtra",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-black-shot.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-bliss-xtra-gold-shot",
+      "sku": "BLISS-XTRA-GOLD-SHOT",
+      "name": "BLISS XTRA GOLD SHOT",
+      "company": "bliss-xtra",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/bliss-xtra-gold-shot.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-feek-free",
+      "sku": "FEEK-FREE",
+      "name": "FEEL FREE",
+      "company": "feel-free",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/feek-free.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-feel-free-shot",
+      "sku": "FEEL-FREE-SHOT",
+      "name": "FEEL FREE SHOT",
+      "company": "feel-free",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/feel-free-shot.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-kanva-focus-flow-shot",
+      "sku": "KANVA-FOCUS-FLOW-SHOT",
+      "name": "KANVA FOCUS FLOW SHOT",
+      "company": "kanva",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/kanva-focus-flow-shot.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-kshot-black",
+      "sku": "KSHOT-BLACK",
+      "name": "KSHOT BLACK",
+      "company": "kshot",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/kshot-black.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-kshot-regular",
+      "sku": "KSHOT-REGULAR",
+      "name": "KSHOT REGULAR",
+      "company": "kshot",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/kshot-regular.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-blue-shot",
+      "sku": "MIT-45-BLUE-SHOT",
+      "name": "MIT 45 BLUE SHOT",
+      "company": "mit-45",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-blue-shot.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-go-boldly",
+      "sku": "MIT-45-GO-BOLDLY",
+      "name": "MIT 45 GO BOLDLY",
+      "company": "mit-45",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-go-boldly.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-gold",
+      "sku": "MIT-45-GOLD",
+      "name": "MIT 45 GOLD",
+      "company": "mit-45",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-gold.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-purple-shot",
+      "sku": "MIT-45-PURPLE-SHOT",
+      "name": "MIT 45 PURPLE SHOT",
+      "company": "mit-45",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-purple-shot.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mit-45-shots",
+      "sku": "MIT-45-SHOTS",
+      "name": "MIT 45 SHOTS",
+      "company": "mit-45",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mit-45-shots.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-mystic-lab-kratom-gummies",
+      "sku": "MYSTIC-LAB-KRATOM-GUMMIES",
+      "name": "MYSTIC LAB KRATOM GUMMIES",
+      "company": "mystic-labs",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/mystic-lab-kratom-gummies.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms-black",
+      "sku": "OPMS-BLACK",
+      "name": "OPMS BLACK",
+      "company": "opms",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms-black.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms-gold",
+      "sku": "OPMS-GOLD",
+      "name": "OPMS GOLD",
+      "company": "opms",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms-gold.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms-red",
+      "sku": "OPMS-RED",
+      "name": "OPMS RED",
+      "company": "opms",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms-red.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-opms",
+      "sku": "OPMS",
+      "name": "OPMS",
+      "company": "opms",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/opms.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-viva-xtreme",
+      "sku": "VIVA-XTREME",
+      "name": "VIVA XTREME",
+      "company": "viva-xtreme",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/viva-xtreme.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-vivazen-2x",
+      "sku": "VIVAZEN-2X",
+      "name": "VIVAZEN 2X",
+      "company": "vivazen",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/vivazen-2x.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "kratom-featured-vivazen-regular",
+      "sku": "VIVAZEN-REGULAR",
+      "name": "VIVAZEN REGULAR",
+      "company": "vivazen",
+      "category": "kratom",
+      "image": "assets/categories/kratom/featured/vivazen-regular.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-bang-shroom-bang-2ct-pre-roll",
+      "sku": "SHROOM-BANG-2CT-PRE-ROLL",
+      "name": "SHROOM BANG 2CT PRE ROLL",
+      "company": "shroom-bang",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-bang/shroom-bang-2ct-pre-roll.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-bang-shroom-bang-4ct-tablet",
+      "sku": "SHROOM-BANG-4CT-TABLET",
+      "name": "SHROOM BANG 4CT TABLET",
+      "company": "shroom-bang",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-bang/shroom-bang-4ct-tablet.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-bang-shroom-bang-4grm-disposable",
+      "sku": "SHROOM-BANG-4GRM-DISPOSABLE",
+      "name": "SHROOM BANG 4GRM DISPOSABLE",
+      "company": "shroom-bang",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-bang/shroom-bang-4grm-disposable.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-3grm-disposable",
+      "sku": "SHROOM-3GRM-DISPOSABLE",
+      "name": "SHROOM 3GRM DISPOSABLE",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-3grm-disposable.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-1-grm-cartridge",
+      "sku": "SHROOM-PUFF-1-GRM-CARTRIDGE",
+      "name": "SHROOM PUFF 1 GRM CARTRIDGE",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-1-grm-cartridge.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-2ct-pre-roll",
+      "sku": "SHROOM-PUFF-2CT-PRE-ROLL",
+      "name": "SHROOM PUFF 2CT PRE ROLL",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-2ct-pre-roll.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-blaster",
+      "sku": "SHROOM-PUFF-BLASTER",
+      "name": "SHROOM PUFF BLASTER",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-blaster.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-shroom-puff-shroom-puff-pre-roll-40ct-jar",
+      "sku": "SHROOM-PUFF-PRE-ROLL-40CT-JAR",
+      "name": "SHROOM PUFF PRE ROLL 40CT JAR",
+      "company": "shroom-puff",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-pre-roll-40ct-jar.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-hero-dose-blue-razz",
+      "sku": "SILLY-DOTS-HERO-DOSE-BLUE-RAZZ",
+      "name": "SILLY DOTS HERO DOSE BLUE RAZZ",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-hero-dose-blue-razz.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-hero-dose-cherry-berry",
+      "sku": "SILLY-DOTS-HERO-DOSE-CHERRY-BERRY",
+      "name": "SILLY DOTS HERO DOSE CHERRY BERRY",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-hero-dose-cherry-berry.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-hero-dose-natural",
+      "sku": "SILLY-DOTS-HERO-DOSE-NATURAL",
+      "name": "SILLY DOTS HERO DOSE NATURAL",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-hero-dose-natural.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose-blue-razz",
+      "sku": "SILLY-DOTS-MEGA-DOSE-BLUE-RAZZ",
+      "name": "SILLY DOTS MEGA DOSE BLUE RAZZ",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose-blue-razz.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose-cherry-berry",
+      "sku": "SILLY-DOTS-MEGA-DOSE-CHERRY-BERRY",
+      "name": "SILLY DOTS MEGA DOSE CHERRY BERRY",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose-cherry-berry.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose-natural",
+      "sku": "SILLY-DOTS-MEGA-DOSE-NATURAL",
+      "name": "SILLY DOTS MEGA DOSE NATURAL",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose-natural.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-mega-dose",
+      "sku": "SILLY-DOTS-MEGA-DOSE",
+      "name": "SILLY DOTS MEGA DOSE",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-mega-dose.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "mushroom-silly-dots-silly-dots-super-dose",
+      "sku": "SILLY-DOTS-SUPER-DOSE",
+      "name": "SILLY DOTS SUPER DOSE",
+      "company": "silly-dots",
+      "category": "mushroom",
+      "image": "assets/categories/mushroom/silly-dots/silly-dots-super-dose.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-10ct-jar-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-10CT-JAR-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 10CT JAR (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-blueberry-blast.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-10ct-jar-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-10CT-JAR-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 10CT JAR (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-strawberry-splash.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-10ct-jar-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-10CT-JAR-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 10CT JAR (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-10ct-jar-watermelon-gushers.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-1ct-tablet-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-1CT-TABLET-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 1CT TABLET (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-1ct-tablet-blueberry-blast.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-1ct-tablet-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-1CT-TABLET-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 1CT TABLET (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-1ct-tablet-strawberry-splash.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-1ct-tablet-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-1CT-TABLET-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 1CT TABLET (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-1ct-tablet-watermelon-gushers.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-2ct-tablet-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-2CT-TABLET-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 2CT TABLET (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-2ct-tablet-blueberry-blast.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-2ct-tablet-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-2CT-TABLET-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 2CT TABLET (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-2ct-tablet-strawberry-splash.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-2ct-tablet-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-2CT-TABLET-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 2CT TABLET (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-2ct-tablet-watermelon-gushers.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-5ct-jar-blueberry-blast",
+      "sku": "GUSHERZ-PSEUDO-5CT-JAR-BLUEBERRY-BLAST",
+      "name": "GUSHERZ PSEUDO 5CT JAR (BLUEBERRY BLAST)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-blueberry-blast.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-5ct-jar-strawberry-splash",
+      "sku": "GUSHERZ-PSEUDO-5CT-JAR-STRAWBERRY-SPLASH",
+      "name": "GUSHERZ PSEUDO 5CT JAR (STRAWBERRY SPLASH)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-strawberry-splash.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-gushers-gusherz-pseudo-5ct-jar-watermelon-gushers",
+      "sku": "GUSHERZ-PSEUDO-5CT-JAR-WATERMELON-GUSHERS",
+      "name": "GUSHERZ PSEUDO 5CT JAR (WATERMELON GUSHERS)",
+      "company": "gushers",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/gushers/gusherz-pseudo-5ct-jar-watermelon-gushers.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-lucid-50mg-photoroom-20260325-155055",
+      "sku": "LUCID-PSEUDO-BLEND-CHEWABLES-200MG-50CT",
+      "name": "LUCID PREMIUM ALKALOIDS PSEUDO BLEND CHEWABLES 200MG 50CT",
+      "company": "lucid-50mg",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/lucid-50mg/lucid-50mg-pseudo-blend-chewables-display.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-10PK-BLUE-RAZZ",
+      "name": "ULTRA OHMZ PSEUDO MEGA 10-PACK DISPLAY (BLUE RAZZ) 125MG/500MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-bluerazz-011426.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-strawberry-011426",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-10PK-STRAWBERRY",
+      "name": "ULTRA OHMZ PSEUDO MEGA 10-PACK DISPLAY (STRAWBERRY) 125MG/500MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-strawberry-011426.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-box-mockup-watermelon-011426",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-10PK-WATERMELON",
+      "name": "ULTRA OHMZ PSEUDO MEGA 10-PACK DISPLAY (WATERMELON) 125MG/500MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-box-mockup-watermelon-011426.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-blueberry-011226",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-JAR-BLUEBERRY",
+      "name": "ULTRA OHMZ PSEUDO MEGA JAR 10CT (BLUEBERRY) 160MG/1600MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-blueberry-011226.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-cherry-011226",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-JAR-CHERRY",
+      "name": "ULTRA OHMZ PSEUDO MEGA JAR 10CT (CHERRY) 160MG/1600MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-cherry-011226.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-strawberry-011226",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-JAR-STRAWBERRY",
+      "name": "ULTRA OHMZ PSEUDO MEGA JAR 10CT (STRAWBERRY) 160MG/1600MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-strawberry-011226.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudomega-capsules-mockup-watermelon-011226",
+      "sku": "ULTRA-OHMZ-PSEUDO-MEGA-JAR-WATERMELON",
+      "name": "ULTRA OHMZ PSEUDO MEGA JAR 10CT (WATERMELON) 160MG/1600MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudomega-capsules-mockup-watermelon-011226.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-010526",
+      "sku": "ULTRA-OHMZ-SUPREME-2TAB-30PK-BLUE-RAZZ",
+      "name": "ULTRA OHMZ PSEUDO SUPREME 2-TAB 30-PACK (BLUE RAZZ) 125MG/250MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-010526.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-110725",
+      "sku": "ULTRA-OHMZ-SUPREME-1TAB-30PK-BLUE-RAZZ",
+      "name": "ULTRA OHMZ PSEUDO SUPREME 1-TAB 30-PACK (BLUE RAZZ) 100MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-bluerazz-110725.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-010526",
+      "sku": "ULTRA-OHMZ-SUPREME-2TAB-30PK-MIXED-BERRY",
+      "name": "ULTRA OHMZ PSEUDO SUPREME 2-TAB 30-PACK (MIXED BERRY) 125MG/250MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-010526.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-110725",
+      "sku": "ULTRA-OHMZ-SUPREME-1TAB-30PK-MIXED-BERRY",
+      "name": "ULTRA OHMZ PSEUDO SUPREME 1-TAB 30-PACK (MIXED BERRY) 100MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-mixedberry-110725.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-strawberry-010526",
+      "sku": "ULTRA-OHMZ-SUPREME-2TAB-30PK-STRAWBERRY",
+      "name": "ULTRA OHMZ PSEUDO SUPREME 2-TAB 30-PACK (STRAWBERRY) 125MG/250MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-strawberry-010526.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-ultraohmzpseudosupreme-capsules-mockup-box-strawberry-110725",
+      "sku": "ULTRA-OHMZ-SUPREME-1TAB-30PK-STRAWBERRY",
+      "name": "ULTRA OHMZ PSEUDO SUPREME 1-TAB 30-PACK (STRAWBERRY) 100MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz/ultraohmzpseudosupreme-capsules-mockup-box-strawberry-110725.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-better-now-5ct-blueberry",
+      "sku": "BETTER-NOW-5CT-BLUEBERRY",
+      "name": "BETTER NOW 5CT (BLUEBERRY)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-5ct-blueberry.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-better-now-5ct-strawberry",
+      "sku": "BETTER-NOW-5CT-STRAWBERRY",
+      "name": "BETTER NOW 5CT (STRAWBERRY)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-5ct-strawberry.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-better-now-5ct-watermelon",
+      "sku": "BETTER-NOW-5CT-WATERMELON",
+      "name": "BETTER NOW 5CT (WATERMELON)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-5ct-watermelon.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-box-mockup-blueberry-012026",
+      "sku": "BETTER-NOW-CATS-CLAW-4CT-CARD-BLUEBERRY",
+      "name": "BETTER NOW CATS CLAW 4-COUNT CARD DISPLAY (BLUEBERRY) 400MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-box-mockup-blueberry-012026.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-box-mockup-strawberry-012026",
+      "sku": "BETTER-NOW-CATS-CLAW-4CT-CARD-STRAWBERRY",
+      "name": "BETTER NOW CATS CLAW 4-COUNT CARD DISPLAY (STRAWBERRY) 400MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-box-mockup-strawberry-012026.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-box-mockup-watermelon-012026",
+      "sku": "BETTER-NOW-CATS-CLAW-4CT-CARD-WATERMELON",
+      "name": "BETTER NOW CATS CLAW 4-COUNT CARD DISPLAY (WATERMELON) 400MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-box-mockup-watermelon-012026.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-jar-mockup-blueberry-012026",
+      "sku": "BETTER-NOW-CATS-CLAW-JAR-10CT-BLUEBERRY",
+      "name": "BETTER NOW CATS CLAW JAR 10CT (BLUEBERRY) 1000MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-jar-mockup-blueberry-012026.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-jar-mockup-strawberry-012026",
+      "sku": "BETTER-NOW-CATS-CLAW-JAR-10CT-STRAWBERRY",
+      "name": "BETTER NOW CATS CLAW JAR 10CT (STRAWBERRY) 1000MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-jar-mockup-strawberry-012026.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-jar-mockup-watermelon-012026",
+      "sku": "BETTER-NOW-CATS-CLAW-JAR-10CT-WATERMELON",
+      "name": "BETTER NOW CATS CLAW JAR 10CT (WATERMELON) 1000MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-jar-mockup-watermelon-012026.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-mockup-box-blueberry-020926",
+      "sku": "BETTER-NOW-CATS-CLAW-30PK-BLUEBERRY",
+      "name": "BETTER NOW CATS CLAW 30-PACK COUNTER DISPLAY (BLUEBERRY) 2CT/200MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-mockup-box-blueberry-020926.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-mockup-box-strawberry-020926",
+      "sku": "BETTER-NOW-CATS-CLAW-30PK-STRAWBERRY",
+      "name": "BETTER NOW CATS CLAW 30-PACK COUNTER DISPLAY (STRAWBERRY) 2CT/200MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-mockup-box-strawberry-020926.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-betternow-capsules-mockup-box-watermelon-020926",
+      "sku": "BETTER-NOW-CATS-CLAW-30PK-WATERMELON",
+      "name": "BETTER NOW CATS CLAW 30-PACK COUNTER DISPLAY (WATERMELON) 2CT/200MG",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/betternow-capsules-mockup-box-watermelon-020926.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-cats-claw-200mg-2ct-watermelon",
+      "sku": "BETTER-NOW-CATS-CLAW-200MG-2CT-WATERMELON",
+      "name": "BETTER NOW CATS CLAW EXTRACT 200MG 2CT (WATERMELON)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-cats-claw-200mg-2ct-watermelon.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-better-now-cats-claw-200mg-2ct-blueberry",
+      "sku": "BETTER-NOW-CATS-CLAW-200MG-2CT-BLUEBERRY",
+      "name": "BETTER NOW CATS CLAW EXTRACT 200MG 2CT (BLUEBERRY)",
+      "company": "better-now",
+      "category": "supplements",
+      "image": "assets/categories/supplements/better-now/better-now-cats-claw-200mg-2ct-blueberry.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-kanna-kava-kanna-kava-relaxing-tonic",
+      "sku": "KANNA-KAVA-RELAXING-TONIC",
+      "name": "KANNA KAVA RELAXING TONIC",
+      "company": "kanna-kava",
+      "category": "supplements",
+      "image": "assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-strike-kava-shot-strike-kava-shot-strawberry",
+      "sku": "STRIKE-KAVA-SHOT-STRAWBERRY",
+      "name": "STRIKE KAVA SHOT (STRAWBERRY)",
+      "company": "strike-kava-shot",
+      "category": "supplements",
+      "image": "assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "supplements-zen-power-shot-img-7056",
+      "sku": "ZEN-POWER-2OZ-ENERGY-SHOT-DISPLAY",
+      "name": "ZEN POWER 2OZ ENERGY SHOT DISPLAY BOX",
+      "company": "zen-power-shot",
+      "category": "supplements",
+      "image": "assets/categories/supplements/zen-power-shot/zen-power-shot-2oz-display-box.webp",
+      "featured": false,
+      "inStock": true,
+      "variantGroup": "zen-power-shot",
+      "variantLabel": "Display Box"
+    },
+    {
+      "id": "supplements-zen-power-shot-img-7057",
+      "sku": "ZEN-POWER-2FL-OZ-SHOT-3PACK",
+      "name": "ZEN POWER 2 FL OZ ENERGY SHOT 3-PACK",
+      "company": "zen-power-shot",
+      "category": "supplements",
+      "image": "assets/categories/supplements/zen-power-shot/zen-power-shot-2oz-3pack.webp",
+      "featured": false,
+      "inStock": true,
+      "variantGroup": "zen-power-shot",
+      "variantLabel": "3-Pack"
+    },
+    {
+      "id": "vape-geekbar-pulse-25k-3flavors",
+      "sku": "GEEK-BAR-PULSE-25K-3FLAVOR",
+      "name": "GEEK BAR PULSE 25K PUFFS DISPOSABLE (3 FLAVORS)",
+      "company": "geek-bar",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/geekbar-pulse-25k-3flavors.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "vape-geekbar-pulse-25k-planet-edition",
+      "sku": "GEEK-BAR-PULSE-25K-PLANET",
+      "name": "GEEK BAR PULSE 25K DISPOSABLE (PLANET EDITION)",
+      "company": "geek-bar",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/geekbar-pulse-25k-planet-edition.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-foger-bit-35k-bitcoin-edition",
+      "sku": "FOGER-BIT-35K-BITCOIN-EDITION",
+      "name": "FOGER BIT 35K DISPOSABLE (BITCOIN EDITION 3-PACK)",
+      "company": "foger",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/foger-bit-35k-bitcoin-edition-3pack.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-foger-switch-pro-kiwi-dragon-berry",
+      "sku": "FOGER-SWITCH-PRO-30K-KIWI-DRAGON-BERRY",
+      "name": "FOGER SWITCH PRO 30K DISPOSABLE (KIWI DRAGON BERRY)",
+      "company": "foger",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/foger-switch-pro-30k-kiwi-dragon-berry.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-foger-switch-pro-pod-mexico-mango",
+      "sku": "FOGER-SWITCH-PRO-POD-MEXICO-MANGO",
+      "name": "FOGER SWITCH PRO REPLACEMENT POD (MEXICO MANGO)",
+      "company": "foger",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/foger-switch-pro-pod-mexico-mango.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-foger-switch-pro-pod-watermelon-ice",
+      "sku": "FOGER-SWITCH-PRO-POD-WATERMELON-ICE",
+      "name": "FOGER SWITCH PRO POD 19ML 30K (WATERMELON ICE)",
+      "company": "foger",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/foger-switch-pro-pod-watermelon-ice.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-raz-ltx-25k-boost-mode",
+      "sku": "RAZ-LTX-25K-BOOST-MODE",
+      "name": "RAZ LTX 25K DISPOSABLE BOOST MODE (ANIMATED)",
+      "company": "raz",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/raz-ltx-25k-boost-mode-animated.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-raz-ltx-25k-fire-and-ice",
+      "sku": "RAZ-LTX-25K-FIRE-ICE",
+      "name": "RAZ LTX 25K FIRE & ICE DISPOSABLE",
+      "company": "raz",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/raz-ltx-25k-fire-and-ice.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-raz-ltx-25k-bangin-sour-berries",
+      "sku": "RAZ-LTX-25K-BANGIN-SOUR-BERRIES",
+      "name": "RAZ LTX 25K DISPOSABLE (BANGIN SOUR BERRIES)",
+      "company": "raz",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/raz-ltx-25k-bangin-sour-berries.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-geekbar-pulse-collection-3colors",
+      "sku": "GEEK-BAR-PULSE-COLLECTION",
+      "name": "GEEK BAR PULSE COLLECTION (RED, BLUE, PURPLE)",
+      "company": "geek-bar",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/geekbar-pulse-collection-3colors.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-geekbar-pulse-x-3d-curved-screen",
+      "sku": "GEEK-BAR-PULSE-X-3D-SCREEN",
+      "name": "GEEK BAR PULSE X 3D CURVED SCREEN DISPOSABLE",
+      "company": "geek-bar",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/geekbar-pulse-x-3d-curved-screen.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-geekbar-pulse-x-25k-constellation",
+      "sku": "GEEK-BAR-PULSE-X-25K-CONSTELLATION",
+      "name": "GEEK BAR PULSE X 25K CONSTELLATION (3 COLORS)",
+      "company": "geek-bar",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/geekbar-pulse-x-25k-constellation.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "vape-gigabar-pulse-x-25k-curved-screen",
+      "sku": "GIGA-BAR-PULSE-X-25K-CURVED",
+      "name": "GIGA BAR PULSE X 25K CURVED SCREEN DISPOSABLE",
+      "company": "giga-bar",
+      "category": "vape",
+      "image": "assets/categories/vape/vapes-new/gigabar-pulse-x-25k-curved-screen.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-50ct-bracelet-display",
+      "sku": "50CT-BRACELET-DISPLAY",
+      "name": "50CT BRACELET DISPLAY (TESTING)",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/50ct-bracelet-display.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-angel-torch-lighter-12ct-19630a",
+      "sku": "ANGEL-TORCH-LIGHTER-12CT-19630A",
+      "name": "ANGEL TORCH LIGHTER 12CT 19630A",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/angel-torch-lighter-12ct-19630a.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-assorted-torch-lighters-display-a",
+      "sku": "ASSORTED-TORCH-LIGHTERS-DISPLAY-A",
+      "name": "ASSORTED TORCH LIGHTERS DISPLAY A",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-a.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-assorted-torch-lighters-display-b",
+      "sku": "ASSORTED-TORCH-LIGHTERS-DISPLAY-B",
+      "name": "ASSORTED TORCH LIGHTERS DISPLAY B",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-b.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-assorted-torch-lighters-display-c",
+      "sku": "ASSORTED-TORCH-LIGHTERS-DISPLAY-C",
+      "name": "ASSORTED TORCH LIGHTERS DISPLAY C",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/assorted-torch-lighters-display-c.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-bic-lighter",
+      "sku": "BIC-LIGHTER",
+      "name": "BIC LIGHTER",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/bic-lighter.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-buck-lighter-9ct-08867",
+      "sku": "BUCK-LIGHTER-9CT-08867",
+      "name": "BUCK LIGHTER 9CT 08867",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/buck-lighter-9ct-08867.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-15ct",
+      "sku": "CARD-LIGHTER-15CT",
+      "name": "CARD LIGHTER 15CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-15ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-15ct1",
+      "sku": "CARD-LIGHTER-15CT1",
+      "name": "CARD LIGHTER 15CT1",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-15ct1.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-20ct",
+      "sku": "CARD-LIGHTER-20CT",
+      "name": "CARD LIGHTER 20CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-20ct1",
+      "sku": "CARD-LIGHTER-20CT1",
+      "name": "CARD LIGHTER 20CT1",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct1.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-20ct2",
+      "sku": "CARD-LIGHTER-20CT2",
+      "name": "CARD LIGHTER 20CT2",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct2.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-20ct3",
+      "sku": "CARD-LIGHTER-20CT3",
+      "name": "CARD LIGHTER 20CT3",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct3.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-coffe-cup-torch-lighter-12ct-19253a",
+      "sku": "COFFE-CUP-TORCH-LIGHTER-12CT-19253A",
+      "name": "COFFE CUP TORCH LIGHTER 12CT 19253A",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/coffe-cup-torch-lighter-12ct-19253a.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-color-torch-lighter-03006-12ct-box",
+      "sku": "COLOR-TORCH-LIGHTER-03006-12CT-BOX",
+      "name": "COLOR TORCH LIGHTER 03006 12CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/color-torch-lighter-03006-12ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-double-barrel-shotgun-lighter-10ct-19024",
+      "sku": "DOUBLE-BARREL-SHOTGUN-LIGHTER-10CT-19024",
+      "name": "DOUBLE BARREL SHOTGUN LIGHTER 10CT 19024",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/double-barrel-shotgun-lighter-10ct-19024.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-double-barrel-shotgun-lighter-10ct-190241",
+      "sku": "DOUBLE-BARREL-SHOTGUN-LIGHTER-10CT-190241",
+      "name": "DOUBLE BARREL SHOTGUN LIGHTER 10CT 190241",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/double-barrel-shotgun-lighter-10ct-190241.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-dragon-lighter-25ct",
+      "sku": "DRAGON-LIGHTER-25CT",
+      "name": "DRAGON LIGHTER 25CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/dragon-lighter-25ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-fire-extinguisher-lighter-3.5-12ct",
+      "sku": "FIRE-EXTINGUISHER-LIGHTER-3.5-12CT",
+      "name": "FIRE EXTINGUISHER LIGHTER 3.5 12CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/fire-extinguisher-lighter-3.5-12ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-grenade-regular-flame-lighter-12ct-06666",
+      "sku": "GRENADE-REGULAR-FLAME-LIGHTER-12CT-06666",
+      "name": "GRENADE REGULAR FLAME LIGHTER 12CT 06666",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/grenade-regular-flame-lighter-12ct-06666.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-gun-torch-lighter-19056-8ct",
+      "sku": "GUN-TORCH-LIGHTER-19056-8CT",
+      "name": "GUN TORCH LIGHTER 19056 8CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/gun-torch-lighter-19056-8ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-neon-lighter-50ct",
+      "sku": "NEON-LIGHTER-50CT",
+      "name": "NEON LIGHTER 50CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/neon-lighter-50ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-ombr-color-skull-torch-17017-9ct",
+      "sku": "OMBR-COLOR-SKULL-TORCH-17017-9CT",
+      "name": "OMBR COLOR SKULL TORCH 17017 9CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/ombr-color-skull-torch-17017-9ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-shoe-flame-lighter-12ct-00188a",
+      "sku": "SHOE-FLAME-LIGHTER-12CT-00188A",
+      "name": "SHOE FLAME LIGHTER 12CT 00188A",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/shoe-flame-lighter-12ct-00188a.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-07418-display",
+      "sku": "TECHNO-07418-DISPLAY",
+      "name": "TECHNO 07418 DISPLAY",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-07418-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-09169a-double-torch-flip-top-lighter-20ct-09169a",
+      "sku": "TECHNO-09169A-DOUBLE-TORCH-FLIP-TOP-LIGHTER-20CT-09169A",
+      "name": "TECHNO 09169A DOUBLE TORCH FLIP TOP LIGHTER 20CT 09169A",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-09169a-double-torch-flip-top-lighter-20ct-09169a.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-119025-dual-flame-lighter-20ct",
+      "sku": "TECHNO-119025-DUAL-FLAME-LIGHTER-20CT",
+      "name": "TECHNO 119025 DUAL FLAME LIGHTER 20CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-119025-dual-flame-lighter-20ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-119025-dual-flame-lighter-20ct1",
+      "sku": "TECHNO-119025-DUAL-FLAME-LIGHTER-20CT1",
+      "name": "TECHNO 119025 DUAL FLAME LIGHTER 20CT1",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-119025-dual-flame-lighter-20ct1.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-19051-a-12ct",
+      "sku": "TECHNO-19051-A-12CT",
+      "name": "TECHNO 19051 A 12CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-19051-a-12ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-9mm-pistol-lighter-12ct-05918",
+      "sku": "TECHNO-9MM-PISTOL-LIGHTER-12CT-05918",
+      "name": "TECHNO 9MM PISTOL LIGHTER 12CT 05918",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-9mm-pistol-lighter-12ct-05918.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-asst-color-side-torch-lighter-19057-9ct-box",
+      "sku": "TECHNO-ASST-COLOR-SIDE-TORCH-LIGHTER-19057-9CT-BOX",
+      "name": "TECHNO ASST COLOR SIDE TORCH LIGHTER 19057 9CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-asst-color-side-torch-lighter-19057-9ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-bbq-lighters-21064-91751-21265-91139-12ct-box",
+      "sku": "TECHNO-BBQ-LIGHTERS-21064-91751-21265-91139-12CT-BOX",
+      "name": "TECHNO BBQ LIGHTERS 21064 91751 21265 91139 12CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-bbq-lighters-21064-91751-21265-91139-12ct-box1",
+      "sku": "TECHNO-BBQ-LIGHTERS-21064-91751-21265-91139-12CT-BOX1",
+      "name": "TECHNO BBQ LIGHTERS 21064 91751 21265 91139 12CT BOX1",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box1.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-carabiner-lighter-06832a-20ct-box",
+      "sku": "TECHNO-CARABINER-LIGHTER-06832A-20CT-BOX",
+      "name": "TECHNO CARABINER LIGHTER 06832A 20CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-carabiner-lighter-06832a-20ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-derringer-torch-lighter-04991-1-16ct-box",
+      "sku": "TECHNO-DERRINGER-TORCH-LIGHTER-04991-1-16CT-BOX",
+      "name": "TECHNO DERRINGER TORCH LIGHTER 04991 1 16CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-derringer-torch-lighter-04991-1-16ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-flexi-torch-lighter-10703",
+      "sku": "TECHNO-FLEXI-TORCH-LIGHTER-10703",
+      "name": "TECHNO FLEXI TORCH LIGHTER 10703",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-flexi-torch-lighter-10703.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-poker-cookies-lighter-20ct-lighter",
+      "sku": "TECHNO-POKER-COOKIES-LIGHTER-20CT-LIGHTER",
+      "name": "TECHNO POKER COOKIES LIGHTER 20CT LIGHTER",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-poker-cookies-lighter-20ct-lighter.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-skull-side-torch-lighter-19052a-9ct-box",
+      "sku": "TECHNO-SKULL-SIDE-TORCH-LIGHTER-19052A-9CT-BOX",
+      "name": "TECHNO SKULL SIDE TORCH LIGHTER 19052A 9CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-skull-side-torch-lighter-19052a-9ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-skull-side-torch-lighter-19052a-9ct-box1",
+      "sku": "TECHNO-SKULL-SIDE-TORCH-LIGHTER-19052A-9CT-BOX1",
+      "name": "TECHNO SKULL SIDE TORCH LIGHTER 19052A 9CT BOX1",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-skull-side-torch-lighter-19052a-9ct-box1.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-windproof-torch-9mm-pistol-12ct-box-09072-3",
+      "sku": "TECHNO-WINDPROOF-TORCH-9MM-PISTOL-12CT-BOX-09072-3",
+      "name": "TECHNO WINDPROOF TORCH 9MM PISTOL 12CT BOX 09072",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-windproof-torch-9mm-pistol-12ct-box-09072-3.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-trout-torch-lighter-19050a-12ct-box",
+      "sku": "TROUT-TORCH-LIGHTER-19050A-12CT-BOX",
+      "name": "TROUT TORCH LIGHTER 19050A 12CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/trout-torch-lighter-19050a-12ct-box.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-x-dog-coin-lighter-20ct-00001b",
+      "sku": "X-DOG-COIN-LIGHTER-20CT-00001B",
+      "name": "X DOG COIN LIGHTER 20CT 00001B",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-x-dog-coin-lighter-20ct-00001b1",
+      "sku": "X-DOG-COIN-LIGHTER-20CT-00001B1",
+      "name": "X DOG COIN LIGHTER 20CT 00001B1",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b1.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-aris-body-spray-perfume-set",
+      "sku": "ARIS-BODY-SPRAY-PERFUME-SET",
+      "name": "ARIS BODY SPRAY & PERFUME SET",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/aris-body-spray-perfume-set.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-assorted-knife-jars",
+      "sku": "ASSORTED-KNIFE-JARS",
+      "name": "ASSORTED KNIFE JARS",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/assorted-knife-jars.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-assorted-premium-knives-jars",
+      "sku": "ASSORTED-PREMIUM-KNIVES-JARS",
+      "name": "ASSORTED PREMIUM KNIVES JARS",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/assorted-premium-knives-jars.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-azza-air-fresheners-200-300ml",
+      "sku": "AZZA-AIR-FRESHENERS-200-300ML",
+      "name": "AZZA AIR FRESHENERS 200/300ML",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/azza-air-fresheners-200-300ml.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-bracelet-display-50ct",
+      "sku": "BRACELET-DISPLAY-50CT",
+      "name": "BRACELET DISPLAY 50CT",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/bracelet-display-50ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-budeez-caps-display-144ct",
+      "sku": "BUDEEZ-CAPS-DISPLAY-144CT",
+      "name": "BUDEEZ CAPS DISPLAY 144CT",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/budeez-caps-display-144ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-car-logo-keychains",
+      "sku": "CAR-LOGO-KEYCHAINS",
+      "name": "CAR LOGO KEYCHAINS",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/car-logo-keychains.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-chorboy-scrubber-display",
+      "sku": "CHORBOY-SCRUBBER-DISPLAY",
+      "name": "CHORBOY SCRUBBER DISPLAY",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/chorboy-scrubber-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-digital-scales-display",
+      "sku": "DIGITAL-SCALES-DISPLAY",
+      "name": "DIGITAL SCALES DISPLAY",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/digital-scales-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-hidden-pocket-socks-48ct",
+      "sku": "HIDDEN-POCKET-SOCKS-48CT",
+      "name": "HIDDEN POCKET SOCKS 48CT",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/hidden-pocket-socks-48ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-high-times-socks-display",
+      "sku": "HIGH-TIMES-SOCKS-DISPLAY",
+      "name": "HIGH TIMES SOCKS DISPLAY",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/high-times-socks-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-jewelry-display-crystals-roses",
+      "sku": "JEWELRY-DISPLAY-CRYSTALS-ROSES",
+      "name": "JEWELRY DISPLAY CRYSTALS & ROSES",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/jewelry-display-crystals-roses.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-keychain-display-300ct",
+      "sku": "KEYCHAIN-DISPLAY-300CT",
+      "name": "KEYCHAIN DISPLAY 300CT",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/keychain-display-300ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-knife-display-48ct-96ct",
+      "sku": "KNIFE-DISPLAY-48CT-96CT",
+      "name": "KNIFE DISPLAY 48CT / 96CT",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/knife-display-48ct-96ct.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-satya-nag-champa-84ct-display",
+      "sku": "SATYA-NAG-CHAMPA-84CT-DISPLAY",
+      "name": "SATYA NAG CHAMPA 84CT DISPLAY",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/satya-nag-champa-84ct-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-satya-nag-champa-agarbatti",
+      "sku": "SATYA-NAG-CHAMPA-AGARBATTI",
+      "name": "SATYA NAG CHAMPA AGARBATTI",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/satya-nag-champa-agarbatti.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-tactical-stoneman-knife-display",
+      "sku": "TACTICAL-STONEMAN-KNIFE-DISPLAY",
+      "name": "TACTICAL & STONEMAN KNIFE DISPLAY",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/tactical-stoneman-knife-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-taisun-charger-display",
+      "sku": "TAISUN-CHARGER-DISPLAY",
+      "name": "TAISUN CHARGER DISPLAY",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/taisun-charger-display.webp",
+      "inStock": true
+    },
+    {
+      "id": "novelties-accessories-warner-premium-pinnacle-batteries",
+      "sku": "WARNER-PREMIUM-PINNACLE-BATTERIES",
+      "name": "WARNER PREMIUM/PINNACLE BATTERIES",
+      "company": "novelties-accessories",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/warner-premium-pinnacle-batteries.webp",
+      "inStock": true
+    }
+  ]
+}
