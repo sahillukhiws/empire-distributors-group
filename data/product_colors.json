@@ -15,7 +15,7 @@
     "chip": "#fec215",
     "chip_text": "#1a1a2e",
     "extracted": "#f8d878",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "bluelotus-featured-mental-health-blue-lotus-1grm-cartridges-pink-champagne": {
     "top": "#f0adc8",
@@ -42,7 +42,7 @@
     "chip": "#ff011e",
     "chip_text": "#ffffff",
     "extracted": "#e85868",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "bluelotus-featured-mental-health-blue-lotus-2ct-preroll-1-5grm-each-blue-razz-blast": {
     "top": "#6887c5",
@@ -231,7 +231,7 @@
     "chip": "#f61b8a",
     "chip_text": "#ffffff",
     "extracted": "#e888b8",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "delta-rock-on-thcp-dabs-6pk-pineapple-express": {
     "top": "#e2d49a",
@@ -276,7 +276,7 @@
     "chip": "#008592",
     "chip_text": "#ffffff",
     "extracted": "#08b8c8",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "delta-rock-on-d9-disposable-6g-super-boof": {
     "top": "#78c578",
@@ -393,7 +393,7 @@
     "chip": "#007fb2",
     "chip_text": "#ffffff",
     "extracted": "#08a8e8",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "delta-rock-on-live-resin-gummies-30bag-blue-razz-burst": {
     "top": "#00b2ee",
@@ -475,15 +475,6 @@
     "chip_text": "#ffffff",
     "extracted": "#584818",
     "has_own_bg": false
-  },
-  "kratom-featured-feek-free": {
-    "top": "#1400be",
-    "middle": "#0d0081",
-    "bottom": "#1300b4",
-    "chip": "#0b0077",
-    "chip_text": "#ffffff",
-    "extracted": "#180898",
-    "has_own_bg": true
   },
   "kratom-featured-feel-free-shot": {
     "top": "#3e97ff",
@@ -708,7 +699,7 @@
     "chip": "#684927",
     "chip_text": "#ffffff",
     "extracted": "#886848",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "mushroom-silly-dots-silly-dots-hero-dose-blue-razz": {
     "top": "#503ba2",
@@ -1149,7 +1140,7 @@
     "chip": "#7bb010",
     "chip_text": "#1a1a2e",
     "extracted": "#98c838",
-    "has_own_bg": true
+    "has_own_bg": false
   },
   "supplements-strike-kava-shot-strike-kava-shot-strawberry": {
     "top": "#0000f5",
@@ -1295,52 +1286,7 @@
     "extracted": "#f8f8c8",
     "has_own_bg": true
   },
-  "novelties-lighters-bic-lighter": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-buck-lighter-08867-9ct": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
   "novelties-lighters-card-lighter-15ct": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-card-lighter-20ct1": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-card-lighter-20ct2": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-card-lighter-20ct3": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
     "bottom": "#1a3a5c",
@@ -1421,24 +1367,6 @@
     "extracted": "#1a3a5c",
     "has_own_bg": true
   },
-  "novelties-lighters-photo-2025-03-28-11-43-56": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-photo-2025-08-20-15-09-51": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
   "novelties-lighters-shoe-flame-lighter-12ct-00188a": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
@@ -1484,15 +1412,6 @@
     "extracted": "#1a3a5c",
     "has_own_bg": true
   },
-  "novelties-lighters-techno-bbq-lighters-21064-91751-21265-91139-12ct-box": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
   "novelties-lighters-techno-carabiner-lighter-06832a-20ct-box": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
@@ -1520,24 +1439,6 @@
     "extracted": "#1a3a5c",
     "has_own_bg": true
   },
-  "novelties-lighters-techno-ligjter-19630a-12ct": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-techno-poker-cookies-lighter-20ct-lighter": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
   "novelties-lighters-techno-skull-side-torch-lighter-19052a-9ct-box": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
@@ -1557,33 +1458,6 @@
     "has_own_bg": true
   },
   "novelties-lighters-trout-torch-lighter-19050a-12ct-box": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-whatsapp-image-2026-04-13-at-2-55-13-pm-3": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-whatsapp-image-2026-04-13-at-2-55-14-pm-1": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-lighters-whatsapp-image-2026-04-13-at-2-55-14-pm-2": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
     "bottom": "#1a3a5c",
@@ -1620,15 +1494,6 @@
     "has_own_bg": true
   },
   "novelties-misc-body-jewelry-display-288ct": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-misc-kaychain-display-300ct": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
     "bottom": "#1a3a5c",
@@ -1700,15 +1565,6 @@
     "extracted": "#1a3a5c",
     "has_own_bg": true
   },
-  "novelties-misc-air-fresheners-200-300ml": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
   "novelties-misc-aris-assorted-perfume-15ml-30ct-display": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
@@ -1736,25 +1592,7 @@
     "extracted": "#1a3a5c",
     "has_own_bg": true
   },
-  "novelties-misc-satya-nagchampa-incence-15gms-12ct": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
   "novelties-misc-chore-boy": {
-    "top": "#1a3a5c",
-    "middle": "#0f2842",
-    "bottom": "#1a3a5c",
-    "chip": "#0a1d33",
-    "chip_text": "#ffffff",
-    "extracted": "#1a3a5c",
-    "has_own_bg": true
-  },
-  "novelties-misc-assorted-premium-knifes-75ct-10ct-jar": {
     "top": "#1a3a5c",
     "middle": "#0f2842",
     "bottom": "#1a3a5c",
@@ -1788,6 +1626,375 @@
     "chip": "#0a1d33",
     "chip_text": "#ffffff",
     "extracted": "#1a3a5c",
+    "has_own_bg": true
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable1": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable2": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable3": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-2ct-pre-roll-1-5-grm-each": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-2ct-pre-roll-1-5-grm-each1": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "whitelotus-ultra-white-lotus-ultra-white-lotus-2ct-pre-roll-1-5-grm-each2": {
+    "top": "#a855f7",
+    "middle": "#7c3aed",
+    "bottom": "#a855f7",
+    "chip": "#6d28d9",
+    "chip_text": "#ffffff",
+    "extracted": "#7c3aed",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-3ct-jar-grape-crush": {
+    "top": "#c0428f",
+    "middle": "#9b1f6e",
+    "bottom": "#b73a85",
+    "chip": "#7a155a",
+    "chip_text": "#ffffff",
+    "extracted": "#a82d7a",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-3ct-jar-cotton-candy": {
+    "top": "#3fc1d6",
+    "middle": "#1e9bb3",
+    "bottom": "#36b8cd",
+    "chip": "#1a8499",
+    "chip_text": "#ffffff",
+    "extracted": "#2aacc4",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-3ct-jar-blue-raspberry": {
+    "top": "#2a85d8",
+    "middle": "#1660ab",
+    "bottom": "#2479c8",
+    "chip": "#0e4f8f",
+    "chip_text": "#ffffff",
+    "extracted": "#1d6fbb",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-5ct-jar-grape-crush": {
+    "top": "#c0428f",
+    "middle": "#9b1f6e",
+    "bottom": "#b73a85",
+    "chip": "#7a155a",
+    "chip_text": "#ffffff",
+    "extracted": "#a82d7a",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-5ct-jar-cotton-candy": {
+    "top": "#3fc1d6",
+    "middle": "#1e9bb3",
+    "bottom": "#36b8cd",
+    "chip": "#1a8499",
+    "chip_text": "#ffffff",
+    "extracted": "#2aacc4",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-5ct-jar-blue-raspberry": {
+    "top": "#2a85d8",
+    "middle": "#1660ab",
+    "bottom": "#2479c8",
+    "chip": "#0e4f8f",
+    "chip_text": "#ffffff",
+    "extracted": "#1d6fbb",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-10ct-jar-grape-crush": {
+    "top": "#c0428f",
+    "middle": "#9b1f6e",
+    "bottom": "#b73a85",
+    "chip": "#7a155a",
+    "chip_text": "#ffffff",
+    "extracted": "#a82d7a",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-10ct-jar-cotton-candy": {
+    "top": "#3fc1d6",
+    "middle": "#1e9bb3",
+    "bottom": "#36b8cd",
+    "chip": "#1a8499",
+    "chip_text": "#ffffff",
+    "extracted": "#2aacc4",
+    "has_own_bg": false
+  },
+  "pseudo-happy-day-10ct-jar-blue-raspberry": {
+    "top": "#2a85d8",
+    "middle": "#1660ab",
+    "bottom": "#2479c8",
+    "chip": "#0e4f8f",
+    "chip_text": "#ffffff",
+    "extracted": "#1d6fbb",
+    "has_own_bg": false
+  },
+  "pseudo-ultra-ohmz-mega-black-edition-10ct-cotton-candy": {
+    "top": "#3a3a3a",
+    "middle": "#1a1a1a",
+    "bottom": "#2e2e2e",
+    "chip": "#d63384",
+    "chip_text": "#ffffff",
+    "extracted": "#222222",
+    "has_own_bg": false
+  },
+  "pseudo-ultra-ohmz-mega-black-edition-10ct-mango": {
+    "top": "#3a3a3a",
+    "middle": "#1a1a1a",
+    "bottom": "#2e2e2e",
+    "chip": "#e07b1f",
+    "chip_text": "#ffffff",
+    "extracted": "#222222",
+    "has_own_bg": false
+  },
+  "pseudo-ultra-ohmz-mega-black-edition-10ct-blue-razz": {
+    "top": "#3a3a3a",
+    "middle": "#1a1a1a",
+    "bottom": "#2e2e2e",
+    "chip": "#1d6fbb",
+    "chip_text": "#ffffff",
+    "extracted": "#222222",
+    "has_own_bg": false
+  },
+  "pseudo-ultra-ohmz-mega-black-edition-10ct-grape": {
+    "top": "#3a3a3a",
+    "middle": "#1a1a1a",
+    "bottom": "#2e2e2e",
+    "chip": "#7c3aed",
+    "chip_text": "#ffffff",
+    "extracted": "#222222",
+    "has_own_bg": false
+  },
+  "novelties-lighters-bear-torch-lighter-20ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-bic-and-neon-lighter": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-bic-lighter-50-3": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-card-lighter-15ct-variant-2": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-card-lighter-20ct-variant-2": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-card-lighter-20ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-poker-lighter-20ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-glock-keyring-lighter": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-gold-bar-lighter-20ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-skull-flip-torch-lighter-20ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-spray-can-lighter-6ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-asst-design-19051-a-12ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-bbq-lighters-12ct-box-variant-2": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-bbq-lighters-12ct-box": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-lighter-19630a-12ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-skull-side-torch-lighter-19052a-9ct-box-variant-2": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-lighters-techno-torch-07418-12ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-misc-air-fresheners-200-and-300ml": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-misc-assorted-premium-knives-75ct-and-10ct-jar": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-misc-keychain-display-300ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
+    "has_own_bg": true
+  },
+  "novelties-misc-satya-nagchampa-incense-15gms-12ct": {
+    "top": "#fce7f3",
+    "middle": "#f9a8d4",
+    "bottom": "#fce7f3",
+    "chip": "#be185d",
+    "chip_text": "#ffffff",
+    "extracted": "#ec4899",
     "has_own_bg": true
   }
 }

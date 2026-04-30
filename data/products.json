@@ -37,6 +37,12 @@
       "description": "Blue lotus carts, prerolls and disposables"
     },
     {
+      "id": "whitelotus",
+      "name": "White Lotus",
+      "icon": "\ud83c\udf3c",
+      "description": "Ultra White Lotus pre-rolls and disposables \u2014 no THC, no Delta"
+    },
+    {
       "id": "supplements",
       "name": "Supplements",
       "icon": "\ud83d\udc8a",
@@ -54,7 +60,7 @@
       "id": "better-now",
       "name": "BETTER NOW",
       "category": "supplements",
-      "hideFromBrands": true
+      "logo": "assets/brand-logos/better-now.webp"
     },
     {
       "id": "bliss-xtra",
@@ -66,7 +72,6 @@
       "id": "feel-free",
       "name": "FEEL FREE",
       "category": "kratom",
-      "logo": "assets/brand-logos/feel-free.webp",
       "hideFromBrands": true
     },
     {
@@ -91,13 +96,19 @@
       "id": "gushers",
       "name": "GUSHERS",
       "category": "pseudo",
+      "logo": "assets/brand-logos/gushers.webp"
+    },
+    {
+      "id": "happy-day",
+      "name": "HAPPY DAY",
+      "category": "pseudo",
       "hideFromBrands": true
     },
     {
       "id": "kanna-kava",
       "name": "KANNA KAVA",
       "category": "supplements",
-      "logo": "assets/brand-logos/kanva.webp"
+      "hideFromBrands": true
     },
     {
       "id": "kanva",
@@ -109,7 +120,6 @@
       "id": "kshot",
       "name": "KSHOT",
       "category": "kratom",
-      "logo": "assets/brand-logos/kshot.webp",
       "hideFromBrands": true
     },
     {
@@ -122,8 +132,7 @@
       "id": "mental-health",
       "name": "MENTAL HEALTH",
       "category": "bluelotus",
-      "logo": "assets/brand-logos/mental-health.webp",
-      "hideFromBrands": true
+      "logo": "assets/brand-logos/mental-health.webp"
     },
     {
       "id": "mit-45",
@@ -141,14 +150,12 @@
       "id": "opms",
       "name": "OPMS",
       "category": "kratom",
-      "logo": "assets/brand-logos/opms.webp",
       "hideFromBrands": true
     },
     {
       "id": "raz",
       "name": "RAZ",
       "category": "vape",
-      "logo": "assets/brand-logos/raz.webp",
       "hideFromBrands": true
     },
     {
@@ -173,14 +180,19 @@
       "id": "silly-dots",
       "name": "SILLY DOTS",
       "category": "mushroom",
-      "logo": "assets/brand-logos/silly-dots.webp",
       "hideFromBrands": true
     },
     {
       "id": "strike-kava-shot",
       "name": "STRIKE KAVA SHOT",
       "category": "supplements",
-      "hideFromBrands": true
+      "logo": "assets/brand-logos/strike-kava-shot.webp"
+    },
+    {
+      "id": "surge",
+      "name": "SURGE",
+      "category": "pseudo",
+      "logo": "assets/brand-logos/surge.webp"
     },
     {
       "id": "ultra-ohmz",
@@ -189,10 +201,16 @@
       "logo": "assets/brand-logos/ultra-ohmz.webp"
     },
     {
+      "id": "ultra-ohmz-mega",
+      "name": "ULTRA OHMZ MEGA",
+      "category": "pseudo",
+      "logo": "assets/brand-logos/ultra-ohmz-mega.webp"
+    },
+    {
       "id": "viva-xtreme",
       "name": "VIVA XTREME",
       "category": "kratom",
-      "hideFromBrands": true
+      "logo": "assets/brand-logos/viva-xtreme.webp"
     },
     {
       "id": "vivazen",
@@ -209,6 +227,12 @@
     {
       "id": "novelties-lighters",
       "name": "NOVELTY LIGHTERS",
+      "category": "novelties",
+      "hideFromBrands": true
+    },
+    {
+      "id": "novelties-misc",
+      "name": "NOVELTY MISC",
       "category": "novelties",
       "hideFromBrands": true
     },
@@ -271,6 +295,12 @@
       "name": "FUME",
       "category": "vape",
       "logo": "assets/brand-logos/fume.webp"
+    },
+    {
+      "id": "ultra-white-lotus",
+      "name": "ULTRA WHITE LOTUS",
+      "category": "whitelotus",
+      "logo": "assets/brand-logos/ultra-white-lotus.webp"
     }
   ],
   "products": [
@@ -290,7 +320,7 @@
       "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (PINEAPPLE PARADISE)",
       "company": "mental-health",
       "category": "bluelotus",
-      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-pineapple-paradise.webp",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-pineapple-paradise.png",
       "featured": true,
       "inStock": true
     },
@@ -320,7 +350,7 @@
       "name": "MENTAL HEALTH BLUE LOTUS 1GRM CARTRIDGES (STRAWBERRY SPLASH)",
       "company": "mental-health",
       "category": "bluelotus",
-      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-strawberry-splash.webp",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-1grm-cartridges-strawberry-splash.png",
       "featured": false,
       "inStock": true
     },
@@ -360,7 +390,7 @@
       "name": "MENTAL HEALTH BLUE LOTUS 4GRM DISPOSABLE (BLUE RAZZ BLAST)",
       "company": "mental-health",
       "category": "bluelotus",
-      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.webp",
+      "image": "assets/categories/bluelotus/featured/mental-health-blue-lotus-4grm-disposable-blue-razz-blast.png",
       "featured": false,
       "inStock": true
     },
@@ -530,7 +560,7 @@
       "name": "ROCK ON THC-P LIVE RESIN DABS 6-PACK (SOUR SPACE CANDY)",
       "company": "rock-on",
       "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-thcp-dabs-6pk-sour-space-candy.webp",
+      "image": "assets/categories/delta/rock-on/rock-on-thcp-dabs-6pk-sour-space-candy.png",
       "featured": false,
       "inStock": true
     },
@@ -580,7 +610,7 @@
       "name": "ROCK ON D9 LIVE RESIN DISPOSABLE 6G 35K (BLUE DREAM)",
       "company": "rock-on",
       "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-blue-dream.webp",
+      "image": "assets/categories/delta/rock-on/rock-on-d9-disposable-6g-blue-dream.png",
       "featured": false,
       "inStock": true
     },
@@ -700,7 +730,7 @@
       "name": "ROCK ON PURE THC GUMMIES DISPLAY BOX 6CT (BLUE RAZZ BURST)",
       "company": "rock-on",
       "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-display-blue-razz-burst-a.webp",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-display-blue-razz-burst-a.png",
       "featured": false,
       "inStock": true
     },
@@ -710,7 +740,7 @@
       "name": "ROCK ON PURE THC GUMMIES DISPLAY BOX 6CT (VARIETY)",
       "company": "rock-on",
       "category": "delta",
-      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-display-blue-razz-burst-b.webp",
+      "image": "assets/categories/delta/rock-on/rock-on-pure-thc-gummies-display-blue-razz-burst-b.png",
       "featured": false,
       "inStock": true
     },
@@ -765,6 +795,66 @@
       "inStock": true
     },
     {
+      "id": "delta-dozo-thcp-donut-rolls-3ct-frosted-wedding-cake",
+      "sku": "DOZO-THCP-DONUT-ROLLS-3CT-FROSTED-WEDDING-CAKE",
+      "name": "DOZO 3X THC-P DONUT ROLLS 3CT (FROSTED WEDDING CAKE - HYBRID)",
+      "company": "dozo",
+      "category": "delta",
+      "image": "assets/categories/delta/Dozo/3DR_01_0001_grande.webp",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "delta-dozo-thcp-donut-rolls-3ct-nova-biscotti",
+      "sku": "DOZO-THCP-DONUT-ROLLS-3CT-NOVA-BISCOTTI",
+      "name": "DOZO 3X THC-P DONUT ROLLS 3CT (NOVA BISCOTTI - INDICA)",
+      "company": "dozo",
+      "category": "delta",
+      "image": "assets/categories/delta/Dozo/3DR_01_0002_grande.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-dozo-thcp-donut-rolls-3ct-tropicana-og",
+      "sku": "DOZO-THCP-DONUT-ROLLS-3CT-TROPICANA-OG",
+      "name": "DOZO 3X THC-P DONUT ROLLS 3CT (TROPICANA OG - HYBRID)",
+      "company": "dozo",
+      "category": "delta",
+      "image": "assets/categories/delta/Dozo/3DR_01_0003_grande.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-dozo-thcp-donut-rolls-3ct-raspberry-sherbet",
+      "sku": "DOZO-THCP-DONUT-ROLLS-3CT-RASPBERRY-SHERBET",
+      "name": "DOZO 3X THC-P DONUT ROLLS 3CT (RASPBERRY SHERBET - SATIVA)",
+      "company": "dozo",
+      "category": "delta",
+      "image": "assets/categories/delta/Dozo/3DR_01_0004_grande.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-dozo-thcp-donut-rolls-3ct-blueberry-gusherz",
+      "sku": "DOZO-THCP-DONUT-ROLLS-3CT-BLUEBERRY-GUSHERZ",
+      "name": "DOZO 3X THC-P DONUT ROLLS 3CT (BLUEBERRY GUSHERZ - INDICA)",
+      "company": "dozo",
+      "category": "delta",
+      "image": "assets/categories/delta/Dozo/3DR_01_0005_grande.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "delta-dozo-thcp-donut-rolls-3ct-gelonade",
+      "sku": "DOZO-THCP-DONUT-ROLLS-3CT-GELONADE",
+      "name": "DOZO 3X THC-P DONUT ROLLS 3CT (GELONADE - SATIVA)",
+      "company": "dozo",
+      "category": "delta",
+      "image": "assets/categories/delta/Dozo/3DR_01_0006_grande.webp",
+      "featured": false,
+      "inStock": true
+    },
+    {
       "id": "kratom-featured-bliss-xtra-100gm-p0wder",
       "sku": "BLISS-XTRA-100GM-P0WDER",
       "name": "BLISS XTRA 100GM P0WDER",
@@ -805,22 +895,12 @@
       "inStock": true
     },
     {
-      "id": "kratom-featured-feek-free",
-      "sku": "FEEK-FREE",
-      "name": "FEEL FREE",
-      "company": "feel-free",
-      "category": "kratom",
-      "image": "assets/categories/kratom/featured/feek-free.webp",
-      "featured": false,
-      "inStock": true
-    },
-    {
       "id": "kratom-featured-feel-free-shot",
       "sku": "FEEL-FREE-SHOT",
       "name": "FEEL FREE SHOT",
       "company": "feel-free",
       "category": "kratom",
-      "image": "assets/categories/kratom/featured/feel-free-shot.webp",
+      "image": "assets/categories/kratom/featured/feel-free-shot.png",
       "featured": false,
       "inStock": true
     },
@@ -1060,7 +1140,7 @@
       "name": "SHROOM PUFF PRE ROLL 40CT JAR",
       "company": "shroom-puff",
       "category": "mushroom",
-      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-pre-roll-40ct-jar.webp",
+      "image": "assets/categories/mushroom/shroom-puff/shroom-puff-pre-roll-40ct-jar.png",
       "featured": false,
       "inStock": true
     },
@@ -1405,6 +1485,136 @@
       "inStock": true
     },
     {
+      "id": "pseudo-happy-day-3ct-jar-grape-crush",
+      "sku": "HAPPY-DAY-PSEUDO-3CT-GRAPE-CRUSH",
+      "name": "HAPPY DAY PSEUDO 3CT JAR (GRAPE CRUSH) 250MG/750MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-3ct-jar-grape-crush.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-3ct-jar-cotton-candy",
+      "sku": "HAPPY-DAY-PSEUDO-3CT-COTTON-CANDY",
+      "name": "HAPPY DAY PSEUDO 3CT JAR (COTTON CANDY) 250MG/750MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-3ct-jar-cotton-candy.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-3ct-jar-blue-raspberry",
+      "sku": "HAPPY-DAY-PSEUDO-3CT-BLUE-RASPBERRY",
+      "name": "HAPPY DAY PSEUDO 3CT JAR (BLUE RASPBERRY) 250MG/750MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-3ct-jar-blue-raspberry.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-5ct-jar-grape-crush",
+      "sku": "HAPPY-DAY-PSEUDO-5CT-GRAPE-CRUSH",
+      "name": "HAPPY DAY PSEUDO 5CT JAR (GRAPE CRUSH) 250MG/1250MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-5ct-jar-grape-crush.png",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-5ct-jar-cotton-candy",
+      "sku": "HAPPY-DAY-PSEUDO-5CT-COTTON-CANDY",
+      "name": "HAPPY DAY PSEUDO 5CT JAR (COTTON CANDY) 250MG/1250MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-5ct-jar-cotton-candy.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-5ct-jar-blue-raspberry",
+      "sku": "HAPPY-DAY-PSEUDO-5CT-BLUE-RASPBERRY",
+      "name": "HAPPY DAY PSEUDO 5CT JAR (BLUE RASPBERRY) 250MG/1250MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-5ct-jar-blue-raspberry.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-10ct-jar-grape-crush",
+      "sku": "HAPPY-DAY-PSEUDO-10CT-GRAPE-CRUSH",
+      "name": "HAPPY DAY PSEUDO 10CT JAR (GRAPE CRUSH) 250MG/2500MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-10ct-jar-grape-crush.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-10ct-jar-cotton-candy",
+      "sku": "HAPPY-DAY-PSEUDO-10CT-COTTON-CANDY",
+      "name": "HAPPY DAY PSEUDO 10CT JAR (COTTON CANDY) 250MG/2500MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-10ct-jar-cotton-candy.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-happy-day-10ct-jar-blue-raspberry",
+      "sku": "HAPPY-DAY-PSEUDO-10CT-BLUE-RASPBERRY",
+      "name": "HAPPY DAY PSEUDO 10CT JAR (BLUE RASPBERRY) 250MG/2500MG",
+      "company": "happy-day",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/happy-day/happy-day-pseudo-10ct-jar-blue-raspberry.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-mega-black-edition-10ct-cotton-candy",
+      "sku": "ULTRA-OHMZ-MEGA-BLACK-EDITION-10CT-COTTON-CANDY",
+      "name": "ULTRA OHMZ PSEUDO MEGA BLACK EDITION 10CT (COTTON CANDY) 200MG/2000MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz-black-edition/ultraohmz-mega-black-edition-10ct-cotton-candy.png",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-mega-black-edition-10ct-mango",
+      "sku": "ULTRA-OHMZ-MEGA-BLACK-EDITION-10CT-MANGO",
+      "name": "ULTRA OHMZ PSEUDO MEGA BLACK EDITION 10CT (MANGO) 200MG/2000MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz-black-edition/ultraohmz-mega-black-edition-10ct-mango.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-mega-black-edition-10ct-blue-razz",
+      "sku": "ULTRA-OHMZ-MEGA-BLACK-EDITION-10CT-BLUE-RAZZ",
+      "name": "ULTRA OHMZ PSEUDO MEGA BLACK EDITION 10CT (BLUE RAZZ) 200MG/2000MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz-black-edition/ultraohmz-mega-black-edition-10ct-blue-razz.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": "pseudo-ultra-ohmz-mega-black-edition-10ct-grape",
+      "sku": "ULTRA-OHMZ-MEGA-BLACK-EDITION-10CT-GRAPE",
+      "name": "ULTRA OHMZ PSEUDO MEGA BLACK EDITION 10CT (GRAPE) 200MG/2000MG",
+      "company": "ultra-ohmz",
+      "category": "pseudo",
+      "image": "assets/categories/pseudo/ultra-ohmz-black-edition/ultraohmz-mega-black-edition-10ct-grape.png",
+      "featured": false,
+      "inStock": true
+    },
+    {
       "id": "supplements-better-now-better-now-5ct-blueberry",
       "sku": "BETTER-NOW-5CT-BLUEBERRY",
       "name": "BETTER NOW 5CT (BLUEBERRY)",
@@ -1550,7 +1760,7 @@
       "name": "KANNA KAVA RELAXING TONIC",
       "company": "kanna-kava",
       "category": "supplements",
-      "image": "assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.webp",
+      "image": "assets/categories/supplements/kanna-kava/kanna-kava-relaxing-tonic.png",
       "featured": false,
       "inStock": true
     },
@@ -1560,7 +1770,7 @@
       "name": "STRIKE KAVA SHOT (STRAWBERRY)",
       "company": "strike-kava-shot",
       "category": "supplements",
-      "image": "assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.webp",
+      "image": "assets/categories/supplements/strike-kava-shot/strike-kava-shot-strawberry.png",
       "featured": false,
       "inStock": true
     },
@@ -1719,23 +1929,102 @@
       "inStock": true
     },
     {
-      "id": "novelties-lighters-bic-lighter",
-      "sku": "BIC-LIGHTER",
-      "name": "BIC LIGHTER",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/bic-lighter.webp",
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable",
+      "sku": "ULTRA-WHITE-LOTUS-3GRAM-DISPOSABLE-BLUEBERRY-RAZZLE",
+      "name": "ULTRA WHITE LOTUS 3GRAM DISPOSABLE (BLUEBERRY RAZZLE)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-3gram-disposable.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-buck-lighter-08867-9ct",
-      "sku": "BUCK-LIGHTER-08867-9CT",
-      "name": "BUCK LIGHTER 08867 9CT",
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable1",
+      "sku": "ULTRA-WHITE-LOTUS-3GRAM-DISPOSABLE-PURPLE-RAIN",
+      "name": "ULTRA WHITE LOTUS 3GRAM DISPOSABLE (PURPLE RAIN)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-3gram-disposable1.png",
+      "inStock": true
+    },
+    {
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable2",
+      "sku": "ULTRA-WHITE-LOTUS-3GRAM-DISPOSABLE-FRUITY-PEBBLES",
+      "name": "ULTRA WHITE LOTUS 3GRAM DISPOSABLE (FRUITY PEBBLES)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-3gram-disposable2.png",
+      "inStock": true
+    },
+    {
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-3gram-disposable3",
+      "sku": "ULTRA-WHITE-LOTUS-3GRAM-DISPOSABLE-STRAWBERRY",
+      "name": "ULTRA WHITE LOTUS 3GRAM DISPOSABLE (STRAWBERRY ENERGIZE)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-3gram-disposable3.png",
+      "inStock": true
+    },
+    {
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-2ct-pre-roll-1-5-grm-each",
+      "sku": "ULTRA-WHITE-LOTUS-2CT-PRE-ROLL-1-5G-FRUITY-PEBBLES",
+      "name": "ULTRA WHITE LOTUS 2CT PRE-ROLL 1.5G EACH (FRUITY PEBBLES)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-2ct-pre-roll-1-5-grm-each.png",
+      "inStock": true
+    },
+    {
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-2ct-pre-roll-1-5-grm-each1",
+      "sku": "ULTRA-WHITE-LOTUS-2CT-PRE-ROLL-1-5G-BLUEBERRY-RAZZLE",
+      "name": "ULTRA WHITE LOTUS 2CT PRE-ROLL 1.5G EACH (BLUEBERRY RAZZLE)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-2ct-pre-roll-1-5-grm-each1.png",
+      "inStock": true
+    },
+    {
+      "id": "whitelotus-ultra-white-lotus-ultra-white-lotus-2ct-pre-roll-1-5-grm-each2",
+      "sku": "ULTRA-WHITE-LOTUS-2CT-PRE-ROLL-1-5G-PURPLE-RAIN",
+      "name": "ULTRA WHITE LOTUS 2CT PRE-ROLL 1.5G EACH (PURPLE RAIN)",
+      "company": "ultra-white-lotus",
+      "category": "whitelotus",
+      "image": "assets/categories/whitelotus/ultra-white-lotus-2ct-pre-roll-1-5-grm-each2.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-bear-torch-lighter-20ct",
+      "sku": "BEAR-TORCH-LIGHTER-20CT",
+      "name": "BEAR TORCH LIGHTER 20CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/buck-lighter-08867-9ct.webp",
+      "image": "assets/categories/novelties/lighters/bear-torch-lighter-20ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-bic-and-neon-lighter",
+      "sku": "BIC-&-NEON-LIGHTER",
+      "name": "BIC & NEON LIGHTER",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/bic-and-neon-lighter.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-bic-lighter-50-3",
+      "sku": "BIC-LIGHTER-50-3",
+      "name": "BIC LIGHTER 50+3",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/bic-lighter-50-3.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-card-lighter-15ct-variant-2",
+      "sku": "CARD-LIGHTER-15CT-VARIANT-2",
+      "name": "CARD LIGHTER 15CT VARIANT 2",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/card-lighter-15ct-variant-2.png",
       "inStock": true
     },
     {
@@ -1744,38 +2033,25 @@
       "name": "CARD LIGHTER 15CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/card-lighter-15ct.webp",
+      "image": "assets/categories/novelties/lighters/card-lighter-15ct.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-card-lighter-20ct1",
-      "sku": "CARD-LIGHTER-20CT1",
-      "name": "CARD LIGHTER 20CT1",
+      "id": "novelties-lighters-card-lighter-20ct-variant-2",
+      "sku": "CARD-LIGHTER-20CT-VARIANT-2",
+      "name": "CARD LIGHTER 20CT VARIANT 2",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/card-lighter-20ct1.webp",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct-variant-2.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-card-lighter-20ct2",
-      "sku": "CARD-LIGHTER-20CT2",
-      "name": "CARD LIGHTER 20CT2",
+      "id": "novelties-lighters-card-lighter-20ct",
+      "sku": "CARD-LIGHTER-20CT",
+      "name": "CARD LIGHTER 20CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/card-lighter-20ct2.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-lighters-card-lighter-20ct3",
-      "sku": "CARD-LIGHTER-20CT3",
-      "name": "CARD LIGHTER 20CT3",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/card-lighter-20ct3.webp",
+      "image": "assets/categories/novelties/lighters/card-lighter-20ct.png",
       "inStock": true
     },
     {
@@ -1784,8 +2060,16 @@
       "name": "COLOR TORCH LIGHTER 03006 12CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/color-torch-lighter-03006-12ct-box.webp",
+      "image": "assets/categories/novelties/lighters/color-torch-lighter-03006-12ct-box.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-poker-lighter-20ct",
+      "sku": "TECHNO-POKER-LIGHTER-20CT",
+      "name": "TECHNO POKER LIGHTER 20CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-poker-lighter-20ct.png",
       "inStock": true
     },
     {
@@ -1794,8 +2078,7 @@
       "name": "DOUBLE BARREL SHOTGUN LIGHTER 10CT 19024",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/double-barrel-shotgun-lighter-10ct-19024.webp",
+      "image": "assets/categories/novelties/lighters/double-barrel-shotgun-lighter-10ct-19024.png",
       "inStock": true
     },
     {
@@ -1804,18 +2087,34 @@
       "name": "DRAGON LIGHTER 25CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/dragon-lighter-25ct.webp",
+      "image": "assets/categories/novelties/lighters/dragon-lighter-25ct.png",
       "inStock": true
     },
     {
       "id": "novelties-lighters-fire-extinguisher-lighter-3-5-12ct",
-      "sku": "FIRE-EXTINGUISHER-LIGHTER-3-5-12CT",
-      "name": "FIRE EXTINGUISHER LIGHTER 3 5 12CT",
+      "sku": "FIRE-EXTINGUISHER-LIGHTER-3.5-12CT",
+      "name": "FIRE EXTINGUISHER LIGHTER 3.5 12CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/fire-extinguisher-lighter-3-5-12ct.webp",
+      "image": "assets/categories/novelties/lighters/fire-extinguisher-lighter-3-5-12ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-glock-keyring-lighter",
+      "sku": "GLOCK-KEYRING-LIGHTER",
+      "name": "GLOCK KEYRING LIGHTER",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/glock-keyring-lighter.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-gold-bar-lighter-20ct",
+      "sku": "GOLD-BAR-LIGHTER-20CT",
+      "name": "GOLD BAR LIGHTER 20CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/gold-bar-lighter-20ct.png",
       "inStock": true
     },
     {
@@ -1824,8 +2123,7 @@
       "name": "GRENADE REGULAR FLAME LIGHTER 12CT 06666",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/grenade-regular-flame-lighter-12ct-06666.webp",
+      "image": "assets/categories/novelties/lighters/grenade-regular-flame-lighter-12ct-06666.png",
       "inStock": true
     },
     {
@@ -1834,8 +2132,7 @@
       "name": "GUN TORCH LIGHTER 19056 8CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/gun-torch-lighter-19056-8ct.webp",
+      "image": "assets/categories/novelties/lighters/gun-torch-lighter-19056-8ct.png",
       "inStock": true
     },
     {
@@ -1844,8 +2141,7 @@
       "name": "NEON LIGHTER 50CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/neon-lighter-50ct.webp",
+      "image": "assets/categories/novelties/lighters/neon-lighter-50ct.png",
       "inStock": true
     },
     {
@@ -1854,28 +2150,7 @@
       "name": "OMBR COLOR SKULL TORCH 17017 9CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/ombr-color-skull-torch-17017-9ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-lighters-photo-2025-03-28-11-43-56",
-      "sku": "PHOTO-2025-03-28-11-43-56",
-      "name": "PHOTO 2025 03 28 11 43 56",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/photo-2025-03-28-11-43-56.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-lighters-photo-2025-08-20-15-09-51",
-      "sku": "PHOTO-2025-08-20-15-09-51",
-      "name": "PHOTO 2025 08 20 15 09 51",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/photo-2025-08-20-15-09-51.webp",
+      "image": "assets/categories/novelties/lighters/ombr-color-skull-torch-17017-9ct.png",
       "inStock": true
     },
     {
@@ -1884,28 +2159,43 @@
       "name": "SHOE FLAME LIGHTER 12CT 00188A",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/shoe-flame-lighter-12ct-00188a.webp",
+      "image": "assets/categories/novelties/lighters/shoe-flame-lighter-12ct-00188a.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-techno-09169a-double-torch-flip-top-lighter-20ct-09169a",
-      "sku": "TECHNO-09169A-DOUBLE-TORCH-FLIP-TOP-LIGHTER-20CT-09169A",
-      "name": "TECHNO 09169A DOUBLE TORCH FLIP TOP LIGHTER 20CT 09169A",
+      "id": "novelties-lighters-skull-flip-torch-lighter-20ct",
+      "sku": "SKULL-FLIP-TORCH-LIGHTER-20CT",
+      "name": "SKULL FLIP TORCH LIGHTER 20CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-09169a-double-torch-flip-top-lighter-20ct-09169a.webp",
+      "image": "assets/categories/novelties/lighters/skull-flip-torch-lighter-20ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-spray-can-lighter-6ct",
+      "sku": "SPRAY-CAN-LIGHTER-6CT",
+      "name": "SPRAY CAN LIGHTER 6CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/spray-can-lighter-6ct.png",
       "inStock": true
     },
     {
       "id": "novelties-lighters-techno-119025-dual-flame-lighter-20ct",
-      "sku": "TECHNO-119025-DUAL-FLAME-LIGHTER-20CT",
-      "name": "TECHNO 119025 DUAL FLAME LIGHTER 20CT",
+      "sku": "TECHNO-(119025)-DUAL-FLAME-LIGHTER-20CT",
+      "name": "TECHNO (119025) DUAL FLAME LIGHTER 20CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-119025-dual-flame-lighter-20ct.webp",
+      "image": "assets/categories/novelties/lighters/techno-119025-dual-flame-lighter-20ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-09169a-double-torch-flip-top-lighter-20ct-09169a",
+      "sku": "TECHNO-09169A-DOUBLE-TORCH-FLIP-TOP-LIGHTER-(20CT)-09169A",
+      "name": "TECHNO 09169A DOUBLE TORCH FLIP TOP LIGHTER (20CT) 09169A",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-09169a-double-torch-flip-top-lighter-20ct-09169a.png",
       "inStock": true
     },
     {
@@ -1914,8 +2204,7 @@
       "name": "TECHNO 9MM PISTOL LIGHTER 12CT 05918",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-9mm-pistol-lighter-12ct-05918.webp",
+      "image": "assets/categories/novelties/lighters/techno-9mm-pistol-lighter-12ct-05918.png",
       "inStock": true
     },
     {
@@ -1924,18 +2213,34 @@
       "name": "TECHNO ASST COLOR SIDE TORCH LIGHTER 19057 9CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-asst-color-side-torch-lighter-19057-9ct-box.webp",
+      "image": "assets/categories/novelties/lighters/techno-asst-color-side-torch-lighter-19057-9ct-box.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-techno-bbq-lighters-21064-91751-21265-91139-12ct-box",
-      "sku": "TECHNO-BBQ-LIGHTERS-21064-91751-21265-91139-12CT-BOX",
-      "name": "TECHNO BBQ LIGHTERS 21064 91751 21265 91139 12CT BOX",
+      "id": "novelties-lighters-techno-asst-design-19051-a-12ct",
+      "sku": "TECHNO-ASST-DESIGN-19051-A-12CT",
+      "name": "TECHNO ASST DESIGN 19051 A 12CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-21064-91751-21265-91139-12ct-box.webp",
+      "image": "assets/categories/novelties/lighters/techno-asst-design-19051-a-12ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-bbq-lighters-12ct-box-variant-2",
+      "sku": "TECHNO-BBQ-LIGHTERS-12CT-BOX-VARIANT-2",
+      "name": "TECHNO BBQ LIGHTERS 12CT BOX VARIANT 2",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-12ct-box-variant-2.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-bbq-lighters-12ct-box",
+      "sku": "TECHNO-BBQ-LIGHTERS-12CT-BOX",
+      "name": "TECHNO BBQ LIGHTERS 12CT BOX",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-bbq-lighters-12ct-box.png",
       "inStock": true
     },
     {
@@ -1944,18 +2249,16 @@
       "name": "TECHNO CARABINER LIGHTER 06832A 20CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-carabiner-lighter-06832a-20ct-box.webp",
+      "image": "assets/categories/novelties/lighters/techno-carabiner-lighter-06832a-20ct-box.png",
       "inStock": true
     },
     {
       "id": "novelties-lighters-techno-derringer-torch-lighter-04991-1-16ct-box",
       "sku": "TECHNO-DERRINGER-TORCH-LIGHTER-04991-1-16CT-BOX",
-      "name": "TECHNO DERRINGER TORCH LIGHTER 04991 1 16CT BOX",
+      "name": "TECHNO DERRINGER TORCH LIGHTER 04991-1 16CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-derringer-torch-lighter-04991-1-16ct-box.webp",
+      "image": "assets/categories/novelties/lighters/techno-derringer-torch-lighter-04991-1-16ct-box.png",
       "inStock": true
     },
     {
@@ -1964,28 +2267,25 @@
       "name": "TECHNO FLEXI TORCH LIGHTER 10703",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-flexi-torch-lighter-10703.webp",
+      "image": "assets/categories/novelties/lighters/techno-flexi-torch-lighter-10703.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-techno-ligjter-19630a-12ct",
-      "sku": "TECHNO-LIGJTER-19630A-12CT",
-      "name": "TECHNO LIGJTER 19630A 12CT",
+      "id": "novelties-lighters-techno-lighter-19630a-12ct",
+      "sku": "TECHNO-LIGHTER-19630A-12CT",
+      "name": "TECHNO LIGHTER 19630A 12CT",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-ligjter-19630a-12ct.webp",
+      "image": "assets/categories/novelties/lighters/techno-lighter-19630a-12ct.png",
       "inStock": true
     },
     {
-      "id": "novelties-lighters-techno-poker-cookies-lighter-20ct-lighter",
-      "sku": "TECHNO-POKER-COOKIES-LIGHTER-20CT-LIGHTER",
-      "name": "TECHNO POKER COOKIES LIGHTER 20CT LIGHTER",
+      "id": "novelties-lighters-techno-skull-side-torch-lighter-19052a-9ct-box-variant-2",
+      "sku": "TECHNO-SKULL-SIDE-TORCH-LIGHTER-19052A-9CT-BOX-VARIANT-2",
+      "name": "TECHNO SKULL SIDE TORCH LIGHTER 19052A 9CT BOX VARIANT 2",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-poker-cookies-lighter-20ct-lighter.webp",
+      "image": "assets/categories/novelties/lighters/techno-skull-side-torch-lighter-19052a-9ct-box-variant-2.png",
       "inStock": true
     },
     {
@@ -1994,18 +2294,25 @@
       "name": "TECHNO SKULL SIDE TORCH LIGHTER 19052A 9CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-skull-side-torch-lighter-19052a-9ct-box.webp",
+      "image": "assets/categories/novelties/lighters/techno-skull-side-torch-lighter-19052a-9ct-box.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-lighters-techno-torch-07418-12ct",
+      "sku": "TECHNO-TORCH-07418-12CT",
+      "name": "TECHNO TORCH 07418 12CT",
+      "company": "novelties-lighters",
+      "category": "novelties",
+      "image": "assets/categories/novelties/lighters/techno-torch-07418-12ct.png",
       "inStock": true
     },
     {
       "id": "novelties-lighters-techno-windproof-torch-9mm-pistol-12ct-box-09072-3",
       "sku": "TECHNO-WINDPROOF-TORCH-9MM-PISTOL-12CT-BOX-09072-3",
-      "name": "TECHNO WINDPROOF TORCH 9MM PISTOL 12CT BOX 09072 3",
+      "name": "TECHNO WINDPROOF TORCH 9MM PISTOL 12CT BOX 09072-3",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/techno-windproof-torch-9mm-pistol-12ct-box-09072-3.webp",
+      "image": "assets/categories/novelties/lighters/techno-windproof-torch-9mm-pistol-12ct-box-09072-3.png",
       "inStock": true
     },
     {
@@ -2014,38 +2321,7 @@
       "name": "TROUT TORCH LIGHTER 19050A 12CT BOX",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/trout-torch-lighter-19050a-12ct-box.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-lighters-whatsapp-image-2026-04-13-at-2-55-13-pm-3",
-      "sku": "WHATSAPP-IMAGE-2026-04-13-AT-2-55-13-PM-3",
-      "name": "WHATSAPP IMAGE 2026 04 13 AT 2 55 13 PM 3",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/whatsapp-image-2026-04-13-at-2-55-13-pm-3.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-lighters-whatsapp-image-2026-04-13-at-2-55-14-pm-1",
-      "sku": "WHATSAPP-IMAGE-2026-04-13-AT-2-55-14-PM-1",
-      "name": "WHATSAPP IMAGE 2026 04 13 AT 2 55 14 PM 1",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/whatsapp-image-2026-04-13-at-2-55-14-pm-1.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-lighters-whatsapp-image-2026-04-13-at-2-55-14-pm-2",
-      "sku": "WHATSAPP-IMAGE-2026-04-13-AT-2-55-14-PM-2",
-      "name": "WHATSAPP IMAGE 2026 04 13 AT 2 55 14 PM 2",
-      "company": "novelties-lighters",
-      "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/whatsapp-image-2026-04-13-at-2-55-14-pm-2.webp",
+      "image": "assets/categories/novelties/lighters/trout-torch-lighter-19050a-12ct-box.png",
       "inStock": true
     },
     {
@@ -2054,8 +2330,7 @@
       "name": "X DOG COIN LIGHTER 20CT 00001B",
       "company": "novelties-lighters",
       "category": "novelties",
-      "subcategory": "LIGHTERS",
-      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b.webp",
+      "image": "assets/categories/novelties/lighters/x-dog-coin-lighter-20ct-00001b.png",
       "inStock": true
     },
     {
@@ -2064,8 +2339,7 @@
       "name": "4 SIDED JEWELRY DISPLAY",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "ACCESSORIES",
-      "image": "assets/categories/novelties/misc/4-sided-jewelry-display.webp",
+      "image": "assets/categories/novelties/misc/4-sided-jewelry-display.png",
       "inStock": true
     },
     {
@@ -2074,108 +2348,16 @@
       "name": "50CT BRACELET DISPLAY",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "ACCESSORIES",
-      "image": "assets/categories/novelties/misc/50ct-bracelet-display.webp",
+      "image": "assets/categories/novelties/misc/50ct-bracelet-display.png",
       "inStock": true
     },
     {
-      "id": "novelties-misc-body-jewelry-display-288ct",
-      "sku": "BODY-JEWELRY-DISPLAY-288CT",
-      "name": "BODY JEWELRY DISPLAY 288CT",
+      "id": "novelties-misc-air-fresheners-200-and-300ml",
+      "sku": "AIR-FRESHENERS-200-&-300ML",
+      "name": "AIR FRESHENERS 200 & 300ML",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "ACCESSORIES",
-      "image": "assets/categories/novelties/misc/body-jewelry-display-288ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-kaychain-display-300ct",
-      "sku": "KAYCHAIN-DISPLAY-300CT",
-      "name": "KAYCHAIN DISPLAY 300CT",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "ACCESSORIES",
-      "image": "assets/categories/novelties/misc/kaychain-display-300ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-cap-display-144ct",
-      "sku": "CAP-DISPLAY-144CT",
-      "name": "CAP DISPLAY 144CT",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "APPAREL",
-      "image": "assets/categories/novelties/misc/cap-display-144ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-hidden-pocket-socks-48ct-display",
-      "sku": "HIDDEN-POCKET-SOCKS-48CT-DISPLAY",
-      "name": "HIDDEN POCKET SOCKS 48CT DISPLAY",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "APPAREL",
-      "image": "assets/categories/novelties/misc/hidden-pocket-socks-48ct-display.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-high-time-socks-display-96ct-display",
-      "sku": "HIGH-TIME-SOCKS-DISPLAY-96CT-DISPLAY",
-      "name": "HIGH TIME SOCKS DISPLAY 96CT DISPLAY",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "APPAREL",
-      "image": "assets/categories/novelties/misc/high-time-socks-display-96ct-display.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-taisun-charger-display-252ct",
-      "sku": "TAISUN-CHARGER-DISPLAY-252CT",
-      "name": "TAISUN CHARGER DISPLAY 252CT",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "ELECTRONICS",
-      "image": "assets/categories/novelties/misc/taisun-charger-display-252ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-taisun-charger-display-516ct",
-      "sku": "TAISUN-CHARGER-DISPLAY-516CT",
-      "name": "TAISUN CHARGER DISPLAY 516CT",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "ELECTRONICS",
-      "image": "assets/categories/novelties/misc/taisun-charger-display-516ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-warner-pinnacle-pro-1100-900mah-battery",
-      "sku": "WARNER-PINNACLE-PRO-1100-900MAH-BATTERY",
-      "name": "WARNER PINNACLE PRO 1100 900MAH BATTERY",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "ELECTRONICS",
-      "image": "assets/categories/novelties/misc/warner-pinnacle-pro-1100-900mah-battery.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-warner-premium-pro-900mah-battery",
-      "sku": "WARNER-PREMIUM-PRO-900MAH-BATTERY",
-      "name": "WARNER PREMIUM PRO 900MAH BATTERY",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "ELECTRONICS",
-      "image": "assets/categories/novelties/misc/warner-premium-pro-900mah-battery.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-air-fresheners-200-300ml",
-      "sku": "AIR-FRESHENERS-200-300ML",
-      "name": "AIR FRESHENERS 200 300ML",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "FRAGRANCE",
-      "image": "assets/categories/novelties/misc/air-fresheners-200-300ml.webp",
+      "image": "assets/categories/novelties/misc/air-fresheners-200-and-300ml.png",
       "inStock": true
     },
     {
@@ -2184,8 +2366,7 @@
       "name": "ARIS ASSORTED PERFUME 15ML 30CT DISPLAY",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "FRAGRANCE",
-      "image": "assets/categories/novelties/misc/aris-assorted-perfume-15ml-30ct-display.webp",
+      "image": "assets/categories/novelties/misc/aris-assorted-perfume-15ml-30ct-display.png",
       "inStock": true
     },
     {
@@ -2194,28 +2375,34 @@
       "name": "ARIS BODY SPRAY 200ML 12CT",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "FRAGRANCE",
-      "image": "assets/categories/novelties/misc/aris-body-spray-200ml-12ct.webp",
+      "image": "assets/categories/novelties/misc/aris-body-spray-200ml-12ct.png",
       "inStock": true
     },
     {
-      "id": "novelties-misc-satya-nag-champa-display-84ct",
-      "sku": "SATYA-NAG-CHAMPA-DISPLAY-84CT",
-      "name": "SATYA NAG CHAMPA DISPLAY 84CT",
+      "id": "novelties-misc-assorted-premium-knives-75ct-and-10ct-jar",
+      "sku": "ASSORTED-PREMIUM-KNIVES-75CT-&-10CT-JAR",
+      "name": "ASSORTED PREMIUM KNIVES 75CT & 10CT JAR",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "FRAGRANCE",
-      "image": "assets/categories/novelties/misc/satya-nag-champa-display-84ct.webp",
+      "image": "assets/categories/novelties/misc/assorted-premium-knives-75ct-and-10ct-jar.png",
       "inStock": true
     },
     {
-      "id": "novelties-misc-satya-nagchampa-incence-15gms-12ct",
-      "sku": "SATYA-NAGCHAMPA-INCENCE-15GMS-12CT",
-      "name": "SATYA NAGCHAMPA INCENCE 15GMS 12CT",
+      "id": "novelties-misc-body-jewelry-display-288ct",
+      "sku": "BODY-JEWELRY-DISPLAY-288CT",
+      "name": "BODY JEWELRY DISPLAY 288CT",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "FRAGRANCE",
-      "image": "assets/categories/novelties/misc/satya-nagchampa-incence-15gms-12ct.webp",
+      "image": "assets/categories/novelties/misc/body-jewelry-display-288ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-cap-display-144ct",
+      "sku": "CAP-DISPLAY-144CT",
+      "name": "CAP DISPLAY 144CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/cap-display-144ct.png",
       "inStock": true
     },
     {
@@ -2224,38 +2411,7 @@
       "name": "CHORE BOY",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "HOUSEHOLD",
-      "image": "assets/categories/novelties/misc/chore-boy.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-assorted-premium-knifes-75ct-10ct-jar",
-      "sku": "ASSORTED-PREMIUM-KNIFES-75CT-10CT-JAR",
-      "name": "ASSORTED PREMIUM KNIFES 75CT 10CT JAR",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "KNIVES",
-      "image": "assets/categories/novelties/misc/assorted-premium-knifes-75ct-10ct-jar.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-knives-big-display-96ct",
-      "sku": "KNIVES-BIG-DISPLAY-96CT",
-      "name": "KNIVES BIG DISPLAY 96CT",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "KNIVES",
-      "image": "assets/categories/novelties/misc/knives-big-display-96ct.webp",
-      "inStock": true
-    },
-    {
-      "id": "novelties-misc-knives-medium-display-48ct",
-      "sku": "KNIVES-MEDIUM-DISPLAY-48CT",
-      "name": "KNIVES MEDIUM DISPLAY 48CT",
-      "company": "novelties-misc",
-      "category": "novelties",
-      "subcategory": "KNIVES",
-      "image": "assets/categories/novelties/misc/knives-medium-display-48ct.webp",
+      "image": "assets/categories/novelties/misc/chore-boy.png",
       "inStock": true
     },
     {
@@ -2264,8 +2420,106 @@
       "name": "DIGITAL SCALES",
       "company": "novelties-misc",
       "category": "novelties",
-      "subcategory": "SCALES",
-      "image": "assets/categories/novelties/misc/digital-scales.webp",
+      "image": "assets/categories/novelties/misc/digital-scales.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-hidden-pocket-socks-48ct-display",
+      "sku": "HIDDEN-POCKET-SOCKS-48CT-DISPLAY",
+      "name": "HIDDEN POCKET SOCKS 48CT DISPLAY",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/hidden-pocket-socks-48ct-display.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-high-time-socks-display-96ct-display",
+      "sku": "HIGH-TIME-SOCKS-DISPLAY-96CT-DISPLAY",
+      "name": "HIGH TIME SOCKS DISPLAY 96CT DISPLAY",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/high-time-socks-display-96ct-display.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-keychain-display-300ct",
+      "sku": "KEYCHAIN-DISPLAY-300CT",
+      "name": "KEYCHAIN DISPLAY 300CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/keychain-display-300ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-knives-big-display-96ct",
+      "sku": "KNIVES-BIG-DISPLAY-96CT",
+      "name": "KNIVES BIG DISPLAY 96CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/knives-big-display-96ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-knives-medium-display-48ct",
+      "sku": "KNIVES-MEDIUM-DISPLAY-48CT",
+      "name": "KNIVES MEDIUM DISPLAY 48CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/knives-medium-display-48ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-satya-nag-champa-display-84ct",
+      "sku": "SATYA-NAG-CHAMPA-DISPLAY---84CT",
+      "name": "SATYA NAG CHAMPA DISPLAY - 84CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/satya-nag-champa-display-84ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-satya-nagchampa-incense-15gms-12ct",
+      "sku": "SATYA-NAGCHAMPA-INCENSE-15GMS-(12CT)",
+      "name": "SATYA NAGCHAMPA INCENSE 15GMS (12CT)",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/satya-nagchampa-incense-15gms-12ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-taisun-charger-display-252ct",
+      "sku": "TAISUN-CHARGER-DISPLAY-252CT",
+      "name": "TAISUN CHARGER DISPLAY 252CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/taisun-charger-display-252ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-taisun-charger-display-516ct",
+      "sku": "TAISUN-CHARGER-DISPLAY-516CT",
+      "name": "TAISUN CHARGER DISPLAY 516CT",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/taisun-charger-display-516ct.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-warner-pinnacle-pro-1100-900mah-battery",
+      "sku": "WARNER-PINNACLE-PRO-1100-900MAH-BATTERY",
+      "name": "WARNER PINNACLE PRO 1100 900MAH BATTERY",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/warner-pinnacle-pro-1100-900mah-battery.png",
+      "inStock": true
+    },
+    {
+      "id": "novelties-misc-warner-premium-pro-900mah-battery",
+      "sku": "WARNER-PREMIUM-PRO-900MAH-BATTERY",
+      "name": "WARNER PREMIUM PRO 900MAH BATTERY",
+      "company": "novelties-misc",
+      "category": "novelties",
+      "image": "assets/categories/novelties/misc/warner-premium-pro-900mah-battery.png",
       "inStock": true
     }
   ]

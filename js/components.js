@@ -44,9 +44,10 @@
                                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>' +
                             '</button>' +
 
-                            /* WhatsApp */
+                            /* WhatsApp - animated SVG on desktop, plain icon on mobile */
                             '<a class="header-wa" data-wa="Hi, I\'d like to know more about Empire Distributors Group." aria-label="Chat on WhatsApp">' +
-                                '<svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.9.8.8-2.9-.2-.3a6.6 6.6 0 1 1 5.9 3.4zm3.6-4.9c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.4.1-.5.7-.6.8-.2.1-.4 0a5.4 5.4 0 0 1-2.7-2.3c-.2-.3.2-.3.5-1 0-.1 0-.2-.1-.3l-.6-1.4c-.1-.3-.3-.3-.4-.3h-.3a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5 3.5 3.5 0 0 0 .7 1.8 8 8 0 0 0 3.1 2.7c1.9.8 1.9.5 2.2.5s1.1-.4 1.2-.9.2-.8.1-.9-.2-.1-.4-.2z"/></svg>' +
+                                '<img class="header-wa__svg" src="' + BASE + 'assets/whatsapp-button-animated.svg" alt="Chat on WhatsApp">' +
+                                '<svg class="header-wa__icon" viewBox="0 0 24 24" fill="#25d366"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.7 12L4 20.9l5-1.3a7.9 7.9 0 0 0 11.9-6.8 7.8 7.8 0 0 0-2.3-5.5zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.9.8.8-2.9-.2-.3a6.6 6.6 0 1 1 5.9 3.4zm3.6-4.9c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.4.1-.5.7-.6.8-.2.1-.4 0a5.4 5.4 0 0 1-2.7-2.3c-.2-.3.2-.3.5-1 0-.1 0-.2-.1-.3l-.6-1.4c-.1-.3-.3-.3-.4-.3h-.3a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5 3.5 3.5 0 0 0 .7 1.8 8 8 0 0 0 3.1 2.7c1.9.8 1.9.5 2.2.5s1.1-.4 1.2-.9.2-.8.1-.9-.2-.1-.4-.2z"/></svg>' +
                             '</a>' +
                         '</div>' +
                     '</div>' +
@@ -146,6 +147,7 @@
                             '<a href="' + BASE + 'pages/category.html?id=mushroom">Mushroom</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=pseudo">Pseudo</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=bluelotus">Blue Lotus</a>' +
+                            '<a href="' + BASE + 'pages/category.html?id=whitelotus">White Lotus</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=supplements">Supplements</a>' +
                             '<a href="' + BASE + 'pages/category.html?id=novelties">Novelties</a>' +
                         '</div>' +
@@ -301,6 +303,46 @@
         }
     })();
 
+    /* Detect the current page's category id (from URL).
+       - On category.html: ?id=<cat>
+       - On product.html: ?id=<productId>, look up its category in products.json
+       Returns a Promise<string|null> that resolves to the category id (or null). */
+    function detectActiveCategory() {
+        var path = window.location.pathname;
+        var qs = new URLSearchParams(window.location.search);
+        var id = qs.get('id');
+        if (!id) return Promise.resolve(null);
+
+        if (/category\.html$/.test(path)) {
+            return Promise.resolve(id);
+        }
+        if (/product\.html$/.test(path)) {
+            return fetch(BASE + 'data/products.json')
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    var p = (data.products || []).find(function (x) { return x.id === id; });
+                    return p ? p.category : null;
+                })
+                .catch(function () { return null; });
+        }
+        return Promise.resolve(null);
+    }
+
+    /* Apply the active state to nav links matching the given category id. */
+    function applyActiveState(catId) {
+        if (!catId) return;
+        var allLinks = document.querySelectorAll('.nav-link, .drawer-link');
+        var match = 'category.html?id=' + catId;
+        allLinks.forEach(function (link) {
+            var href = link.getAttribute('href') || '';
+            if (href.indexOf(match) !== -1) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
     // Mirror nav to sticky and mobile drawer
     (function mirrorNav() {
         var src = document.getElementById('nav-bar-list');
@@ -325,16 +367,24 @@
                     a.className = 'drawer-link';
                     a.href = link.getAttribute('href');
                     a.textContent = link.textContent;
+                    if (link.classList.contains('active')) {
+                        a.classList.add('active');
+                    }
                     drawerNav.appendChild(a);
                 });
             }
         }
 
+        function rebuildAndMarkActive() {
+            rebuild();
+            detectActiveCategory().then(applyActiveState);
+        }
+
         var obs = new MutationObserver(function () {
-            if (src.children.length) { rebuild(); obs.disconnect(); }
+            if (src.children.length) { rebuildAndMarkActive(); obs.disconnect(); }
         });
         obs.observe(src, { childList: true });
-        rebuild();
+        rebuildAndMarkActive();
     })();
 
     // Mobile drawer

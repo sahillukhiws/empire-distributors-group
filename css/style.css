@@ -42,6 +42,7 @@
     --c-mushroom: #a16207;   --c-mushroom-lt: #fef3c7;   --c-mushroom-dk: #713f12;
     --c-pseudo: #eab308;     --c-pseudo-lt: #fef9c3;     --c-pseudo-dk: #a16207;
     --c-bluelotus: #6366f1;  --c-bluelotus-lt: #e0e7ff;  --c-bluelotus-dk: #4338ca;
+    --c-whitelotus: #a855f7; --c-whitelotus-lt: #f3e8ff; --c-whitelotus-dk: #7c3aed;
     --c-supplements: #10b981;--c-supplements-lt: #d1fae5; --c-supplements-dk: #047857;
     --c-novelties: #ec4899;  --c-novelties-lt: #fce7f3;  --c-novelties-dk: #be185d;
 
@@ -529,9 +530,17 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     border: 0;
     background: transparent;
     overflow: hidden;
+    object-fit: contain;
+}
+/* Plain green icon - shown only on mobile/small screens */
+.header-wa__icon {
+    display: none;
+    width: 36px;
+    height: 36px;
+    pointer-events: none;
 }
 /* Legacy fallback if someone puts <svg> or <img> directly */
-.header-wa > svg,
+.header-wa > svg:not(.header-wa__icon),
 .header-wa__img {
     width: 45px;
     height: 45px;
@@ -956,7 +965,8 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
     transition: color 0.15s, background 0.15s;
 }
 .drawer-link:hover,
-.drawer-link:active {
+.drawer-link:active,
+.drawer-link.active {
     color: #fff;
     background: var(--brand);
 }
@@ -2655,7 +2665,9 @@ h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); }
         order: 2;
         margin-left: auto;
     }
-    .header-wa__svg { width: 190px; height: 66px; }  /* bigger, prominent */
+    /* On mobile, hide animated SVG and show plain green icon (more compact) */
+    .header-wa__svg { display: none; }
+    .header-wa__icon { display: block; }
     .header-mobile-search {
         display: flex;
         order: 3;
